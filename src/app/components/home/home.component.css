@@ -1,0 +1,344 @@
+
+.navbar{
+    height: 78px;
+    background: #272727
+}
+.logoNavbar{
+    width: 104px;
+    margin: 20px 70px;
+}
+.menuNavbar{
+    display: flex;
+    position: absolute;
+    right: 70px;
+}
+.allNets{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-right: 60px;
+}
+.netLink{
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    margin: auto 20px;
+}
+.nets{    
+    display: flex;
+}
+.btnRegister{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    border-radius: 40px;
+    background: white;
+    width: 264px;
+    height: 53px;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+}
+.free{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FBFE01;
+    height: 100%;    
+    width: 90px;
+    border-radius: 0 40px 40px 0;
+    margin-right: -18px;
+}
+/*  */
+.banner{
+    background: url(../../../assets/back/Banner_go.jpg) no-repeat;
+    width: 1005;
+    height: 750px;
+    background-position: bottom;
+    background-size: cover;
+}
+.arrowBanner{
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    right: 70px;
+    margin-top: 54px;
+}
+.content-objBanner{ 
+    width: fit-content;
+    position: relative;
+    top: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.textBanner{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.onlineBack{
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+}
+.fechaBanner{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/*  */
+.bannertwo{
+    width: 100%;
+    height: 900px;
+    background: #E3E3E1;
+}
+.contentBannerTwo{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titleInfo{
+    background: #FBFE01;
+    width: 460px;
+    position: absolute;
+    z-index: 5;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentTitleInfo{
+    font-size: 30px;
+}
+.contentTitleInfo p{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.messageBannerTwo{
+    background: #272727;
+    padding: 55px;
+    width: 930px;
+    margin-left: auto;
+    top: 60px;
+    position: relative;
+}
+.contentMessageTwo{
+    margin-top: 20px;
+    padding: 10px;
+}
+.titleMessage{
+    font-family: monospace;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: absolute;
+}
+.subtitleMessage{
+    font-family: monospace;
+    color: white;
+    font-size: 18px;   
+}
+/*  */
+.backVideo{
+    width: 530px;
+    height: 294px;
+    background: #F89FDC;
+    z-index: 5;
+    right: 200px;
+    margin-top: -85px;
+    position: absolute;
+}
+.iframeVideo{
+    margin-left: 15px;
+    margin-top: -15px;
+}
+.imgArrowVideo{
+    margin-left: 70px;
+    margin-top: 80px;    
+}
+.arrowVideo{
+    width: 100px;
+}
+.imgArrowVertical{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 106px;
+    margin-top: -295px;
+}
+/*  */
+.band{
+    background: black;
+    width: 100%;
+    height: 70px;
+    margin-top: -70px;
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+}
+/*  */
+.how{
+    background: url(../../../assets/back/Fondo-manchas.jpg);
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 933px;
+}
+.contentHow{
+    position: absolute;
+    width: 100%;
+    margin-top: 70px;
+}
+.titleHow{
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+.contentBox{
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+}
+.contentActions{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+.contentActionsTwo{    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.subactionOne{    
+    display: flex;
+}
+.actionOne, .actionTwo, .actionThree,
+.actionFive, .actionSix{
+    width: 244px;
+    height: 168px;
+    margin: 10px;
+    font-size: 30px;    
+    font-weight: bold;
+    line-height: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentText{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+.actionOne{background: #FBFE01;}
+.actionTwo{background: #E5E5E5;}
+.actionThree{background: #FF6F57;}
+.actionFour{
+    width: 244px;
+    height: 356px;
+    background: #F89FDC;
+    margin: 10px;    
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    line-height: .5;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.actionFive{background: #FBFE01;}
+.actionSix{background: #E5E5E5;}
+.actionSeven{
+    background: #1D1D1D;
+    width: 508px;
+    height: 168px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    line-height: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+/*  */
+.registerTwo{
+    width: 100%;
+    height: 130px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+.content-imgRgisterTwo{
+    margin-left: auto;
+    margin-right: 13px;
+}
+.buttonRegisterTwo{
+    margin-left: 13px;
+    margin-right: auto;
+}
+.btnRegTwo{
+    width: 237px;
+    height: 80px;
+    background: black;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+}
+/*  */
+.watherPink{
+    background: url(../../../assets/back/watherPink.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+}
+.contentWeAreOne{
+    width: 800px;
+    position: absolute;    
+    margin-top: 120px;
+}
+.titleOne{
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+    margin-bottom: -30px;
+    
+}
+.whatOne{
+    background: transparent;
+    padding: 20px 0;
+    font-size: 18px;
+    color: white;
+}
+.versOne{
+    background: #1C1C1C;
+    padding: 28px 48px;
+    font-size: 16px;
+    color: white;
+}
+.arrowOne{
+    position: absolute;
+    margin-top: 500px;
+    right: 70px;
+}
+.contentMedia{
+    width: 100%;
+    margin-top: -5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contentImgs{
+    width: calc(100% / 4);
+    height: 334px;
+    /* object-fit: cover;
+    object-position: center; */
+}
