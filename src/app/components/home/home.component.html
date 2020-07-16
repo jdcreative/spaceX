@@ -19,7 +19,7 @@
                     <img src="../../../assets/logs/YT.png" class="nets" width="32px">
                 </a>
             </div>
-            <div class="btnRegister">
+            <div class="btnRegister" (click)="openCloseModal()">
                 <div class="btn here">
                     REGÍSTRATE <strong>AQUI </strong>
                 </div>
@@ -40,12 +40,21 @@
         <div class="textBanner">
             <img src="../../../assets/back/convencion_text_1.png" width="437">
         </div>
-        <div class="onlineBack">
+        <!-- <div class="onlineBack">
             <img src="../../../assets/back/online1.png" width="282px">
         </div>
         <div class="fechaBanner">
             <img src="../../../assets/back/fecha2_1.png" width="420">
+        </div> -->        
+    </div>
+    <div class="contetn-btnOptions">
+        <div class="contentVerify">
+            <button class="btnVerify" (click)="openModalvalidate()"><p class="minitextBtn">Confirma tu registro a la Convencion</p>  SOMOSUNOGO</button>
         </div>
+        <div class="contentRegister">  
+            <button class="btnRegisterBanner" (click)="openCloseModal()">REGISTRATE</button>
+        </div>
+        
     </div>
 </div>
 <div class="bannertwo">
@@ -204,6 +213,6 @@
     </div>
     <div class="contentImgs">
         <img src="../../../assets/media/48319163011_0940c6d7b4_o.jpg" width="100%">
-    </div>
-       
+    </div>       
 </div>
+

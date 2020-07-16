@@ -1,0 +1,78 @@
+::ng-deep.mat-dialog-container{
+    background: url(../../../assets/back/Banner_go_azul.jpg);
+    background-size: cover;
+    background-position: center;  
+    height: 500px;  
+}
+::ng-deep.cdk-overlay-pane{
+    max-width: 95vw !important;
+}
+.formRegister{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contentInput{
+    display: grid;
+}
+.contentSelect{
+    margin: 5px 0;
+}
+.inputForm{
+    border: 2px solid white;
+    border-radius: 20px;
+    font-family: roboto;
+    padding: 7px 20px;
+    background: transparent;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+input:focus{outline: none;}
+mat-select{
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 7px 20px;
+    font-family: 'roboto';
+    font-size: 16px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+::ng-deep.mat-select-value-text{color:white}
+.labels{
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 12px;
+    color: black;
+}
+.stc{color: red;}
+.contentCheck{
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+::ng-deep .mat-radio-button{
+    margin-left: auto;
+    margin-right: auto;
+}
+.checkBox{
+    margin-top: 20px;
+    display: flex;
+}
+.mat-checkbox{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}

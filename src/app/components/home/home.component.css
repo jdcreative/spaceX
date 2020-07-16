@@ -87,6 +87,46 @@
     justify-content: center;
     margin-top: 30px;
 }
+.contetn-btnOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    margin-top: 300px;
+}
+.contentVerify, .contentRegister{    
+    margin-left: auto;
+    margin-right: auto;
+}
+.btnVerify{
+    border: 1px solid black;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 0.5;
+    outline: none;
+}
+.minitextBtn{
+    text-align: center;
+    color: #39C3C4;
+    font-weight: bold;
+    font-size: 17px;
+}
+.btnRegisterBanner{
+    border: 1px solid #F89FDC;
+    background: #F89FDC;
+    border-radius: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 20px 50px;
+    outline: none;
+}
+
 
 /*  */
 .bannertwo{
