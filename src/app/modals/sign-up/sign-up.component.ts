@@ -129,6 +129,9 @@ export class SignUpComponent implements OnInit {
   validSara:boolean=false;
   validTwelve: boolean = false;
   validOtraIglesia: boolean = false;
+
+  currentState=1
+
   constructor(
     private dialogRef: MatDialogRef<SignUpComponent>,
     @Inject(MAT_DIALOG_DATA) data,
@@ -173,7 +176,8 @@ export class SignUpComponent implements OnInit {
       idioma: [''],
       talleres: [''],
       firebase: [true],
-      terminosYCondiciones: [true]
+      terminosYCondiciones: [true],
+      date_register:[ new Date]
     })
     this.registerForm.valueChanges.subscribe(res => {
 
@@ -238,8 +242,12 @@ export class SignUpComponent implements OnInit {
     if(this.registerForm.valid){
       const data = this.registerForm.value;
       this.fire.newUser(data)
+      this.currentState=2
     }
     this.registerForm.reset();
+    // setTimeout(() => {
+    //   this.close()
+    // }, 4000);
   }
   save() {
     this.dialogRef.close();

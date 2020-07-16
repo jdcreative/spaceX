@@ -3,104 +3,108 @@
         <p class="titleModalvalidate">CONFIRMA TUS <span>DATOS</span></p>
     </div>
     <div *ngIf="currentState == 0" class="content-form">
-        <div *ngIf="loader">cargando....</div>
+        <!-- <div *ngIf="loader">cargando....</div> -->
         <form *ngIf="!loader" [formGroup]="formValid" (ngSubmit)="validateForm($event)">
-            <input type="text" placeholder="correo electronico" formControlName="email">
-            <button type="submit">Confirmar</button>
+            <p class="titleformValid"><span class="stc">*</span> INGRESA EL CORREO ELECTRONICO CON EL QUE TE REGISTRASTE</p>
+            <input type="text" class="inputFormValid" placeholder="correo electronico" formControlName="email">
+            <div class="contentBtnValidar">
+                <button type="submit" class="btnConfirmar">Confirmar</button>
+            </div>            
         </form>        
     </div>
     <div *ngIf="currentState == 2" class="listDataUser">
-        <div class="inputlist">
-            <label >esta es la fecha de tu registro: </label>
-            <p class="contentData">{{selectedUser.date_register}}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> esta es la fecha de tu registro: </label>
+            <p class="inputForm">{{selectedUser.date_register}}</p>
         </div>
 
-        <div class="inputlist">
-            <label >nombre: </label>
-            <p class="contentData">{{selectedUser.nombre}}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> nombre: </label>
+            <p class="inputForm">{{selectedUser.nombre}}</p>
         </div>
-        <div class="inputlist">
-            <label>apellidos:</label>
-            <p class="contentData"> {{selectedUser.apellidos}}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> apellidos:</label>
+            <p class="inputForm"> {{selectedUser.apellidos}}</p>
         </div>
-        <div class="inputlist">
-            <label>email: </label>
-            <p class="contentData">{{selectedUser.email }}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> email: </label>
+            <p class="inputForm">{{selectedUser.email }}</p>
         </div>
-        <div class="inputlist">
-            <label>celular: </label>
-            <p class="contentData">{{selectedUser.celular ? selectedUser.celular : 'no tienes celular registrado'}}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> celular: </label>
+            <p class="inputForm">{{selectedUser.celular ? selectedUser.celular : 'no tienes celular registrado'}}</p>
         </div>
-        <div  class="inputlist">
-            <label>telefono: </label>
-            <p class="contentData">{{selectedUser.telefono ? selectedUser.telefono : 'no tienes telefono registrado'}}</p>
+        <div  class="contentInput">
+            <label class="labels"><span class="stc">*</span> telefono: </label>
+            <p class="inputForm">{{selectedUser.telefono ? selectedUser.telefono : 'no tienes telefono registrado'}}</p>
         </div>
-        <div class="inputlist">
-            <label>edad: </label>
-            <p class="contentData">{{selectedUser.edad  ? selectedUser.edad : 'no has ingresado tu edad'}}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> edad: </label>
+            <p class="inputForm">{{selectedUser.edad  ? selectedUser.edad : 'no has ingresado tu edad'}}</p>
         </div>
-        <div class="inputlist">
-            <label>pais: </label>
-            <p class="contentData">{{selectedUser.pais ? selectedUser.pais : 'no has seleccionado un pais'}}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> pais: </label>
+            <p class="inputForm">{{selectedUser.pais ? selectedUser.pais : 'no has seleccionado un pais'}}</p>
         </div>
-        <div class="inputlist">
-            <label>ciudad: </label>
-            <p class="contentData">{{selectedUser.ciudad ? selectedUser.ciudad : 'no has seleccionado una ciudad'}}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> ciudad: </label>
+            <p class="inputForm">{{selectedUser.ciudad ? selectedUser.ciudad : 'no has seleccionado una ciudad'}}</p>
         </div>
-        <div class="inputlist">
-            <label>iglesia: </label>
-            <p class="contentData">{{selectedUser.iglesia }}</p>
+        <div class="contentInput">
+            <label class="labels"><span class="stc">*</span> iglesia: </label>
+            <p class="inputForm">{{selectedUser.iglesia }}</p>
         </div>        
-        <div *ngIf="selectedUser.otraIglesia" class="inputlist" >
-            <label>otra iglesia: </label>
-            <p class="contentData">{{selectedUser.otraIglesia}}</p>
+        <div *ngIf="selectedUser.otraIglesia" class="contentInput" >
+            <label class="labels"><span class="stc">*</span> otra iglesia: </label>
+            <p class="inputForm">{{selectedUser.otraIglesia}}</p>
         </div>
-        <div *ngIf="selectedUser.sedeMci" class="inputlist">
-            <label>sede: </label>
-            <p class="contentData">{{selectedUser.sedeMci}}</p>
+        <div *ngIf="selectedUser.sedeMci" class="contentInput">
+            <label class="labels"><span class="stc">*</span> sede: </label>
+            <p class="inputForm">{{selectedUser.sedeMci}}</p>
         </div>
-        <div *ngIf="selectedUser.red" class="inputlist">
-            <label>red: </label>
-            <p class="contentData">{{selectedUser.red}}</p>
+        <div *ngIf="selectedUser.red" class="contentInput">
+            <label class="labels"><span class="stc">*</span>red: </label>
+            <p class="inputForm">{{selectedUser.red}}</p>
         </div>
-        <div *ngIf="selectedUser.redHombres" class="inputlist">
-            <label>red de Hombres:</label>
-            <p class="contentData"> {{selectedUser.redHombres}}</p>
+        <div *ngIf="selectedUser.redHombres" class="contentInput">
+            <label class="labels"><span class="stc">*</span>red de Hombres:</label>
+            <p class="inputForm"> {{selectedUser.redHombres}}</p>
         </div>
-        <div *ngIf="selectedUser.redMujeres" class="inputlist">
-            <label>red de Mujeres: </label>
-            <p class="contentData">{{selectedUser.redMujeres}}</p>
+        <div *ngIf="selectedUser.redMujeres" class="contentInput">
+            <label class="labels"><span class="stc">*</span>red de Mujeres: </label>
+            <p class="inputForm">{{selectedUser.redMujeres}}</p>
         </div>
-        <div *ngIf="selectedUser.redEliemerson" class="inputlist">
-            <label>red de Eliemerson proenca: </label>
-            <p class="contentData">{{selectedUser.redEliemerson}}</p>
+        <div *ngIf="selectedUser.redEliemerson" class="contentInput">
+            <label class="labels"><span class="stc">*</span>red de Eliemerson proenca: </label>
+            <p class="inputForm">{{selectedUser.redEliemerson}}</p>
         </div>
-        <div *ngIf="selectedUser.redJohanna" class="inputlist">
-            <label>red de Johanna Proenca: </label>
-            <p class="contentData">{{selectedUser.redJohanna}}</p>
+        <div *ngIf="selectedUser.redJohanna" class="contentInput">
+            <label class="labels"><span class="stc">*</span>red de Johanna Proenca: </label>
+            <p class="inputForm">{{selectedUser.redJohanna}}</p>
         </div>
-        <div *ngIf="selectedUser.redLauGuerra" class="inputlist">
-            <label>red de Lau Guerra: </label>
-            <p class="contentData">{{selectedUser.redLauGuerra}}</p>
+        <div *ngIf="selectedUser.redLauGuerra" class="contentInput">
+            <label class="labels"><span class="stc">*</span>red de Lau Guerra: </label>
+            <p class="inputForm">{{selectedUser.redLauGuerra}}</p>
         </div>
-        <div *ngIf="selectedUser.redSaraCastellanos" class="inputlist">
-            <label>red de Sara Guerra: </label>
-            <p class="contentData">{{selectedUser.redSaraCastellanos}}</p>
+        <div *ngIf="selectedUser.redSaraCastellanos" class="contentInput">
+            <label class="labels"><span class="stc">*</span>red de Sara Guerra: </label>
+            <p class="inputForm">{{selectedUser.redSaraCastellanos}}</p>
         </div>
-        <div *ngIf="selectedUser.liderPrincipal" class="inputlist">
-            <label>Lider principal: </label>
-            <p class="contentData">{{selectedUser.liderPrincipal}}</p>
+        <div *ngIf="selectedUser.liderPrincipal" class="contentInput">
+            <label class="labels"><span class="stc">*</span>Lider principal: </label>
+            <p class="inputForm">{{selectedUser.liderPrincipal}}</p>
         </div>
-        <div *ngIf="selectedUser.idioma" class="inputlist">
-            <label>idioma seleccionado:</label>
-            <p class="contentData"> {{selectedUser.idioma ? selectedUser.idioma : 'no has seleccionado un idioma'}}</p>
+        <div *ngIf="selectedUser.idioma" class="contentInput">
+            <label class="labels"><span class="stc">*</span>idioma seleccionado:</label>
+            <p class="inputForm"> {{selectedUser.idioma ? selectedUser.idioma : 'no has seleccionado un idioma'}}</p>
         </div>
-        <div *ngIf="selectedUser.talleres" class="inputlist">
-            <label>taller seleccionado: </label>
-            <p class="contentData">{{selectedUser.talleres ? selectedUser.talleres : 'no has seleccionado un taller'}}</p>
+        <div *ngIf="selectedUser.talleres" class="contentInput">
+            <label class="labels"><span class="stc">*</span>taller seleccionado: </label>
+            <p class="inputForm">{{selectedUser.talleres ? selectedUser.talleres : 'no has seleccionado un taller'}}</p>
         </div>  
+        
         <div class="contentBtn">
-            <button class="btnGo" (click)="currentState = 1">ACTUALIZA TUS DATOS</button>
+            <button type="button" class="btnValid" (click)="currentState = 1">ACTUALIZA TUS DATOS</button>
         </div>      
     </div>
 
@@ -425,9 +429,9 @@
                     <mat-option *ngFor="let lang of language" [value]="lang.name">{{lang.name}}</mat-option>
                 </mat-select>                
             </div>
-
-            <div class="contentBtn">
-                <button type="submit" class="btnGo">ACEPTAR</button>
+            
+            <div class="contentBtnValidar">
+                <button type="submit" class="btnConfirmar" (click)="currentState = 1">ACEPTAR</button>
             </div>
         </form>
     </div>

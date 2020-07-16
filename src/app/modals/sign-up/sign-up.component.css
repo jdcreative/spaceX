@@ -76,3 +76,36 @@ mat-select{
     margin-left: auto;
     margin-right: auto;
 }
+.contetBtn{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+.btn{
+    border:none;
+    border-radius: 50px;
+    background: yellow;
+    color: #4f4f4f;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 7px 20px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+
+.okGO{
+    width: 600%;
+    margin: 100px auto auto auto;
+    text-align: center;
+    line-height: 1;
+}
+.okRegiter{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.GO{
+    color:black;
+    font-size: 35px;
+    font-weight: 900;
+}

@@ -3,7 +3,7 @@
     <div class="contentImgModal">
         <img src="../../../assets/back/registro_textoMRegistro.png" width="700">
     </div>
-    <div class="formRegister">
+    <div *ngIf="currentState == 1" class="formRegister">
         <form [formGroup]="registerForm" (ngSubmit)="saveUser($event)">
             <div class="contentInput">
                 <label for="name" class="labels"><span class="stc">*</span> Nombres</label>
@@ -328,8 +328,13 @@
             </div>
 
             <div class="contetBtn">
-                <button class="btn" type="submit" >Registrarme</button>
+                <button class="btn" type="submit" >REGISTRARME</button>
             </div>
         </form>
+    </div>
+
+    <div *ngIf="currentState == 2" class="okGO">
+        <p class="okRegiter">tu registro a sido exitoso</p>
+        <p class="GO">preparate para la conveción SOMOS UNO GO!</p>
     </div>
 </div>

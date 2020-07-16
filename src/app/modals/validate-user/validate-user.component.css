@@ -14,6 +14,7 @@
     width: 100%;
     text-align: center;
 }
+.stc{color:red}
 .titleModalvalidate{
     font-size: 70px;
     font-weight: 900;
@@ -38,6 +39,47 @@
     margin-left: 15px;
     margin-bottom: -5px;
 }
+/* form validate */
+.content-form{
+    width: 70%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 50px auto auto;
+}
+.titleformValid{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto';
+    color:black;
+}
+.inputFormValid{
+    border:2px solid white;
+    background:transparent;
+    border-radius: 50px;
+    padding: 7px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background: white;
+}
+.contentBtnValidar{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto auto;
+}
+.btnConfirmar{
+    border:none;
+    border-radius: 50px;
+    background: yellow;
+    color: #4f4f4f;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 7px 20px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+
 
 /* form Update */
 .contentInput{
@@ -103,4 +145,30 @@ mat-select{
     letter-spacing: 2px;
     margin-left: auto;
     margin-right: auto;
+}
+.contentBtn{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto auto;
+}
+.btnValid{
+    border:none;
+    border-radius: 50px;
+    background: yellow;
+    color: #4f4f4f;
+    font-size: 19px;
+    font-weight: 900;
+    padding: 7px 20px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+}
+/* message  */
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-weight: bold;
 }
