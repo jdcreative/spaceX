@@ -16,6 +16,7 @@ export class ValidateUserComponent implements OnInit {
   description: string;
   formValid: FormGroup;
   formUpdate: FormGroup;
+  mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
   public dataUser = [];
   private idUser = [];
   dateRegister:any;
@@ -32,20 +33,7 @@ export class ValidateUserComponent implements OnInit {
   validLau:boolean=false;
   validSara:boolean=false;
   validTwelve: boolean = false;
-  validOtraIglesia: boolean = false;
-
-
-  loader:boolean=false;
-  prueba:'sdfsdfsf'
-
-  country = [{
-    data: [
-      {'name': 'colombia'},
-      {'name': 'Italia'},
-      {'name': 'Mexico'}
-    ]
-
-  }];
+  validOtraIglesia: boolean = false;  
   countries: any;
   cities = 0;
   language = [{ 'name': 'English' }, { 'name': 'Español' }, { 'name': 'português' }];
@@ -155,28 +143,21 @@ export class ValidateUserComponent implements OnInit {
   }
 
   ngOnInit() { 
-    this.getCountries();
-     
+    this.getCountries();     
   }
 
   getCountries() {
-    this.country.map(res => {
-      this.countries = res.data;
-      // console.log(this.countries)
+    this.util.getCountries().subscribe(res=>{
+      this.countries = res;
     })
   }
-  selectCountry(i: number) {
-    this.cities = i;
-    // this.cities = this.countries[i];
-    // console.log(this.countries[i].ciudades)
-  }
-
-
+  // valid mail form
   buildForm() {
     this.formValid = this.fb.group({
-      email: ['']
+      email: ['', [Validators.required, Validators.pattern(this.mailPattern)]]
     });
   }
+  get validatorMail(){return this.formValid.get('email')};
   validateForm(e: Event) {
     e.preventDefault();
     if (this.formValid.valid) {
@@ -199,32 +180,32 @@ export class ValidateUserComponent implements OnInit {
     }    
   }
   
-  //section update data
+  // update data form
   buildFormUpdate() {    
     this.formUpdate = this.fb.group({
-      nombre: [],
-      apellidos: [''],
-      email: [''],
-      celular: [''],
+      nombre: ['',[Validators.required]],
+      apellidos: ['',[Validators.required]],
+      email: ['',[Validators.required, Validators.pattern(this.mailPattern)]],
+      celular: ['',[Validators.required]],
       telefono: [''],
-      edad: [''],
-      pais: [],
-      ciudad: [this.selectedUser.ciudad],
-      iglesia: [this.selectedUser.iglesia],
-      otraIglesia: [this.selectedUser.otraIglesia],
-      sedeMci: [this.selectedUser.sedeMci],
-      red: [this.selectedUser.red],
-      redHombres: [this.selectedUser.redHombres],
-      redMujeres: [this.selectedUser.redMujeres],
-      redEliemerson: [this.selectedUser.redEliemerson],
-      redJohanna: [this.selectedUser.redJohanna],
-      redLauGuerra: [this.selectedUser.redLauGuerra],
-      redSaraCastellanos: [this.selectedUser.redSaraCastellanos],
-      liderPrincipal: [this.selectedUser.liderPrincipal],
-      idioma: [this.selectedUser.idioma],
-      talleres: [this.selectedUser.talleres],
+      edad: ['',[Validators.required]],
+      pais: ['',,[Validators.required]],
+      ciudad: ['',[Validators.required]],
+      iglesia: ['',[Validators.required]],
+      otraIglesia: [''],
+      sedeMci: [''],
+      red: [''],
+      redHombres: [''],
+      redMujeres: [''],
+      redEliemerson: [''],
+      redJohanna: [''],
+      redLauGuerra: [''],
+      redSaraCastellanos: [''],
+      liderPrincipal: [''],
+      idioma: ['',,[Validators.required]],
+      talleres: ['',[Validators.required]],
       firebase: [true],
-      terminosYCondiciones: [true]
+      terminosYCondiciones: [true,,[Validators.required]]
     });
     this.formUpdate.valueChanges.subscribe(res=>{
       if(res.iglesia == 'pertenece_mci'){this.validSede=true; this.validOtraIglesia=false}
@@ -279,7 +260,17 @@ export class ValidateUserComponent implements OnInit {
         res.redLauGuerra='';        
       }  
     })
-  }
+  };
+  get nameUpdate(){return this.formUpdate.get('nombre')};
+  get lastUpdate(){return this.formUpdate.get('apellidos')};
+  get mailUpdate(){return this.formUpdate.get('email')};
+  get phoneUpdate(){return this.formUpdate.get('celular')};
+  get ageUpdate(){return this.formUpdate.get('edad')};
+  get countryUpdate(){return this.formUpdate.get('pais')};
+  get cityUpdate(){return this.formUpdate.get('ciudad')};
+  get churchUpdate(){return this.formUpdate.get('iglesia')};
+  get languageUpdate(){return this.formUpdate.get('idioma')};
+  get workShopUpdate(){return this.formUpdate.get('talleres')};
   setValues(){
     this.formUpdate.controls['nombre'].setValue(this.selectedUser.nombre);
     this.formUpdate.controls['apellidos'].setValue(this.selectedUser.apellidos);
@@ -302,9 +293,6 @@ export class ValidateUserComponent implements OnInit {
     this.formUpdate.controls['liderPrincipal'].setValue(this.selectedUser.liderPrincipal);
     this.formUpdate.controls['idioma'].setValue(this.selectedUser.idioma);
     this.formUpdate.controls['talleres'].setValue(this.selectedUser.talleres);
-
-
-    // this.loader= false;
   }
   updateUser(e: Event) {
     e.preventDefault;

@@ -1,3 +1,5 @@
+import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -8,17 +10,27 @@ import { countryInterface } from '../interfaces/country_interface';
 })
 export class UtilsService {
  
-  urlApi = 'https://gateway.mcidonaciones.com:1100/Master';
+  private urlApi = 'api/countries';
   httpOptions = {
     headers: new HttpHeaders({'ContentType': 'application/json'})
   };
   constructor(private http: HttpClient) { }
 
-  getCountries(){
-    let akjsd = this.http.get<countryInterface>(this.urlApi +'/GetCountryXDepartamentXCity', this.httpOptions)
-    console.log(akjsd);
-    return akjsd
+  getCountries(): Observable<countryInterface[]>{
+    let countries = this.http.get<countryInterface[]>(this.urlApi)
+    .pipe(catchError(this.handleError<countryInterface[]>('getCountries', [])))
+    console.log(countries);
+    return countries
   }
+  private handleError<T> (operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error); 
+
+      return of(result as T);
+    };
+  }
+
+
 
   
 }

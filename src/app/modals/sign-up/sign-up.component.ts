@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { FirestoreService } from './../../service/firestore.service';
 import { userInterface } from '../../interfaces/user_interface';
+import { countryInterface } from './../../interfaces/country_interface';
+import { UtilsService } from '../../service/utils.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -13,48 +15,40 @@ import { userInterface } from '../../interfaces/user_interface';
 export class SignUpComponent implements OnInit {
 
   description: string;
-  registerForm: FormGroup;
-  // public dataUser=[];
-  country = [{
-    data: [
-      {'name': 'colombia'},
-      {'name': 'Italia'},
-      {'name': 'Mexico'}
-    ]
-
-  }];
+  registerForm: FormGroup;  
+  
   countries: any;
   cities = 0;
   language = [{ 'name': 'English' }, { 'name': 'Español' }, { 'name': 'português' }];
   pastoras = [
-    { name: 'Margarita Cataño', value:'Margarita Cataño'},
-    { name: 'Ruth Jimena Castañeda', value:'ruth jimena castañeda' },
-    { name: 'Anita Alonso', value:'Anita Alonso' },
-    { name: 'Clara Sandoval', value:'Clara sandoval' },
-    { name: 'Olga Morales', value:'Olga morales' },
-    { name: 'Manuela Castellanos', value:'Manuela castellanos' },
-    { name: 'Johanna Proenca', value:'Johanna_proenca' },
-    { name: 'Lorena Gamba', value:'Lorena gamba' },
-    { name: 'Erika Berrios', value:'Erika berrios' },
-    { name: 'Janeth de Barrios', value:'Janeth de barrios' },
-    { name: 'Angela Espinosa', value:'Angela espinosa' },
-    { name: 'Perla Doris mora', value:'perla doris mora' },
-    { name: 'Sara Castellanos', value:'sara_castellanos' },
+    { name: 'Margarita Cataño', value: 'Margarita Cataño' },
+    { name: 'Ruth Jimena Castañeda', value: 'ruth jimena castañeda' },
+    { name: 'Anita Alonso', value: 'Anita Alonso' },
+    { name: 'Clara Sandoval', value: 'Clara sandoval' },
+    { name: 'Olga Morales', value: 'Olga morales' },
+    { name: 'Manuela Castellanos', value: 'Manuela castellanos' },
+    { name: 'Johanna Proenca', value: 'Johanna_proenca' },
+    { name: 'Lorena Gamba', value: 'Lorena gamba' },
+    { name: 'Erika Berrios', value: 'Erika berrios' },
+    { name: 'Janeth de Barrios', value: 'Janeth de barrios' },
+    { name: 'Angela Espinosa', value: 'Angela espinosa' },
+    { name: 'Perla Doris mora', value: 'perla doris mora' },
+    { name: 'Sara Castellanos', value: 'sara_castellanos' },
   ]
   pastores = [
-    { name: 'Jorge Andrés Cataño',value:'Jorge Andres Cataño'},
-    { name: 'Orlando Castañeda', value:'Orlando Castañeda'},
-    { name: 'Alaín Alonso', value:'Alaín Alonso' },
-    { name: 'Fernando Ramos', value:'Fernando Ramos' },
-    { name: 'Miguel Morales', value:'Miguel Morales' },
-    { name: 'Rich Harding', value:'Rich Harding' },
-    { name: 'Eliemerson Proenca', value:'eliemerson_proenca' },
-    { name: 'Julian Gamba', value:'Julian Gamba' },
-    { name: 'Daniel Berrios', value:'Daniel Berrios' },
-    { name: 'Luis Barrios', value:'Luis Barrios' },
-    { name: 'John Espinosa', value:'John Espinosa' },
-    { name: 'Alfredo Mora', value:'Alfredo Mora' },
-    { name: 'Lau Guerra', value:'lau_guerra' },
+    { name: 'Jorge Andrés Cataño', value: 'Jorge Andres Cataño' },
+    { name: 'Orlando Castañeda', value: 'Orlando Castañeda' },
+    { name: 'Alaín Alonso', value: 'Alaín Alonso' },
+    { name: 'Fernando Ramos', value: 'Fernando Ramos' },
+    { name: 'Miguel Morales', value: 'Miguel Morales' },
+    { name: 'Rich Harding', value: 'Rich Harding' },
+    { name: 'Eliemerson Proenca', value: 'eliemerson_proenca' },
+    { name: 'Julian Gamba', value: 'Julian Gamba' },
+    { name: 'Daniel Berrios', value: 'Daniel Berrios' },
+    { name: 'Luis Barrios', value: 'Luis Barrios' },
+    { name: 'John Espinosa', value: 'John Espinosa' },
+    { name: 'Alfredo Mora', value: 'Alfredo Mora' },
+    { name: 'Lau Guerra', value: 'lau_guerra' },
   ]
   eliemerson = [
     { name: 'Elkin German Gamba Velasquez' },
@@ -123,138 +117,156 @@ export class SignUpComponent implements OnInit {
   validRedMen: boolean = false;
   validredWomen: boolean = false;
   validMinisterio: string = '';
-  validEliemerson:boolean=false;
-  validJohana:boolean=false;
-  validLau:boolean=false;
-  validSara:boolean=false;
+  validEliemerson: boolean = false;
+  validJohana: boolean = false;
+  validLau: boolean = false;
+  validSara: boolean = false;
   validTwelve: boolean = false;
   validOtraIglesia: boolean = false;
 
-  currentState=1
+  currentState = 1
 
   constructor(
     private dialogRef: MatDialogRef<SignUpComponent>,
     @Inject(MAT_DIALOG_DATA) data,
     private fb: FormBuilder,
-    private fire: FirestoreService
+    private fire: FirestoreService,
+    public utils: UtilsService
   ) {
     this.description = data.title;
     this.buildFormRegister();
   }
 
   ngOnInit() {
-    this.getCountries();        
+    this.getCountries();    
   }
 
-  getCountries() {
-    this.country.map(res => {
-      this.countries = res.data;    
-    })
-  }  
+  getCountries(): void {
+    this.utils.getCountries().subscribe(res => {
+      this.countries = res;
+    }) 
+  }
   buildFormRegister() {
     this.registerForm = this.fb.group({
-      nombre: [''],
-      apellidos: [''],
-      email: [''],
-      celular: [''],
+      nombre: ['', [Validators.required]],
+      apellidos: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      celular: ['', [Validators.required]],
       telefono: [''],
-      edad: [''],
-      pais: [''],
-      ciudad: [''],
-      iglesia: [''],
+      edad: ['', [Validators.required]],
+      pais: ['', [Validators.required]],
+      ciudad: ['', [Validators.required]],
+      iglesia: ['', [Validators.required]],
       otraIglesia: [''],
       sedeMci: [''],
       red: [''],
-      redHombres:[''],
-      redMujeres:[''],
+      redHombres: [''],
+      redMujeres: [''],
       // pastorPrincipal: [''],
-      redEliemerson:[''],
-      redJohanna:[''],
-      redLauGuerra:[''],
-      redSaraCastellanos:[''],
+      redEliemerson: [''],
+      redJohanna: [''],
+      redLauGuerra: [''],
+      redSaraCastellanos: [''],
       liderPrincipal: [''],
-      idioma: [''],
-      talleres: [''],
+      idioma: ['', [Validators.required]],
+      talleres: ['', [Validators.required]],
       firebase: [true],
-      terminosYCondiciones: [true],
-      date_register:[ new Date]
+      terminosYCondiciones: [true, [Validators.required]],
+      date_register: [new Date]
     })
     this.registerForm.valueChanges.subscribe(res => {
 
-      if(res.iglesia == 'pertenece_mci'){this.validSede=true; this.validOtraIglesia=false}
-      else if(res.iglesia == 'otra_iglesia'){
-        this.validOtraIglesia=true; this.validSede=false; this.validRed=false; 
-        this.validRedMen=false; this.validredWomen=false; this.validTwelve=false}
-      else if(res.iglesia == 'G12_church'){
-        this.validOtraIglesia=false; this.validSede=false; this.validRed=false;
-        this.validRedMen=false; this.validredWomen=false; this.validTwelve=true;
+      if (res.iglesia == 'pertenece_mci') { this.validSede = true;this.validTwelve=false; this.validOtraIglesia = false; console.log('pertenece') }
+      else if (res.iglesia == 'otra_iglesia') {
+        this.validOtraIglesia = true; this.validSede = false; this.validRed = false; console.log('otra')
+        this.validRedMen = false; this.validredWomen = false; 
+        res.sedeMci='';
+        res.red='';
+        res.redHombres='';
+        res.redMujeres='';
       }
-      else{this.validSede=false; this.validOtraIglesia=false; this.validRed=false; this.validredWomen=false; this.validRedMen=false; this.validTwelve=false}
+      else if (res.iglesia == 'G12_church') {
+        ; console.log('church')
+        this.validTwelve = true; this.validOtraIglesia = false; this.validSede = false; this.validRed = false;
+        this.validRedMen = false; this.validredWomen = false;
+        res.sedeMci='';
+        res.red='';
+        res.redHombres='';
+        res.redMujeres='';
+      }
+      else { this.validSede = false; this.validOtraIglesia = false; this.validRed = false; this.validredWomen = false; 
+        this.validRedMen = false; this.validTwelve = false; 
+        res.sedeMci='';
+        res.red='';
+        res.redHombres='';
+        res.redMujeres='';
+        console.log('else') };
 
-      if(res.sedeMci == 'bogota_principal'){this.validRed=true}
-      else{this.validRed=false; this.validRedMen=false}
 
-      if(res.red == 'Mujeres'){
-        this.validredWomen=true; this.validRedMen=false; this.validEliemerson=false; 
-        this.validLau=false; res.redHombres=''; }
-      else if(res.red == 'Hombres'){
-        this.validredWomen=false; this.validRedMen=true; this.validJohana=false; 
-        this.validSara=false; res.redMujeres=''}
-      
-        if(res.redHombres == 'lau_guerra'){
-          this.validEliemerson=false; this.validLau=true; this.validJohana=false; this.validSara=false;
-          res.redJohanna='';
-          res.redSaraCastellanos='';
-          res.redEliemerson='';        
-        }
-        else if(res.redHombres == 'eliemerson_proenca'){
-          this.validEliemerson=true; this.validLau=false; this.validJohana=false; this.validSara=false;
-          res.redJohanna='';
-          res.redSaraCastellanos='';        
-          res.redLauGuerra='';
-        }
-        else if(res.redMujeres == 'Johanna_proenca'){
-          this.validEliemerson=false; this.validLau=false; this.validJohana=true; this.validSara=false;        
-          res.redSaraCastellanos='';
-          res.redEliemerson='';
-          res.redLauGuerra='';      
-        }
-        else if(res.redMujeres == 'sara_castellanos'){
-          this.validEliemerson=false; this.validLau=false; this.validJohana=false; this.validSara=true;
-          res.redJohanna='';        
-          res.redEliemerson='';
-          res.redLauGuerra='';        
-        }
-        else{
-          this.validEliemerson=false; this.validLau=false; this.validJohana=false; this.validSara=false;
-          res.redJohanna='';
-          res.redSaraCastellanos='';
-          res.redEliemerson='';
-          res.redLauGuerra='';        
-        }  
+      if (res.sedeMci == 'bogota_principal') { this.validRed = true }
+      else { this.validRed = false; this.validRedMen = false };
 
+
+      if (res.red == 'Mujeres') {
+        this.validredWomen = true; this.validRedMen = false; this.validEliemerson = false;
+        this.validLau = false; res.redHombres = '';
+      }
+      else if (res.red == 'Hombres') {
+        this.validredWomen = false; this.validRedMen = true; this.validJohana = false;
+        this.validSara = false; res.redMujeres = ''
+      };
+
+
+      if (res.redHombres == 'lau_guerra') {
+        this.validEliemerson = false; this.validLau = true; this.validJohana = false; this.validSara = false;
+        res.redJohanna = '';
+        res.redSaraCastellanos = '';
+        res.redEliemerson = '';
+      }
+      else if (res.redHombres == 'eliemerson_proenca') {
+        this.validEliemerson = true; this.validLau = false; this.validJohana = false; this.validSara = false;
+        res.redJohanna = '';
+        res.redSaraCastellanos = '';
+        res.redLauGuerra = '';
+      }
+      else if (res.redMujeres == 'Johanna_proenca') {
+        this.validEliemerson = false; this.validLau = false; this.validJohana = true; this.validSara = false;
+        res.redSaraCastellanos = '';
+        res.redEliemerson = '';
+        res.redLauGuerra = '';
+      }
+      else if (res.redMujeres == 'sara_castellanos') {
+        this.validEliemerson = false; this.validLau = false; this.validJohana = false; this.validSara = true;
+        res.redJohanna = '';
+        res.redEliemerson = '';
+        res.redLauGuerra = '';
+      }
+      else {
+        this.validEliemerson = false; this.validLau = false; this.validJohana = false; this.validSara = false;
+        res.redJohanna = '';
+        res.redSaraCastellanos = '';
+        res.redEliemerson = '';
+        res.redLauGuerra = '';        
+      };
       console.log('respuesta: ', res)
     })
   }
-  
+
   saveUser(e: Event) {
     e.preventDefault();
-    if(this.registerForm.valid){
+    if (this.registerForm.valid) {
       const data = this.registerForm.value;
       this.fire.newUser(data)
-      this.currentState=2
+      this.currentState = 2
     }
-    this.registerForm.reset();
-    // setTimeout(() => {
-    //   this.close()
-    // }, 4000);
+    this.registerForm.reset();    
   }
   save() {
     this.dialogRef.close();
   }
   close() {
     this.registerForm.reset();
-    this.dialogRef.close(); 
+    this.dialogRef.close();
     this.fire.selectedUser = new userInterface();
   }
 }

@@ -1,3 +1,4 @@
+import { LoginComponent } from './../../modals/login/login.component';
 import { SignUpComponent } from './../../modals/sign-up/sign-up.component';
 import { ValidateUserComponent } from './../../modals/validate-user/validate-user.component'
 import { Component, OnInit } from '@angular/core';
@@ -16,17 +17,24 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  openLogin(){
+    const dialogConfig = new MatDialogConfig();    
+    dialogConfig.autoFocus = true;
+    dialogConfig.hasBackdrop = true;
+    dialogConfig.position = { top: '50px'}
+    dialogConfig.data ={ id:1, title:'Iniciar sesion'}    
+    const dialogRef = this.dialog.open(LoginComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(res => {      
+    })
+  }
   openCloseModal() {
-    const dialogConfig = new MatDialogConfig();
-    // dialogConfig.disableClose = true;
+    const dialogConfig = new MatDialogConfig();    
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
     dialogConfig.position = { top: '50px'}
     dialogConfig.data ={ id:1, title:'Registrate'}    
-
     const dialogRef = this.dialog.open(SignUpComponent, dialogConfig);
-    dialogRef.afterClosed().subscribe(res => {
-      // console.log('data modal: ', res)
+    dialogRef.afterClosed().subscribe(res => {      
     })
   }
 
@@ -35,11 +43,9 @@ export class HomeComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
     dialogConfig.position = { top: '50px'}
-    dialogConfig.data ={ id:2, title:'valida'}    
-
+    dialogConfig.data ={ id:2, title:'validar'}    
     const dialogRef = this.dialog.open(ValidateUserComponent, dialogConfig);
-    dialogRef.afterClosed().subscribe(res => {
-      // console.log('data modal: ', res)
+    dialogRef.afterClosed().subscribe(res => {      
     })
   }
 

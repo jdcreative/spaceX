@@ -1,0 +1,29 @@
+<div class="modal" tabindex="-1" role="dialog" style="display: contents;">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p>INICIAR <span>SESION</span></p>
+            </div>
+            <form [formGroup]="formlogin" (ngSubmit)="login($event)">
+                <div class="modal-body">
+                    <div class="formLogin">
+                        <div class="form-row">
+                            <label for="correo">Escribe tu correo electronico</label>
+                            <input type="text" class="form-control" id="correo"
+                                placeholder="Ingresa tu correo electronico" formControlName="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBtn modal-footer">
+                    <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">INGRESAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="content-modal">
+    
+    
+</div> -->
