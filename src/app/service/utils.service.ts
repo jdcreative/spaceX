@@ -16,21 +16,4 @@ export class UtilsService {
   };
   constructor(private http: HttpClient) { }
 
-  getCountries(): Observable<countryInterface[]>{
-    let countries = this.http.get<countryInterface[]>(this.urlApi)
-    .pipe(catchError(this.handleError<countryInterface[]>('getCountries', [])))
-    console.log(countries);
-    return countries
-  }
-  private handleError<T> (operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error); 
-
-      return of(result as T);
-    };
-  }
-
-
-
-  
 }

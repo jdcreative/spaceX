@@ -5,7 +5,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FirestoreService } from './../../service/firestore.service';
 import { userInterface } from '../../interfaces/user_interface';
 import { countryInterface } from './../../interfaces/country_interface';
+import { apicountry } from './../../service/apicountry';
 import { UtilsService } from '../../service/utils.service';
+import { DataUserService } from 'src/app/service/data-user.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -15,9 +17,9 @@ import { UtilsService } from '../../service/utils.service';
 export class SignUpComponent implements OnInit {
 
   description: string;
-  registerForm: FormGroup;  
-  
-  countries: any;
+  registerForm: FormGroup;
+  mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
+  countries = apicountry;
   cities = 0;
   language = [{ 'name': 'English' }, { 'name': 'Español' }, { 'name': 'português' }];
   pastoras = [
@@ -131,26 +133,21 @@ export class SignUpComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) data,
     private fb: FormBuilder,
     private fire: FirestoreService,
-    public utils: UtilsService
+    public utils: UtilsService,
+    public data_user: DataUserService
   ) {
     this.description = data.title;
     this.buildFormRegister();
   }
 
   ngOnInit() {
-    this.getCountries();    
   }
 
-  getCountries(): void {
-    this.utils.getCountries().subscribe(res => {
-      this.countries = res;
-    }) 
-  }
   buildFormRegister() {
     this.registerForm = this.fb.group({
       nombre: ['', [Validators.required]],
       apellidos: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.pattern(this.mailPattern)]],
       celular: ['', [Validators.required]],
       telefono: [''],
       edad: ['', [Validators.required]],
@@ -162,7 +159,6 @@ export class SignUpComponent implements OnInit {
       red: [''],
       redHombres: [''],
       redMujeres: [''],
-      // pastorPrincipal: [''],
       redEliemerson: [''],
       redJohanna: [''],
       redLauGuerra: [''],
@@ -170,37 +166,40 @@ export class SignUpComponent implements OnInit {
       liderPrincipal: [''],
       idioma: ['', [Validators.required]],
       talleres: ['', [Validators.required]],
-      firebase: [true],
       terminosYCondiciones: [true, [Validators.required]],
+      tribu: [''],
+      updated: [true],
       date_register: [new Date]
     })
     this.registerForm.valueChanges.subscribe(res => {
 
-      if (res.iglesia == 'pertenece_mci') { this.validSede = true;this.validTwelve=false; this.validOtraIglesia = false; console.log('pertenece') }
+      if (res.iglesia == 'pertenece_mci') { this.validSede = true; this.validTwelve = false; this.validOtraIglesia = false }
       else if (res.iglesia == 'otra_iglesia') {
-        this.validOtraIglesia = true; this.validSede = false; this.validRed = false; console.log('otra')
-        this.validRedMen = false; this.validredWomen = false; 
-        res.sedeMci='';
-        res.red='';
-        res.redHombres='';
-        res.redMujeres='';
+        this.validOtraIglesia = true; this.validSede = false; this.validRed = false; 
+        this.validRedMen = false; this.validredWomen = false;
+        res.sedeMci = '';
+        res.red = '';
+        res.redHombres = '';
+        res.redMujeres = '';
       }
       else if (res.iglesia == 'G12_church') {
-        ; console.log('church')
+        
         this.validTwelve = true; this.validOtraIglesia = false; this.validSede = false; this.validRed = false;
         this.validRedMen = false; this.validredWomen = false;
-        res.sedeMci='';
-        res.red='';
-        res.redHombres='';
-        res.redMujeres='';
+        res.sedeMci = '';
+        res.red = '';
+        res.redHombres = '';
+        res.redMujeres = '';
       }
-      else { this.validSede = false; this.validOtraIglesia = false; this.validRed = false; this.validredWomen = false; 
-        this.validRedMen = false; this.validTwelve = false; 
-        res.sedeMci='';
-        res.red='';
-        res.redHombres='';
-        res.redMujeres='';
-        console.log('else') };
+      else {
+        this.validSede = false; this.validOtraIglesia = false; this.validRed = false; this.validredWomen = false;
+        this.validRedMen = false; this.validTwelve = false;
+        res.sedeMci = '';
+        res.red = '';
+        res.redHombres = '';
+        res.redMujeres = '';
+        
+      };
 
 
       if (res.sedeMci == 'bogota_principal') { this.validRed = true }
@@ -246,20 +245,42 @@ export class SignUpComponent implements OnInit {
         res.redJohanna = '';
         res.redSaraCastellanos = '';
         res.redEliemerson = '';
-        res.redLauGuerra = '';        
-      };
-      console.log('respuesta: ', res)
-    })
+        res.redLauGuerra = '';
+      };   
+    });
   }
+  get nameUpdate() { return this.registerForm.get('nombre') };
+  get lastUpdate() { return this.registerForm.get('apellidos') };
+  get mailUpdate() { return this.registerForm.get('email') };
+  get phoneUpdate() { return this.registerForm.get('celular') };
+  get ageUpdate() { return this.registerForm.get('edad') };
+  get countryUpdate() { return this.registerForm.get('pais') };
+  get cityUpdate() { return this.registerForm.get('ciudad') };
+  get churchUpdate() { return this.registerForm.get('iglesia') };
+  get languageUpdate() { return this.registerForm.get('idioma') };
+  get workShopUpdate() { return this.registerForm.get('talleres') };
+  get terminos() { return this.registerForm.get('terminosYCondiciones') };
 
   saveUser(e: Event) {
     e.preventDefault();
     if (this.registerForm.valid) {
       const data = this.registerForm.value;
-      this.fire.newUser(data)
-      this.currentState = 2
+      // this.fire.newUser(data)
+      this.data_user.createUser(data).subscribe(res => {
+        // console.log('rs de la new user: ', res.estado);
+        if (res.estado) {
+          // console.log('entro aqui')
+          this.currentState = 2
+        } else {
+          // console.log('entro al false')
+          this.currentState = 3
+        }
+      }, err => {
+        // console.error('error en el new user', err)
+      })
+    } else {
+      this.currentState = 4
     }
-    this.registerForm.reset();    
   }
   save() {
     this.dialogRef.close();

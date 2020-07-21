@@ -13,21 +13,29 @@
                             <label for="inputNombre">Nombre</label>
                             <input type="email" class="form-control" id="inputNombre" formControlName="nombre"
                                 placeholder="escribe tu nombre">
-                            <div class="invalid-feedback"
-                                *ngIf="registerForm.get('nombre').invalid && (registerForm.get('nombre').touched || registerForm.get('nombre').dirty) ">
-                                <p *ngIf="registerForm.get('nombre').hasError('required')">Example invalid input group feedback
-                                </p>
+                            <div *ngIf="nameUpdate.invalid && (nameUpdate.touched || nameUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="nameUpdate.hasError('required')">Debes ingresar tu Nombre</p>
                             </div>
+
                         </div>
                         <div class="form-group col-md-5">
                             <label for="inputApellido">Apellidos</label>
                             <input type="text" class="form-control" id="inputApellido" formControlName="apellidos"
                                 placeholder="escribe tu apellido">
+                            <div *ngIf="lastUpdate.invalid && (lastUpdate.touched || lastUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="lastUpdate.hasError('required')">Debes ingresar tu Apellido</p>
+                            </div>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputEdad">Edad</label>
                             <input type="text" class="form-control" id="inputEdad" formControlName="edad"
                                 placeholder="cual es tu edad">
+                            <div *ngIf="ageUpdate.invalid && (ageUpdate.touched || ageUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="ageUpdate.hasError('required')">Debes ingresar tu Edad</p>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
@@ -35,20 +43,28 @@
                             <label for="inputEmail">Correo Electronico</label>
                             <input type="email" class="form-control" id="inputEmail" formControlName="email"
                                 placeholder="cual es tu correo electronico">
+                            <div *ngIf="mailUpdate.invalid && (mailUpdate.touched || mailUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="mailUpdate.hasError('required')">Debes ingresar tu Correo Electronico</p>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputCelular">Celular</label>
                             <input type="text" class="form-control" id="inputCelular" formControlName="celular"
                                 placeholder="escribe tu numero de celular">
+                                <div *ngIf="phoneUpdate.invalid && (phoneUpdate.touched || phoneUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="phoneUpdate.hasError('required')">Debes ingresar tu Correo Electronico</p>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputTelefono">Telefono</label>
                             <input type="text" class="form-control" id="inputTelefono" formControlName="telefono"
                                 placeholder="escribe tu numero telefonico fijo">
+                                
                         </div>
                     </div>
-        
-                    <!-- select  country-->
+
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputState">Pais</label>
@@ -56,15 +72,22 @@
                                 <option selected value="">Selecciona un pais...</option>
                                 <option *ngFor="let co of countries; index as i" [value]="co.name">{{co.name}}</option>
                             </select>
+                            <div *ngIf="countryUpdate.invalid && (countryUpdate.touched || countryUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="countryUpdate.hasError('required')">Debes Seleccionar tu pais</p>
+                            </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputCiudad">Ciudad</label>
                             <input type="text" class="form-control" id="inputCiudad" placeholder="donde vives"
                                 formControlName="ciudad">
+                                <div *ngIf="cityUpdate.invalid && (cityUpdate.touched || cityUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="cityUpdate.hasError('required')">Debes Ingresar tu ciudad</p>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
-                        <!-- select church-->
                         <div class="form-group col-md-4">
                             <label for="inputChurch">Iglesia</label>
                             <select id="inputChurch" class="form-control custom-select" formControlName="iglesia">
@@ -74,13 +97,17 @@
                                 <option value='otra_iglesia'>Otra Iglesia</option>
                                 <option value='ninguna'>No pertenezco a ninguna iglesia</option>
                             </select>
+                            <div *ngIf="churchUpdate.invalid && (churchUpdate.touched || churchUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="churchUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
+                            </div>
                         </div>
                         <div *ngIf="validOtraIglesia" class="form-group col-md-5">
                             <label for="inputOtraIglesia">Nombre de tu Iglesia</label>
                             <input type="text" class="form-control" id="inputOtraIglesia"
                                 placeholder="Escribe el nombre de tu Iglesia" formControlName="otraIglesia">
                         </div>
-                        <!-- soy parte de mci -->
+
                         <div *ngIf="validSede" class="form-group col-md-5">
                             <label for="inputSede">Sede</label>
                             <select id="inputSede" class="form-control custom-select" formControlName="sedeMci">
@@ -137,7 +164,7 @@
                                     <option value='mci-maracaibo'>MCI Maracaibo</option>
                                     <option value='mci-yaritagua'>MCI Yaritagua</option>
                                 </optgroup>
-        
+
                                 <optgroup label="Nacionales - Antioquia">
                                     <option value='mci-medellin'>MCI Medellin</option>
                                     <option value='mci-occidente'>MCI Occidente</option>
@@ -180,22 +207,22 @@
                                 <optgroup label="Nacionales - Cordoba">
                                     <option value='mci-monteria'>MCI Monteria</option>
                                 </optgroup>
-        
+
                                 <optgroup label="Nacionales - Huila">
                                     <option value='mci-neiva'>MCI Neiva</option>
                                     <option value='mci-garzon'>MCI Garzon</option>
                                     <option value='mci-pitalito'>MCI Pitalito</option>
                                     <option value='mci-la-plata'>MCI La Plata</option>
                                 </optgroup>
-        
+
                                 <optgroup label="Nacionales - Magdalena">
                                     <option value='mci-santa-marta'>MCI Santa Marta</option>
                                 </optgroup>
-        
+
                                 <optgroup label="Nacionales - Guajira">
                                     <option value='mci-maicao'>MCI Maicao</option>
                                 </optgroup>
-        
+
                                 <optgroup label="Nacionales - Meta">
                                     <option value='mci-villavicencio'>MCI Villavicencio</option>
                                     <option value='mci-acacias'>MCI Acacias</option>
@@ -262,7 +289,7 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <!-- mci- bogota -->
+
                         <div *ngIf="validRed" class="form-group col-md-3">
                             <label for="inputMinistry">Red / Ministerio</label>
                             <select id="inputMinistry" class="form-control custom-select" formControlName="red">
@@ -276,23 +303,27 @@
                         <div *ngIf="validRedMen || validredWomen" class="form-group col-md-5">
                             <div *ngIf="validRedMen">
                                 <label for="inputPastor">Pastor principal</label>
-                                <select id="inputPastor" class="form-control custom-select" formControlName="redHombres">
+                                <select id="inputPastor" class="form-control custom-select"
+                                    formControlName="redHombres">
                                     <option value="">Selecciona tu Pastor</option>
                                     <option *ngFor="let ps of pastores" [value]="ps.value">{{ps.name}}</option>
                                 </select>
                             </div>
                             <div *ngIf="validredWomen">
                                 <label for="inputPastora">Pastora principal</label>
-                                <select id="inputPastora" class="form-control custom-select" formControlName="redMujeres">
+                                <select id="inputPastora" class="form-control custom-select"
+                                    formControlName="redMujeres">
                                     <option value="">Selecciona tu Pastora...</option>
                                     <option *ngFor="let ps of pastoras" [value]="ps.value">{{ps.name}}</option>
                                 </select>
                             </div>
                         </div>
-                        <div *ngIf="validEliemerson || validLau || validJohana || validSara" class="form-group col-md-4">
+                        <div *ngIf="validEliemerson || validLau || validJohana || validSara"
+                            class="form-group col-md-4">
                             <div *ngIf="validEliemerson">
                                 <label for="inputEli">Red Eliemerson</label>
-                                <select id="inputEli" class="form-control custom-select" formControlName="redEliemerson">
+                                <select id="inputEli" class="form-control custom-select"
+                                    formControlName="redEliemerson">
                                     <option value="">Selecciona tu Lider de 12</option>
                                     <option *ngFor="let eli of eliemerson" [value]="eli.name">{{eli.name}}</option>
                                 </select>
@@ -306,14 +337,16 @@
                             </div>
                             <div *ngIf="validJohana">
                                 <label for="inputJohanna">Red Johana Proenca</label>
-                                <select id="inputJohanna" class="form-control custom-select" formControlName="redJohanna">
+                                <select id="inputJohanna" class="form-control custom-select"
+                                    formControlName="redJohanna">
                                     <option value="">Selecciona tu Lider de 12</option>
                                     <option *ngFor="let joh of johana" [value]="joh.name">{{joh.name}}</option>
                                 </select>
                             </div>
                             <div *ngIf="validSara">
                                 <label for="inputSara">Red Sara Castellanos</label>
-                                <select id="inputSara" class="form-control custom-select" formControlName="redSaraCastellanos">
+                                <select id="inputSara" class="form-control custom-select"
+                                    formControlName="redSaraCastellanos">
                                     <option value="">Selecciona tu Lider de 12</option>
                                     <option *ngFor="let sa of sara" [value]="sa.name">{{sa.name}}</option>
                                 </select>
@@ -325,7 +358,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputTaller">Seleccione un Taller</label>
@@ -338,6 +371,10 @@
                                 <option value='Creativo'>Creativo</option>
                                 <option value='Carrera'>Carrera</option>
                             </select>
+                            <div *ngIf="workShopUpdate.invalid && (workShopUpdate.touched || workShopUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="workShopUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
+                            </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputIdioma">Seleccione un Idioma</label>
@@ -345,20 +382,30 @@
                                 <option value=''>Seleccione un Idioma</option>
                                 <option *ngFor="let lang of language" [value]="lang.name">{{lang.name}}</option>
                             </select>
+                            <div *ngIf="languageUpdate.invalid && (languageUpdate.touched || languageUpdate.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="languageUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
+                            </div>                            
                         </div>
                         <div class="form-group col-md-4 col-auto" style="margin-top: auto">
                             <div class="form-check mb-2" style="display: flex;">
-                                <input class="form-check-input" type="checkbox" id="terminosYCondiciones" class="margin-top: 0">
+                                <input class="form-check-input" type="checkbox" id="terminosYCondiciones"
+                                    class="margin-top: 0" formControlName="terminosYCondiciones">
                                 <label class="form-check-label" for="terminosYCondiciones" style="margin-left: 10px;">
                                     Acepto Terminos y condiciones
                                 </label>
                             </div>
+                            <div *ngIf="terminos.invalid && (terminos.touched || terminos.dirty)"
+                                class="invalid-feedback">
+                                <p *ngIf="terminos.hasError('required')">Debes aceptar los terminos y condiciones</p>
+                            </div> 
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="contetBtn">
-                        <button class="btn" type="submit">REGISTRARME</button>
+                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]="registerForm.invalid"
+                        [ngClass]="{'buttonform': registerForm.valid}">REGISTRARME</button>
                     </div>
                 </div>
             </form>
@@ -367,7 +414,21 @@
             <div class="modal-header">
                 <div  class="okGO">
                     <p class="okRegiter">tu registro a sido exitoso</p>
-                    <p class="GO">preparate para la conveción SOMOS UNO GO!</p>
+                    <p class="GO">preparate para la conveción<span> SOMOS UNO GO!</span></p>
+                </div>
+            </div>           
+        </div>
+        <div *ngIf="currentState == 3" class="modal-content">
+            <div class="modal-header">
+                <div  class="okGO">                    
+                    <p class="GO">LO SENTIMOS TU USUARIO <span>YA EXISTE!</span></p>
+                </div>
+            </div>           
+        </div>
+        <div *ngIf="currentState == 4" class="modal-content">
+            <div class="modal-header">
+                <div class="okGO">
+                    <p class="GO">ALGO HA SALIDO MAL <span>INTENTALO NUEVAMENTE</span></p>
                 </div>
             </div>           
         </div>

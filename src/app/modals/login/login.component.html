@@ -1,6 +1,6 @@
 <div class="modal" tabindex="-1" role="dialog" style="display: contents;">
     <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
+        <div *ngIf=" currentState == 0" class="modal-content">
             <div class="modal-header">
                 <p>INICIAR <span>SESION</span></p>
             </div>
@@ -19,11 +19,12 @@
                 </div>
             </form>
         </div>
+        <div *ngIf="currentState == 1" class="modal-content">
+            <div class="modal-header">
+                <div class="okGO">
+                    <p class="GO">DENTRO DE POCO PODRAS DISFRUTAR DE LA MEJOR EXPERIENCIA <span>SOMOS UNO GO!!</span></p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-
-<!-- <div class="content-modal">
-    
-    
-</div> -->

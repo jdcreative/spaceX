@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
 
   description: string;
   formlogin:FormGroup;
+  currentState=0;
   constructor(
     private dialogRef: MatDialogRef<LoginComponent>,
     @Inject(MAT_DIALOG_DATA) data,
@@ -30,16 +31,16 @@ export class LoginComponent implements OnInit {
       email:['', [Validators.required]]
     });
     this.formlogin.valueChanges.subscribe(res=>{
-      console.log('login : ', res);
+      // console.log('login : ', res);
     })
   }
   login(e:Event){
     e.preventDefault();
     if(this.formlogin.valid){
       const data = this.formlogin.value;
-      console.log('formulary : ', data);
+      // console.log('formulary : ', data);
       this.data_user.getDataUser(data.email).subscribe(res=>{
-        console.log('lo que recibo del user: ',res)
+        this.currentState = 1;        
       }, err =>{console.log(  'error:', err)})
     }
   }

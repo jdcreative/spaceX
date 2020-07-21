@@ -4,7 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { FirestoreService } from './../../service/firestore.service';
 import { UtilsService } from './../../service/utils.service'
+import { DataUserService } from './../../service/data-user.service';
 import { userInterface } from '../../interfaces/user_interface';
+import { apicountry } from './../../service/apicountry';
 
 @Component({
   selector: 'app-validate-user',
@@ -16,12 +18,17 @@ export class ValidateUserComponent implements OnInit {
   description: string;
   formValid: FormGroup;
   formUpdate: FormGroup;
+  formValidateCode:FormGroup;
   mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
+  numberPattern: any =/^[0-9]{6}$/;
   public dataUser = [];
   private idUser = [];
   dateRegister:any;
   selectedUser: userInterface = new userInterface();
   currentState: number = 0;
+  codeUser:number;
+  errCode:string='';
+  mailCode:string='';
 
   validSede: boolean = false;
   validRed: boolean = false;
@@ -34,8 +41,8 @@ export class ValidateUserComponent implements OnInit {
   validSara:boolean=false;
   validTwelve: boolean = false;
   validOtraIglesia: boolean = false;  
-  countries: any;
-  cities = 0;
+  countries=apicountry;
+  loader:boolean=false;  
   language = [{ 'name': 'English' }, { 'name': 'Español' }, { 'name': 'português' }];
   pastoras = [
     { name: 'Margarita Cataño', value:'Margarita Cataño'},
@@ -135,21 +142,16 @@ export class ValidateUserComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) data,
     private fb: FormBuilder,
     private fire: FirestoreService,
-    public util: UtilsService
+    public util: UtilsService,
+    public data_user: DataUserService
   ) {
     this.description = data.title;
     this.buildForm();
+    this.buildValidateCode();
     this.buildFormUpdate();
   }
 
-  ngOnInit() { 
-    this.getCountries();     
-  }
-
-  getCountries() {
-    this.util.getCountries().subscribe(res=>{
-      this.countries = res;
-    })
+  ngOnInit() {     
   }
   // valid mail form
   buildForm() {
@@ -162,24 +164,42 @@ export class ValidateUserComponent implements OnInit {
     e.preventDefault();
     if (this.formValid.valid) {
       const data = this.formValid.value;
-      this.fire.getOneUser(data.email).snapshotChanges().subscribe((item) => {        
-        this.dataUser = [];
-        item.forEach(data => {
-          let id = data.payload.doc.id;
-          let user = data.payload.doc.data();
-          this.idUser.push(id as any);
-          this.dataUser.push(user as userInterface)
-          this.currentState = 2;
-          console.log('id del user: ', this.idUser[0]);
-        })
-        this.selectedUser = this.dataUser[0]        
-        console.log('data user: ', this.selectedUser);
-        this.setValues(); 
-              
-      },(err)=>console.log('error', err));      
+      this.data_user.getCodeSesion(data.email).subscribe(res=>{
+        this.mailCode = data.email;
+        this.codeUser = res.code;
+        // console.log('res de code:', res);
+        this.currentState = 1;
+      }, err=>{console.log('error: ', err)});
+      this.data_user.getDataUser(data.email).subscribe(res=>{
+        this.selectedUser = res;
+        setTimeout(() => {
+          this.setValues();
+        }, 200);
+        // console.log('toda la data del user: ',res);
+      }, err =>{console.log('err :', err)})
     }    
   }
-  
+  // validate code
+  buildValidateCode(){
+    this.formValidateCode = this.fb.group({
+      code:['', [Validators.required, Validators.pattern(this.numberPattern), Validators.minLength(6)]]
+    })
+  }
+  get code(){return this.formValidateCode.get('code')};
+  validateCode(e:Event){
+    e.preventDefault();
+    if(this.formValidateCode.valid){
+      const data = this.formValidateCode.value;
+      // console.log('la data del code: ',data.code)
+      // console.log('code: ', this.codeUser)
+      if(data.code == this.codeUser){        
+        this.currentState = 2;        
+      }else{
+        this.errCode='El codigo que has ingresado es incorrecto, intentalo de nuevo';        
+      }
+           
+    }
+  }
   // update data form
   buildFormUpdate() {    
     this.formUpdate = this.fb.group({
@@ -189,7 +209,7 @@ export class ValidateUserComponent implements OnInit {
       celular: ['',[Validators.required]],
       telefono: [''],
       edad: ['',[Validators.required]],
-      pais: ['',,[Validators.required]],
+      pais: ['',[Validators.required]],
       ciudad: ['',[Validators.required]],
       iglesia: ['',[Validators.required]],
       otraIglesia: [''],
@@ -202,10 +222,11 @@ export class ValidateUserComponent implements OnInit {
       redLauGuerra: [''],
       redSaraCastellanos: [''],
       liderPrincipal: [''],
-      idioma: ['',,[Validators.required]],
-      talleres: ['',[Validators.required]],
-      firebase: [true],
-      terminosYCondiciones: [true,,[Validators.required]]
+      idioma: ['',[Validators.required]],
+      talleres: ['',[Validators.required]],      
+      terminosYCondiciones: [true,[Validators.required]],
+      tribu:[''],
+      updated:[true]
     });
     this.formUpdate.valueChanges.subscribe(res=>{
       if(res.iglesia == 'pertenece_mci'){this.validSede=true; this.validOtraIglesia=false}
@@ -271,6 +292,7 @@ export class ValidateUserComponent implements OnInit {
   get churchUpdate(){return this.formUpdate.get('iglesia')};
   get languageUpdate(){return this.formUpdate.get('idioma')};
   get workShopUpdate(){return this.formUpdate.get('talleres')};
+  get terminos(){return this.formUpdate.get('terminosYCondiciones')};
   setValues(){
     this.formUpdate.controls['nombre'].setValue(this.selectedUser.nombre);
     this.formUpdate.controls['apellidos'].setValue(this.selectedUser.apellidos);
@@ -293,22 +315,32 @@ export class ValidateUserComponent implements OnInit {
     this.formUpdate.controls['liderPrincipal'].setValue(this.selectedUser.liderPrincipal);
     this.formUpdate.controls['idioma'].setValue(this.selectedUser.idioma);
     this.formUpdate.controls['talleres'].setValue(this.selectedUser.talleres);
+    this.formUpdate.controls['terminosYCondiciones'].setValue(this.selectedUser.terminosYCondiciones);
   }
   updateUser(e: Event) {
     e.preventDefault;
     if (this.formUpdate.valid) {
       const data = this.formUpdate.value;      
-      this.fire.updateUser(this.idUser[0], data)
-      setTimeout(() => {
-        this.currentState=4;
-      }, 200);
+      this.data_user.updateDataUser(data).subscribe(res=>{
+        if(res== true){
+          setTimeout(() => {
+            this.currentState=4;
+          }, 200);          
+        }else{
+          setTimeout(() => {
+            this.currentState=5;
+          }, 200); 
+        }        
+      }, err=>{console.error('error del update: ', err)})
+      
       close()
     }
   }
   close() {
-
+    this.formValid.reset();
+    this.formValidateCode.reset();
+    this.formUpdate.reset();
     this.dialogRef.close();
-
   }
 
 }

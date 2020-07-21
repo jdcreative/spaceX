@@ -27,6 +27,18 @@
 .form-control{
     border-radius: 20px;
 }
+.titleFecha{
+    font-size: 16px;
+    font-weight: 900;
+    color: #4f4f4f;
+    text-align: center; 
+}
+.fecha{
+    font-size: 22px;
+    font-weight: 900;
+    color: black;
+    text-align: center;    
+}
 input[type=checkbox]{
     box-sizing: border-box;
     padding: 0;
@@ -35,6 +47,7 @@ input[type=checkbox]{
 }
 .invalid-feedback{
     display: block;
+    color: black;
 }
 .contentBtnValidar{
     display: flex;

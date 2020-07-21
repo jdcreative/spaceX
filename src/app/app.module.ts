@@ -14,7 +14,6 @@ import {
   MatOptionModule
 } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +24,6 @@ import { SignUpComponent } from './modals/sign-up/sign-up.component';
 //services
 import { FirestoreService } from './service/firestore.service';
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
-import { apicountry } from './service/apicountry';
 import { LoginComponent } from './modals/login/login.component';
 
 @NgModule({
@@ -41,8 +39,7 @@ import { LoginComponent } from './modals/login/login.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatDialogModule,
-    // MatRadioGroup,
+    MatDialogModule,    
     MatRadioModule,
     MatOptionModule,
     MatSelectModule,
@@ -50,14 +47,10 @@ import { LoginComponent } from './modals/login/login.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),    
-    AppRoutingModule,
-    
-    HttpClientInMemoryWebApiModule.forRoot(
-      apicountry, { dataEncapsulation: false },)
+    AppRoutingModule,   
   ],
   providers: [
-    AngularFirestore,
-    apicountry
+    AngularFirestore,    
   ],
   bootstrap: [AppComponent],
   entryComponents: [

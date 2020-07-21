@@ -1,18 +1,16 @@
-export class userInterface {
-    $key:string;
+export class userInterface {    
     nombre: string;
     apellidos: string;
     email: string;
     celular: string;
     telefono: string;
-    edad: number;
+    edad: string;
     pais: string;
     ciudad: string;
     iglesia: string;
     otraIglesia: string;
     sedeMci: string;
-    red: string;
-    // pastorPrincipal: string;
+    red: string;    
     redHombres:string;
     redMujeres:string;
     liderPrincipal: string;
@@ -21,8 +19,9 @@ export class userInterface {
     redSaraCastellanos:string;
     redLauGuerra:string;
     idioma: string;
-    talleres: string;
-    firebase: boolean;
+    talleres: string;    
     terminosYCondiciones: boolean;
-    date_register:string
+    date_register:string;
+    tribu:string;
+    updated:boolean;
 }
