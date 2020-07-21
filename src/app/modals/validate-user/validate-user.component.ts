@@ -347,10 +347,10 @@ export class ValidateUserComponent implements OnInit {
         }
       }, err => { console.error('error del update: ', err) })
 
-      close()
+     
     }
   }
-  close() {
+  closemodal() {
     this.formValid.reset();
     this.formValidateCode.reset();
     this.formUpdate.reset();
