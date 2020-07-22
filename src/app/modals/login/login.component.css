@@ -1,6 +1,6 @@
 ::ng-deep.mat-dialog-container{
     width: auto;
-    background: url(../../../assets/back/watherPink.jpg);
+    background: url(../../../assets/media/modals/1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -42,6 +42,7 @@
     font-weight: 900;
     background: yellow;
     opacity: 1;
+    border-radius: 30%;
 }
 .btnLogin:hover{
     background: rgb(206, 206, 3);

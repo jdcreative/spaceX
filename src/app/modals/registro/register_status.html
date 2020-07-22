@@ -1,10 +1,167 @@
 <div class="modal" tabindex="-1" role="dialog" style="display: contents;">
     <div class="modal-dialog modal-dialog-scrollable modal-xl">
-        <div *ngIf="currentState == 1" class="modal-content">
-            <form [formGroup]="registerForm" (ngSubmit)="saveUser($event)">
+        <div *ngIf="currentState == 0" class="modal-content">
+            <form [formGroup]="formValid" (ngSubmit)="validateForm($event)">
                 <div class="modal-header">
-                    <div class="contentImgModal">
-                        <img src="../../../assets/back/registro_textoMRegistro.png" width="400">
+                    <div class="contentTitle">
+                        <p class="titleModalvalidate">Bienvenido</p>
+                    </div>
+                </div>
+				<p class="titleModalvalidate">hemos enviado un mensaje de confirmación a tu correo, confirma para poder ingresar a la plataforma.</span></p>
+                <div class="modal-footer">
+                    <div class="contentBtnValidar">
+                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]="formValid.invalid"
+                            [ngClass]="{'buttonform': formValid.valid}">CONFIRMAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div *ngIf="currentState == 1" class="modal-content">
+            <form [formGroup]="formValidateCode" (ngSubmit)="validateCode($event)">
+                <div class="modal-footer">
+                    <div class="contentBtnValidar">
+                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]=" formValidateCode.invalid"
+                            [ngClass]="{'buttonform': formValidateCode.valid}">INGRESAR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div *ngIf="currentState == 2" class="modal-content">
+            <div class="modal-header">
+                <div class="contentTitle">
+                    <p class="titleModalvalidate">AQUI ENCONTRARAS LA LISTA DE LOS <span>
+                            DATOS QUE INGRESASTE</span></p>
+                </div>
+            </div>
+            <div class="modal-body" style="height: 300px;">
+                <div class="col-md-12">
+                    <label class="titleFecha">Tu fecha de Registro fue: </label>
+                    <p class="fecha">{{selectedUser.date_register | date}}</p>
+                </div>
+                <div class="row" style="display: flex;">
+                    <div class="col-md-5">
+                        <label class="labels"><span class="stc">*</span>Nombre: </label>
+                        <p class="form-control">{{selectedUser.nombre}}</p>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="labels"><span class="stc">*</span>Apellidos:</label>
+                        <p class="form-control"> {{selectedUser.apellidos}}</p>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="labels"><span class="stc">*</span>Edad: </label>
+                        <p class="form-control">{{selectedUser.edad  ? selectedUser.edad : '--'}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Correo Electronico: </label>
+                        <p class="form-control">{{selectedUser.email }}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Celular: </label>
+                        <p class="form-control">
+                            {{selectedUser.celular ? selectedUser.celular : 'no registrado'}}
+                        </p>
+                    </div>
+                    <div *ngIf="selectedUser.telefono && selectedUser.telefono !='null'" class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Telefono: </label>
+                        <p class="form-control">
+                            {{selectedUser.telefono ? selectedUser.telefono : 'no registrado'}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="labels"><span class="stc">*</span>Pais: </label>
+                        <p class="form-control">
+                            {{selectedUser.pais ? selectedUser.pais : 'no has seleccionado un pais'}}
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels"><span class="stc">*</span>Ciudad: </label>
+                        <p class="form-control">
+                            {{selectedUser.ciudad ? selectedUser.ciudad : 'no has seleccionado una ciudad'}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Iglesia: </label>
+                        <p class="form-control">{{selectedUser.iglesia }}</p>
+                    </div>
+                    <div *ngIf="selectedUser.otraIglesia && selectedUser.otraIglesia != 'null'" class="col-md-5">
+                        <label class="labels"><span class="stc">*</span> Nombre de tu Iglesia: </label>
+                        <p class="form-control">{{selectedUser.otraIglesia}}</p>
+                    </div>
+                    <div *ngIf="selectedUser.sedeMci && selectedUser.sedeMci != 'null'" class="col-md-5">
+                        <label class="labels"><span class="stc">*</span>Sede: </label>
+                        <p class="form-control">{{selectedUser.sedeMci}}</p>
+                    </div>
+                    <div *ngIf="selectedUser.red && selectedUser.red != 'null'" class="col-md-3">
+                        <label class="labels"><span class="stc">*</span>Red / Ministerio: </label>
+                        <p class="form-control">{{selectedUser.red}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngIf="selectedUser.redHombres && selectedUser.redHombres != 'null'" class="col-md-5">
+                        <label class="labels"><span class="stc">*</span>Tu Pastora Principal:</label>
+                        <p class="form-control"> {{selectedUser.redHombres}}</p>
+                    </div>
+                    <div *ngIf="selectedUser.redMujeres && selectedUser.redMujeres != 'null'" class="col-md-5">
+                        <label class="labels"><span class="stc">*</span>Tu Pastora Principal: </label>
+                        <p class="form-control">{{selectedUser.redMujeres}}</p>
+                    </div>
+                    <div *ngIf="selectedUser.redEliemerson && selectedUser.redEliemerson != 'null'" class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Red de Eliemerson proenca: </label>
+                        <p class="form-control">{{selectedUser.redEliemerson}}</p>
+                    </div>
+                    <div *ngIf="selectedUser.redJohanna && selectedUser.redJohanna != 'null'" class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Red de Johanna Proenca: </label>
+                        <p class="form-control">{{selectedUser.redJohanna}}</p>
+                    </div>
+                    <div *ngIf="selectedUser.redLauGuerra && selectedUser.redLauGuerra != 'null'" class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Red de Lau Guerra: </label>
+                        <p class="form-control">{{selectedUser.redLauGuerra}}</p>
+                    </div>
+                    <div *ngIf="selectedUser.redSaraCastellanos && selectedUser.redSaraCastellanos != 'null'" class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Red de Sara Guerra: </label>
+                        <p class="form-control">{{selectedUser.redSaraCastellanos}}</p>
+                    </div>
+                    <div *ngIf="selectedUser.liderPrincipal && selectedUser.liderPrincipal != 'null'" class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>Lider Principal: </label>
+                        <p class="form-control">{{selectedUser.liderPrincipal}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngIf="selectedUser.idioma && selectedUser.idioma != 'null'" class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>idioma seleccionado:</label>
+                        <p class="form-control">
+                            {{selectedUser.idioma ? selectedUser.idioma : 'no has seleccionado un idioma'}}
+                        </p>
+                    </div>
+                    <div *ngIf="selectedUser.talleres && selectedUser.talleres != 'null'" class="col-md-4">
+                        <label class="labels"><span class="stc">*</span>taller seleccionado: </label>
+                        <p class="form-control">
+                            {{selectedUser.talleres ? selectedUser.talleres : 'no has seleccionado un taller'}}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="contentBtnValidar">
+                    <button type="button" class="btn  buttonform" (click)="currentState = 3">ACTUALIZA TUS
+                        DATOS</button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="currentState == 3" class="modal-content">
+            <form [formGroup]="formUpdate" (ngSubmit)="updateUser($event)">
+                <div class="modal-header">
+                    <div class="contentTitle">
+                        <p class="titleModalvalidate">REVISA TUS DATOS<span>
+                                Y ACTUALIZALOS</span></p>
                     </div>
                 </div>
                 <div class="modal-body" style="height: 300px;">
@@ -403,43 +560,34 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="contetBtn">
-                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]="registerForm.invalid"
-                        [ngClass]="{'buttonform': registerForm.valid}">REGISTRARME</button>
+                    <div class="contentBtnValidar">
+                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]="formUpdate.invalid"
+                        [ngClass]="{'buttonform': formUpdate.valid}">ACEPTAR</button>
                     </div>
                 </div>
             </form>
         </div>
-        <div *ngIf="currentState == 2" class="modal-content">
-            <div class="modal-header">
-                <div  class="okGO">
-                    <p class="okRegiter"> actualización exitosa</p>
-                    <p class="GO">!ya estas listo! nos vemos en la convencion SOMOS uno GO.</p>
-                </div>
-            </div>  
-            <div class="modal-footer">
-                <div class="contetBtn">
-                    <button type="submit" class=" btn buttonform invalidBtn" [disabled]="registerForm.invalid"
-                    [ngClass]="{'buttonform': registerForm.valid}">INGRESAR</button>
-                </div>
-            </div>         
-        </div>
-        <div *ngIf="currentState == 3" class="modal-content">
-            <div class="modal-header">
-                <div  class="okGO">                    
-                    <p class="GO">LO SENTIMOS TU USUARIO <span>YA EXISTE!</span></p>
-                </div>
-            </div>           
-        </div>
         <div *ngIf="currentState == 4" class="modal-content">
             <div class="modal-header">
-                <div class="okGO">
-                    <p class="GO">ALGO HA SALIDO MAL <span>INTENTALO NUEVAMENTE</span></p>
+                <div class="contentTitle">
+                    <p class="titleModalvalidate">TUS DATOS <span>HAN SIDO ACTUALIZADOS</span></p>
                 </div>
-            </div>           
+            </div>
+        </div>
+        <div *ngIf="currentState == 5" class="modal-content">
+            <div class="modal-header">
+                <div class="contentTitle">
+                    <p class="titleModalvalidate">ALGO HA SALIDO MAL <span>INTENTALO NUEVAMENTE</span></p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="currentState == 6" class="modal-content">
+            <div class="modal-header">
+                <div class="contentTitle">
+                    <p class="titleModalvalidate">AL PARECER NO ESTAS REGISTRAD@ </p>
+                    <P class="titleModalvalidate"><span>TE INVITAMOS A QUE REALICES TU PROCESO DE REGISTRO</span></P>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-
-

@@ -2,13 +2,14 @@
     <div class="modal-dialog modal-dialog-scrollable">
         <div *ngIf=" currentState == 0" class="modal-content">
             <div class="modal-header">
-                <p>INICIAR <span>SESION</span></p>
+                <p style="text-align:center !important">INGRESA TU CORREO</p>
             </div>
+            <p style="color: white; text-align:center !important">ingresa el correo electrónico con el que te registraste, te enviaremos un codigo de seguridad para que puedas actualizar tu registro</p>
             <form [formGroup]="formlogin" (ngSubmit)="login($event)">
                 <div class="modal-body">
                     <div class="formLogin">
                         <div class="form-row">
-                            <label for="correo">Escribe tu correo electronico</label>
+                            <label style="color: white" for="correo">Escribe tu correo electronico</label>
                             <input type="text" class="form-control" id="correo"
                                 placeholder="Ingresa tu correo electronico" formControlName="email">
                         </div>
@@ -22,9 +23,76 @@
         <div *ngIf="currentState == 1" class="modal-content">
             <div class="modal-header">
                 <div class="okGO">
-                    <p class="GO">DENTRO DE POCO PODRAS DISFRUTAR DE LA MEJOR EXPERIENCIA <span>SOMOS UNO GO!!</span></p>
+                    <p class="GO"style="text-align:center !important">OH NO!</p>
                 </div>
             </div>
+            <p style="color: white; text-align:center">Tu correo no esta registrado en la base de datos, Realiza el registro.</p>
+            <div class="form-row">
+                <input type="text" class="form-control" id="correo"
+                    placeholder="Ingresa tu correo electronico" formControlName="email">
+            </div>
+            <div class="contentBtn modal-footer">
+                <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">REGISTRATE</button>
+            </div>
         </div>
+
+        <!-- Rgistro-->
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-header">
+                <div class="okGO">
+                    <p class="GO"style="text-align:center !important">Registro</p>
+                </div>
+            </div>
+            <p style="color: white; text-align:center">Tu correo no esta registrado en la base de datos, Realiza el registro.</p>
+            <div class="form-row">
+                <input type="text" class="form-control" id="correo"
+                    placeholder="Ingresa tu correo electronico" formControlName="email">
+            </div>
+            <div class="contentBtn modal-footer">
+                <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">REGISTRAME</button>
+            </div>
+          
+        </div>
+
+        <!-- Bienvenido-->
+
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-header">
+                <div class="okGO">
+                    <p class="GO"style="text-align:center !important">BIENVENIDO</p>
+                </div>
+            </div>
+            <p style="color: white; text-align:center">hemos enviado un mensaje de confirmación a tu correo, confirma para poder ingresar a la plataforma.</p>
+            <div class="form-row">
+                <input type="text" class="form-control" id="correo"
+                    placeholder="Ingresa tu correo electronico" formControlName="email">
+            </div>
+            <div class="contentBtn modal-footer">
+                <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">INGRESAR</button>
+            </div>
+          
+        </div>
+
+        <!-- wOO. ESTAS REGISTRADO-->
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-header">
+                <div class="okGO">
+                    <p class="GO"style="text-align:center !important">wow ya estabas registrado</p>
+                </div>
+            </div>
+            <p style="color: white; text-align:center"Busca el mensaje de confirmación en tu correo, confirma para poder ingresar a la plataforma.</p>
+            <div class="form-row">
+                <input type="text" class="form-control" id="correo"
+                    placeholder="Ingresa tu correo electronico" formControlName="email">
+            </div>
+            <div class="contentBtn modal-footer">
+                <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">INGRESAR</button>
+            </div>
+          
+        </div>
+
+
+
+
     </div>
 </div>
