@@ -1,8 +1,35 @@
 ::ng-deep.mat-dialog-container{
     width: auto;
-    background: url(../../../assets/back/watherPink.jpg);
+    padding: 0px;
+}
+.modal-header, .modal-footer{
+    border: 0px;
+}
+.modal-footer{
+    padding-bottom: 60px;
+}
+p.title-modal {
+    font-size: 35px;
+    margin-top: 20px;
+}
+.padding-50{
+    padding: 60px 40px 0px 40px;
+}
+.title-modal{
+    text-align: center;
+    width: 100%;
+}
+.dark{
+    color:black;
+}
+.light{
+    color:white;
+}
+.modal-dialog{
+    background: url(../../../assets/back/shadow_modal_01.jpg);
     background-size: cover;
     background-position: center;
+    margin: 0px !important;
 }
 .modal-content{
     background: transparent;
@@ -25,7 +52,13 @@
     max-height: calc(90vh - 3.5rem);
 }
 .form-control{
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+.label {
+    display: inline-block;
+    margin-bottom: .2rem;
+    color: white;
 }
 .titleFecha{
     font-size: 16px;
@@ -57,11 +90,18 @@ input[type=checkbox]{
 .buttonform{
     border-radius: 20px;
     padding: 8px 25px;
-    color: #4f4f4f !important;
-    font-size: 22px;
+    color: #000000 !important;
+    font-size: 15px !important;
     font-family: 'Roboto';
     font-weight: 900;
     background: yellow !important;
+    width: 50%;
+}
+label {
+    display: inline-block;
+    margin-bottom: .2rem;
+    color: #c1c1c1;
+    font-size: 13px;
 }
 .invalidBtn{
     border-radius: 20px;
