@@ -5,7 +5,7 @@
 }
 .logoNavbar{
     width: 104px;
-    margin: 20px 70px;
+    margin-left: 2vw;
 }
 .menuNavbar{
     display: flex;
@@ -16,7 +16,10 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    margin-right: 60px;
+    margin-right: 200px;
+}
+@media screen and (max-width:991px){
+    .allNets{display: none;}
 }
 .netLink{    
     margin: auto 20px;
@@ -31,7 +34,9 @@
     border:none;
     border-radius: 40px;
     background: white;
-    width: 220px;
+    width: 25%;
+    min-width: 150px;
+    max-width: 200px;
     height: 50px;
     font-size: 16px;
     text-align: center;
@@ -239,7 +244,7 @@
     margin-top: 70px;
 }
 .titleHow{
-    width: fit-content;
+    width: 55%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -253,7 +258,9 @@
 .contentActions{
     margin-top: 70px;
     display: flex;
-    justify-content: center;
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;;
 }
 .contentActionsTwo{    
     width: 100%;
@@ -265,8 +272,8 @@
 }
 .actionOne, .actionTwo, .actionThree,
 .actionFive, .actionSix{
-    width: 244px;
-    height: 168px;
+    width: 100%;
+    padding: 7%;
     margin: 10px;
     font-size: 30px;    
     font-weight: bold;
@@ -286,7 +293,7 @@
 .actionTwo{background: #E5E5E5;}
 .actionThree{background: #FF6F57;}
 .actionFour{
-    width: 244px;
+    width: 22.5%;
     height: 356px;
     background: #F89FDC;
     margin: 10px;    
@@ -314,49 +321,24 @@
     align-items: center;
     color: white;
 }
-/*  */
-.registerTwo{
-    width: 100%;
-    height: 130px;
-    background: #FFFFFF;
-    display: flex;
-    align-items: center;
-}
-.content-imgRgisterTwo{
-    margin-left: auto;
-    margin-right: 13px;
-}
-.buttonRegisterTwo{
-    margin-left: 13px;
-    margin-right: auto;
-}
-.btnRegTwo{
-    width: 237px;
-    height: 80px;
-    background: black;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 35px;
-    color: white;
-}
+
 /*  */
 .watherPink{
     background: url(../../../assets/back/watherPink.jpg);
+    height: calc(500em /11.2);
     background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 580px;
+    background-size: cover;    
     display: flex;
     justify-content: center;
 }
 .contentWeAreOne{
-    width: 800px;
+    width: 77%;
     position: absolute;    
-    margin-top: 120px;
+    margin-top: 11%;
 }
 .titleOne{
     font-weight: bold;
-    font-size: 40px;
+    font-size: calc(1em + 1.5vw);
     color: black;
     margin-bottom: -30px;
     
@@ -364,18 +346,15 @@
 .whatOne{
     background: transparent;
     padding: 20px 0;
-    font-size: 18px;
+    font-size: calc(.7em + 1vw);
     color: white;
 }
 .versOne{
     background: #1C1C1C;
     padding: 28px 48px;
-    font-size: 16px;
+    font-size: calc(.7em + 1vw);
     color: white;
 }
 .contentMedia{
-    background: url(../../../assets/media/galeria.png) no-repeat;
-    width: 100%;
-    height: 700px;    
-    background-size: cover;
+    padding: 0;
 }
