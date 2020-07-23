@@ -25,6 +25,7 @@ import { SignUpComponent } from './modals/sign-up/sign-up.component';
 import { FirestoreService } from './service/firestore.service';
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
 import { LoginComponent } from './modals/login/login.component';
+import { PreconvencionComponent } from './components/preconvencion/preconvencion.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginComponent } from './modals/login/login.component';
     FooterComponent,
     SignUpComponent,
     ValidateUserComponent,
-    LoginComponent
+    LoginComponent,
+    PreconvencionComponent
   ],
   imports: [
     BrowserModule,

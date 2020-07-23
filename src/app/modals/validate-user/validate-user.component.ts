@@ -345,9 +345,7 @@ export class ValidateUserComponent implements OnInit {
             this.currentState = 5;
           }, 200);
         }
-      }, err => { console.error('error del update: ', err) })
-
-     
+      }, err => { console.error('error del update: ', err) })     
     }
   }
   closemodal() {

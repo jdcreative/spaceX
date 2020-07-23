@@ -50,79 +50,72 @@
 }
 /*  */
 .banner{
-    background: url(../../../assets/back/Banner_go.jpg) no-repeat;
-    width: 1005;
-    height: 750px;
-    background-position: bottom;
+    background: url(../../../assets/back/Banner_gopre.jpg) no-repeat;
+    width: 100%;
+    height: 650px;
+    background-position: top;
     background-size: cover;
 }
-.arrowBanner{
+.contentPromoBanner{
     display: flex;
-    position: absolute;
-    justify-content: flex-end;
-    right: 70px;
-    margin-top: 54px;
 }
-.content-objBanner{ 
-    width: fit-content;
+.logoBanner{
+    background: url(../../../assets/media/Logo-fecha2.png) no-repeat;
+    width: 408px;
+    height: 305px;
+    background-size: contain;
     position: relative;
-    top: 180px;
+    bottom: -241px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: -73px;
 }
-.textBanner{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.onlineBack{
-    display: flex;
-    justify-content: center;
-    margin-top: 110px;
-}
-.fechaBanner{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+.itielBanner{
+    background: url(../../../assets/media/itiel2.png) no-repeat;
+    width: 680px;
+    height: 501px;
+    background-size: contain;
+    position: relative;
+    bottom: -160px;
+    margin-left: auto;
+    margin-right: 100px;
 }
 .contetn-btnOptions{
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    margin-top: 300px;
+    align-items: center;    
+    width: 100%;    
+    background: white;
+    padding: 35px 0;
 }
 .contentVerify, .contentRegister{    
     margin-left: auto;
     margin-right: auto;
 }
 .btnVerify{
-    border: 1px solid black;
-    padding: 20px 40px;
+    border: none;
+    width: 334px;
+    height: 70px;
     border-radius: 50px;
-    background: black;
+    background: #272727;
     color: white;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
     line-height: 0.5;
     outline: none;
-}
-.minitextBtn{
     text-align: center;
-    color: #39C3C4;
-    font-weight: bold;
-    font-size: 17px;
 }
 .btnRegisterBanner{
-    border: 1px solid #F89FDC;
-    background: #F89FDC;
+    width: 334px;
+    height: 70px;
+    border: none;
+    background: #FBFE01;
     border-radius: 80px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: black;
     padding: 20px 50px;
     outline: none;
+    text-align: center;
 }
 
 
@@ -130,7 +123,7 @@
 .bannertwo{
     width: 100%;
     height: 900px;
-    background: #E3E3E1;
+    background: url(../../../assets/back/Stars.jpg)
 }
 .contentBannerTwo{
     width: 1000px;
@@ -180,48 +173,65 @@
     font-size: 18px;   
 }
 /*  */
-.backVideo{
-    width: 530px;
-    height: 294px;
-    background: #F89FDC;
-    z-index: 5;
-    right: 200px;
-    margin-top: -85px;
-    position: absolute;
-}
-.iframeVideo{
-    margin-left: 15px;
-    margin-top: -15px;
-}
-.imgArrowVideo{
-    margin-left: 70px;
-    margin-top: 80px;    
-}
-.arrowVideo{
-    width: 100px;
-}
-.imgArrowVertical{
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    right: 106px;
-    margin-top: -295px;
-}
-/*  */
-.band{
-    background: black;
+.banner2{
+    background: url(../../../assets/back/Stars.jpg) no-repeat;
     width: 100%;
-    height: 70px;
-    margin-top: -70px;
-    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    height: 1100px;    
+    background-size: cover;
 }
+.textPreconvencion{
+    background: #272727;
+    width: 830px;
+    height: 440px;
+    margin-top: 100px;
+    padding: 30px;
+    font-family: 'Roboto Monospace';
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+}
+.backvideo{
+    width: 600px;
+    height: 440px;
+    margin: -40px -30px auto auto;
+    background: #00CEA7;
+}
+.iframevideo{
+    width: 600px;
+    height: 440px;
+    margin-left: 30px;
+    margin-top: -30px;
+}
+.contentBtn-banner2{
+    left: 50%;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 870px;
+    position: absolute;
+    transform: translate(-50%, 0);
+}
+
+.band{
+    background: url(../../../assets/back/Papeles.png);
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    margin-top: -100px;  
+    position: absolute;  
+}
+
 /*  */
 .how{
     background: url(../../../assets/back/Fondo-manchas.jpg);
     background-position: top;
     background-size: cover;
     width: 100%;
-    height: 933px;
+    height: 933px;   
 }
 .contentHow{
     position: absolute;
@@ -363,20 +373,9 @@
     font-size: 16px;
     color: white;
 }
-.arrowOne{
-    position: absolute;
-    margin-top: 500px;
-    right: 70px;
-}
 .contentMedia{
+    background: url(../../../assets/media/galeria.png) no-repeat;
     width: 100%;
-    margin-top: -5px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.contentImgs{
-    width: calc(100% / 4);
-    height: 334px;
-    /* object-fit: cover;
-    object-position: center; */
+    height: 700px;    
+    background-size: cover;
 }
