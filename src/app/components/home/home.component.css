@@ -325,6 +325,7 @@
 /*  */
 .watherPink{
     background: url(../../../assets/back/watherPink.jpg);
+    height: calc(500em /11.2);
     background-position: center;
     background-size: cover;    
     display: flex;
@@ -333,7 +334,7 @@
 .contentWeAreOne{
     width: 77%;
     position: absolute;    
-    margin-top: 9%;
+    margin-top: 11%;
 }
 .titleOne{
     font-weight: bold;
