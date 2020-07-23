@@ -1,12 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">
+    <a class="" href="#">
         <img src="./../../../assets/logs/goo.png" class="logoNavbar">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    </a>     
+    <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo01">
         <div class="menuNavbar">
             <div class="allNets">
                 <a href="" class="netLink">
@@ -19,13 +15,17 @@
                     <img src="../../../assets/logs/YT.png" class="nets" width="32px">
                 </a>
             </div>
-            <div class="btnRegister" (click)="openLogin()">
+            <!-- <div class="btnRegister" (click)="openLogin()">
                 <div class="btn here">
                     INICIAR SESION
                 </div>
-            </div>
+            </div> -->
+        </div>        
+    </div>
+    <div class="btnRegister" (click)="openLogin()">
+        <div class="btn here">
+            INICIAR SESION
         </div>
-
     </div>
 </nav>
 <!--  -->
@@ -78,7 +78,7 @@
 <div class="how">
     <div class="contentHow">
         <div class="titleHow">
-            <img src="../../../assets/back/Que-habrá.png" width="508">
+            <img src="../../../assets/back/Que-habrá.png" width="100%">
         </div>
     </div>
     <div class="contentBox">
@@ -137,15 +137,7 @@
         </div>
     </div>
 </div>
-<!-- <div class="registerTwo">
-    <div class="content-imgRgisterTwo">
-        <img src="../../../assets/back/registrate-aquí.png" width="500">
-    </div>
-    <div class="buttonRegisterTwo">
-        <button class="btn btnRegTwo">GRATIS</button>
-    </div>
-</div> -->
-<div class="watherPink">
+<div class="watherPink h-100 w-100">
     <div class="contentWeAreOne">
         <div class="titleOne">
             <p>SOMOS UNO</p>
@@ -163,5 +155,6 @@
         </div>
     </div>    
 </div>
-<div class="contentMedia">    
+<div class="container col contentMedia"> 
+    <img src="../../../assets/media/galeria.png"  class="img-fluid">   
 </div>
