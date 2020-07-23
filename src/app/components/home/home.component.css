@@ -57,15 +57,24 @@
 .banner{
     background: url(../../../assets/back/Banner_gopre.jpg) no-repeat;
     width: 100%;
-    height: 650px;
+    padding-top: 50px;
     background-position: top;
     background-size: cover;
+}
+
+img.img-left-banner {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
+.banner .row {
+    padding-top: 145px;
 }
 .contentPromoBanner{
     display: flex;
 }
+
 .logoBanner{
-    background: url(../../../assets/media/Logo-fecha2.png) no-repeat;
     width: 408px;
     height: 305px;
     background-size: contain;
@@ -108,6 +117,8 @@
     line-height: 0.5;
     outline: none;
     text-align: center;
+    margin: 0 auto;
+    display: block;
 }
 .btnRegisterBanner{
     width: 334px;
@@ -121,8 +132,12 @@
     padding: 20px 50px;
     outline: none;
     text-align: center;
+    display: block;
+    margin: 0 auto;
 }
-
+.btn-bar{
+    padding: 15px 0px;
+}
 
 /*  */
 .bannertwo{
@@ -357,4 +372,12 @@
 }
 .contentMedia{
     padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .col-6 {
+        width: 100%;
+        max-width: 100%;
+        flex: auto;
+    }
 }

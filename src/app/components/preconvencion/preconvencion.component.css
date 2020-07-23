@@ -59,7 +59,7 @@
     display: flex;
 }
 .logoBanner{
-    background: url(../../../assets/media/Logo-fecha2.png) no-repeat;
+ 
     width: 408px;
     height: 305px;
     background-size: contain;

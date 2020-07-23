@@ -212,14 +212,18 @@
         <div *ngIf="currentState == 3" class="modal-content">
             <form [formGroup]="formUpdate" (ngSubmit)="updateUser($event)">
                 <div class="modal-header">
-                    <div class="contentTitle">
-                        <p class="titleModalvalidate">REVISA TUS DATOS<span>
-                                Y ACTUALIZALOS</span></p>
+                    <div class="container padding-50">
+                        <div class="row">
+                            <img src="../../../assets/media/icons/check.png" style="margin: 0 auto;" />
+                        </div>
+                        <div class="row">
+                            <p class="title-modal light">ACTUALIZA TU INFORMACIÓN</p>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-body" style="height: 300px;">
+                <div class="modal-body" style="height: 450px;">
                     <div class="form-row">
-                        <div class="form-group col-md-5">
+                        <div class="form-group col-md-6">
                             <label for="inputNombre">Nombre</label>
                             <input type="email" class="form-control" id="inputNombre" formControlName="nombre"
                                 placeholder="escribe tu nombre">
@@ -229,7 +233,7 @@
                             </div>
 
                         </div>
-                        <div class="form-group col-md-5">
+                        <div class="form-group col-md-6">
                             <label for="inputApellido">Apellidos</label>
                             <input type="text" class="form-control" id="inputApellido" formControlName="apellidos"
                                 placeholder="escribe tu apellido">
@@ -238,7 +242,10 @@
                                 <p *ngIf="lastUpdate.hasError('required')">Debes ingresar tu Apellido</p>
                             </div>
                         </div>
-                        <div class="form-group col-md-2">
+                        
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
                             <label for="inputEdad">Edad</label>
                             <input type="text" class="form-control" id="inputEdad" formControlName="edad"
                                 placeholder="cual es tu edad">
@@ -247,9 +254,7 @@
                                 <p *ngIf="ageUpdate.hasError('required')">Debes ingresar tu Edad</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="inputEmail">Correo Electronico</label>
                             <input type="email" class="form-control" id="inputEmail" formControlName="email"
                                 placeholder="cual es tu correo electronico">
@@ -258,7 +263,10 @@
                                 <p *ngIf="mailUpdate.hasError('required')">Debes ingresar tu Correo Electronico</p>
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
+                        
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
                             <label for="inputCelular">Celular</label>
                             <input type="text" class="form-control" id="inputCelular" formControlName="celular"
                                 placeholder="escribe tu numero de celular">
@@ -267,14 +275,13 @@
                                 <p *ngIf="phoneUpdate.hasError('required')">Debes ingresar tu Correo Electronico</p>
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="inputTelefono">Telefono</label>
                             <input type="text" class="form-control" id="inputTelefono" formControlName="telefono"
                                 placeholder="escribe tu numero telefonico fijo">
                                 
                         </div>
                     </div>
-
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputState">Pais</label>
@@ -298,7 +305,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="inputChurch">Iglesia</label>
                             <select id="inputChurch" class="form-control custom-select" formControlName="iglesia">
                                 <option selected value="">Selecciona tu iglesia</option>
@@ -312,13 +319,15 @@
                                 <p *ngIf="churchUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
                             </div>
                         </div>
-                        <div *ngIf="validOtraIglesia" class="form-group col-md-5">
+                        <div *ngIf="validOtraIglesia" class="form-group col-md-6">
                             <label for="inputOtraIglesia">Nombre de tu Iglesia</label>
                             <input type="text" class="form-control" id="inputOtraIglesia"
                                 placeholder="Escribe el nombre de tu Iglesia" formControlName="otraIglesia">
                         </div>
+                    </div>
 
-                        <div *ngIf="validSede" class="form-group col-md-5">
+                    <div class="form-row">
+                        <div *ngIf="validSede" class="form-group col-md-6">
                             <label for="inputSede">Sede</label>
                             <select id="inputSede" class="form-control custom-select" formControlName="sedeMci">
                                 <option value=''>Cual es tu Sede</option>
@@ -499,8 +508,7 @@
                                 </optgroup>
                             </select>
                         </div>
-
-                        <div *ngIf="validRed" class="form-group col-md-3">
+                        <div *ngIf="validRed" class="form-group col-md-6">
                             <label for="inputMinistry">Red / Ministerio</label>
                             <select id="inputMinistry" class="form-control custom-select" formControlName="red">
                                 <option selected value="">Selecciona la red</option>
@@ -510,7 +518,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div *ngIf="validRedMen || validredWomen" class="form-group col-md-5">
+                        <div *ngIf="validRedMen || validredWomen" class="form-group col-md-12">
                             <div *ngIf="validRedMen">
                                 <label for="inputPastor">Pastor principal</label>
                                 <select id="inputPastor" class="form-control custom-select"
@@ -529,7 +537,7 @@
                             </div>
                         </div>
                         <div *ngIf="validEliemerson || validLau || validJohana || validSara"
-                            class="form-group col-md-4">
+                            class="form-group col-md-12">
                             <div *ngIf="validEliemerson">
                                 <label for="inputEli">Red Eliemerson</label>
                                 <select id="inputEli" class="form-control custom-select"
@@ -570,7 +578,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="inputTaller">Seleccione un Taller</label>
                             <select id="inputTaller" class="form-control custom-select" formControlName="talleres">
                                 <option value="">Seleccione un Taller...</option>
@@ -586,7 +594,7 @@
                                 <p *ngIf="workShopUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
                             </div>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="inputIdioma">Seleccione un Idioma</label>
                             <select id="inputIdioma" class="form-control custom-select" formControlName="idioma">
                                 <option value=''>Seleccione un Idioma</option>
@@ -597,7 +605,10 @@
                                 <p *ngIf="languageUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
                             </div>                            
                         </div>
-                        <div class="form-group col-md-4 col-auto" style="margin-top: auto">
+                        
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12 col-auto" style="margin-top: auto">
                             <div class="form-check mb-2" style="display: flex;">
                                 <input class="form-check-input" type="checkbox" id="terminosYCondiciones"
                                     class="margin-top: 0" formControlName="terminosYCondiciones">
@@ -615,7 +626,7 @@
                 <div class="modal-footer">
                     <div class="contentBtnValidar">
                         <button type="submit" class=" btn buttonform invalidBtn" [disabled]="formUpdate.invalid"
-                        [ngClass]="{'buttonform': formUpdate.valid}">ACEPTAR</button>
+                        [ngClass]="{'buttonform': formUpdate.valid}">ACTUALIZAR</button>
                     </div>
                 </div>
             </form>
