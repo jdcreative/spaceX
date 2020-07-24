@@ -13,7 +13,7 @@ export class DataUserService {
 
   apiUrl= 'https://tnpuu5xzq6.execute-api.us-east-2.amazonaws.com/dev/auth';
   apiCode='https://4sgi96tm5h.execute-api.us-east-2.amazonaws.com/dev/send_code';
-  apiValidateCode='https://tqufnitxp8.execute-api.us-east-2.amazonaws.com/dev';
+  apiValidateCode='https://tqufnitxp8.execute-api.us-east-2.amazonaws.com/dev/validate_code';
   apiUpdate='https://ybvvk76o5k.execute-api.us-east-2.amazonaws.com/dev/update_user';
   apiNew='https://tm44g2qq8k.execute-api.us-east-2.amazonaws.com/dev/signup';
   httpOptions = {
