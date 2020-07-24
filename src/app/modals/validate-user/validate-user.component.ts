@@ -426,24 +426,22 @@ export class ValidateUserComponent implements OnInit {
     return this.formValidateCode.get('code')
   };
 
-  validateCode(e: Event){
+  validateCode(e: Event) {
     this.loaderButton = true;
-      e.preventDefault();
-      if (this.formValidateCode.valid){
-          const data = this.formValidateCode.value;      
-          this.data_user.validateCode(this.mailCode, this.codeUser).subscribe((data)=> 
-          {
-              if(data == true) 
-              {
-                  this.currentState = 2;
-                  this.loaderButton = false;
-              } else 
-              {
-                  this.errCode = 'El codigo que has ingresado es incorrecto, intentalo de nuevo';
-                  this.loaderButton = false;
-              }
-          });
+    e.preventDefault();
+    if (this.formValidateCode.valid) {
+      const data = this.formValidateCode.value;
+      // console.log('la data del code: ',data.code)
+      // console.log('code: ', this.codeUser)
+      if (data.code == this.codeUser) {
+        this.currentState = 2;
+        this.loaderButton = false;
+      } else {
+        this.errCode = 'El codigo que has ingresado es incorrecto, intentalo de nuevo';
+        this.loaderButton = false;
       }
+
+    }
   }
   // update data form
   buildFormUpdate() 
