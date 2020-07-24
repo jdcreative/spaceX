@@ -396,9 +396,9 @@ export class ValidateUserComponent implements OnInit {
           this.data_user.getCodeSesion(data.email).subscribe(res => {
             this.mailCode = data.email;
             this.codeUser = res.code;
-            console.log('res de code:', res);
+            // console.log('res de code:', res);
           }, err => {
-            console.log('error: ', err)
+            // console.log('error: ', err)
           });
 
         } else if (res.estado == false) {

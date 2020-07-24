@@ -57,26 +57,26 @@ import { ErrordialogserviceService } from './service/errordialogservice.service'
       ReactiveFormsModule,
       AngularFireModule.initializeApp(environment.firebase),    
       AppRoutingModule,
-      JwtModule.forRoot
-      ({
-        config: 
-        {
-            tokenGetter: 
-            function  tokenGetter() 
-            {
-                return localStorage.getItem('access_token');
-            },
-            allowedDomains: ['localhost:3000']
-        }
-      })
+    //   JwtModule.forRoot  <----------ESTO CONTIENE ERRORES...
+    //   ({                         Y ESTA AFECTANDO TODOS LOS SERVICIOS 
+    //     config:                  EN ESPECIAL UPDATE USER --------
+    //     {
+    //         tokenGetter: 
+    //         function  tokenGetter() 
+    //         {
+    //             return localStorage.getItem('access_token');
+    //         },
+    //         allowedDomains: ['localhost:3000']
+    //     }
+    //   })
   ],
   providers: 
   [
       AngularFirestore,
-      { 
-          provide: HTTP_INTERCEPTORS, useClass: JwtService, multi: true 
-      },
-      ErrordialogserviceService,
+    //   { 
+    //       provide: HTTP_INTERCEPTORS, useClass: JwtService, multi: true 
+    //   },
+    //   ErrordialogserviceService,
   ],
   bootstrap: [AppComponent],
   entryComponents: 
