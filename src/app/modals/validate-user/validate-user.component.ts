@@ -477,108 +477,89 @@ export class ValidateUserComponent implements OnInit {
     );
     this.formUpdate.valueChanges.subscribe(res => 
     {
-          if (res.iglesia == 'pertenece_mci') 
-          {
-              this.validSede = true;
-              this.validOtraIglesia = false
-          } else if (res.iglesia == 'otra_iglesia') 
-          {
-              this.validOtraIglesia = true;
-              this.validSede = false;
-              this.validRed = false;
-              this.validRedMen = false;
-              this.validredWomen = false;
-              this.validTwelve = false
-          } else if (res.iglesia == 'G12_church') 
-          {
-              this.validOtraIglesia = false;
-              this.validSede = false;
-              this.validRed = false;
-              this.validRedMen = false;
-              this.validredWomen = false;
-              this.validTwelve = true;
-          } else 
-          {
-              this.validSede = false;
-              this.validOtraIglesia = false;
-              this.validRed = false;
-              this.validredWomen = false;
-              this.validRedMen = false;
-              this.validTwelve = false
-          }
-
-        if (res.sedeMci == 'bogota_principal') 
-        {
-              this.validRed = true
-        } else 
-        {
-              this.validRed = false;
-              this.validRedMen = false
-        }
-
-        if (res.red == 'Mujeres') 
-        {
-            this.validredWomen = true;
-            this.validRedMen = false;
-            this.validEliemerson = false;
-            this.validLau = false;
-            res.redHombres = '';
-        } else if (res.red == 'Hombres') 
-        {
-            this.validredWomen = false;
-            this.validRedMen = true;
-            this.validJohana = false;
-            this.validSara = false;
-            res.redMujeres = ''
-        }
-
-        if (res.redHombres == 'lau_guerra') 
-        {
-            this.validEliemerson = false;
-            this.validLau = true;
-            this.validJohana = false;
-            this.validSara = false;
-            res.redJohanna = '';
-            res.redSaraCastellanos = '';
-            res.redEliemerson = '';
-      } else if (res.redHombres == 'eliemerson_proenca') 
-      {
-            this.validEliemerson = true;
-            this.validLau = false;
-            this.validJohana = false;
-            this.validSara = false;
-            res.redJohanna = '';
-            res.redSaraCastellanos = '';
-            res.redLauGuerra = '';
-      } else if (res.redMujeres == 'Johanna_proenca') 
-      {
-            this.validEliemerson = false;
-            this.validLau = false;
-            this.validJohana = true;
-            this.validSara = false;
-            res.redSaraCastellanos = '';
-            res.redEliemerson = '';
-            res.redLauGuerra = '';
-      } else if (res.redMujeres == 'sara_castellanos') 
-      {
-            this.validEliemerson = false;
-            this.validLau = false;
-            this.validJohana = false;
-            this.validSara = true;
-            res.redJohanna = '';
-            res.redEliemerson = '';
-            res.redLauGuerra = '';
-      } else 
-      {
-            this.validEliemerson = false;
-            this.validLau = false;
-            this.validJohana = false;
-            this.validSara = false;
-            res.redJohanna = '';
-            res.redSaraCastellanos = '';
-            res.redEliemerson = '';
-            res.redLauGuerra = '';
+      if (res.iglesia == 'pertenece_mci') { this.validSede = true; this.validTwelve = false; this.validOtraIglesia = false }
+      else if (res.iglesia == 'otra_iglesia') {
+        this.validOtraIglesia = true; this.validSede = false; this.validRed = false; 
+        this.validRedMen = false; this.validredWomen = false;
+        res.sedeMci = '';
+        res.red = '';
+        res.redHombres = '';
+        res.redMujeres = '';
+        res.liderPrincipal = '';
       }
+      else if (res.iglesia == 'G12_church') {
+        
+        this.validTwelve = true; this.validOtraIglesia = false; this.validSede = false; this.validRed = false;
+        this.validRedMen = false; this.validredWomen = false;
+        res.sedeMci = '';
+        res.red = '';
+        res.redHombres = '';
+        res.redMujeres = '';
+        res.liderPrincipal = '';
+      }
+      else {
+        this.validSede = false; this.validOtraIglesia = false; this.validRed = false; this.validredWomen = false;
+        this.validRedMen = false; this.validTwelve = false;
+        res.sedeMci = '';
+        res.red = '';
+        res.redHombres = '';
+        res.redMujeres = '';
+        res.liderPrincipal = '';
+      };
+
+
+      if (res.sedeMci == 'bogota_principal') { this.validRed = true }
+      else { this.validRed = false; this.validRedMen = false };
+
+      if(res.sedeMci != 'bogota_principal'){
+        res.red = '';
+        res.redHombres = '';
+        res.redMujeres = '';
+        res.liderPrincipal = '';
+      }
+
+      if (res.red == 'Mujeres') {
+        this.validredWomen = true; this.validRedMen = false; this.validEliemerson = false;
+        this.validLau = false; res.redHombres = '';
+      }
+      else if (res.red == 'Hombres') {
+        this.validredWomen = false; this.validRedMen = true; this.validJohana = false;
+        this.validSara = false; res.redMujeres = ''
+      };
+
+
+      if (res.redHombres == 'lau_guerra') {
+        this.validEliemerson = false; this.validLau = true; this.validJohana = false; this.validSara = false;
+        res.redJohanna = '';
+        res.redSaraCastellanos = '';
+        res.redEliemerson = '';
+      }
+      else if (res.redHombres == 'eliemerson_proenca') {
+        this.validEliemerson = true; this.validLau = false; this.validJohana = false; this.validSara = false;
+        res.redJohanna = '';
+        res.redSaraCastellanos = '';
+        res.redLauGuerra = '';
+      }
+      else if (res.redMujeres == 'Johanna_proenca') {
+        this.validEliemerson = false; this.validLau = false; this.validJohana = true; this.validSara = false;
+        res.redSaraCastellanos = '';
+        res.redEliemerson = '';
+        res.redLauGuerra = '';
+      }
+      else if (res.redMujeres == 'sara_castellanos') {
+        this.validEliemerson = false; this.validLau = false; this.validJohana = false; this.validSara = true;
+        res.redJohanna = '';
+        res.redEliemerson = '';
+        res.redLauGuerra = '';
+      }
+      else {
+        this.validEliemerson = false; this.validLau = false; this.validJohana = false; this.validSara = false;
+        res.redJohanna = '';
+        res.redSaraCastellanos = '';
+        res.redEliemerson = '';
+        res.redLauGuerra = '';
+      }
+      console.log('formulary data: ', res)
     })
   };
   get nameUpdate() {

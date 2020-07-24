@@ -3,7 +3,7 @@
         <div *ngIf="currentState == 0" class="modal-content">
             <form [formGroup]="formValid" (ngSubmit)="validateForm($event)">
                 <div class="modal-header">
-                
+
                     <div class="container padding-50">
                         <div class="row">
                             <img src="../../../assets/media/icons/mail.png" style="margin: 0 auto;" />
@@ -12,9 +12,10 @@
                             <p class="title-modal light">INGRESA TU CORREO</p>
                         </div>
                         <div class="row">
-                            <p class="description light">ingresa el correo electrónico con el que te registraste, te enviaremos un codigo de seguridad para que puedas actualizar tu registro.</p>
+                            <p class="description light">ingresa el correo electrónico con el que te registraste, te
+                                enviaremos un codigo de seguridad para que puedas actualizar tu registro.</p>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-body col-md-8" style="display: block; margin-left: auto; margin-right: auto;">
@@ -45,12 +46,15 @@
                             <p class="title-modal light">YEAH! ESTAS REGISTRADO(A)</p>
                         </div>
                         <div class="row">
-                            <p class="description light">Si deseas actualizar tu informacion puedes digitar el codigo de seguridad enviado a tu correo para que puedas ajustar tu informacion y acceder a la plataforma.</p>
+                            <p class="description light">Si deseas actualizar tu informacion puedes digitar el codigo de
+                                seguridad enviado a tu correo para que puedas ajustar tu informacion y acceder a la
+                                plataforma.</p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-body" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
-                    <input type="text" class="form-control" placeholder="ingresa el codigo" maxlength="6" formControlName="code" style="width: 100%;"> 
+                    <input type="text" class="form-control" placeholder="ingresa el codigo" maxlength="6"
+                        formControlName="code" style="width: 100%;">
                     <div *ngIf="code.invalid && (code.touched || code.dirty)" class="invalid-feedback">
                         <p *ngIf="code.hasError('pattern')">Debes ingresar 6 digitos </p>
                         <p *ngIf="code.hasError('required')">Es necesario que ingreses el codigo que te enviamos a tu
@@ -65,22 +69,23 @@
                         <button type="submit" class="invalidBtn" [disabled]=" formValidateCode.invalid"
                             [ngClass]="{'buttonform': formValidateCode.valid, 'disbledButton':loaderButton}">
                             <span [ngClass]="{'spinner-border': loaderButton}"></span> ACTUALIZAR</button>
-                    </div>                            
+                    </div>
                 </div>
             </form>
         </div>
         <div *ngIf="currentState == 2" class="modal-content">
             <div class="modal-header">
-               
-                    <div class="container padding-50" style="padding-bottom: 0;">
-                        <div class="row">
-                            <p class="title-modal light" style="font-size: 25px;">INFORMACIÓN REGISTRADA</p>
-                        </div>
-                        <div class="row">
-                            <p class="description light">A continuación podras ver un detalle de la informacion registrada para nuestra convencion de jovenes #SomosUnoGo.</p>
-                        </div>
+
+                <div class="container padding-50" style="padding-bottom: 0;">
+                    <div class="row">
+                        <p class="title-modal light" style="font-size: 25px;">INFORMACIÓN REGISTRADA</p>
                     </div>
-              
+                    <div class="row">
+                        <p class="description light">A continuación podras ver un detalle de la informacion registrada
+                            para nuestra convencion de jovenes #SomosUnoGo.</p>
+                    </div>
+                </div>
+
             </div>
             <div class="modal-body" style="height: 450px;">
                 <div class="col-md-12">
@@ -96,7 +101,7 @@
                         <label class="labels"><span class="stc">*</span>Apellidos:</label>
                         <p class="form-control"> {{selectedUser.apellidos}}</p>
                     </div>
-                    
+
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -146,7 +151,7 @@
                         <label class="labels"><span class="stc">*</span> Nombre de tu Iglesia: </label>
                         <p class="form-control">{{selectedUser.otraIglesia}}</p>
                     </div>
-                    
+
                 </div>
                 <div class="row">
                     <div *ngIf="selectedUser.sedeMci && selectedUser.sedeMci != 'null'" class="col-md-6">
@@ -179,7 +184,8 @@
                         <label class="labels"><span class="stc">*</span>Red de Lau Guerra: </label>
                         <p class="form-control">{{selectedUser.redLauGuerra}}</p>
                     </div>
-                    <div *ngIf="selectedUser.redSaraCastellanos && selectedUser.redSaraCastellanos != 'null'" class="col-md-6">
+                    <div *ngIf="selectedUser.redSaraCastellanos && selectedUser.redSaraCastellanos != 'null'"
+                        class="col-md-6">
                         <label class="labels"><span class="stc">*</span>Red de Sara Guerra: </label>
                         <p class="form-control">{{selectedUser.redSaraCastellanos}}</p>
                     </div>
@@ -244,7 +250,7 @@
                                 <p *ngIf="lastUpdate.hasError('required')">Debes ingresar tu Apellido</p>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -265,14 +271,14 @@
                                 <p *ngIf="mailUpdate.hasError('required')">Debes ingresar tu Correo Electronico</p>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputCelular">Celular</label>
                             <input type="text" class="form-control" id="inputCelular" formControlName="celular"
                                 placeholder="escribe tu numero de celular">
-                                <div *ngIf="phoneUpdate.invalid && (phoneUpdate.touched || phoneUpdate.dirty)"
+                            <div *ngIf="phoneUpdate.invalid && (phoneUpdate.touched || phoneUpdate.dirty)"
                                 class="invalid-feedback">
                                 <p *ngIf="phoneUpdate.hasError('required')">Debes ingresar tu Correo Electronico</p>
                             </div>
@@ -281,7 +287,7 @@
                             <label for="inputTelefono">Telefono</label>
                             <input type="text" class="form-control" id="inputTelefono" formControlName="telefono"
                                 placeholder="escribe tu numero telefonico fijo">
-                                
+
                         </div>
                     </div>
                     <div class="form-row">
@@ -300,7 +306,7 @@
                             <label for="inputCiudad">Ciudad</label>
                             <input type="text" class="form-control" id="inputCiudad" placeholder="donde vives"
                                 formControlName="ciudad">
-                                <div *ngIf="cityUpdate.invalid && (cityUpdate.touched || cityUpdate.dirty)"
+                            <div *ngIf="cityUpdate.invalid && (cityUpdate.touched || cityUpdate.dirty)"
                                 class="invalid-feedback">
                                 <p *ngIf="cityUpdate.hasError('required')">Debes Ingresar tu ciudad</p>
                             </div>
@@ -570,12 +576,14 @@
                                     <option value="">Selecciona tu Lider de 12</option>
                                     <option *ngFor="let sa of sara" [value]="sa.name">{{sa.name}}</option>
                                 </select>
-                            </div>
-                            <div *ngIf="validTwelve==true">
+                            </div>                            
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
                                 <label for="inputLider">Lider de 12</label>
                                 <input type="text" class="form-control" id="inputLider"
                                     placeholder="Escribe el nombre de tu lider de 12" formControlName="liderPrincipal">
-                            </div>
+                            </div>                            
                         </div>
                     </div>
 
@@ -593,7 +601,7 @@
                             </select>
                             <div *ngIf="workShopUpdate.invalid && (workShopUpdate.touched || workShopUpdate.dirty)"
                                 class="invalid-feedback">
-                                <p *ngIf="workShopUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
+                                <p *ngIf="workShopUpdate.hasError('required')">Debes Seleccionar Taller</p>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -604,10 +612,10 @@
                             </select>
                             <div *ngIf="languageUpdate.invalid && (languageUpdate.touched || languageUpdate.dirty)"
                                 class="invalid-feedback">
-                                <p *ngIf="languageUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
-                            </div>                            
+                                <p *ngIf="languageUpdate.hasError('required')">Debes Seleccionar un Idioma</p>
+                            </div>
                         </div>
-                        
+
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 col-auto" style="margin-top: auto">
@@ -621,22 +629,22 @@
                             <div *ngIf="terminos.invalid && (terminos.touched || terminos.dirty)"
                                 class="invalid-feedback">
                                 <p *ngIf="terminos.hasError('required')">Debes aceptar los terminos y condiciones</p>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="contentBtnValidar">
                         <button type="submit" class="invalidBtn" [disabled]="formUpdate.invalid"
-                        [ngClass]="{'buttonform': formUpdate.valid, 'disbledButton':loaderButton}">
-                        <span [ngClass]="{'spinner-border': loaderButton}"></span>ACEPTAR</button>
-                    </div>                                
+                            [ngClass]="{'buttonform': formUpdate.valid, 'disbledButton':loaderButton}">
+                            <span [ngClass]="{'spinner-border': loaderButton}"></span>ACEPTAR</button>
+                    </div>
                 </div>
             </form>
         </div>
         <div *ngIf="currentState == 4" class="modal-content">
             <div class="modal-header">
-                
+
                 <div class="container padding-50">
                     <div class="row">
                         <img src="../../../assets/media/icons/ticket.png" style="margin: 0 auto;" />
@@ -667,11 +675,13 @@
                         <p class="title-modal light">OH NO!</p>
                     </div>
                     <div class="row">
-                        <p class="description light">Tu correo no esta registrado en la base de datos, realiza el registro y no te pierdas la convencion #SomosUnoGo.</p>
+                        <p class="description light">Tu correo no esta registrado en la base de datos, realiza el
+                            registro y no te pierdas la convencion #SomosUnoGo.</p>
                     </div>
 
                     <div class="row" style="margin-bottom:25px;">
-                        <button type="button" class="btn buttonform" style="margin: 0 auto;" (click)="showregister()">Registrate</button>
+                        <button type="button" class="btn buttonform" style="margin: 0 auto;"
+                            (click)="showregister()">Registrate</button>
                     </div>
                 </div>
             </div>
