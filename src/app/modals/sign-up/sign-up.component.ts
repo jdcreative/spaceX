@@ -173,7 +173,7 @@ export class SignUpComponent implements OnInit {
       date_register: [new Date]
     })
     this.registerForm.valueChanges.subscribe(res => {
-
+        console.log('res: ', res)
       if (res.iglesia == 'pertenece_mci') { this.validSede = true; this.validTwelve = false; this.validOtraIglesia = false }
       else if (res.iglesia == 'otra_iglesia') {
         this.validOtraIglesia = true; this.validSede = false; this.validRed = false; 
@@ -182,6 +182,7 @@ export class SignUpComponent implements OnInit {
         res.red = '';
         res.redHombres = '';
         res.redMujeres = '';
+        res.liderPrincipal = '';
       }
       else if (res.iglesia == 'G12_church') {
         
@@ -191,6 +192,7 @@ export class SignUpComponent implements OnInit {
         res.red = '';
         res.redHombres = '';
         res.redMujeres = '';
+        res.liderPrincipal = '';
       }
       else {
         this.validSede = false; this.validOtraIglesia = false; this.validRed = false; this.validredWomen = false;
@@ -199,12 +201,19 @@ export class SignUpComponent implements OnInit {
         res.red = '';
         res.redHombres = '';
         res.redMujeres = '';
-        
+        res.liderPrincipal = '';
       };
 
 
-      if (res.sedeMci == 'bogota_principal') { this.validRed = true }
+      if (res.sedeMci == 'bogota_principal') { this.validRed = true }      
       else { this.validRed = false; this.validRedMen = false };
+
+      if(res.sedeMci != 'bogota_principal'){          
+          res.red = '';
+          res.redHombres = '';
+          res.redMujeres = '';
+          res.liderPrincipal = '';
+        }
 
 
       if (res.red == 'Mujeres') {
@@ -263,19 +272,18 @@ export class SignUpComponent implements OnInit {
   get terminos() { return this.registerForm.get('terminosYCondiciones') };
 
   saveUser(e: Event) {
-    this.loaderButton=true;
-    console.log('spiner: ', this.loaderButton);
+    this.loaderButton=true;    
     e.preventDefault();
     if (this.registerForm.valid) {
       const data = this.registerForm.value;      
       this.data_user.createUser(data).subscribe(res => {
-        console.log('rs de la new user: ', res.estado);
+        // console.log('rs de la new user: ', res);
         if (res.estado) {
-          console.log('entro aqui')         
+          // console.log('entro aqui')         
           this.currentState = 2;   
           this.loaderButton=false;       
         } else {
-          console.log('entro al false')          
+          // console.log('entro al false')          
           this.currentState = 3;
           this.loaderButton=false;
         }

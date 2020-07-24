@@ -559,7 +559,7 @@ export class ValidateUserComponent implements OnInit {
         res.redEliemerson = '';
         res.redLauGuerra = '';
       }
-      console.log('formulary data: ', res)
+      // console.log('formulary data: ', res)
     })
   };
   get nameUpdate() {
