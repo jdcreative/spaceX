@@ -1,0 +1,91 @@
+<div class="container-sider-bar" [ngStyle]=" { background: finalColor } ">
+
+    <div class="container-padding">
+
+        <div class="container-image-profile padding-items display-flex">
+            <img class="rounded-circle" src="assets/media/default-user.jpg">
+        </div>
+
+        <div class="container-info padding-items">
+
+            <h2 class="names">
+                {{ userProfile.nombre ? userProfile.nombre : 'N/A' }}
+                {{ userProfile.apellidos ? userProfile.apellidos : 'N/A' }}
+            </h2>
+            <h6 class="email">
+                {{ userProfile.email ? userProfile.email : 'N/A' }}
+            </h6>
+
+        </div>
+
+        <div class="container-tribu padding-items display-flex">
+
+            <div class="container-border">
+
+                <h6 class="tribu-halcones">
+                    TRIBU
+                    HALCONES
+                </h6>
+
+                <small>PUNTOS</small>
+
+                <h6 class="tribu-points">
+                    0
+                </h6>
+
+            </div>
+
+        </div>
+
+        <div class="container-menu padding-items">
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" (click)="goTo('home');" [ngClass]="{ 'bold-selected' : tab == 'home' }">
+                    HOME
+                </li>
+                <li class="list-group-item" (click)="goTo('tribus');" [ngClass]="{ 'bold-selected' : tab == 'tribus' }">
+                    TRIBUS
+                </li>
+                <li class="list-group-item" (click)="goTo('conferencistas');"
+                    [ngClass]="{ 'bold-selected' : tab == 'conferencistas' }">
+                    CONFERENCISTAS
+                </li>
+                <li class="list-group-item" (click)="goTo('talleres');"
+                    [ngClass]="{ 'bold-selected' : tab == 'talleres' }">
+                    TALLERES
+                </li>
+                <li class="list-group-item" (click)="goTo('merch');" [ngClass]="{ 'bold-selected' : tab == 'merch' }">
+                    MERCH
+                </li>
+                <li class="list-group-item" (click)="goTo('galeria');"
+                    [ngClass]="{ 'bold-selected' : tab == 'galeria' }">
+                    GALERIA
+                </li>
+                <li class="list-group-item" (click)="goTo('playlist');"
+                    [ngClass]="{ 'bold-selected' : tab == 'playlist' }">
+                    PLAYLIST
+                </li>
+                <li class="list-group-item" (click)="goTo('podcast');"
+                    [ngClass]="{ 'bold-selected' : tab == 'podcast' }">
+                    PODCAST
+                </li>
+                <li class="list-group-item" (click)="goTo('donacion');"
+                    [ngClass]="{ 'bold-selected' : tab == 'donacion' }">
+                    DONACION
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="container-exit display-flex">
+
+        <button class="btn btn-fixed btn-lg btn-light col-xs-12" (click)="closeSession();">
+            <span class="glyphicon glyphicon-earphone pull-left"></span>
+            Salir
+        </button>
+
+    </div>
+
+</div>

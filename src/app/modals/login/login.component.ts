@@ -3,6 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { DataUserService } from './../../service/data-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
     private dialogRef: MatDialogRef<LoginComponent>,
     @Inject(MAT_DIALOG_DATA) data,
     private fb: FormBuilder,
-    public data_user: DataUserService
+    public data_user: DataUserService,
+    public router: Router
   ) {
     this.description = data.title;
     this.buildlogin();
@@ -40,6 +42,9 @@ export class LoginComponent implements OnInit {
       const data = this.formlogin.value;
       // console.log('formulary : ', data);
       this.data_user.getDataUser(data.email).subscribe(res=>{
+        console.log("RES", res);
+        localStorage.setItem("user", JSON.stringify(res));
+        this.router.navigate(["/profile"]);
         this.currentState = 1;        
       }, err =>{console.log(  'error:', err)})
     }
