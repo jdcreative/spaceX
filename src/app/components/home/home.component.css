@@ -136,7 +136,7 @@ img.img-left-banner {
     margin: 0 auto;
 }
 .btn-bar{
-    padding: 15px 0px;
+    padding: 3% 0px;
 }
 
 /*  */
@@ -205,7 +205,7 @@ img.img-left-banner {
     height: 440px;
     margin-top: 100px;
     padding: 30px;
-    font-family: 'Roboto Monospace';
+    font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     font-size: 18px;
     color: white;
@@ -220,10 +220,18 @@ img.img-left-banner {
     background: #00CEA7;
 }
 .iframevideo{
-    width: 600px;
-    height: 440px;
-    margin-left: 30px;
-    margin-top: -30px;
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    min-height: 350px;
+    margin: 0 auto !important;
+    background: #00CEA7;
+    padding: 1%;
+    margin-top: -45px !important;
+}
+.vdeo_set {
+    width: 100%;
+    display: grid;
 }
 .contentBtn-banner2{
     left: 50%;
@@ -251,8 +259,22 @@ img.img-left-banner {
     background-position: top;
     background-size: cover;
     width: 100%;
-    height: 933px;   
+    padding: 5% 0px;
 }
+img.title_subcontent {
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 45px;
+}
+p.textOne {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    line-height: 30px;
+}
+.description{
+    padding-top: 5%;
+}
+
 .contentHow{
     position: absolute;
     width: 100%;
@@ -336,7 +358,28 @@ img.img-left-banner {
     align-items: center;
     color: white;
 }
+.introducing{
+    background: black url(../../../assets/back/starts-bg.png);
+    background-attachment: fixed;
+    padding: 7% 0px;
+}
+img.amor_accion {
+    width: 45%;
+}
+img.img_set_info {
+    width: 100%;
+    margin-bottom: 35px;
+}
 
+.content_side {
+    background: #272727;
+    padding: 5%;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+.content_side p {
+    font-family: 'Roboto Mono', monospace;
+}
 /*  */
 .watherPink{
     background: url(../../../assets/back/watherPink.jpg);
@@ -364,14 +407,22 @@ img.img-left-banner {
     font-size: calc(.7em + 1vw);
     color: white;
 }
-.versOne{
+
+.versOne {
     background: #1C1C1C;
-    padding: 28px 48px;
-    font-size: calc(.7em + 1vw);
+    padding: 5%;
     color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+    font-size: 19px;
 }
 .contentMedia{
     padding: 0;
+}
+.contentMedia .img-fluid {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -379,5 +430,32 @@ img.img-left-banner {
         width: 100%;
         max-width: 100%;
         flex: auto;
+    }
+    img.img-right-banner {
+        width: 90%;
+    }
+    .col-2 {
+        max-width: 2%;
+        flex: 0;
+    }
+    .col-4, .col-6, .col-8 {
+        width: 100% !important;
+        flex: 100%;
+        max-width: 100% !important;
+    }
+    img.title_subcontent{
+        margin: 0 auto;
+        width: 80%;
+        margin: 45px 0px;
+    }
+    .iframevideo {
+        width: 88%;
+        height: auto;
+        display: inline-block;
+        min-height: 250px;
+        margin: 0 auto !important;
+        background: #00CEA7;
+        padding: 1%;
+        margin-top: 27px !important;
     }
 }
