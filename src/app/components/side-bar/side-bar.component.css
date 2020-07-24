@@ -1,7 +1,6 @@
 .container-sider-bar {
-    /* border: 5px solid red; */
     width: 300px;
-    background: linear-gradient(180deg, rgba(237, 44, 44, 0) 13.22%, #F95252 94.29%), #FFF09B;
+    /* border: 5px solid red; */
 }
 
 .container-padding {

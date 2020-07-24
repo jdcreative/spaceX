@@ -58,7 +58,6 @@
 }
 
 .color-degra {
-    background: linear-gradient(90deg, rgba(249, 82, 82, 1) 0%, rgba(245, 167, 119, 1) 47%, rgba(251, 232, 156, 1) 100%);
     height: 5px;
 }
 

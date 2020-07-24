@@ -48,7 +48,8 @@ import { ErrorDialogComponent } from './components/error-dialog/error-dialog.com
     TribusComponent,
     ConferencistasComponent,
     TalleresComponent,
-    MerchComponent
+    MerchComponent,
+    ErrorDialogComponent
   ],
   imports:
     [
