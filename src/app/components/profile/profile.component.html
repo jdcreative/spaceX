@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="" href="#">
+        <img src="./../../../assets/logs/goo.png" class="logoNavbar">
+    </a>
+</nav>
+
+<div class="container-profile">
+
+    <app-side-bar (sendTag)="sendTagReceive($event);"></app-side-bar>
+
+    <div class="content-profile">
+
+        <div class="tab">
+
+            <nav class="navbar black justify-content-between">
+                <a class="navbar-brand title-nav-profile">{{ tab ? tab : 'Home' }}</a>
+                <div class="form-inline languages-profile">
+                    ENGLISH -
+                    ESPAÑOL -
+                    PORTUGES
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="color-degra"></div>
+
+        <div class="container-content-profile">
+
+            <div class="tab-switch">
+
+                <div *ngIf="tab == 'home'">
+
+
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/4BfsaT5J5As" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                    <div class="info-video">
+
+                        <div class="info display-f">
+                            <div class="info-title">
+                                Alcanzando la Promesa
+                            </div>
+                            Laudjair Guerra
+                        </div>
+
+                        <div class="container-next">
+                            Next<br>
+                            Break
+                        </div>
+
+                    </div>
+
+                    <div class="container-buttons">
+
+                        <button class="btn bttn-gray btn-selected">
+                            Notas
+                        </button>
+                        <button class="btn bttn-gray">
+                            Biblia
+                        </button>
+                        <button class="btn bttn-gray">
+                            Horario
+                        </button>
+
+                    </div>
+
+                    <div class="content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, asperiores!
+                    </div>
+
+
+                </div>
+
+                <app-tribus *ngIf="tab == 'tribus'"></app-tribus>
+                <app-conferencistas *ngIf="tab == 'conferencistas'"></app-conferencistas>
+                <app-talleres *ngIf="tab == 'talleres'"></app-talleres>
+                <app-merch *ngIf="tab =='merch'"></app-merch>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

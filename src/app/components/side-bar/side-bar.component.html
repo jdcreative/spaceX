@@ -1,0 +1,92 @@
+<div class="container-sider-bar">
+
+    <div class="container-padding">
+
+        <div class="container-image-profile padding-items display-flex">
+            <img class="rounded-circle"
+                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1737ee1879e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1737ee1879e%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.421875%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+        </div>
+
+        <div class="container-info padding-items">
+
+            <h2 class="names">
+                {{ userProfile.nombre ? userProfile.nombre : 'N/A' }}
+                {{ userProfile.apellidos ? userProfile.apellidos : 'N/A' }}
+            </h2>
+            <h6 class="email">
+                {{ userProfile.email ? userProfile.email : 'N/A' }}
+            </h6>
+
+        </div>
+
+        <div class="container-tribu padding-items display-flex">
+
+            <div class="container-border">
+
+                <h6 class="tribu-halcones">
+                    TRIBU
+                    HALCONES
+                </h6>
+
+                <small>PUNTOS</small>
+
+                <h6 class="tribu-points">
+                    0
+                </h6>
+
+            </div>
+
+        </div>
+
+        <div class="container-menu padding-items">
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" (click)="goTo('home');" [ngClass]="{ 'bold-selected' : tab == 'home' }">
+                    HOME
+                </li>
+                <li class="list-group-item" (click)="goTo('tribus');" [ngClass]="{ 'bold-selected' : tab == 'tribus' }">
+                    TRIBUS
+                </li>
+                <li class="list-group-item" (click)="goTo('conferencistas');"
+                    [ngClass]="{ 'bold-selected' : tab == 'conferencistas' }">
+                    CONFERENCISTAS
+                </li>
+                <li class="list-group-item" (click)="goTo('talleres');"
+                    [ngClass]="{ 'bold-selected' : tab == 'talleres' }">
+                    TALLERES
+                </li>
+                <li class="list-group-item" (click)="goTo('merch');" [ngClass]="{ 'bold-selected' : tab == 'merch' }">
+                    MERCH
+                </li>
+                <li class="list-group-item" (click)="goTo('galeria');"
+                    [ngClass]="{ 'bold-selected' : tab == 'galeria' }">
+                    GALERIA
+                </li>
+                <li class="list-group-item" (click)="goTo('playlist');"
+                    [ngClass]="{ 'bold-selected' : tab == 'playlist' }">
+                    PLAYLIST
+                </li>
+                <li class="list-group-item" (click)="goTo('podcast');"
+                    [ngClass]="{ 'bold-selected' : tab == 'podcast' }">
+                    PODCAST
+                </li>
+                <li class="list-group-item" (click)="goTo('donacion');"
+                    [ngClass]="{ 'bold-selected' : tab == 'donacion' }">
+                    DONACION
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="container-exit display-flex">
+
+        <button class="btn btn-fixed btn-lg btn-light col-xs-12" (click)="closeSession();">
+            <span class="glyphicon glyphicon-earphone pull-left"></span>
+            Salir
+        </button>
+
+    </div>
+
+</div>

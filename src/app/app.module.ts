@@ -26,6 +26,12 @@ import { FirestoreService } from './service/firestore.service';
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
 import { LoginComponent } from './modals/login/login.component';
 import { PreconvencionComponent } from './components/preconvencion/preconvencion.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { TribusComponent } from './components/profile/tribus/tribus.component';
+import { ConferencistasComponent } from './components/profile/conferencistas/conferencistas.component';
+import { TalleresComponent } from './components/profile/talleres/talleres.component';
+import { MerchComponent } from './components/profile/merch/merch.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,13 @@ import { PreconvencionComponent } from './components/preconvencion/preconvencion
     SignUpComponent,
     ValidateUserComponent,
     LoginComponent,
-    PreconvencionComponent
+    PreconvencionComponent,
+    ProfileComponent,
+    SideBarComponent,
+    TribusComponent,
+    ConferencistasComponent,
+    TalleresComponent,
+    MerchComponent
   ],
   imports: [
     BrowserModule,
