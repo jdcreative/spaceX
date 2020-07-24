@@ -371,28 +371,28 @@ export class ValidateUserComponent implements OnInit {
       email: ['', [Validators.required, Validators.pattern(this.mailPattern)]]
     });
   }
-  get validatorMail() {
+  get validatorMail() 
+  {
     return this.formValid.get('email')
   };
   validateForm(e: Event) {
     this.loaderButton = true;
     e.preventDefault();
-    if (this.formValid.valid) {
+    if (this.formValid.valid) 
+    {
       const data = this.formValid.value;
       //auth del usuario
-      this.data_user.getDataUser(data.email).subscribe(res => {
-        console.log('la res del get data: ', res);
-        //validar usuario exsitente
-        if (res.email) {
-          // console.log('esta en el true');
+      this.data_user.getDataUser(data.email).subscribe(res => 
+      {
+        if (res.email) 
+        {
           this.currentState = 1;
           this.loaderButton = false;
           this.selectedUser = res;
-          setTimeout(() => {
+          setTimeout(() => 
+          {
             this.setValues();
           }, 200);
-          // console.log('toda la data del user: ',res);
-          //envio de codigo de ingreso
           this.data_user.getCodeSesion(data.email).subscribe(res => {
             this.mailCode = data.email;
             this.codeUser = res.code;
@@ -402,7 +402,6 @@ export class ValidateUserComponent implements OnInit {
           });
 
         } else if (res.estado == false) {
-          // console.log('esta en el false');          
           this.currentState = 6;
           this.loaderButton = false;
         }
@@ -412,148 +411,175 @@ export class ValidateUserComponent implements OnInit {
     }
   }
   // validate code
-  buildValidateCode() {
-    this.formValidateCode = this.fb.group({
-      code: ['', [Validators.required, Validators.pattern(this.numberPattern), Validators.minLength(6)]]
-    })
+  buildValidateCode() 
+  {
+      this.formValidateCode = this.fb.group
+      (
+        {
+            code: ['', [Validators.required, Validators.pattern(this.numberPattern), Validators.minLength(6)]]
+        }
+      )
   }
-  get code() {
+
+  get code() 
+  {
     return this.formValidateCode.get('code')
   };
-  validateCode(e: Event) {
-    this.loaderButton = true;
-    e.preventDefault();
-    if (this.formValidateCode.valid) {
-      const data = this.formValidateCode.value;
-      // console.log('la data del code: ',data.code)
-      // console.log('code: ', this.codeUser)
-      if (data.code == this.codeUser) {
-        this.currentState = 2;
-        this.loaderButton = false;
-      } else {
-        this.errCode = 'El codigo que has ingresado es incorrecto, intentalo de nuevo';
-        this.loaderButton = false;
-      }
 
-    }
+  validateCode(e: Event){
+    this.loaderButton = true;
+      e.preventDefault();
+      if (this.formValidateCode.valid){
+          const data = this.formValidateCode.value;      
+          this.data_user.validateCode(this.mailCode, this.codeUser).subscribe((data)=> 
+          {
+              if(data == true) 
+              {
+                  this.currentState = 2;
+                  this.loaderButton = false;
+              } else 
+              {
+                  this.errCode = 'El codigo que has ingresado es incorrecto, intentalo de nuevo';
+                  this.loaderButton = false;
+              }
+          });
+      }
   }
   // update data form
-  buildFormUpdate() {
-    this.formUpdate = this.fb.group({
-      nombre: ['', [Validators.required]],
-      apellidos: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.pattern(this.mailPattern)]],
-      celular: ['', [Validators.required]],
-      telefono: [''],
-      edad: ['', [Validators.required]],
-      pais: ['', [Validators.required]],
-      ciudad: ['', [Validators.required]],
-      iglesia: ['', [Validators.required]],
-      otraIglesia: [''],
-      sedeMci: [''],
-      red: [''],
-      redHombres: [''],
-      redMujeres: [''],
-      redEliemerson: [''],
-      redJohanna: [''],
-      redLauGuerra: [''],
-      redSaraCastellanos: [''],
-      liderPrincipal: [''],
-      idioma: ['', [Validators.required]],
-      talleres: ['', [Validators.required]],
-      terminosYCondiciones: [true, [Validators.required]],
-      tribu: [''],
-      updated: [true]
-    });
-    this.formUpdate.valueChanges.subscribe(res => {
-      if (res.iglesia == 'pertenece_mci') {
-        this.validSede = true;
-        this.validOtraIglesia = false
-      } else if (res.iglesia == 'otra_iglesia') {
-        this.validOtraIglesia = true;
-        this.validSede = false;
-        this.validRed = false;
-        this.validRedMen = false;
-        this.validredWomen = false;
-        this.validTwelve = false
-      } else if (res.iglesia == 'G12_church') {
-        this.validOtraIglesia = false;
-        this.validSede = false;
-        this.validRed = false;
-        this.validRedMen = false;
-        this.validredWomen = false;
-        this.validTwelve = true;
-      } else {
-        this.validSede = false;
-        this.validOtraIglesia = false;
-        this.validRed = false;
-        this.validredWomen = false;
-        this.validRedMen = false;
-        this.validTwelve = false
+  buildFormUpdate() 
+  {
+      this.formUpdate = this.fb.group
+      (
+        {
+            nombre: ['', [Validators.required]],
+            apellidos: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.pattern(this.mailPattern)]],
+            celular: ['', [Validators.required]],
+            telefono: [''],
+            edad: ['', [Validators.required]],
+            pais: ['', [Validators.required]],
+            ciudad: ['', [Validators.required]],
+            iglesia: ['', [Validators.required]],
+            otraIglesia: [''],
+            sedeMci: [''],
+            red: [''],
+            redHombres: [''],
+            redMujeres: [''],
+            redEliemerson: [''],
+            redJohanna: [''],
+            redLauGuerra: [''],
+            redSaraCastellanos: [''],
+            liderPrincipal: [''],
+            idioma: ['', [Validators.required]],
+            talleres: ['', [Validators.required]],
+            terminosYCondiciones: [true, [Validators.required]],
+            tribu: [''],
+            updated: [true]
       }
+    );
+    this.formUpdate.valueChanges.subscribe(res => 
+    {
+          if (res.iglesia == 'pertenece_mci') 
+          {
+              this.validSede = true;
+              this.validOtraIglesia = false
+          } else if (res.iglesia == 'otra_iglesia') 
+          {
+              this.validOtraIglesia = true;
+              this.validSede = false;
+              this.validRed = false;
+              this.validRedMen = false;
+              this.validredWomen = false;
+              this.validTwelve = false
+          } else if (res.iglesia == 'G12_church') 
+          {
+              this.validOtraIglesia = false;
+              this.validSede = false;
+              this.validRed = false;
+              this.validRedMen = false;
+              this.validredWomen = false;
+              this.validTwelve = true;
+          } else 
+          {
+              this.validSede = false;
+              this.validOtraIglesia = false;
+              this.validRed = false;
+              this.validredWomen = false;
+              this.validRedMen = false;
+              this.validTwelve = false
+          }
 
-      if (res.sedeMci == 'bogota_principal') {
-        this.validRed = true
-      } else {
-        this.validRed = false;
-        this.validRedMen = false
-      }
+        if (res.sedeMci == 'bogota_principal') 
+        {
+              this.validRed = true
+        } else 
+        {
+              this.validRed = false;
+              this.validRedMen = false
+        }
 
-      if (res.red == 'Mujeres') {
-        this.validredWomen = true;
-        this.validRedMen = false;
-        this.validEliemerson = false;
-        this.validLau = false;
-        res.redHombres = '';
-      } else if (res.red == 'Hombres') {
-        this.validredWomen = false;
-        this.validRedMen = true;
-        this.validJohana = false;
-        this.validSara = false;
-        res.redMujeres = ''
-      }
+        if (res.red == 'Mujeres') 
+        {
+            this.validredWomen = true;
+            this.validRedMen = false;
+            this.validEliemerson = false;
+            this.validLau = false;
+            res.redHombres = '';
+        } else if (res.red == 'Hombres') 
+        {
+            this.validredWomen = false;
+            this.validRedMen = true;
+            this.validJohana = false;
+            this.validSara = false;
+            res.redMujeres = ''
+        }
 
-      if (res.redHombres == 'lau_guerra') {
-        this.validEliemerson = false;
-        this.validLau = true;
-        this.validJohana = false;
-        this.validSara = false;
-        res.redJohanna = '';
-        res.redSaraCastellanos = '';
-        res.redEliemerson = '';
-      } else if (res.redHombres == 'eliemerson_proenca') {
-        this.validEliemerson = true;
-        this.validLau = false;
-        this.validJohana = false;
-        this.validSara = false;
-        res.redJohanna = '';
-        res.redSaraCastellanos = '';
-        res.redLauGuerra = '';
-      } else if (res.redMujeres == 'Johanna_proenca') {
-        this.validEliemerson = false;
-        this.validLau = false;
-        this.validJohana = true;
-        this.validSara = false;
-        res.redSaraCastellanos = '';
-        res.redEliemerson = '';
-        res.redLauGuerra = '';
-      } else if (res.redMujeres == 'sara_castellanos') {
-        this.validEliemerson = false;
-        this.validLau = false;
-        this.validJohana = false;
-        this.validSara = true;
-        res.redJohanna = '';
-        res.redEliemerson = '';
-        res.redLauGuerra = '';
-      } else {
-        this.validEliemerson = false;
-        this.validLau = false;
-        this.validJohana = false;
-        this.validSara = false;
-        res.redJohanna = '';
-        res.redSaraCastellanos = '';
-        res.redEliemerson = '';
-        res.redLauGuerra = '';
+        if (res.redHombres == 'lau_guerra') 
+        {
+            this.validEliemerson = false;
+            this.validLau = true;
+            this.validJohana = false;
+            this.validSara = false;
+            res.redJohanna = '';
+            res.redSaraCastellanos = '';
+            res.redEliemerson = '';
+      } else if (res.redHombres == 'eliemerson_proenca') 
+      {
+            this.validEliemerson = true;
+            this.validLau = false;
+            this.validJohana = false;
+            this.validSara = false;
+            res.redJohanna = '';
+            res.redSaraCastellanos = '';
+            res.redLauGuerra = '';
+      } else if (res.redMujeres == 'Johanna_proenca') 
+      {
+            this.validEliemerson = false;
+            this.validLau = false;
+            this.validJohana = true;
+            this.validSara = false;
+            res.redSaraCastellanos = '';
+            res.redEliemerson = '';
+            res.redLauGuerra = '';
+      } else if (res.redMujeres == 'sara_castellanos') 
+      {
+            this.validEliemerson = false;
+            this.validLau = false;
+            this.validJohana = false;
+            this.validSara = true;
+            res.redJohanna = '';
+            res.redEliemerson = '';
+            res.redLauGuerra = '';
+      } else 
+      {
+            this.validEliemerson = false;
+            this.validLau = false;
+            this.validJohana = false;
+            this.validSara = false;
+            res.redJohanna = '';
+            res.redSaraCastellanos = '';
+            res.redEliemerson = '';
+            res.redLauGuerra = '';
       }
     })
   };
@@ -617,50 +643,60 @@ export class ValidateUserComponent implements OnInit {
   updateUser(e: Event) {
     this.loaderButton = true;
     e.preventDefault;
-    if (this.formUpdate.valid) {
+    if (this.formUpdate.valid) 
+    {
       const data = this.formUpdate.value;
-      this.data_user.updateDataUser(data).subscribe(res => {
-        if (res == true) {
-          setTimeout(() => {
+      this.data_user.updateDataUser(data).subscribe(res => 
+        {
+        if (res == true) 
+        {
+          setTimeout(() => 
+          {
             this.currentState = 4;
             this.loaderButton = false;
           }, 200);
-        } else {
-          setTimeout(() => {
+        } else 
+        {
+          setTimeout(() => 
+          {
             this.currentState = 5;
             this.loaderButton = false;
           }, 200);
         }
-      }, err => {
+      }, err => 
+      {
         console.error('error del update: ', err)
       })
     }
   }
-  closemodal() {
+  closemodal() 
+  {
     this.formValid.reset();
     this.formValidateCode.reset();
     this.formUpdate.reset();
     this.dialogRef.close();
   }
 
-  showregister() {
-
+  showregister() 
+  {
     this.closemodal()
-    setTimeout(() => {
+    setTimeout(() => 
+    {
       const dialogConfig = new MatDialogConfig();
       dialogConfig.autoFocus = true;
       dialogConfig.hasBackdrop = true;
-      dialogConfig.position = {
+      dialogConfig.position = 
+      {
         top: '50px'
       }
-      dialogConfig.data = {
+      dialogConfig.data = 
+      {
         id: 1,
         title: 'Iniciar sesion'
       }
       const dialogRef = this.dialog.open(SignUpComponent, dialogConfig);
       dialogRef.afterClosed().subscribe(res => {})
     }, 1000);
-
 
   }
 
