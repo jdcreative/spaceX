@@ -6,7 +6,7 @@
     border: 0px;
 }
 .modal-footer{
-    padding-bottom: 60px;
+    padding-bottom: 15px;
 }
 p.title-modal {
     font-size: 35px;
@@ -54,7 +54,6 @@ p.title-modal {
 .form-control{
     border-radius: 10px;
 }
-
 .label {
     display: inline-block;
     margin-bottom: .2rem;
@@ -62,14 +61,15 @@ p.title-modal {
 }
 .titleFecha{
     font-size: 16px;
-    font-weight: 900;
-    color: #4f4f4f;
+    font-weight: 100;
+    color: #fff;
     text-align: center; 
+    width: 100%;
 }
 .fecha{
     font-size: 22px;
     font-weight: 900;
-    color: black;
+    color:#fff;
     text-align: center;    
 }
 input[type=checkbox]{
@@ -117,4 +117,28 @@ label {
 }
 .disbledButton{
     pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+    p.title-modal.light {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    p.description.light {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .modal-dialog-scrollable {
+        background-position: 30%;
+        margin: 0px !important;
+    }
+    .buttonform{
+        font-size: 11px !important;
+        background: yellow !important;
+        width: 90%;
+    }
+    .padding-50{
+        padding: 30px 40px 0px 40px;
+    }
 }

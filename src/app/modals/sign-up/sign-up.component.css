@@ -1,21 +1,23 @@
-::ng-deep.mat-dialog-container{
-    width: auto;
-    background: url(../../../assets/back/Banner_go_azul.jpg) !important;
+.modal-dialog{
+    background: url(../../../assets/media/bg_register.jpg) !important;
     background-size: cover;
     background-position: center;
+    margin: 0px !important;
 }
 .modal-content{
     background: transparent;
     border: none;
 }
-
+.mat-dialog-container{
+    padding: 0px !important;
+}
 .contentImgModal{
     margin-left: auto;
     margin-right: auto;
     width: min-content;
 }
 .form-control{
-    border-radius: 20px !important;    
+    border-radius: 10px !important;    
 }
 label{
     font-size: 20px !important;
@@ -35,9 +37,13 @@ input[type=checkbox]{
     justify-content: center;
     width: 100%;
 }
+p.ng-star-inserted {
+    margin: 0px;
+    padding: 0px;
+}
 .buttonform{
-    border-radius: 20px;
-    padding: 8px 25px;
+    border-radius: 15px;
+    padding: 5px 25px;
     color: #4f4f4f !important;
     font-size: 22px;
     font-family: 'Roboto';
@@ -45,10 +51,10 @@ input[type=checkbox]{
     background: yellow !important;
 }
 .invalidBtn{
-    border-radius: 20px;
-    padding: 8px 25px;
+    border-radius: 10px;
+    padding: 5px 25px;
     color: #a8a8a8;
-    font-size: 22px;
+    font-size: 15px;
     font-family: 'Roboto';
     font-weight: 900;
     background: rgb(214, 214, 214);
