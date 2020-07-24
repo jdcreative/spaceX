@@ -218,18 +218,17 @@
             </div>
         </div>
         <div *ngIf="currentState == 3" class="modal-content">
-            <form [formGroup]="formUpdate" (ngSubmit)="updateUser($event)">
+            
                 <div class="modal-header">
                     <div class="container padding-50">
+                 
                         <div class="row">
-                            <img src="../../../assets/media/icons/check.png" style="margin: 0 auto;" />
-                        </div>
-                        <div class="row">
-                            <p class="title-modal light">ACTUALIZA TU INFORMACIÓN</p>
+                            <p class="title-modal light" style="font-size: 20px;">ACTUALIZA TU INFORMACIÓN</p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-body" style="height: 450px;">
+                    <form [formGroup]="formUpdate" (ngSubmit)="updateUser($event)">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputNombre">Nombre</label>
@@ -618,6 +617,7 @@
 
                     </div>
                     <div class="form-row">
+                        
                         <div class="form-group col-md-12 col-auto" style="margin-top: auto">
                             <div class="form-check mb-2" style="display: flex;">
                                 <input class="form-check-input" type="checkbox" id="terminosYCondiciones"
@@ -632,15 +632,18 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
                     <div class="contentBtnValidar">
                         <button type="submit" class="invalidBtn" [disabled]="formUpdate.invalid"
                             [ngClass]="{'buttonform': formUpdate.valid, 'disbledButton':loaderButton}">
                             <span [ngClass]="{'spinner-border': loaderButton}"></span>ACEPTAR</button>
                     </div>
+                </form>
+                   
                 </div>
-            </form>
+                <div class="modal-footer">
+                    
+                </div>
+            
         </div>
         <div *ngIf="currentState == 4" class="modal-content">
             <div class="modal-header">
@@ -653,7 +656,7 @@
                         <p class="title-modal light">ACTUALIZACIÓN <br> EXITOSA</p>
                     </div>
                     <div class="row">
-                        <p class="description light">!Ya estas listo! nos vemos en la convencion SOMOS uno GO..</p>
+                        <p class="description light" style="text-align: center;">Ya estás listo! Nos vemos en la Convención Somos Uno GO!</p>
                     </div>
                 </div>
             </div>

@@ -46,7 +46,8 @@ export class ValidateUserComponent implements OnInit {
   formValid: FormGroup;
   formUpdate: FormGroup;
   formValidateCode: FormGroup;
-  mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
+  //mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
+  mailPattern: any ;
   numberPattern: any = /^[0-9]{6}$/;
   public dataUser = [];
   private idUser = [];

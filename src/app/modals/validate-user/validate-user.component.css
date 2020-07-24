@@ -119,6 +119,7 @@ label {
     pointer-events: none;
 }
 
+
 @media only screen and (max-width: 600px) {
     p.title-modal.light {
         font-size: 15px;

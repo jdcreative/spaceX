@@ -7,7 +7,7 @@
             <img src="../../../assets/back/registro_textoMRegistro.png" width="400">
           </div>
         </div>
-        <div class="modal-body" style="height: 400px;">
+        <div class="modal-body" style="height: 450px;">
           <div class="form-row">
             <div class="form-group col-md-6">
               <input type="email" class="form-control" id="inputNombre" formControlName="nombre"
@@ -60,7 +60,7 @@
             <div class="form-group col-md-6">
               <select id="inputState" class="form-control custom-select" formControlName="pais">
                 <option selected value="">Selecciona un pais...</option>
-                <option *ngFor="let co of countries; index as i" [value]="co.name">{{co.name}}</option>
+                <option *ngFor="let co of countries; index as i" [value]="co.name" >{{co.name}}</option>
               </select>
               <div *ngIf="countryUpdate.invalid && (countryUpdate.touched || countryUpdate.dirty)"
                 class="invalid-feedback">
@@ -79,7 +79,7 @@
               <select id="inputChurch" class="form-control custom-select" formControlName="iglesia">
                 <option selected value="">Selecciona tu iglesia</option>
                 <option value='pertenece_mci'>Soy parte de la MCI</option>
-                <option value='G12_church'>G12 Church</option>
+                <option value='G12_church'>G12 Church - Miami</option>
                 <option value='otra_iglesia'>Otra Iglesia</option>
                 <option value='ninguna'>No pertenezco a ninguna iglesia</option>
               </select>
@@ -379,9 +379,9 @@
           <div class="row">
             <div class="form-group col-md-12 col-auto" style="margin-top: auto">
               <div class="form-check mb-2" style="display: flex;">
-                <input class="form-check-input" type="checkbox" id="terminosYCondiciones" class="margin-top: 0">
-                <label class="form-check-label" for="terminosYCondiciones" style="margin-left: 10px;">
-                  recibir los marketing emails de Somos Uno GO
+                <input class="form-check-input" type="checkbox" id="email_aceptado" class="margin-top: 0">
+                <label class="form-check-label" for="email_aceptado" style="margin-left: 10px;">
+                  Recibir emails de marketing de Somos Uno GO
                 </label>
               </div>   
             </div>
