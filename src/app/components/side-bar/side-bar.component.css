@@ -1,0 +1,117 @@
+.container-sider-bar {
+    /* border: 5px solid red; */
+    width: 300px;
+    background: linear-gradient(180deg, rgba(237, 44, 44, 0) 13.22%, #F95252 94.29%), #FFF09B;
+}
+
+.container-padding {
+    /* border: 5px solid gold; */
+    padding: 25px;
+}
+
+.container-image-profile {
+    /* border: 5px solid springgreen; */
+}
+
+.container-info {
+    /* border: 5px solid blue; */
+}
+
+.container-tribu {
+    /* border: 5px solid aqua; */
+}
+
+.container-menu {
+    /* border: 5px solid blueviolet; */
+    font-family: Roboto;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+.container-exit {
+    background-color: #FFFFFF;
+    /* border: 5px solid green; */
+    padding: 20px;
+}
+
+.tribu-points {
+    color: white;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.list-group-item {
+    text-align: center;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.list-group-item:hover {
+    cursor: pointer;
+}
+
+.names {
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.email {
+    font-family: Roboto;
+    text-align: center;
+    color: gray;
+}
+
+.tribu-halcones {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.container-border {
+    width: auto;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 11px;
+}
+
+.btn-fixed {
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 172px;
+    height: 57px;
+}
+
+.display-flex {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.padding-items {
+    margin-bottom: 30px;
+}
+
+.bold-selected {
+    color: black;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 739px) {
+    .container-sider-bar {
+        width: 100%;
+    }
+}

@@ -26,66 +26,73 @@ import { SignUpComponent } from './modals/sign-up/sign-up.component';
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
 import { LoginComponent } from './modals/login/login.component';
 import { PreconvencionComponent } from './components/preconvencion/preconvencion.component';
-import { JwtService } from './interceptor/jwt.service';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { TribusComponent } from './components/profile/tribus/tribus.component';
+import { ConferencistasComponent } from './components/profile/conferencistas/conferencistas.component';
+import { TalleresComponent } from './components/profile/talleres/talleres.component';
+import { MerchComponent } from './components/profile/merch/merch.component';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
-import { ErrordialogserviceService } from './service/errordialogservice.service';
 
-@NgModule
-({
-  declarations: 
-  [
-      AppComponent,
-      HomeComponent,
-      FooterComponent,
-      SignUpComponent,
-      ValidateUserComponent,
-      LoginComponent,
-      PreconvencionComponent,
-      ErrorDialogComponent
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    FooterComponent,
+    SignUpComponent,
+    ValidateUserComponent,
+    LoginComponent,
+    PreconvencionComponent,
+    ProfileComponent,
+    SideBarComponent,
+    TribusComponent,
+    ConferencistasComponent,
+    TalleresComponent,
+    MerchComponent
   ],
-  imports: 
-  [
+  imports:
+    [
       BrowserModule,
       AppRoutingModule,
       HttpClientModule,
-      MatDialogModule,    
+      MatDialogModule,
       MatRadioModule,
       MatOptionModule,
       MatSelectModule,
       MatCheckboxModule,
       BrowserAnimationsModule,
       ReactiveFormsModule,
-      AngularFireModule.initializeApp(environment.firebase),    
+      AngularFireModule.initializeApp(environment.firebase),
       AppRoutingModule,
-    //   JwtModule.forRoot  <----------ESTO CONTIENE ERRORES...
-    //   ({                         Y ESTA AFECTANDO TODOS LOS SERVICIOS 
-    //     config:                  EN ESPECIAL UPDATE USER --------
-    //     {
-    //         tokenGetter: 
-    //         function  tokenGetter() 
-    //         {
-    //             return localStorage.getItem('access_token');
-    //         },
-    //         allowedDomains: ['localhost:3000']
-    //     }
-    //   })
-  ],
-  providers: 
-  [
+      //   JwtModule.forRoot  <----------ESTO CONTIENE ERRORES...
+      //   ({                         Y ESTA AFECTANDO TODOS LOS SERVICIOS 
+      //     config:                  EN ESPECIAL UPDATE USER --------
+      //     {
+      //         tokenGetter: 
+      //         function  tokenGetter() 
+      //         {
+      //             return localStorage.getItem('access_token');
+      //         },
+      //         allowedDomains: ['localhost:3000']
+      //     }
+      //   })
+    ],
+  providers:
+    [
       AngularFirestore,
-    //   { 
-    //       provide: HTTP_INTERCEPTORS, useClass: JwtService, multi: true 
-    //   },
-    //   ErrordialogserviceService,
-  ],
+      //   { 
+      //       provide: HTTP_INTERCEPTORS, useClass: JwtService, multi: true 
+      //   },
+      //   ErrordialogserviceService,
+    ],
   bootstrap: [AppComponent],
-  entryComponents: 
-  [
+  entryComponents:
+    [
       SignUpComponent,
       ValidateUserComponent,
       LoginComponent,
       ErrorDialogComponent
-  ]
+    ]
 
 })
 export class AppModule { }
