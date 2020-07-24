@@ -52,7 +52,7 @@
                             <label for="inputCelular">Celular</label>
                             <input type="text" class="form-control" id="inputCelular" formControlName="celular"
                                 placeholder="escribe tu numero de celular">
-                                <div *ngIf="phoneUpdate.invalid && (phoneUpdate.touched || phoneUpdate.dirty)"
+                            <div *ngIf="phoneUpdate.invalid && (phoneUpdate.touched || phoneUpdate.dirty)"
                                 class="invalid-feedback">
                                 <p *ngIf="phoneUpdate.hasError('required')">Debes ingresar tu Correo Electronico</p>
                             </div>
@@ -61,7 +61,7 @@
                             <label for="inputTelefono">Telefono</label>
                             <input type="text" class="form-control" id="inputTelefono" formControlName="telefono"
                                 placeholder="escribe tu numero telefonico fijo">
-                                
+
                         </div>
                     </div>
 
@@ -81,7 +81,7 @@
                             <label for="inputCiudad">Ciudad</label>
                             <input type="text" class="form-control" id="inputCiudad" placeholder="donde vives"
                                 formControlName="ciudad">
-                                <div *ngIf="cityUpdate.invalid && (cityUpdate.touched || cityUpdate.dirty)"
+                            <div *ngIf="cityUpdate.invalid && (cityUpdate.touched || cityUpdate.dirty)"
                                 class="invalid-feedback">
                                 <p *ngIf="cityUpdate.hasError('required')">Debes Ingresar tu ciudad</p>
                             </div>
@@ -385,7 +385,7 @@
                             <div *ngIf="languageUpdate.invalid && (languageUpdate.touched || languageUpdate.dirty)"
                                 class="invalid-feedback">
                                 <p *ngIf="languageUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="form-group col-md-4 col-auto" style="margin-top: auto">
                             <div class="form-check mb-2" style="display: flex;">
@@ -398,42 +398,41 @@
                             <div *ngIf="terminos.invalid && (terminos.touched || terminos.dirty)"
                                 class="invalid-feedback">
                                 <p *ngIf="terminos.hasError('required')">Debes aceptar los terminos y condiciones</p>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="contetBtn">
-                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]="registerForm.invalid"
-                        [ngClass]="{'buttonform': registerForm.valid}">REGISTRARME</button>
+                        <button class="button invalidBtn" [disabled]="registerForm.invalid"
+                            [ngClass]="{'buttonform': registerForm.valid, 'disbledButton':loaderButton}">
+                            <span [ngClass]="{'spinner-border': loaderButton}"></span>REGISTRARME
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
         <div *ngIf="currentState == 2" class="modal-content">
             <div class="modal-header">
-                <div  class="okGO">
+                <div class="okGO">
                     <p class="okRegiter">tu registro a sido exitoso</p>
                     <p class="GO">preparate para la conveción<span> SOMOS UNO GO!</span></p>
                 </div>
-            </div>           
+            </div>
         </div>
         <div *ngIf="currentState == 3" class="modal-content">
             <div class="modal-header">
-                <div  class="okGO">                    
+                <div class="okGO">
                     <p class="GO">LO SENTIMOS TU USUARIO <span>YA EXISTE!</span></p>
                 </div>
-            </div>           
+            </div>
         </div>
         <div *ngIf="currentState == 4" class="modal-content">
             <div class="modal-header">
                 <div class="okGO">
                     <p class="GO">ALGO HA SALIDO MAL <span>INTENTALO NUEVAMENTE</span></p>
                 </div>
-            </div>           
+            </div>
         </div>
     </div>
 </div>
-
-
-

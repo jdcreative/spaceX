@@ -20,6 +20,7 @@ export class SignUpComponent implements OnInit {
   registerForm: FormGroup;
   mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
   countries = apicountry;
+  loaderButton:boolean=false;
   cities = 0;
   language = [{ 'name': 'English' }, { 'name': 'Español' }, { 'name': 'português' }];
   pastoras = [
@@ -262,25 +263,33 @@ export class SignUpComponent implements OnInit {
   get terminos() { return this.registerForm.get('terminosYCondiciones') };
 
   saveUser(e: Event) {
+    this.loaderButton=true;
+    console.log('spiner: ', this.loaderButton);
     e.preventDefault();
     if (this.registerForm.valid) {
-      const data = this.registerForm.value;
-      // this.fire.newUser(data)
+      const data = this.registerForm.value;      
       this.data_user.createUser(data).subscribe(res => {
-        // console.log('rs de la new user: ', res.estado);
+        console.log('rs de la new user: ', res.estado);
         if (res.estado) {
-          // console.log('entro aqui')
-          this.currentState = 2
+          console.log('entro aqui')         
+          this.currentState = 2;   
+          this.loaderButton=false;       
         } else {
-          // console.log('entro al false')
-          this.currentState = 3
+          console.log('entro al false')          
+          this.currentState = 3;
+          this.loaderButton=false;
         }
       }, err => {
-        // console.error('error en el new user', err)
+        console.error('error en el new user', err)
       })
-    } else {
-      this.currentState = 4
+    } else {      
+      this.currentState = 4;
+      this.loaderButton=false;
     }
+    setTimeout(() => {
+         
+    }, 5000);
+    
   }
   save() {
     this.dialogRef.close();

@@ -56,6 +56,7 @@ export class ValidateUserComponent implements OnInit {
   codeUser: number;
   errCode: string = '';
   mailCode: string = '';
+  loaderButton:boolean=false;
 
   validSede: boolean = false;
   validRed: boolean = false;
@@ -374,6 +375,7 @@ export class ValidateUserComponent implements OnInit {
     return this.formValid.get('email')
   };
   validateForm(e: Event) {
+    this.loaderButton = true;
     e.preventDefault();
     if (this.formValid.valid) {
       const data = this.formValid.value;
@@ -384,6 +386,7 @@ export class ValidateUserComponent implements OnInit {
         if (res.email) {
           // console.log('esta en el true');
           this.currentState = 1;
+          this.loaderButton = false;
           this.selectedUser = res;
           setTimeout(() => {
             this.setValues();
@@ -399,8 +402,9 @@ export class ValidateUserComponent implements OnInit {
           });
 
         } else if (res.estado == false) {
-          // console.log('esta en el false');
+          // console.log('esta en el false');          
           this.currentState = 6;
+          this.loaderButton = false;
         }
       }, err => {
         console.log('err :', err)
@@ -417,6 +421,7 @@ export class ValidateUserComponent implements OnInit {
     return this.formValidateCode.get('code')
   };
   validateCode(e: Event) {
+    this.loaderButton = true;
     e.preventDefault();
     if (this.formValidateCode.valid) {
       const data = this.formValidateCode.value;
@@ -424,8 +429,10 @@ export class ValidateUserComponent implements OnInit {
       // console.log('code: ', this.codeUser)
       if (data.code == this.codeUser) {
         this.currentState = 2;
+        this.loaderButton = false;
       } else {
         this.errCode = 'El codigo que has ingresado es incorrecto, intentalo de nuevo';
+        this.loaderButton = false;
       }
 
     }
@@ -608,6 +615,7 @@ export class ValidateUserComponent implements OnInit {
     this.formUpdate.controls['terminosYCondiciones'].setValue(this.selectedUser.terminosYCondiciones);
   }
   updateUser(e: Event) {
+    this.loaderButton = true;
     e.preventDefault;
     if (this.formUpdate.valid) {
       const data = this.formUpdate.value;
@@ -615,10 +623,12 @@ export class ValidateUserComponent implements OnInit {
         if (res == true) {
           setTimeout(() => {
             this.currentState = 4;
+            this.loaderButton = false;
           }, 200);
         } else {
           setTimeout(() => {
             this.currentState = 5;
+            this.loaderButton = false;
           }, 200);
         }
       }, err => {

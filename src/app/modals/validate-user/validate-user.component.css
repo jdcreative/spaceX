@@ -115,3 +115,6 @@ label {
 .buttonform:hover{
     background: rgb(206, 206, 3);
 }
+.disbledButton{
+    pointer-events: none;
+}

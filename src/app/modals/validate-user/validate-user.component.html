@@ -27,8 +27,9 @@
                 </div>
                 <div class="modal-footer">
                     <div class="contentBtnValidar">
-                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]="formValid.invalid"
-                            [ngClass]="{'buttonform': formValid.valid}">CONFIRMAR</button>
+                        <button type="submit" class="invalidBtn" [disabled]="formValid.invalid"
+                            [ngClass]="{'buttonform': formValid.valid, 'disbledButton':loaderButton}">
+                            <span [ngClass]="{'spinner-border': loaderButton}"></span>CONFIRMAR</button>
                     </div>
                 </div>
             </form>
@@ -61,9 +62,10 @@
                 </div>
                 <div class="modal-footer">
                     <div class="contentBtnValidar">
-                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]=" formValidateCode.invalid"
-                            [ngClass]="{'buttonform': formValidateCode.valid}">ACTUALIZAR</button>
-                    </div>
+                        <button type="submit" class="invalidBtn" [disabled]=" formValidateCode.invalid"
+                            [ngClass]="{'buttonform': formValidateCode.valid, 'disbledButton':loaderButton}">
+                            <span [ngClass]="{'spinner-border': loaderButton}"></span> ACTUALIZAR</button>
+                    </div>                            
                 </div>
             </form>
         </div>
@@ -614,9 +616,10 @@
                 </div>
                 <div class="modal-footer">
                     <div class="contentBtnValidar">
-                        <button type="submit" class=" btn buttonform invalidBtn" [disabled]="formUpdate.invalid"
-                        [ngClass]="{'buttonform': formUpdate.valid}">ACEPTAR</button>
-                    </div>
+                        <button type="submit" class="invalidBtn" [disabled]="formUpdate.invalid"
+                        [ngClass]="{'buttonform': formUpdate.valid, 'disbledButton':loaderButton}">
+                        <span [ngClass]="{'spinner-border': loaderButton}"></span>ACEPTAR</button>
+                    </div>                                
                 </div>
             </form>
         </div>

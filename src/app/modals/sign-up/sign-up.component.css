@@ -53,6 +53,9 @@ input[type=checkbox]{
     font-weight: 900;
     background: rgb(214, 214, 214);
 }
+.disbledButton{
+    pointer-events: none;
+}
 .buttonform:hover{
     background: rgb(206, 206, 3);
 }
