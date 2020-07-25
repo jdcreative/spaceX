@@ -58,7 +58,7 @@ export class DataUserService {
   }
 
   getAuthToken(email: string, code: any): Observable<any> {
-    return this.http.post<userInterface>(this.apiAuth, { email: email, code: code }, this.httpOptions).pipe(
+    return this.http.post<userInterface>(this.apiAuth, { email: email.toLocaleLowerCase(), code: code }, this.httpOptions).pipe(
       catchError(this.handleError));
   }
 

@@ -9,7 +9,7 @@
                     <div class="formLogin">
                         <div class="form-row">
                             <label for="correo">Escribe tu correo electronico</label>
-                            <input type="text" class="form-control" id="correo"
+                            <input class="toLowerEmail" type="text" class="form-control" id="correo"
                                 placeholder="Ingresa tu correo electronico" formControlName="email">
                         </div>
                     </div>
@@ -22,7 +22,7 @@
 
                 </div>
             </form>
-        </div>       
+        </div>
         <div *ngIf="validationCode == 2" class="modal-content">
 
             <div class="modal-body">
