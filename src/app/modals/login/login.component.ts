@@ -100,6 +100,7 @@ export class LoginComponent implements OnInit {
       this.showAlert = true;
     }
   }
+
   showregister() {
     this.closeModal()
     setTimeout(() => {
