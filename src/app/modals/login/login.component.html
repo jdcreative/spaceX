@@ -15,7 +15,11 @@
                     </div>
                 </div>
                 <div class="contentBtn modal-footer">
-                    <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">INGRESAR</button>
+                    <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">INGRESAR
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                            *ngIf="loginValidation"></span>
+                    </button>
+
                 </div>
             </form>
         </div>
