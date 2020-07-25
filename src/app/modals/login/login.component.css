@@ -71,3 +71,12 @@
     display: flex;
     justify-content: center;
 }
+
+.codeValidation {
+    overflow: auto !important;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: x-large;
+}

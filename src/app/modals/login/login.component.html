@@ -1,5 +1,5 @@
 <div class="modal" tabindex="-1" role="dialog" style="display: contents;">
-    <div class="modal-dialog modal-dialog-scrollable">
+    <div class=" modal-dialog-scrollable">
         <div *ngIf=" currentState == 0" class="modal-content">
             <div class="modal-header">
                 <p>INICIAR <span>SESION</span></p>
@@ -29,16 +29,13 @@
         </div> -->
         <div *ngIf="validationCode" class="modal-content">
 
-            <div class="modal-header">
+            <div class="modal-body">
 
                 <div class="codeValidation">
 
                     <div class="container padding-50">
                         <div class="center-items">
                             <img src="../../../assets/media/icons/mail.png" style="margin: 0 auto;" />
-                        </div>
-                        <div class="center-items">
-                            <p class="title-modal light">INGRESA TU CÓDIGO</p>
                         </div>
                         <div class="center-items">
                             <p class="description light">Ingresa el código que te hemos enviado a tu correo electrónico.
