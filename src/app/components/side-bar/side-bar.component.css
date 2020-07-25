@@ -109,6 +109,11 @@
     font-weight: bold;
 }
 
+.img-tribus {
+    height: 200px;
+    width: 200px;
+}
+
 @media only screen and (max-width: 739px) {
     .container-sider-bar {
         width: 100%;

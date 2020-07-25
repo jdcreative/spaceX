@@ -11,11 +11,13 @@ import { user } from '../interfaces/user'
 })
 export class DataUserService {
 
-  apiUrl= 'https://tnpuu5xzq6.execute-api.us-east-2.amazonaws.com/dev/auth';
-  apiCode='https://4sgi96tm5h.execute-api.us-east-2.amazonaws.com/dev/send_code';
-  apiValidateCode='https://tqufnitxp8.execute-api.us-east-2.amazonaws.com/dev/validate_code';
-  apiUpdate='https://ybvvk76o5k.execute-api.us-east-2.amazonaws.com/dev/update_user';
-  apiNew='https://tm44g2qq8k.execute-api.us-east-2.amazonaws.com/dev/signup';
+  apiUrl = 'https://tnpuu5xzq6.execute-api.us-east-2.amazonaws.com/dev/auth';
+  apiCode = 'https://4sgi96tm5h.execute-api.us-east-2.amazonaws.com/dev/send_code';
+  apiValidateCode = 'https://tqufnitxp8.execute-api.us-east-2.amazonaws.com/dev/validate_code';
+  apiUpdate = 'https://ybvvk76o5k.execute-api.us-east-2.amazonaws.com/dev/update_user';
+  apiNew = 'https://tm44g2qq8k.execute-api.us-east-2.amazonaws.com/dev/signup';
+  apiAuth = 'https://virr342x09.execute-api.us-east-2.amazonaws.com/dev/authorization';
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -27,34 +29,38 @@ export class DataUserService {
     private http: HttpClient
   ) { }
 
-  getDataUser(mail: string): Observable<any>{    
-    return this.http.post<userInterface>(this.apiUrl, {email: mail}, this.httpOptions)
-    .pipe(catchError(this.handleError));    
+  getDataUser(mail: string): Observable<any> {
+    return this.http.post<userInterface>(this.apiUrl, { email: mail }, this.httpOptions)
+      .pipe(catchError(this.handleError));
   }
 
-  getCodeSesion(mail:string): Observable<any>{
+  getCodeSesion(mail: string): Observable<any> {
     // console.log('el mail enviado', mail)
-    return this.http.post<user>(this.apiCode, {email: mail}, this.httpOptions)
-    .pipe(catchError(this.handleError));
+    return this.http.post<user>(this.apiCode, { email: mail }, this.httpOptions)
+      .pipe(catchError(this.handleError));
   }
 
-  validateCode(mail:string, code:number): Observable<any>{
+  validateCode(mail: string, code: number): Observable<any> {
     // console.log('mail :', mail, ' code: ', code);
-    return this.http.post<any>(this.apiValidateCode, {email: mail, code:code}, this.httpOptions)
-    .pipe(catchError(this.handleError));
+    return this.http.post<any>(this.apiValidateCode, { email: mail, code: code }, this.httpOptions)
+      .pipe(catchError(this.handleError));
   }
-  updateDataUser(datauser: any): Observable<any>{
+  updateDataUser(datauser: any): Observable<any> {
     // console.log('la data que llega: ',datauser);
-    return this.http.post<userInterface>(this.apiUpdate, datauser, this.httpOptions )
-    .pipe(catchError(this.handleError));
+    return this.http.post<userInterface>(this.apiUpdate, datauser, this.httpOptions)
+      .pipe(catchError(this.handleError));
   }
 
-  createUser(data:any):Observable<any>{
+  createUser(data: any): Observable<any> {
     // console.log('la data del new user: ', data);
     return this.http.post<userInterface>(this.apiNew, data, this.httpOptions)
-    .pipe(catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
+  getAuthToken(email: string, code: any): Observable<any> {
+    return this.http.post<userInterface>(this.apiAuth, { email: email, code: code }, this.httpOptions).pipe(
+      catchError(this.handleError));
+  }
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

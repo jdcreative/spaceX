@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
@@ -53,6 +53,7 @@ import { ErrorDialogComponent } from './components/error-dialog/error-dialog.com
   ],
   imports:
     [
+      FormsModule,
       BrowserModule,
       AppRoutingModule,
       HttpClientModule,

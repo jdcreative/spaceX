@@ -3,7 +3,7 @@
     <div class="container-padding">
 
         <div class="container-image-profile padding-items display-flex">
-            <img class="rounded-circle" src="assets/media/default-user.jpg">
+            <img class="rounded-circle img-tribus" [src]="finalImage">
         </div>
 
         <div class="container-info padding-items">
@@ -24,7 +24,7 @@
 
                 <h6 class="tribu-halcones">
                     TRIBU
-                    HALCONES
+                    {{ finalTribu ? finalTribu : 'Leones' }}
                 </h6>
 
                 <small>PUNTOS</small>

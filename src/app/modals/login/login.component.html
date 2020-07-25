@@ -19,10 +19,57 @@
                 </div>
             </form>
         </div>
-        <div *ngIf="currentState == 1" class="modal-content">
+        <!-- <div *ngIf="currentState == 1" class="modal-content">
             <div class="modal-header">
                 <div class="okGO">
-                    <p class="GO">DENTRO DE POCO PODRAS DISFRUTAR DE LA MEJOR EXPERIENCIA <span>SOMOS UNO GO!!</span></p>
+                    <p class="GO">DENTRO DE POCO PODRAS DISFRUTAR DE LA MEJOR EXPERIENCIA <span>SOMOS UNO GO!!</span>
+                    </p>
+                </div>
+            </div>
+        </div> -->
+        <div *ngIf="validationCode" class="modal-content">
+
+            <div class="modal-header">
+
+                <div class="codeValidation">
+
+                    <div class="container padding-50">
+                        <div class="center-items">
+                            <img src="../../../assets/media/icons/mail.png" style="margin: 0 auto;" />
+                        </div>
+                        <div class="center-items">
+                            <p class="title-modal light">INGRESA TU CÓDIGO</p>
+                        </div>
+                        <div class="center-items">
+                            <p class="description light">Ingresa el código que te hemos enviado a tu correo electrónico.
+                            </p>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Ingresa el código..."
+                                aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="code">
+                        </div>
+
+                        <div>
+                            <div class="contentBtn modal-footer">
+                                <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid"
+                                    (click)="saveValidation();" type="button">
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                                        *ngIf="statusLoading"></span>
+
+                                    INGRESAR
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-danger" role="alert" *ngIf="showAlert">
+                            El código ingresado es inválido, revisa de nuevo.
+                        </div>
+
+                        <div class="alert alert-warning" role="alert" *ngIf="emailNotFound">
+                            El correo que ingresaste no existe
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
