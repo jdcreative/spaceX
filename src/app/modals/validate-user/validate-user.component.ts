@@ -379,30 +379,28 @@ export class ValidateUserComponent implements OnInit {
   validateForm(e: Event) {
     this.loaderButton = true;
     e.preventDefault();
-    if (this.formValid.valid) 
-    {
+    if (this.formValid.valid) {
       const data = this.formValid.value;
-      //auth del usuario
-      this.data_user.getDataUser(data.email).subscribe(res => 
-      {
-        if (res.email) 
-        {
+      //auth del usuario getCodeSesion
+      this.data_user.getCodeSesion(data.email).subscribe(res => {
+        console.log('res de getdatauser : ', res);
+        if (res.email) {
           this.currentState = 1;
           this.loaderButton = false;
-          this.selectedUser = res;
-          setTimeout(() => 
-          {
+          this.mailCode = data.email;
+          this.codeUser = res.code;
+          setTimeout(() => {
             this.setValues();
           }, 200);
-          this.data_user.getCodeSesion(data.email).subscribe(res => {
-            this.mailCode = data.email;
-            this.codeUser = res.code;
-            // console.log('res de code:', res);
+          this.data_user.getDataUser(data.email).subscribe(res => {
+            console.log('res de getcodesesion :', res)
+            this.selectedUser = res;
           }, err => {
-            // console.log('error: ', err)
+            console.log('error: ', err)
           });
 
         } else if (res.estado == false) {
+          console.log('res del estado : ', res.estado)
           this.currentState = 6;
           this.loaderButton = false;
         }
