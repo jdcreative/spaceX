@@ -18,7 +18,8 @@ export class SignUpComponent implements OnInit {
 
   description: string;
   registerForm: FormGroup;
-  mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
+  //mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
+  mailPattern: any;
   countries = apicountry;
   loaderButton:boolean=false;
   cities = 0;

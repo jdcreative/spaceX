@@ -9,7 +9,7 @@
     padding-bottom: 15px;
 }
 p.title-modal {
-    font-size: 35px;
+    font-size: 25px;
     margin-top: 20px;
 }
 .padding-50{
@@ -24,6 +24,11 @@ p.title-modal {
 }
 .light{
     color:white;
+    font-size: 13px;
+    text-align: center;
+}
+.modal-header img {
+    width: 30%;
 }
 .modal-dialog{
     background: url(../../../assets/back/shadow_modal_01.jpg);
@@ -78,14 +83,16 @@ input[type=checkbox]{
     width: 25px;
     height: 25px;    
 }
-.invalid-feedback{
+.invalid-feedback, .invalid-feedaback{
     display: block;
-    color: black;
+    color: #dc3545 !important;
+    text-align: center;
 }
 .contentBtnValidar{
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top:10px;
 }
 .buttonform{
     border-radius: 20px;
@@ -107,10 +114,13 @@ label {
     border-radius: 20px;
     padding: 8px 25px;
     color: #a8a8a8;
-    font-size: 22px;
+    font-size: 14px;
     font-family: 'Roboto';
     font-weight: 900;
     background: rgb(214, 214, 214);
+}
+.invalid-feedback p {
+    margin-bottom: 0px;
 }
 .buttonform:hover{
     background: rgb(206, 206, 3);
