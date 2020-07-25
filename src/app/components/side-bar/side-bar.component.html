@@ -61,18 +61,27 @@
                     [ngClass]="{ 'bold-selected' : tab == 'galeria' }">
                     GALERIA
                 </li>
-                <li class="list-group-item" (click)="goTo('playlist');"
-                    [ngClass]="{ 'bold-selected' : tab == 'playlist' }">
-                    PLAYLIST
+                <li class="list-group-item">
+                    <a class="white" target="_blank"
+                        href="https://open.spotify.com/user/u2r5xfv3uohci4693tuqvyb6e?si=4jV_CisOTLKpsorjMdRG6A">
+                        PLAYLIST
+                    </a>
                 </li>
-                <li class="list-group-item" (click)="goTo('podcast');"
-                    [ngClass]="{ 'bold-selected' : tab == 'podcast' }">
-                    PODCAST
+                <li class="list-group-item">
+                    <a class="white" target="_blank"
+                        href="https://open.spotify.com/show/3LEn5V5hmqikFBaoAMzeJV?si=MMVwbqE8R-q0eIgEi2Hfwg">
+                        PODCAST
+                    </a>
                 </li>
-                <li class="list-group-item" (click)="goTo('donacion');"
-                    [ngClass]="{ 'bold-selected' : tab == 'donacion' }">
-                    DONACION
+                <li class="list-group-item">
+                    <a class="white" target="_blank" href="https://mcidonaciones.com/">
+                        DONACIONES
+                    </a>
                 </li>
+                <!-- <li class="list-group-item" (click)="goTo('donacion');"
+                    [ngClass]="{ 'bold-selected' : tab == 'donacion' }" >
+                    
+                </li> -->
             </ul>
 
         </div>
