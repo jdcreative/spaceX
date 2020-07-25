@@ -1,0 +1,13 @@
+.container-conferencistas {
+    text-align: center;
+}
+
+.container-conferencistas > img {
+    width: 50%;
+}
+
+@media only screen and (max-width: 1331px) {
+    .container-conferencistas > img {
+        width: 100%;
+    }
+  }

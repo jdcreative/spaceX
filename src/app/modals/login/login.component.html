@@ -9,8 +9,9 @@
                     <div class="formLogin">
                         <div class="form-row">
                             <label for="correo">Escribe tu correo electronico</label>
-                            <input class="toLowerEmail" type="text" class="form-control" id="correo"
-                                placeholder="Ingresa tu correo electronico" formControlName="email">
+                            <input id="toLowerEmail" type="text" class="form-control" id="correo"
+                                placeholder="Ingresa tu correo electronico" formControlName="email"
+                                (input)="toLower($event);">
                         </div>
                     </div>
                 </div>
