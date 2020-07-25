@@ -388,12 +388,14 @@ export class ValidateUserComponent implements OnInit {
           this.loaderButton = false;
           this.mailCode = data.email;
           this.codeUser = res.code;
-          setTimeout(() => {
-            this.setValues();
-          }, 200);
+          
           this.data_user.getDataUser(data.email).subscribe(res => {
             // console.log('res de getcodesesion :', res)
             this.selectedUser = res;
+            // this.setValues();
+          setTimeout(() => {
+            this.setValues();
+          }, 400);
           }, err => {
             // console.log('error: ', err)
           });
