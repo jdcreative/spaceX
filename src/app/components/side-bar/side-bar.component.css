@@ -22,7 +22,7 @@
 
 .container-menu {
     /* border: 5px solid blueviolet; */
-    font-family: Roboto;
+    font-family: 'Roboto Mono', monospace;
     text-align: center;
     text-transform: uppercase;
     color: white;
@@ -54,21 +54,24 @@
 }
 
 .names {
-    font-family: Roboto;
+    font-family: 'Roboto Mono' , monospace;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     color: #000000;
+    font-size: 18px;
 }
 
+
 .email {
-    font-family: Roboto;
+    font-family: 'Roboto Mono', monospace;
     text-align: center;
-    color: gray;
+    color:white;
+    font-size: 12px;
 }
 
 .tribu-halcones {
-    font-family: Roboto;
+    font-family: 'Roboto Mono', monospace;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
