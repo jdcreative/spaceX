@@ -114,6 +114,15 @@
     width: 200px;
 }
 
+.white {
+    color: white !important;
+}
+
+.white:hover {
+    color: white !important;
+    text-decoration: none
+}
+
 @media only screen and (max-width: 739px) {
     .container-sider-bar {
         width: 100%;
