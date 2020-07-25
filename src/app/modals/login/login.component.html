@@ -1,6 +1,6 @@
 <div class="modal" tabindex="-1" role="dialog" style="display: contents;">
     <div class="modal-dialog modal-dialog-scrollable">
-        <div *ngIf=" currentState == 0" class="modal-content">
+        <div *ngIf="validationCode == 0" class="modal-content">
             <div class="modal-header">
                 <p>INICIAR <span>SESION</span></p>
             </div>
@@ -18,16 +18,8 @@
                     <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">INGRESAR</button>
                 </div>
             </form>
-        </div>
-        <!-- <div *ngIf="currentState == 1" class="modal-content">
-            <div class="modal-header">
-                <div class="okGO">
-                    <p class="GO">DENTRO DE POCO PODRAS DISFRUTAR DE LA MEJOR EXPERIENCIA <span>SOMOS UNO GO!!</span>
-                    </p>
-                </div>
-            </div>
-        </div> -->
-        <div *ngIf="validationCode" class="modal-content">
+        </div>       
+        <div *ngIf="validationCode == 2" class="modal-content">
 
             <div class="modal-header">
 
@@ -69,6 +61,27 @@
                             El correo que ingresaste no existe
                         </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="validationCode == 3" class="modal-content">
+            <div class="modal-header">
+                <div class="container padding-50">
+                    <div class="row">
+                        <img src="../../../assets/media/icons/face.png" style="margin: 0 auto;" />
+                    </div>
+                    <div class="row" style="justify-content: center;">
+                        <p class="title-modal light">OH NO!</p>
+                    </div>
+                    <div class="row">
+                        <p class="description light">Tu correo no esta registrado en la base de datos, realiza el
+                            registro y no te pierdas la convencion #SomosUnoGo.</p>
+                    </div>
+
+                    <div class="row" style="margin-bottom:25px;">
+                        <button type="button" class="btn buttonform" style="margin: 0 auto;"
+                            (click)="showregister()">Registrate</button>
                     </div>
                 </div>
             </div>

@@ -102,7 +102,7 @@ input[type=checkbox]{
     font-family: 'Roboto';
     font-weight: 900;
     background: yellow !important;
-    width: 50%;
+    width: 50%;    
 }
 label {
     display: inline-block;

@@ -71,3 +71,37 @@
     display: flex;
     justify-content: center;
 }
+p.description.light {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.buttonform{
+    border-radius: 20px;
+    padding: 8px 25px;
+    color: #000000 !important;
+    font-size: 15px !important;
+    font-family: 'Roboto';
+    font-weight: 900;
+    background: yellow !important;
+    width: 50%;
+}
+.buttonform:hover{
+    background: rgb(206, 206, 3);
+}
+@media screen and (max-width: 600px) {
+    p.title-modal.light {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    p.description.light {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .buttonform{
+        font-size: 11px !important;
+        background: yellow !important;
+        width: 90%;
+    }
+}

@@ -1,7 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {MatDialog,MatDialogConfig} from "@angular/material";
 import { DataUserService } from './../../service/data-user.service';
+import {SignUpComponent} from './../../modals/sign-up/sign-up.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +17,7 @@ export class LoginComponent implements OnInit {
   description: string;
   formlogin: FormGroup;
   currentState = 0;
-  validationCode: boolean = false;
+  validationCode: number = 0;
   statusLoading: boolean = false;
   showAlert: boolean = false;
   emailNotFound: boolean = false;
@@ -28,6 +30,7 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     public data_user: DataUserService,
     public router: Router,
+    private dialog: MatDialog
   ) {
     this.description = data.title;
     this.buildlogin();
@@ -48,12 +51,18 @@ export class LoginComponent implements OnInit {
     if (this.formlogin.valid) {
       const data = this.formlogin.value;
       this.data_user.getCodeSesion(data.email).subscribe(res => {
-        if (res) {
+        // console.log('res incial: ', res);
+        if (res.email) {
           this.dataForm = res;
-          this.validationCode = true;
-        }
-        this.currentState = 1;
-      }, err => { console.log('error:', err) })
+          this.validationCode = 2;          
+        }else if (res.estado == false) {
+          // console.log('res del estado : ', res.estado)
+          this.validationCode = 3;          
+        }        
+      }, err => { 
+        // console.log('error:', err) 
+      })
+      
     }
   }
 
@@ -71,7 +80,7 @@ export class LoginComponent implements OnInit {
                 this.dialogRef.close();
               }, 2000);
             } else {
-              this.validationCode = false;
+              // this.validationCode = false;
               this.code = "";
               localStorage.setItem("token", res.token);
               localStorage.setItem("user", JSON.stringify(res));
@@ -89,7 +98,21 @@ export class LoginComponent implements OnInit {
       this.showAlert = true;
     }
   }
-
+  showregister() {
+    this.closeModal()
+    setTimeout(() => {
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.autoFocus = true;
+      dialogConfig.hasBackdrop = true;
+      dialogConfig.position = {top: '50px'}
+      dialogConfig.data = {
+        id: 1,
+        title: 'Iniciar sesion'
+      }
+      const dialogRef = this.dialog.open(SignUpComponent, dialogConfig);
+      dialogRef.afterClosed().subscribe(res => {})
+    }, 1000);
+  }
   closeModal() {
     this.formlogin.reset();
     this.dialogRef.close();
