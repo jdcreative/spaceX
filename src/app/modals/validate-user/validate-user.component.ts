@@ -383,7 +383,7 @@ export class ValidateUserComponent implements OnInit {
       const data = this.formValid.value;
       //auth del usuario getCodeSesion
       this.data_user.getCodeSesion(data.email).subscribe(res => {
-        console.log('res de getdatauser : ', res);
+        // console.log('res de getdatauser : ', res);
         if (res.email) {
           this.currentState = 1;
           this.loaderButton = false;
@@ -393,19 +393,19 @@ export class ValidateUserComponent implements OnInit {
             this.setValues();
           }, 200);
           this.data_user.getDataUser(data.email).subscribe(res => {
-            console.log('res de getcodesesion :', res)
+            // console.log('res de getcodesesion :', res)
             this.selectedUser = res;
           }, err => {
-            console.log('error: ', err)
+            // console.log('error: ', err)
           });
 
         } else if (res.estado == false) {
-          console.log('res del estado : ', res.estado)
+          // console.log('res del estado : ', res.estado)
           this.currentState = 6;
           this.loaderButton = false;
         }
       }, err => {
-        console.log('err :', err)
+        // console.log('err :', err)
       });
     }
   }
@@ -643,7 +643,7 @@ export class ValidateUserComponent implements OnInit {
         }
       }, err => 
       {
-        console.error('error del update: ', err)
+        // console.error('error del update: ', err)
       })
     }
   }
