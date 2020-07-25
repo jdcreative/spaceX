@@ -1,41 +1,49 @@
-::ng-deep.mat-dialog-container{
+::ng-deep.mat-dialog-container {
     width: auto;
     background: url(../../../assets/back/watherPink.jpg);
     background-size: cover;
     background-position: center;
 }
-.modal-content{
+
+.modal-content {
     background: transparent;
     border: none;
 }
-.modal-header p{
+
+.modal-header p {
     font-size: 32px;
     color: white;
     font-weight: 900;
 }
-.modal-header p span{
+
+.modal-header p span {
     font-size: 32px;
     color: black;
 }
-.okGO{
+
+.okGO {
     width: 600%;
     margin: 100px auto auto auto;
     text-align: center;
     line-height: 1;
 }
-.GO{
-    color:black;
+
+.GO {
+    color: black;
     font-size: 35px;
     font-weight: 900;
 }
-.GO span{
+
+.GO span {
     color: white;
 }
-.contentBtn{
+
+.contentBtn {
     display: flex;
     justify-content: center;
 }
-.btnLogin{
+
+.btnLogin {
     color: #4f4f4f;
     font-size: 22px;
     font-family: 'Roboto';
@@ -43,6 +51,23 @@
     background: yellow;
     opacity: 1;
 }
-.btnLogin:hover{
+
+.btnLogin:hover {
     background: rgb(206, 206, 3);
+}
+
+.codeValidation {
+    display: flex;
+}
+
+.codeValidation>.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center-items {
+    display: flex;
+    justify-content: center;
 }
