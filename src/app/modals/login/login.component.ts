@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   statusLoading: boolean = false;
   showAlert: boolean = false;
   emailNotFound: boolean = false;
+  loginValidation: boolean = false;
   dataForm: any;
   code: string;
 
@@ -47,6 +48,7 @@ export class LoginComponent implements OnInit {
     });
   }
   login(e: Event) {
+    this.loginValidation = true;
     e.preventDefault();
     if (this.formlogin.valid) {
       const data = this.formlogin.value;

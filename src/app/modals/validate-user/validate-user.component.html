@@ -18,7 +18,7 @@
 
                     </div>
                 </div>
-                <div class="modal-body col-md-8" style="height: 350px;display: block; margin-left: auto; margin-right: auto;">
+                <div class="modal-body col-md-8" style="display: block; margin-left: auto; margin-right: auto;">
                     <input type="text" class="form-control" placeholder="Correo Electronico" formControlName="email">
                     <div *ngIf="validatorMail.invalid && (validatorMail.touched || validatorMail.dirty)"
                         class="invalid-feedback">
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-body" style="height: 350px;display: block; margin-left: auto; margin-right: auto; width: 70%;">
+                <div class="modal-body" style="display: block; margin-left: auto; margin-right: auto; width: 70%;">
                     <input type="text" class="form-control" placeholder="ingresa el codigo" maxlength="6"
                         formControlName="code" style="width: 100%;">
                     <div *ngIf="code.invalid && (code.touched || code.dirty)" class="invalid-feedback" style="color:red">
@@ -86,14 +86,14 @@
                     <div class="row">
                         <p class="title-modal light" style="font-size: 25px;">INFORMACIÓN REGISTRADA</p>
                     </div>
-                    <div class="row">
+                    <div class="row" style="display: none;">
                         <p class="description light">A continuación podras ver un detalle de la informacion registrada
                             para nuestra convencion de jovenes #SomosUnoGo.</p>
                     </div>
                 </div>
 
             </div>
-            <div class="modal-body" style="height: 450px;">
+            <div class="modal-body" style="height: 350px;">
                 <div class="col-md-12">
                     <label class="titleFecha">Tu fecha de Registro fue: </label>
                     <p class="fecha">{{selectedUser.date_register | date}}</p>
@@ -214,16 +214,14 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="contentBtnValidar">
-                        <button type="button" class="btn  buttonform" (click)="currentState = 3">ACTUALIZA TUS
-                            DATOS</button>
-                    </div>
-                </div>
+           
 
             </div>
             <div class="modal-footer">
-                
+                <div class="contentBtnValidar">
+                    <button type="button" class="btn  buttonform" (click)="currentState = 3">ACTUALIZA TUS
+                        DATOS</button>
+                </div>
             </div>
         </div>
         <div *ngIf="currentState == 3" class="modal-content">

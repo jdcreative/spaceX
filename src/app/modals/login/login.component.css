@@ -71,6 +71,7 @@
     display: flex;
     justify-content: center;
 }
+
 p.description.light {
     font-size: 22px;
     text-align: center;
@@ -88,6 +89,14 @@ p.description.light {
 }
 .buttonform:hover{
     background: rgb(206, 206, 3);
+}
+.codeValidation {
+    overflow: auto !important;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: unset;
 }
 @media screen and (max-width: 600px) {
     p.title-modal.light {
