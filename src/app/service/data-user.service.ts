@@ -36,7 +36,8 @@ export class DataUserService {
 
   getCodeSesion(mail: string): Observable<any> {
     // console.log('el mail enviado', mail)
-    return this.http.post<user>(this.apiCode, { email: mail }, this.httpOptions)
+    let emailLower = mail.toLowerCase();
+    return this.http.post<user>(this.apiCode, { email: emailLower }, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
 
@@ -58,7 +59,8 @@ export class DataUserService {
   }
 
   getAuthToken(email: string, code: any): Observable<any> {
-    return this.http.post<userInterface>(this.apiAuth, { email: email.toLocaleLowerCase(), code: code }, this.httpOptions).pipe(
+    let emailLower = email.toLowerCase();
+    return this.http.post<userInterface>(this.apiAuth, { email: emailLower, code: code }, this.httpOptions).pipe(
       catchError(this.handleError));
   }
 

@@ -102,8 +102,8 @@ p.description.light {
     font-size: unset;
 }
 
-.toLowerEmail {
-    text-transform: lowercase;
+#toLowerEmail {
+    text-transform: lowercase !important;
 }
 
 @media screen and (max-width: 600px) {

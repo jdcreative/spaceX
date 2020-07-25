@@ -1,9 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {MatDialog,MatDialogConfig} from "@angular/material";
+import { MatDialog, MatDialogConfig } from "@angular/material";
 import { DataUserService } from './../../service/data-user.service';
-import {SignUpComponent} from './../../modals/sign-up/sign-up.component';
+import { SignUpComponent } from './../../modals/sign-up/sign-up.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -56,15 +56,17 @@ export class LoginComponent implements OnInit {
         // console.log('res incial: ', res);
         if (res.email) {
           this.dataForm = res;
-          this.validationCode = 2;          
-        }else if (res.estado == false) {
+          this.validationCode = 2;
+        } else if (res.estado == false) {
           // console.log('res del estado : ', res.estado)
-          this.validationCode = 3;          
-        }        
-      }, err => { 
+          this.validationCode = 3;
+          this.loginValidation = false;
+        }
+      }, err => {
+        this.loginValidation = false;
         // console.log('error:', err) 
-      })
-      
+      });
+
     }
   }
 
@@ -93,6 +95,7 @@ export class LoginComponent implements OnInit {
           });
         } else {
           console.log("OCURRIÓ UN ERROR");
+          this.statusLoading = false;
         }
       })
     } else {
@@ -107,15 +110,20 @@ export class LoginComponent implements OnInit {
       const dialogConfig = new MatDialogConfig();
       dialogConfig.autoFocus = true;
       dialogConfig.hasBackdrop = true;
-      dialogConfig.position = {top: '50px'}
+      dialogConfig.position = { top: '50px' }
       dialogConfig.data = {
         id: 1,
         title: 'Iniciar sesion'
       }
       const dialogRef = this.dialog.open(SignUpComponent, dialogConfig);
-      dialogRef.afterClosed().subscribe(res => {})
+      dialogRef.afterClosed().subscribe(res => { })
     }, 1000);
   }
+
+  toLower(event) {
+    this.formlogin.get("email").setValue(event.target.value.toLowerCase());
+  }
+
   closeModal() {
     this.formlogin.reset();
     this.dialogRef.close();
