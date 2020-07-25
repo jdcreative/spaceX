@@ -8,15 +8,22 @@
     margin-left: 2vw;
 }
 .menuNavbar{
-    display: flex;
+    /*display: flex;
     position: absolute;
-    right: 70px;
+    right: 70px;*/
 }
 .allNets{
-    display: flex;
+    /*display: flex;
     justify-content: center;
     align-items: baseline;
-    margin-right: 200px;
+    margin-right: 200px;*/
+    display: flex;
+    align-items: baseline;
+    margin-right: 61px;
+    float: right;
+}
+.menuNavbar {
+    width: 100%;
 }
 @media screen and (max-width:991px){
     .allNets{display: none;}
@@ -383,11 +390,11 @@ img.img_set_info {
 /*  */
 .watherPink{
     background: url(../../../assets/back/watherPink.jpg);
-    height: calc(500em /11.2);
     background-position: center;
-    background-size: cover;    
+    background-size: cover;
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 .contentWeAreOne{
     width: 77%;

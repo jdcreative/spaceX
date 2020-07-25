@@ -18,20 +18,23 @@
 
                     </div>
                 </div>
-                <div class="modal-body col-md-8" style="display: block; margin-left: auto; margin-right: auto;">
+                <div class="modal-body col-md-8" style="height: 350px;display: block; margin-left: auto; margin-right: auto;">
                     <input type="text" class="form-control" placeholder="Correo Electronico" formControlName="email">
                     <div *ngIf="validatorMail.invalid && (validatorMail.touched || validatorMail.dirty)"
                         class="invalid-feedback">
                         <p *ngIf="validatorMail.hasError('required')">Debes ingresar tu correo electronico</p>
                         <p *ngIf="validatorMail.hasError('pattern')">Debes ingresar un correo electronico</p>
                     </div>
+                    <div class="row">
+                        <div class="contentBtnValidar">
+                            <button type="submit" class="invalidBtn" [disabled]="formValid.invalid"
+                                [ngClass]="{'buttonform': formValid.valid, 'disbledButton':loaderButton}">
+                                <span [ngClass]="{'spinner-border': loaderButton}"></span>CONFIRMAR</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="contentBtnValidar">
-                        <button type="submit" class="invalidBtn" [disabled]="formValid.invalid"
-                            [ngClass]="{'buttonform': formValid.valid, 'disbledButton':loaderButton}">
-                            <span [ngClass]="{'spinner-border': loaderButton}"></span>CONFIRMAR</button>
-                    </div>
+                    
                 </div>
             </form>
         </div>
@@ -52,10 +55,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-body" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+                <div class="modal-body" style="height: 350px;display: block; margin-left: auto; margin-right: auto; width: 70%;">
                     <input type="text" class="form-control" placeholder="ingresa el codigo" maxlength="6"
                         formControlName="code" style="width: 100%;">
-                    <div *ngIf="code.invalid && (code.touched || code.dirty)" class="invalid-feedback">
+                    <div *ngIf="code.invalid && (code.touched || code.dirty)" class="invalid-feedback" style="color:red">
                         <p *ngIf="code.hasError('pattern')">Debes ingresar 6 digitos </p>
                         <p *ngIf="code.hasError('required')">Es necesario que ingreses el codigo que te enviamos a tu
                             correo electronico</p>
@@ -63,13 +66,16 @@
                     <div *ngIf="errCode" class="invalid-feedaback">
                         <p>{{errCode}}</p>
                     </div>
+                    <div class="row">
+                        <div class="contentBtnValidar">
+                            <button type="submit" class="invalidBtn" [disabled]=" formValidateCode.invalid"
+                                [ngClass]="{'buttonform': formValidateCode.valid, 'disbledButton':loaderButton}">
+                                <span [ngClass]="{'spinner-border': loaderButton}"></span> ACTUALIZAR</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="contentBtnValidar">
-                        <button type="submit" class="invalidBtn" [disabled]=" formValidateCode.invalid"
-                            [ngClass]="{'buttonform': formValidateCode.valid, 'disbledButton':loaderButton}">
-                            <span [ngClass]="{'spinner-border': loaderButton}"></span> ACTUALIZAR</button>
-                    </div>
+                    
                 </div>
             </form>
         </div>
@@ -208,13 +214,16 @@
                         </p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="contentBtnValidar">
+                        <button type="button" class="btn  buttonform" (click)="currentState = 3">ACTUALIZA TUS
+                            DATOS</button>
+                    </div>
+                </div>
 
             </div>
             <div class="modal-footer">
-                <div class="contentBtnValidar">
-                    <button type="button" class="btn  buttonform" (click)="currentState = 3">ACTUALIZA TUS
-                        DATOS</button>
-                </div>
+                
             </div>
         </div>
         <div *ngIf="currentState == 3" class="modal-content">
