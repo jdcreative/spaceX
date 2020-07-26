@@ -64,7 +64,7 @@
 .banner{
     background: url(../../../assets/back/banner_home.jpg) no-repeat;
     width: 100%;
-    padding-top: 50px;
+    padding: 100px 1px;
     background-position: top;
     background-size: cover;
 }
@@ -75,7 +75,7 @@ img.img-left-banner {
     width: 50%;
 }
 .banner .row {
-    padding-top: 145px;
+    padding-top: 20px;
 }
 .contentPromoBanner{
     display: flex;
@@ -91,7 +91,6 @@ img.img-left-banner {
     margin-right: -73px;
 }
 .itielBanner{
-    background: url(../../../assets/media/itiel2.png) no-repeat;
     width: 680px;
     height: 501px;
     background-size: contain;
