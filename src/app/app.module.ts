@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -21,6 +21,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SignUpComponent } from './modals/sign-up/sign-up.component';
+
+//Languages libraries
+//Language library
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //services
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
@@ -66,6 +71,15 @@ import { ErrorDialogComponent } from './components/error-dialog/error-dialog.com
       ReactiveFormsModule,
       AngularFireModule.initializeApp(environment.firebase),
       AppRoutingModule,
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: (http: HttpClient) => {
+            return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+          },
+          deps: [HttpClient]
+        }
+      }),
       //   JwtModule.forRoot  <----------ESTO CONTIENE ERRORES...
       //   ({                         Y ESTA AFECTANDO TODOS LOS SERVICIOS 
       //     config:                  EN ESPECIAL UPDATE USER --------
