@@ -125,6 +125,7 @@ img.img-left-banner {
     text-align: center;
     margin: 0 auto;
     display: block;
+    text-transform: uppercase;
 }
 .btnRegisterBanner{
     width: 334px;
@@ -140,6 +141,7 @@ img.img-left-banner {
     text-align: center;
     display: block;
     margin: 0 auto;
+    text-transform: uppercase;
 }
 .btn-bar{
     padding: 3% 0px;

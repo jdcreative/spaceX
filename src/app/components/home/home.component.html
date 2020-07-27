@@ -19,7 +19,7 @@
     </div>
     <a class="btnRegister" (click)="openLogin();" style="display: none;">
         <div class="btn here">
-            INICIAR SESION
+            {{ 'home.iniciar-sesion' | translate }}
         </div>
     </a>
 </nav>
@@ -38,10 +38,10 @@
 <!--  -->
 <div class="row btn-bar">
     <div class="col-6">
-        <button class="btnVerify" (click)="openModalvalidate()">CONFIRMA TU REGISTRO</button>
+        <button class="btnVerify" (click)="openModalvalidate()">{{ 'home.confirmar-registro' | translate }}</button>
     </div>
     <div class="col-6">
-        <button class="btnRegisterBanner" (click)="openCloseModal()">REGISTRATE AQUI</button>
+        <button class="btnRegisterBanner" (click)="openCloseModal()">{{ 'home.registrate' | translate }}</button>
     </div>
 
 </div>
