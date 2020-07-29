@@ -23,6 +23,11 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SignUpComponent } from './modals/sign-up/sign-up.component';
 
+//Languages libraries
+//Language library
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 //services
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
 import { LoginComponent } from './modals/login/login.component';
@@ -68,8 +73,41 @@ import { ChatComponent } from './components/profile/chat/chat.component';
       BrowserAnimationsModule,
       ReactiveFormsModule,
       AngularFireModule.initializeApp(environment.firebase),
+<<<<<<< HEAD
       AngularFireDatabaseModule,
       AppRoutingModule,            
+=======
+      AppRoutingModule,
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: (http: HttpClient) => {
+            return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+          },
+          deps: [HttpClient]
+        }
+      }),
+      //   JwtModule.forRoot  <----------ESTO CONTIENE ERRORES...
+      //   ({                         Y ESTA AFECTANDO TODOS LOS SERVICIOS 
+      //     config:                  EN ESPECIAL UPDATE USER --------
+      //     {
+      //         tokenGetter: 
+      //         function  tokenGetter() 
+      //         {
+      //             return localStorage.getItem('access_token');
+      //         },
+      //         allowedDomains: ['localhost:3000']
+      //     }
+      //   })
+    ],
+  providers:
+    [
+      AngularFirestore,
+      //   { 
+      //       provide: HTTP_INTERCEPTORS, useClass: JwtService, multi: true 
+      //   },
+      //   ErrordialogserviceService,
+>>>>>>> 7c82598d48a19cf7c01d452ee1cc12fd93459c1f
     ],
   providers:[
     AngularFirestore,

@@ -77,7 +77,8 @@ p.description.light {
     text-align: center;
     margin-bottom: 0px;
 }
-.buttonform{
+
+.buttonform {
     border-radius: 20px;
     padding: 8px 25px;
     color: #000000 !important;
@@ -87,9 +88,11 @@ p.description.light {
     background: yellow !important;
     width: 50%;
 }
-.buttonform:hover{
+
+.buttonform:hover {
     background: rgb(206, 206, 3);
 }
+
 .codeValidation {
     overflow: auto !important;
     color: white;
@@ -98,6 +101,11 @@ p.description.light {
     font-weight: bold;
     font-size: unset;
 }
+
+#toLowerEmail {
+    text-transform: lowercase !important;
+}
+
 @media screen and (max-width: 600px) {
     p.title-modal.light {
         font-size: 15px;
@@ -108,7 +116,7 @@ p.description.light {
         text-align: center;
         margin-bottom: 0px;
     }
-    .buttonform{
+    .buttonform {
         font-size: 11px !important;
         background: yellow !important;
         width: 90%;

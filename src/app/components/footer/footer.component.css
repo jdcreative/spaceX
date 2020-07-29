@@ -1,9 +1,11 @@
 .footer{
-    background: #1C1C1C;
-    height: calc(6em + 8vw);
+    background: #000000;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 23px;
+    padding-bottom: 13px;
 }
 .content-nets{
     display: flex;

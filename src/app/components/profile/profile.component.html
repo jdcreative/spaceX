@@ -81,14 +81,23 @@
 
                 </div>
 
-                <div class="container-prox" *ngIf="tab != 'home'">
-                    <h2>
-                        Próximamente...
-                    </h2>
+                <div class="container-prox" *ngIf="tab != 'home' && tab != 'conferencistas' && tab != 'tribus'">
+                 
+                   
+                    <img src="../../../assets/merch/soonmerch.jpg"  style="display: flex;text-align: center;margin: 0 auto;"/>
+                    
                 </div>
 
-                <!-- <app-tribus *ngIf="tab == 'tribus'"></app-tribus>
-                <app-conferencistas *ngIf="tab == 'conferencistas'"></app-conferencistas>
+                <div class="container-prox" *ngIf=" tab == 'conferencistas'">
+                    <app-conferencistas></app-conferencistas>
+                </div>
+
+                <div class="container-prox" *ngIf=" tab == 'tribus'">
+                    <app-tribus></app-tribus>
+                </div>
+
+                
+                <!-- <app-conferencistas *ngIf="tab == 'conferencistas'"></app-conferencistas>
                 <app-talleres *ngIf="tab == 'talleres'"></app-talleres>
                 <app-merch *ngIf="tab =='merch'"></app-merch> -->
 
