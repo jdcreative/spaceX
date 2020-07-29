@@ -1,0 +1,21 @@
+{
+    "language": "Portugues",
+    "home": {
+        "confirmar-registro": "CONFIRME SUA INSCRIÇÃO",
+        "iniciar-sesion": "INGRESAR",
+        "registrate": "INSCREVA-SE AQUI",
+        "versiculo": "”Um anjo do Senhor disse a Filipe: Levante-se e vá para o Sul...Filipe se levantou e foi.” Atos 8:26-27",
+        "descripcion": "O chamado de Deus a essa geração é “Levante-se e vá”! Há uma missão que  nos espera. Há um chamado à porta. Há vidas esperando a mensagem que eu e você temos. Deus lançou sua palavra “levante-se e vá!”. Agora o resto depende de nós. GO é nossa resposta e cremos que não estamos sós nessa resposta. Vamos nos unir ao clamor de milhares e digamos: “Eis-me aqui, Deus. Envia-me a mim!” A partir de hoje nos unimos à geração GO!",
+        "descripcion-nombre": "Pastores do “SOMOS UNO",
+        "descripcion-somosuno": "“Somos Um” é o ministério de jovens da Misión Carismática internacional (Missão Carismática Internacional). Cremos que a mensagem mais poderosa que temos é a unidade. “Somos Um” busca unir a nova geração para que, através da unidade com o Espírito Santo, muitos possam escutar a mensagem mais impactante de todas: a mensagem de Jesus.",
+        "versiculo-somosuno": "“Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste” João 17:20-22"
+    },
+    "sidebar":{
+        "tribu": "TRIBO",
+        "puntos": "PONTOS",
+        "boton-salir": "SAIR"
+    },
+    "footer":{
+        "siguenos":"SIGA-NOS:"
+    }
+}

@@ -3,6 +3,19 @@
     "home": {
         "confirmar-registro": "Confirma tu Registro",
         "iniciar-sesion": "Inciar Sesión",
-        "registrate": "Registrate Aquí"
+        "registrate": "Registrate Aquí",
+        "versiculo": "”Un ángel del Señor habló a Felipe, diciendo: Levántate y ve hacia el sur…. Entonces él se levantó y fue...” Hechos 8:26-27",
+        "descripcion": "El llamado de Dios a esta generación es levántate y ve. Hay una misión que nos espera, hay un llamado a la puerta, hay vidas esperando el mensaje que tú y yo tenemos. Dios ha lanzado su palabra, “levántate y ve!” Ahora el resto depende de nosotros. GO es nuestra respuesta y creemos que no estamos solos en esta respuesta. Unámonos al clamor de miles y digamos, “¡Heme aquí Dios, envíame a mí!” !A partir de hoy nos unimos a la generación GO!",
+        "descripcion-nombre": "Pastores de SOMOS UNO",
+        "descripcion-somosuno": "Somos uno es el ministerio de Jóvenes de la Misión Carismática internacional, creemos que el mensaje más poderoso que tenemos es la unidad. Somos Uno busca unir la nueva generación para que a través de la unidad con el Espíritu Santo muchos puedan escuchar el mensaje más poderoso de todos: el mensaje de Jesús.",
+        "versiculo-somosuno": "”Mas no ruego solamente por éstos, sino también por los que han de creer en mí por la palabra de ellos, para que todos sean uno; como tú, oh Padre, en mí, y yo en ti, que también ellos sean uno en nosotros; para que el mundo crea que tú me enviaste.” - Juan 17:20-22"
+    },
+    "sidebar":{
+        "tribu": "TRIBU",
+        "puntos": "PUNTOS",
+        "boton-salir": "SALIR"
+    },
+    "footer":{
+        "siguenos":"Síguenos en:"
     }
 }
