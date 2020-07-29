@@ -1,0 +1,29 @@
+
+
+<div class="container content-chat">
+    <h1>Chat</h1>
+    <hr>
+    <div *ngFor="let message of chatservice.messages ">
+        <span class="badge badge-primary">{{message.username}}</span>
+  
+            <p class="messageList">{{message.message}}</p>
+            <p class="timeMessage">{{message.hourMessage | date:'short'}}</p>   
+            <hr class="hrMessage">
+    </div>    
+    <hr class="hrMessage">
+</div>
+<form [formGroup]="formMessages" (ngSubmit)="newMessage($event)">                
+    <div class="goContent">
+        <a class="control">
+        <input class="input inputLook" type="text" placeholder="Envianos tu saludo" formControlName="message">
+            <span class="icon is-small is-right">
+                <button type="submit" value="submit" class="btninputLook">
+                    <img src="../../../../assets/logs/enviar.png" class="imgButton">
+                </button>
+            </span>
+        </a>
+    </div>
+</form>
+
+
+

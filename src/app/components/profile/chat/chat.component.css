@@ -1,0 +1,84 @@
+
+.content-chat{
+    height: 490px;
+    overflow: hidden;
+}
+.content-message{
+    display: flex;
+    width: 100%;
+}
+.messageList{
+    width: 70%;
+    font-family:  Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    color:whitesmoke;
+    margin-right: auto;
+    line-height: 1;
+}
+.timeMessage{
+    width: 30%;
+    font-family:  Roboto;
+    font-size: 10px;
+    font-weight: bold;
+    color:whitesmoke;
+    margin-left: auto;
+    line-height: 1 ;
+    text-align: end;   
+}
+.hrMessage{
+    border-top: 1px solid #4f4f4f;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.btnGo{
+    border:none;
+    border-radius: 20px;
+    background: rgb(0, 225, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goContent{
+    display: flex;    
+    align-items: center;
+    padding: 20px 0;
+}
+.control{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inputLook{
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    font-family: Roboto;
+    font-size: 16px;
+    color: #4F4F4F;
+    padding-left: 20px;
+}
+.btninputLook{
+    padding: 14px;
+    border:none;
+    border-radius: 30px;
+    box-shadow: 0 0 4px 3px rgba(0,0,0,0.3);
+    font-family: 'GothamMedium';
+    font-size: 14px;
+    background: rgb(0, 225, 255);
+    color:white;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    margin-left: -57px;
+    margin-top: 5px;
+    transition: .3s all ease;
+}
+.btninputLook:hover{
+    background: rgb(13, 189, 212);
+    transition: .3s all ease;
+}
+.imgButton{
+    width: 22px;    
+}

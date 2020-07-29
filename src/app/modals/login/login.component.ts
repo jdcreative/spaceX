@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
     if (this.formlogin.valid) {
       const data = this.formlogin.value;
       this.data_user.getCodeSesion(data.email).subscribe(res => {
-        // console.log('res incial: ', res);
+        console.log('res incial: ', res);
         if (res.email) {
           this.dataForm = res;
           this.validationCode = 2;          
