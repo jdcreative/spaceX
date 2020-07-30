@@ -4,5 +4,9 @@
         "confirmar-registro": "Confirma tu Registro",
         "iniciar-sesion": "Inciar Sesión",
         "registrate": "Registrate Aquí"
+    },
+    "sidebar": {
+        "home": "Inicio",
+        "points": "Puntos"
     }
 }

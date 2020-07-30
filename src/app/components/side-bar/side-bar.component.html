@@ -27,7 +27,7 @@
                     {{ finalTribu ? finalTribu : 'Leones' }}
                 </h6>
 
-                <small>PUNTOS</small>
+                <small>{{ 'sidebar.points' | translate }}</small>
 
                 <h6 class="tribu-points">
                     0
@@ -41,7 +41,7 @@
 
             <ul class="list-group list-group-flush">
                 <li class="list-group-item" (click)="goTo('home');" [ngClass]="{ 'bold-selected' : tab == 'home' }">
-                    HOME
+                    {{ 'sidebar.home' | translate }}
                 </li>
                 <li class="list-group-item" (click)="goTo('tribus');" [ngClass]="{ 'bold-selected' : tab == 'tribus' }">
                     TRIBUS

@@ -4,5 +4,8 @@
         "confirmar-registro": "Confirm your registration",
         "iniciar-sesion": "Login",
         "registrate": "Sign In Here"
+    },
+    "sidebar": {
+        "home": "Home"
     }
 }
