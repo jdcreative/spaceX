@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FirestoreService } from 'src/app/service/firestore.service';
+import { RealtimeDatabaseService } from 'src/app/service/realtime-database.service';
+
 
 @Component({
   selector: 'app-profile',
@@ -24,7 +25,7 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private _fire: FirestoreService
+    private _database: RealtimeDatabaseService
   ) { }
 
   ngOnInit() {
@@ -34,15 +35,12 @@ export class ProfileComponent implements OnInit {
   }
 
   getTribus() {
-    this._fire.getTribus().subscribe((res) => {
+    this._database.getTribus().snapshotChanges().subscribe((res) => {
       this.tribus = [];
       res.forEach((tribus: any) => {
-        this.tribus.push({
-          id: tribus.payload.doc.id,
-          data: tribus.payload.doc.data()
-        });
+        let id = tribus.payload.toJSON();
+        this.tribus.push(id);
       });
-      // console.log("TRIBUS: ", this.tribus);
     });
   }
 
