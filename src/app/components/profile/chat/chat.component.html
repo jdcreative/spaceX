@@ -1,29 +1,49 @@
-
-
 <div class="container content-chat">
-    <h1>Chat</h1>
-    <hr>
-    <div *ngFor="let message of chatservice.messages ">
-        <span class="badge badge-primary">{{message.username}}</span>
-  
-            <p class="messageList">{{message.message}}</p>
-            <p class="timeMessage">{{message.hourMessage | date:'short'}}</p>   
-            <hr class="hrMessage">
-    </div>    
+    <h1 style="font-size: 22px;">Chat SOMOSUNOGO!</h1>
     <hr class="hrMessage">
+
+    <div *ngFor="let message of chatservice.messages" class="back-cloud">
+
+        <div class="cloudMessage" [ngStyle]="styleCloud( message.username)">
+            <div class="content-head" [ngStyle]="styleHead( message.username)">
+                <div class="imgProfile">
+                    <img class="imgTribu" [src]="finalImage">                    
+                </div>
+                <p class="textName">{{message.username | slice:0:14}}</p>
+            </div>       
+            <div class="text-time" [ngStyle]="styleHeadFinal( message.username)">
+                <p class="timeMessage">{{message.hourMessage | date:'HH:mm:ss'}}</p>
+            </div>     
+            <div class="content-message">
+                <div class="text-message">
+                    <p class="messageList">{{message.message}}</p>
+                </div>                
+            </div>
+            <div class="text-time" [ngStyle]="styleHead( message.username)">
+                <p class="timeMessage">{{message.hourMessage | date:'HH:mm:ss'}}</p>
+            </div>
+            <div class="content-head" [ngStyle]="styleHeadFinal( message.username)">
+                <div class="imgProfile">
+                    <img class="imgTribu" [src]="finalImage">                    
+                </div>
+                <p class="textName">{{message.username | slice:0:14}}</p>
+            </div>
+            
+        </div>
+        <div class="triangle" [ngClass]="{'triangleRight': username == message.username, 'triangleLeft': username != message.username}"></div>
+    </div>
 </div>
-<form [formGroup]="formMessages" (ngSubmit)="newMessage($event)">                
+
+<hr class="hrMessage">
+<form [formGroup]="formMessages" (ngSubmit)="newMessage($event)">
     <div class="goContent">
         <a class="control">
-        <input class="input inputLook" type="text" placeholder="Envianos tu saludo" formControlName="message">
+            <input class="input inputLook" type="text" placeholder="Envianos tu saludo" formControlName="message">
             <span class="icon is-small is-right">
-                <button type="submit" value="submit" class="btninputLook">
+                <button type="submit" value="submit" class="btninputLook" [ngStyle]=" { background: finalColor } ">
                     <img src="../../../../assets/logs/enviar.png" class="imgButton">
                 </button>
             </span>
         </a>
     </div>
 </form>
-
-
-
