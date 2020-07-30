@@ -30,7 +30,7 @@
                 <small>{{ 'sidebar.points' | translate }}</small>
 
                 <h6 class="tribu-points">
-                    0
+                    {{ tribuPoints ? tribuPoints : '0' }}
                 </h6>
 
             </div>
@@ -78,10 +78,6 @@
                         DONACIONES
                     </a>
                 </li>
-                <!-- <li class="list-group-item" (click)="goTo('donacion');"
-                    [ngClass]="{ 'bold-selected' : tab == 'donacion' }" >
-                    
-                </li> -->
             </ul>
 
         </div>
@@ -90,10 +86,12 @@
 
     <div class="container-exit display-flex">
 
-        <button class="btn btn-fixed btn-lg btn-light col-xs-12" (click)="closeSession();">
-            <span class="glyphicon glyphicon-earphone pull-left"></span>
-            Salir
-        </button>
+        <div>
+            <button class="btn btn-fixed btn-lg btn-light col-xs-12" (click)="closeSession();">
+                <span class="glyphicon glyphicon-earphone pull-left"></span>
+                Salir
+            </button>
+        </div>
 
     </div>
 

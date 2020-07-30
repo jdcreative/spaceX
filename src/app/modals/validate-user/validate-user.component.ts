@@ -20,9 +20,6 @@ import {
   SignUpComponent
 } from './../../modals/sign-up/sign-up.component';
 import {
-  FirestoreService
-} from './../../service/firestore.service';
-import {
   UtilsService
 } from './../../service/utils.service'
 import {
@@ -354,7 +351,6 @@ export class ValidateUserComponent implements OnInit {
     private dialogRef: MatDialogRef<ValidateUserComponent>,
     @Inject(MAT_DIALOG_DATA) data,
     private fb: FormBuilder,
-    private fire: FirestoreService,
     public util: UtilsService,
     public data_user: DataUserService,
     private dialog: MatDialog

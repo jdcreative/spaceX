@@ -6,7 +6,7 @@
 
 <div class="container-profile">
 
-    <app-side-bar (sendTag)="sendTagReceive($event);"></app-side-bar>
+    <app-side-bar (sendTag)="sendTagReceive($event);" [tribus]="tribus"></app-side-bar>
 
     <div class="content-profile">
 
@@ -82,10 +82,11 @@
                 </div>
 
                 <div class="container-prox" *ngIf="tab != 'home' && tab != 'conferencistas' && tab != 'tribus'">
-                 
-                   
-                    <img src="../../../assets/merch/soonmerch.jpg"  style="display: flex;text-align: center;margin: 0 auto;"/>
-                    
+
+
+                    <img src="../../../assets/merch/soonmerch.jpg"
+                        style="display: flex;text-align: center;margin: 0 auto;" />
+
                 </div>
 
                 <div class="container-prox" *ngIf=" tab == 'conferencistas'">
@@ -96,7 +97,7 @@
                     <app-tribus></app-tribus>
                 </div>
 
-                
+
                 <!-- <app-conferencistas *ngIf="tab == 'conferencistas'"></app-conferencistas>
                 <app-talleres *ngIf="tab == 'talleres'"></app-talleres>
                 <app-merch *ngIf="tab =='merch'"></app-merch> -->

@@ -1,29 +1,60 @@
 <div class="modal" tabindex="-1" role="dialog" style="display: contents;">
+
     <div class="modal-dialog-scrollable">
+
         <div *ngIf="validationCode == 0" class="modal-content">
+
             <div class="modal-header">
                 <p>INICIAR <span>SESION</span></p>
             </div>
-            <form [formGroup]="formlogin" (ngSubmit)="login($event)">
+
+            <form [formGroup]="formLogin" (ngSubmit)="login($event);">
+
                 <div class="modal-body">
+
                     <div class="formLogin">
+
                         <div class="form-row">
-                            <label for="correo">Escribe tu correo electronico</label>
-                            <input id="toLowerEmail" type="text" class="form-control" id="correo"
+
+                            <label class="label-bold" for="correo">Correo Electrónico: </label>
+
+                            <input class="form-control" id="correo" type="email"
                                 placeholder="Ingresa tu correo electronico" formControlName="email"
-                                (input)="toLower($event);">
+                                (input)="toLower($event);"
+                                [ngClass]="{ 'is-invalid' : !formLogin.valid, 'is-valid' : formLogin.valid }">
+
+                            <ng-container *ngFor="let error of error_messages.email">
+                                <div class="error-message"
+                                    [ngClass]="{ 'is-invalid' : !formLogin.valid, 'is-valid' : formLogin.valid }"
+                                    *ngIf="formLogin.get('email').hasError(error.type) && (formLogin.get('email').dirty || formLogin.get('email').touched)">
+                                    {{ error.message }}
+                                </div>
+                            </ng-container>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="contentBtn modal-footer">
-                    <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">INGRESAR
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
-                            *ngIf="loginValidation"></span>
+
+                    <button class="btn btn-primary btnLogin" [disabled]="!formLogin.valid">
+                        <span [ngClass]="{ 'spinner-border spinner-border-sm' : loginValidation }" role="status"
+                            aria-hidden="true"></span>
+                        INGRESAR
                     </button>
 
                 </div>
+
             </form>
+
+            <div class="alert alert-warning" role="alert" *ngIf="errorOccurred">
+                Ocurrió un error, vuelve a intentarlo.
+            </div>
+
         </div>
+
         <div *ngIf="validationCode == 2" class="modal-content">
 
             <div class="modal-body">
@@ -34,26 +65,33 @@
                         <div class="center-items">
                             <img src="../../../assets/media/icons/mail.png" style="margin: 0 auto;" />
                         </div>
+
                         <div class="center-items">
-                            <p class="description light">Ingresa el código que te hemos enviado a tu correo electrónico.
+                            <p class="description light">
+                                Ingresa el código que hemos enviado a tu correo electrónico:
+                                {{ tempEmail ? tempEmail : 'N/A' }}
                             </p>
                         </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Ingresa el código..."
-                                aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="code">
-                        </div>
 
-                        <div>
-                            <div class="contentBtn modal-footer">
-                                <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid"
-                                    (click)="saveValidation();" type="button">
-                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
-                                        *ngIf="statusLoading"></span>
+                        <form [formGroup]="formCode">
 
-                                    INGRESAR
-                                </button>
+                            <div class="input-group mb-3">
+                                <input type="number" min="0" class="form-control" placeholder="Ingresa el código..."
+                                    aria-label="Username" aria-describedby="basic-addon1" formControlName="code">
                             </div>
-                        </div>
+
+                            <div>
+                                <div class="contentBtn modal-footer">
+                                    <button class="btn btn-primary btnLogin" (click)="saveValidation();" type="button"
+                                        [disabled]="!formCode.valid">
+                                        <span [ngClass]="{ 'spinner-border spinner-border-sm' : statusLoading }"
+                                            role="status" aria-hidden="true"></span>
+                                        INGRESAR
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
 
                         <div class="alert alert-danger" role="alert" *ngIf="showAlert">
                             El código ingresado es inválido, revisa de nuevo.
@@ -64,21 +102,30 @@
                         </div>
 
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
         <div *ngIf="validationCode == 3" class="modal-content">
+
             <div class="modal-header">
+
                 <div class="container padding-50">
+
                     <div class="row">
                         <img src="../../../assets/media/icons/face.png" style="margin: 0 auto;" />
                     </div>
+
                     <div class="row" style="justify-content: center;">
                         <p class="title-modal light">OH NO!</p>
                     </div>
+
                     <div class="row">
-                        <p class="description light">Tu correo no esta registrado en la base de datos, realiza el
-                            registro y no te pierdas la convencion #SomosUnoGo.</p>
+                        <p class="description light">Tu correo no esta registrado, realiza el
+                            registro y no te pierdas la convención #SomosUnoGo.</p>
                     </div>
 
                     <div class="row" style="margin-bottom:25px;">

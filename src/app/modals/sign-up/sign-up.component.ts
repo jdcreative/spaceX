@@ -1,8 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-import { FirestoreService } from './../../service/firestore.service';
 import { userInterface } from '../../interfaces/user_interface';
 import { countryInterface } from './../../interfaces/country_interface';
 import { apicountry } from './../../service/apicountry';
@@ -21,7 +19,7 @@ export class SignUpComponent implements OnInit {
   //mailPattern: any = /^[a-z0-9._%+-]{1,40}[@]{1}[a-z]{1,40}[.]{1}[a-z.]{2,6}$/;
   mailPattern: any;
   countries = apicountry;
-  loaderButton:boolean=false;
+  loaderButton: boolean = false;
   cities = 0;
   language = [{ 'name': 'English' }, { 'name': 'Español' }, { 'name': 'português' }];
   pastoras = [
@@ -134,7 +132,6 @@ export class SignUpComponent implements OnInit {
     private dialogRef: MatDialogRef<SignUpComponent>,
     @Inject(MAT_DIALOG_DATA) data,
     private fb: FormBuilder,
-    private fire: FirestoreService,
     public utils: UtilsService,
     public data_user: DataUserService
   ) {
@@ -174,10 +171,10 @@ export class SignUpComponent implements OnInit {
       date_register: [new Date]
     })
     this.registerForm.valueChanges.subscribe(res => {
-        console.log('res: ', res)
+      console.log('res: ', res)
       if (res.iglesia == 'pertenece_mci') { this.validSede = true; this.validTwelve = false; this.validOtraIglesia = false }
       else if (res.iglesia == 'otra_iglesia') {
-        this.validOtraIglesia = true; this.validSede = false; this.validRed = false; 
+        this.validOtraIglesia = true; this.validSede = false; this.validRed = false;
         this.validRedMen = false; this.validredWomen = false;
         res.sedeMci = '';
         res.red = '';
@@ -186,7 +183,7 @@ export class SignUpComponent implements OnInit {
         res.liderPrincipal = '';
       }
       else if (res.iglesia == 'G12_church') {
-        
+
         this.validTwelve = true; this.validOtraIglesia = false; this.validSede = false; this.validRed = false;
         this.validRedMen = false; this.validredWomen = false;
         res.sedeMci = '';
@@ -206,15 +203,15 @@ export class SignUpComponent implements OnInit {
       };
 
 
-      if (res.sedeMci == 'bogota_principal') { this.validRed = true }      
+      if (res.sedeMci == 'bogota_principal') { this.validRed = true }
       else { this.validRed = false; this.validRedMen = false };
 
-      if(res.sedeMci != 'bogota_principal'){          
-          res.red = '';
-          res.redHombres = '';
-          res.redMujeres = '';
-          res.liderPrincipal = '';
-        }
+      if (res.sedeMci != 'bogota_principal') {
+        res.red = '';
+        res.redHombres = '';
+        res.redMujeres = '';
+        res.liderPrincipal = '';
+      }
 
 
       if (res.red == 'Mujeres') {
@@ -257,7 +254,7 @@ export class SignUpComponent implements OnInit {
         res.redSaraCastellanos = '';
         res.redEliemerson = '';
         res.redLauGuerra = '';
-      };   
+      };
     });
   }
   get nameUpdate() { return this.registerForm.get('nombre') };
@@ -273,32 +270,32 @@ export class SignUpComponent implements OnInit {
   get terminos() { return this.registerForm.get('terminosYCondiciones') };
 
   saveUser(e: Event) {
-    this.loaderButton=true;    
+    this.loaderButton = true;
     e.preventDefault();
     if (this.registerForm.valid) {
-      const data = this.registerForm.value;      
+      const data = this.registerForm.value;
       this.data_user.createUser(data).subscribe(res => {
         // console.log('rs de la new user: ', res);
         if (res.estado) {
           // console.log('entro aqui')         
-          this.currentState = 2;   
-          this.loaderButton=false;       
+          this.currentState = 2;
+          this.loaderButton = false;
         } else {
           // console.log('entro al false')          
           this.currentState = 3;
-          this.loaderButton=false;
+          this.loaderButton = false;
         }
       }, err => {
         console.error('error en el new user', err)
       })
-    } else {      
+    } else {
       this.currentState = 4;
-      this.loaderButton=false;
+      this.loaderButton = false;
     }
     setTimeout(() => {
-         
+
     }, 5000);
-    
+
   }
   save() {
     this.dialogRef.close();
@@ -306,6 +303,5 @@ export class SignUpComponent implements OnInit {
   close() {
     this.registerForm.reset();
     this.dialogRef.close();
-    this.fire.selectedUser = new userInterface();
   }
 }
