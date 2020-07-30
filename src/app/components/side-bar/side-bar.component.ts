@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 export class SideBarComponent implements OnInit {
 
   @Output() sendTag: EventEmitter<string> = new EventEmitter<string>();
+
+  @Input() tribus: any;
+
   userProfile: any;
   tab: string = "home";
   finalColor: any;
@@ -31,6 +34,7 @@ export class SideBarComponent implements OnInit {
     gorilas: "Gorilas",
     leones: "Leones"
   }];
+  tribuPoints: string = "0";
 
   constructor(
     private _router: Router
@@ -45,7 +49,29 @@ export class SideBarComponent implements OnInit {
     this.userProfile = JSON.parse(localStorage.getItem("user"));
   }
 
+  ngOnChanges() {
+    if (this.tribus.length >= 1) {
+      this.validateTribus();
+    }
+
+  }
+
+  validateTribus() {
+    if (this.userProfile.tribu == "1" || this.userProfile.tribu == 1) {
+      this.tribuPoints = this.tribus[0].data.gorilas;
+    } else if (this.userProfile.tribu == "2" || this.userProfile.tribu == 2) {
+      this.tribuPoints = this.tribus[0].data.halcones;
+    } else if (this.userProfile.tribu == "3" || this.userProfile.tribu == 3) {
+      this.tribuPoints = this.tribus[0].data.leones;
+    } else if (this.userProfile.tribu == "4" || this.userProfile.tribu == 4) {
+      this.tribuPoints = this.tribus[0].data.tiburones;
+    } else {
+      this.tribuPoints = this.tribus[0].data.leones;
+    }
+  }
+
   validationColors() {
+
     if (this.userProfile.tribu == "1" || this.userProfile.tribu == 1) {
       this.finalColor = this.data[0].gorilas;
       this.finalImage = this.data[1].gorilas;

@@ -45,7 +45,6 @@
 
 .btnLogin {
     color: #4f4f4f;
-    font-size: 22px;
     font-family: 'Roboto';
     font-weight: 900;
     background: yellow;
@@ -76,6 +75,8 @@ p.description.light {
     font-size: 22px;
     text-align: center;
     margin-bottom: 0px;
+    padding: 10px;
+    text-align: justify;
 }
 
 .buttonform {
@@ -104,6 +105,15 @@ p.description.light {
 
 #toLowerEmail {
     text-transform: lowercase !important;
+}
+
+.error-message {
+    color: rgb(196, 20, 20);
+    font-weight: bold;
+}
+
+.label-bold {
+    font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {

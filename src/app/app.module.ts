@@ -1,7 +1,7 @@
 import { ChatService } from './service/chat.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
@@ -24,7 +24,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignUpComponent } from './modals/sign-up/sign-up.component';
 
 //Languages libraries
-//Language library
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -59,34 +58,47 @@ import { ChatComponent } from './components/profile/chat/chat.component';
     ErrorDialogComponent,
     ChatComponent
   ],
-  imports:
-    [
-      FormsModule,
-      BrowserModule,
-      AppRoutingModule,
-      HttpClientModule,
-      MatDialogModule,
-      MatRadioModule,
-      MatOptionModule,
-      MatSelectModule,
-      MatCheckboxModule,
-      BrowserAnimationsModule,
-      ReactiveFormsModule,
-      AngularFireModule.initializeApp(environment.firebase),
-      AngularFireDatabaseModule,
-      AppRoutingModule,            
-    ],
-  providers:[
+  imports: [
+    FormsModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatRadioModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http: HttpClient) => {
+          return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+        },
+        deps: [HttpClient]
+      }
+    })
+  ],
+  providers: [
     AngularFirestore,
     ChatService
   ],
   bootstrap: [AppComponent],
-  entryComponents:[
-      SignUpComponent,
-      ValidateUserComponent,
-      LoginComponent,
-      ErrorDialogComponent
-    ]
-
+  entryComponents: [
+    SignUpComponent,
+    ValidateUserComponent,
+    LoginComponent,
+    ErrorDialogComponent
+  ]
 })
-export class AppModule { }
+
+export class AppModule {
+
+  constructor(
+    public translate: TranslateService
+  ) { }
+
+}

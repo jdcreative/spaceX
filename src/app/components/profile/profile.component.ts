@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FirestoreService } from 'src/app/service/firestore.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,10 +10,11 @@ import { Router } from '@angular/router';
 
 export class ProfileComponent implements OnInit {
 
+  public tribus = [];
   tab: string = 'home';
   finalColor: any;
   userProfile: any;
-  colorUser
+  colorUser: any;
   data: any = [{
     halcones: "linear-gradient(180deg, rgba(255, 27, 27, 0) 33.68%, #7839FF 110.36%), #ED5059",
     tiburones: "linear-gradient(180deg, rgba(27, 228, 255, 0) 23.74%, #3965FF 97.77%), #71D7CA",
@@ -21,13 +23,27 @@ export class ProfileComponent implements OnInit {
   }];
 
   constructor(
-    private router: Router
+    private router: Router,
+    private _fire: FirestoreService
   ) { }
 
   ngOnInit() {
     this.userProfile = JSON.parse(localStorage.getItem("user"));
     this.validationColors();
+    this.getTribus();
+  }
 
+  getTribus() {
+    this._fire.getTribus().subscribe((res) => {
+      this.tribus = [];
+      res.forEach((tribus: any) => {
+        this.tribus.push({
+          id: tribus.payload.doc.id,
+          data: tribus.payload.doc.data()
+        });
+      });
+      // console.log("TRIBUS: ", this.tribus);
+    });
   }
 
   sendTagReceive(event) {

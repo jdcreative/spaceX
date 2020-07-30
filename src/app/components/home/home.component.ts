@@ -9,44 +9,46 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
 
-  isOpenClose: boolean = false;
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
   }
 
-  openLogin(){
-    const dialogConfig = new MatDialogConfig();    
+  openLogin() {
+    const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
-    dialogConfig.position = { top: '50px'}
-    dialogConfig.data ={ id:1, title:'Iniciar sesion'}    
+    dialogConfig.position = { top: '50px' }
+    dialogConfig.data = { id: 1, title: 'Iniciar sesion' }
     const dialogRef = this.dialog.open(LoginComponent, dialogConfig);
-    dialogRef.afterClosed().subscribe(res => {      
-    })
-  }
-  openCloseModal() {
-    const dialogConfig = new MatDialogConfig();    
-    dialogConfig.autoFocus = true;
-    dialogConfig.hasBackdrop = true;
-    dialogConfig.position = { top: '50px'}
-    dialogConfig.data ={ id:1, title:'Registrate'}    
-    const dialogRef = this.dialog.open(SignUpComponent, dialogConfig);
-    dialogRef.afterClosed().subscribe(res => {      
-    })
+    dialogRef.afterClosed().subscribe(res => {
+    });
   }
 
-  openModalvalidate(){
-    const dialogConfig = new MatDialogConfig();    
+  openCloseModal() {
+    const dialogConfig = new MatDialogConfig();
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
-    dialogConfig.position = { top: '50px'}
-    dialogConfig.data ={ id:2, title:'validar'}    
+    dialogConfig.position = { top: '50px' }
+    dialogConfig.data = { id: 1, title: 'Registrate' }
+    const dialogRef = this.dialog.open(SignUpComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(res => {
+    });
+  }
+
+  openModalvalidate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = true;
+    dialogConfig.hasBackdrop = true;
+    dialogConfig.position = { top: '50px' }
+    dialogConfig.data = { id: 2, title: 'validar' }
     const dialogRef = this.dialog.open(ValidateUserComponent, dialogConfig);
-    dialogRef.afterClosed().subscribe(res => {      
-    })
+    dialogRef.afterClosed().subscribe(res => {
+    });
   }
 
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { from, combineLatest } from 'rxjs';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { combineLatest } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TranslateService } from '@ngx-translate/core';
 import { UtilsService } from './service/utils.service';
@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
 
   title = 'space';
   public navigatorLang: string;
+  isShow: boolean;
+  topPosToStartShowing = 100;
 
   constructor(
     private http: HttpClient,
@@ -21,6 +23,17 @@ export class AppComponent implements OnInit {
     private utils: UtilsService
   ) { }
 
+  @HostListener('window:scroll') checkScroll() {
+
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    if (scrollPosition >= this.topPosToStartShowing) {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+
+  }
 
   ngOnInit() {
     this.setLanguage();
@@ -45,6 +58,14 @@ export class AppComponent implements OnInit {
       !this.navigatorLang ? this.utils.setLang('es') : this.utils.setLang(this.navigatorLang);
     });
 
+  }
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
 }
