@@ -1,11 +1,12 @@
+import { ChatService } from './service/chat.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
-import { JwtModule } from '@auth0/angular-jwt';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { environment } from 'src/environments/environment';
 import {
   MatDialogModule,
@@ -38,6 +39,7 @@ import { ConferencistasComponent } from './components/profile/conferencistas/con
 import { TalleresComponent } from './components/profile/talleres/talleres.component';
 import { MerchComponent } from './components/profile/merch/merch.component';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
+import { ChatComponent } from './components/profile/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { ErrorDialogComponent } from './components/error-dialog/error-dialog.com
     ConferencistasComponent,
     TalleresComponent,
     MerchComponent,
-    ErrorDialogComponent
+    ErrorDialogComponent,
+    ChatComponent
   ],
   imports:
     [
@@ -70,7 +73,9 @@ import { ErrorDialogComponent } from './components/error-dialog/error-dialog.com
       BrowserAnimationsModule,
       ReactiveFormsModule,
       AngularFireModule.initializeApp(environment.firebase),
-      AppRoutingModule,
+      AngularFireDatabaseModule,
+      AppRoutingModule,  
+                   
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
@@ -79,31 +84,14 @@ import { ErrorDialogComponent } from './components/error-dialog/error-dialog.com
           },
           deps: [HttpClient]
         }
-      }),
-      //   JwtModule.forRoot  <----------ESTO CONTIENE ERRORES...
-      //   ({                         Y ESTA AFECTANDO TODOS LOS SERVICIOS 
-      //     config:                  EN ESPECIAL UPDATE USER --------
-      //     {
-      //         tokenGetter: 
-      //         function  tokenGetter() 
-      //         {
-      //             return localStorage.getItem('access_token');
-      //         },
-      //         allowedDomains: ['localhost:3000']
-      //     }
-      //   })
+      }),           
     ],
-  providers:
-    [
-      AngularFirestore,
-      //   { 
-      //       provide: HTTP_INTERCEPTORS, useClass: JwtService, multi: true 
-      //   },
-      //   ErrordialogserviceService,
-    ],
+  providers:[
+    AngularFirestore,
+    ChatService
+  ],
   bootstrap: [AppComponent],
-  entryComponents:
-    [
+  entryComponents:[
       SignUpComponent,
       ValidateUserComponent,
       LoginComponent,

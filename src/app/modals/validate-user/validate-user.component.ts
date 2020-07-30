@@ -391,8 +391,7 @@ export class ValidateUserComponent implements OnInit {
           
           this.data_user.getDataUser(data.email).subscribe(res => {
             // console.log('res de getcodesesion :', res)
-            this.selectedUser = res;
-            // this.setValues();
+            this.selectedUser = res;            
           setTimeout(() => {
             this.setValues();
           }, 400);

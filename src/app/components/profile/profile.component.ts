@@ -12,6 +12,7 @@ export class ProfileComponent implements OnInit {
   tab: string = 'home';
   finalColor: any;
   userProfile: any;
+  colorUser
   data: any = [{
     halcones: "linear-gradient(180deg, rgba(255, 27, 27, 0) 33.68%, #7839FF 110.36%), #ED5059",
     tiburones: "linear-gradient(180deg, rgba(27, 228, 255, 0) 23.74%, #3965FF 97.77%), #71D7CA",
@@ -26,6 +27,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.userProfile = JSON.parse(localStorage.getItem("user"));
     this.validationColors();
+
   }
 
   sendTagReceive(event) {
