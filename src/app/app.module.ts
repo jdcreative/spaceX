@@ -1,7 +1,7 @@
 import { ChatService } from './service/chat.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
@@ -74,7 +74,17 @@ import { ChatComponent } from './components/profile/chat/chat.component';
       ReactiveFormsModule,
       AngularFireModule.initializeApp(environment.firebase),
       AngularFireDatabaseModule,
-      AppRoutingModule,            
+      AppRoutingModule,  
+                   
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateLoader,
+          useFactory: (http: HttpClient) => {
+            return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+          },
+          deps: [HttpClient]
+        }
+      }),           
     ],
   providers:[
     AngularFirestore,
