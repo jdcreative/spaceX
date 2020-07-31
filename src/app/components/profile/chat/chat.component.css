@@ -1,9 +1,8 @@
 ::-webkit-scrollbar {
     display: none;
 }
-.content-chat{
-    min-height: 80px;
-    max-height: 300px;
+.content-chat{   
+    height: 300px;
     overflow: auto;
     padding: 0;    
 }
@@ -16,15 +15,19 @@
 }
 .cloudMessage{       
     display: flex;
-    padding: 5px 5px 0 5px;
-    
+    padding: 5px 5px 0 5px;    
 }
-
-.content-head{    
-    width: 79px;
-    text-align: center;
+.content-emojis{
+    position: absolute;
+    margin-top: -38px;
+    margin-left: 5px;
 }
-
+.attachment{
+    border-radius: 72px;
+    width: 40px;
+    border: none;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.3)
+}
 .textName{
     font-size: 11px;
     margin-bottom: auto;
@@ -67,14 +70,6 @@
     margin-bottom: 2px;
     margin-top: 2px;
 }
-.btnGo{
-    border:none;
-    border-radius: 20px;
-    background: rgb(0, 225, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .goContent{
     display: flex;    
     align-items: center;
@@ -87,14 +82,13 @@
 }
 .inputLook{
     width: 100%;
-    height: 40px;
-    background: transparent;
+    height: 40px;    
     border: none;
     font-family: Roboto;
     font-size: 16px;
-    color: #A8A8A8;    
-    padding-left: 20px;
-    padding-right: 67px;
+    color: #4f4f4f;    
+    padding-left: 50px;
+    padding-right: 80px;
     outline-style: none;
 }
 .btninputLook{
@@ -112,14 +106,7 @@
     margin-top: 3px;
     transition: .3s all ease;
 }
-.btninputLook:hover{
-    background: rgb(13, 189, 212);
-    transition: .3s all ease;
-}
 .imgButton{
     width: 27px;    
 }
-@media screen and (max-width:740px){
-    .triangleRight{right: 20%;}
-    .triangleLeft{left: 20%;}
-}
+
