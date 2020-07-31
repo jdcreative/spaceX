@@ -1,6 +1,6 @@
 ::ng-deep.mat-dialog-container {
     width: auto;
-    background: url(../../../assets/back/watherPink.jpg);
+    background: url("https://cdn.somosunogo.com/watherPink.jpg");
     background-size: cover;
     background-position: center;
 }

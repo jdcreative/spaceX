@@ -16,7 +16,7 @@ export class SideBarComponent implements OnInit {
   userProfile: any;
   tab: string = "home";
   finalColor: any;
-  finalImage: any = "assets/media/default-user.jpg";
+  finalImage: any = "http://cdn.somosunogo.com/default-user.jpg";
   finalTribu: string;
   data: any = [{
     halcones: "linear-gradient(180deg, rgba(255, 27, 27, 0) 33.68%, #7839FF 110.36%), #ED5059",
@@ -24,10 +24,10 @@ export class SideBarComponent implements OnInit {
     gorilas: "linear-gradient(180deg, rgba(13, 201, 165, 0) 45.6%, #19B960 106.71%), #C1F092",
     leones: "linear-gradient(180deg, rgba(237, 44, 44, 0) 13.22%, #F95252 94.29%), #FFF09B"
   }, {
-    halcones: "assets/profiles/halcones.jpeg",
-    tiburones: "assets/profiles/tiburones.jpeg",
-    gorilas: "assets/profiles/gorilas.jpeg",
-    leones: "assets/profiles/leones.jpeg"
+    halcones: "http://cdn.somosunogo.com/halcones.jpeg",
+    tiburones: "http://cdn.somosunogo.com/tiburones.jpeg",
+    gorilas: "http://cdn.somosunogo.com/gorilas.jpeg",
+    leones: "http://cdn.somosunogo.com/leones.jpeg"
   }, {
     halcones: "Halcones",
     tiburones: "Tiburones",
