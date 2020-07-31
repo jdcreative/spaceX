@@ -171,18 +171,21 @@
 }
 @media screen and (max-width:1000px){
     .mediaHome{display: block;}
-    .vimeo{width: 100%;}
+    .vimeo{
+        width: 100%;
+        height: 400px;
+    }
     .chat{width: 100%;}
 }
-@media only screen and (max-width: 739px) {
-    .container-profile {display: block;}
-    .vimeo{height: 400px;}
+@media only screen and (max-width: 850px) {
+    .vimeo{height: 350px;}
 }
-
+@media only screen and (max-width: 739px) {
+    .container-profile {display: block;}    
+}
 @media only screen and (max-width: 470px) {
     .container-content-profile {
         padding: 0;
         padding-top: 50px;
-    }
-    .vimeo{height: 350px;}
+    }    
 }
