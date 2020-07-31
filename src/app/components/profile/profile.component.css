@@ -44,7 +44,14 @@
 
 .container-profile {
     display: flex;
+}
+
+.background-black {
     background: #1D1D1D;
+}
+
+.background-white {
+    background: #E9E9E9;
 }
 
 .content-profile {
@@ -90,10 +97,14 @@
     background: #000000 !important;
 }
 
-.tab-switch {
-    /* border: 5px solid red; */
-    color: white;
-    background: #101010;
+.tab-switch-white {
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.tab-switch-black {
+    color: white !important;
+    background: #101010 !important;
 }
 
 .info-video {
@@ -153,8 +164,9 @@
         display: block;
     }
 }
+
 @media only screen and (max-width: 470px) {
-    .container-content-profile{
+    .container-content-profile {
         padding: 0;
         padding-top: 50px;
     }

@@ -5,11 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './talleres.component.html',
   styleUrls: ['./talleres.component.css']
 })
+
 export class TalleresComponent implements OnInit {
+
+  tab: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeTab(tab){
+    this.tab = tab;
   }
 
 }
