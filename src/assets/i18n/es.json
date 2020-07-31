@@ -1,6 +1,7 @@
 {
     "language": "Español",
     "menu": {
+        "inicio": "INICIO",
         "invitados": "INVITADOS",
         "conferencistas": "CONFERENCISTAS",
         "bandas": "BANDAS",
