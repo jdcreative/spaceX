@@ -116,6 +116,10 @@ p.description.light {
     font-weight: bold;
 }
 
+.resend-title:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
     p.title-modal.light {
         font-size: 15px;
