@@ -3,6 +3,7 @@ import { SignUpComponent } from './../../modals/sign-up/sign-up.component';
 import { ValidateUserComponent } from './../../modals/validate-user/validate-user.component'
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from "@angular/material";
+import { UtilsService } from "../../service/utils.service";
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,16 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
 })
 
 export class HomeComponent implements OnInit {
-
-  constructor(private dialog: MatDialog) { }
+  languaje: any;
+  isOpenClose: boolean = false;
+  constructor(private dialog: MatDialog, private UtilsService: UtilsService) { }
 
   ngOnInit() {
     window.scroll(0, 0);
+  }
+
+  setLang(lang){
+    this.languaje = this.UtilsService.setLang(lang);
   }
 
   openLogin() {

@@ -46,9 +46,13 @@ export class AppComponent implements OnInit {
 
     if (localStorage.getItem("lang") == undefined || localStorage.getItem("lang") == null) {
       this.navigatorLang = navigator.language.split("-")[0];
+      //this.navigatorLang = "es";
+      //localStorage.setItem("lang", this.navigatorLang)
     } else {
       this.navigatorLang = localStorage.getItem("lang");
     }
+    //console.log("navigatorLang");
+    //console.log(this.navigatorLang);
 
     const combined = combineLatest(getGlobalLang, getDefaultLang);
     const subscribe = combined.subscribe(res => {

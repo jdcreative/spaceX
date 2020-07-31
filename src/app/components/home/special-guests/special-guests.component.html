@@ -1,0 +1,177 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="" href="#">
+        <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
+    </a>
+    <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo01">
+        <div class="menuNavbar">
+
+            <div class="allNets">
+                <a class="nav-link" [routerLink]="['/invitados-especiales']">
+                    <span class="textMenu">{{ 'menu.invitados' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/conferencistas']">
+                    <span class="textMenu">{{ 'menu.conferencistas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/bandas']">
+                    <span class="textMenu">{{ 'menu.bandas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/tribus']">
+                    <span class="textMenu">{{ 'menu.tribus' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/faq']">
+                    <span class="textMenu">{{ 'menu.faq' | translate }}</span>
+                </a>
+                <!--
+                <a class="nav-link" (click)="setLang('es');">
+                    <img src="https://devocional.somosunogo.com/images/062-colombia.png" width="20" height="20"
+                        alt="Español">
+                </a>
+                <a class="nav-link" (click)="setLang('en');">
+                    <img src="https://devocional.somosunogo.com/images/153-united-states-of-america.png" width="20"
+                        height="20" alt="English">
+                </a>
+                <a class="nav-link" (click)="setLang('pt');">
+                    <img src="https://devocional.somosunogo.com/images/250-brazil.png" width="20" height="20"
+                        alt="Portugues">
+                </a>
+                <a class="nav-link" (click)="setLang('en');">
+                    <img src="https://devocional.somosunogo.com/images/153-united-states-of-america.png" width="20"
+                        height="20" alt="English">
+                </a>
+                <a class="nav-link" (click)="setLang('pt');">
+                    <img src="https://devocional.somosunogo.com/images/250-brazil.png" width="20" height="20"
+                        alt="Portugues">
+                </a>
+                -->
+            </div>
+        </div>
+    </div>
+    <a class="btnRegister" (click)="openLogin();" style="display: none;">
+        <div class="btn here">
+            {{ 'home.iniciar-sesion' | translate }}
+        </div>
+    </a>
+</nav>
+<div class="banner">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            <h1 class="title_banner">{{ 'guests.titulo' | translate }}</h1>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</div>
+<div class="fondo_containt">
+    <div class="row justify-content-md-center py-4">
+        <div class="col-4">
+            <img src="https://cdn.somosunogo.com/invitado_especial1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-4">
+            <p class="paragraph">{{ 'guests.descripcion1' | translate }}</p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <p class="frase">"Tener fe a veces significa hacer lo que los demás consideran loco."</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-4">
+        <div class="col-4">
+            <img src="https://cdn.somosunogo.com/invitado_especial2.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-4">
+            <p class="paragraph">¿Has visto la serie "The Chosen" (Los Escogidos)? Bueno, Dallas Jenkins fue su
+                productor, director y co-escritor. Este escritor, productor de cine y director de televisión, ha
+                impactado al mundo entero con una de las mejores series que narra épicamente la historia de nuestro
+                Salvador. Su primera producción independiente fue lanzada a sus 25 años y distribuida por Warner
+                Brothers, y ¡nada lo ha detenido!
+                Creció en un hogar en donde amaban narrar historias, y se formó profesionalmente para contarle al mundo
+                sobre la historia más grande de todas: El amor de Dios que lo entregó todo con tal de recuperar nuestro
+                corazón</p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <p class="frase">"Hemos sido llamados para llevar el mensaje de Jesús a esta generación a través de los
+                medios de comunicación. No existen los límites".</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-4">
+        <div class="col-4">
+            <img src="https://cdn.somosunogo.com/invitado_especial3.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-4">
+            <p class="paragraph">La historia de Heidi Baker parece una continuación del libro de Hechos. Está llena de
+                encuentros divinos, visiones y milagros, desde los 16 años, cuando le hablaron de Jesús y se enamoró
+                perdidamente. Ha visto muertos resucitar, sordos oír y ciegos ver. A niños que se prostituían por un
+                pan, convertirse en médicos, ingenieros y predicadores. A pueblos enteros que nunca habían escuchado el
+                evangelio, entregándose a Dios en uno de los países más pobres y amenazados del mundo: Mozambique.
+                Junto con su esposo fundaron Iris Global, que hoy tiene 34 bases misioneras en 30 países. Han plantado
+                más de 10 mil iglesias, están construyendo una universidad y trabajando para rescatar a un millón de
+                pequeños huérfanos y ver avivamiento. Tuvieron un antes y después de Cristo, y quieren que la humanidad
+                entera lo tenga.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <p class="frase">"El método de Dios para cambiar tu nación eres tú. Tú eres la sal. Tú eres la luz. Tú
+                eres la persona que Él quiere usar."</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-4">
+        <div class="col-4">
+            <img src="https://cdn.somosunogo.com/invitado_especial4.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-4">
+            <p class="paragraph">Dominic Russo es un predicador, evangelista e innovador en términos de misiones
+                internacionales. A la temprana edad de 20 años, Dominic fundó Missions.Me y comenzó a organizar campañas
+                estratégicas de predicación en ciudades de América Latina. Desde 2011 y durante sus cuatro principales
+                campañas Evangelistas en América Latina, pudo llegar a más de 3,6 millones de personas cara a cara a
+                través de las diversas iniciativas.
+                Fundador de Angel House, una organización que ha rescatado de la pobreza y el abandono a más de 5 mil
+                niños en la India. Junto a su esposa ha desarrollado centros de restauración para jóvenes que han sido
+                víctimas de la trata de personas en Nepal, con el propósito de darles un llamado y esperanza de vida por
+                medio del mensaje de Jesús. Actualmente lidera un ministerio en el Sur de California levantando a miles
+                de líderes para seguir avanzando con este gran proyecto en las más de 200 misiones Angel House que han
+                establecido en Asia y Latinoamérica.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <p class="frase">"Dios te ha llamado para dejar una huella en esta generación a través del mensaje de
+                Jesús."</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-4">
+        <div class="col-4">
+            <img src="https://cdn.somosunogo.com/invitado_especial5.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-4">
+            <p class="paragraph">Profesor de la Universidad de Oxford, matemático y filósofo cristiano de la ciencia
+                británico, protagonista de memorables debates sobre la existencia de Dios con destacados intelectuales,
+                como Richard Dawkins y Christopher Hitchens. Director principal del Instituto Trinity Forum y autor de
+                una reconocida serie de publicaciones como "¿Ha enterrado la ciencia a Dios?", "El principio según
+                Génesis y la Ciencia", "Podemos confiar en los Evangelios", entre otros, donde expone la gran relación
+                que existe entre Dios y la ciencia.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <p class="frase">"Cuanto más comprendo la ciencia, más creo en Dios por la maravilla de la amplitud,
+                sofisticación e integridad de su creación".</p>
+        </div>
+    </div>
+</div>

@@ -1,55 +1,46 @@
-.general-container {
-    height: auto;
-}
 
-.navbar {
+.navbar{
     height: 78px;
     background: #272727
 }
-
-.logoNavbar {
+.logoNavbar{
     width: 104px;
     margin-left: 2vw;
 }
-
-.menuNavbar {
+.menuNavbar{
     /*display: flex;
     position: absolute;
     right: 70px;*/
 }
-
-.allNets {
+.allNets{
+    /*display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-right: 200px;*/
     display: flex;
     align-items: baseline;
     margin-right: 10px;
     float: right;
 }
-
 .menuNavbar {
     width: 100%;
 }
-
-@media screen and (max-width:991px) {
-    .allNets {
-        display: none;
-    }
+@media screen and (max-width:991px){
+    .allNets{display: none;}
 }
-
-.netLink {
+.netLink{    
     margin: auto 20px;
 }
-
-.nets {
+.nets{    
     display: flex;
 }
-
-.btnRegister {
+.btnRegister{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
+    border:none;
     border-radius: 40px;
-    background: white;
+    background: #FBFE01;
     width: 25%;
     min-width: 150px;
     max-width: 200px;
@@ -58,100 +49,54 @@
     text-align: center;
     color: black;
     cursor: pointer;
-    text-transform: uppercase;
 }
-
-.free {
+.free{
     display: flex;
     justify-content: center;
     align-items: center;
     background: #FBFE01;
-    height: 100%;
+    height: 100%;    
     width: 90px;
     border-radius: 0 40px 40px 0;
     margin-right: -18px;
 }
-
-/*  */
-
-.banner {
-    background: url("https://cdn.somosunogo.com/banner_home.jpg") no-repeat;
+/*   */
+.banner{
+    background: url('https://cdn.somosunogo.com/banner_home.jpg') no-repeat;
     width: 100%;
-    padding: 100px 1px;
+    padding: 70px 1px;
     background-position: top;
     background-size: cover;
 }
-
-img.img-left-banner {
-    margin: 0 auto;
-    display: block;
-    width: 50%;
-}
-
-.container-buttons {
-    display: flex;
-    padding: 25px;
-}
-
-.container-introducing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black url("https://cdn.somosunogo.com/starts-bg.png");
-    background-attachment: fixed;
-    padding: 7% 0px;
-}
-
-.container-content-introducting {
-    width: 65%;
-    justify-content: center;
-    justify-content: center;
-    align-items: center;
+.fondo_containt{
+    background: url('https://cdn.somosunogo.com/fondo_talleres.png') no-repeat;
+    width: 100%;
+    padding: 70px 0px;
+    background-position: top;
+    background-size: cover;
 }
 
 .banner .row {
     padding-top: 20px;
 }
-
-.contentPromoBanner {
-    display: flex;
+h1.title_banner {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
 }
-
-.logoBanner {
-    width: 408px;
-    height: 305px;
-    background-size: contain;
-    position: relative;
-    bottom: -241px;
-    margin-left: auto;
-    margin-right: -73px;
-}
-
-.itielBanner {
-    width: 680px;
-    height: 501px;
-    background-size: contain;
-    position: relative;
-    bottom: -160px;
-    margin-left: auto;
-    margin-right: 100px;
-}
-
-.contetn-btnOptions {
+.contetn-btnOptions{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
+    align-items: center;    
+    width: 100%;    
     background: white;
     padding: 35px 0;
 }
-
-.contentVerify, .contentRegister {
+.contentVerify, .contentRegister{    
     margin-left: auto;
     margin-right: auto;
 }
-
-.btnVerify {
+.btnVerify{
     border: none;
     width: 334px;
     height: 70px;
@@ -167,8 +112,7 @@ img.img-left-banner {
     display: block;
     text-transform: uppercase;
 }
-
-.btnRegisterBanner {
+.btnRegisterBanner{
     width: 334px;
     height: 70px;
     border: none;
@@ -184,26 +128,15 @@ img.img-left-banner {
     margin: 0 auto;
     text-transform: uppercase;
 }
-
-.btn-bar {
+.btn-bar{
     padding: 3% 0px;
 }
-
-/*  */
-
-.bannertwo {
-    width: 100%;
-    height: 900px;
-    background: url("https://cdn.somosunogo.com/Stars.jpg")
-}
-
-.contentBannerTwo {
+.contentBannerTwo{
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
-
-.titleInfo {
+.titleInfo{
     background: #FBFE01;
     width: 460px;
     position: absolute;
@@ -213,18 +146,15 @@ img.img-left-banner {
     justify-content: center;
     align-items: center;
 }
-
-.contentTitleInfo {
+.contentTitleInfo{
     font-size: 30px;
 }
-
-.contentTitleInfo p {
+.contentTitleInfo p{
     display: flex;
     margin-top: auto;
     margin-bottom: auto;
 }
-
-.messageBannerTwo {
+.messageBannerTwo{
     background: #272727;
     padding: 55px;
     width: 930px;
@@ -232,36 +162,23 @@ img.img-left-banner {
     top: 60px;
     position: relative;
 }
-
-.contentMessageTwo {
+.contentMessageTwo{
     margin-top: 20px;
     padding: 10px;
 }
-
-.titleMessage {
+.titleMessage{
     font-family: monospace;
     color: white;
     font-size: 18px;
     text-transform: uppercase;
     position: absolute;
 }
-
-.subtitleMessage {
+.subtitleMessage{
     font-family: monospace;
     color: white;
-    font-size: 18px;
+    font-size: 18px;   
 }
-
-/*  */
-
-.banner2 {
-    background: url("https://cdn.somosunogo.com/Stars.jpg") no-repeat;
-    width: 100%;
-    height: 1100px;
-    background-size: cover;
-}
-
-.textPreconvencion {
+.textPreconvencion{
     background: #272727;
     width: 830px;
     height: 440px;
@@ -275,15 +192,13 @@ img.img-left-banner {
     transform: translate(-50%, 0);
     position: absolute;
 }
-
-.backvideo {
+.backvideo{
     width: 600px;
     height: 440px;
     margin: -40px -30px auto auto;
     background: #00CEA7;
 }
-
-.iframevideo {
+.iframevideo{
     width: 50%;
     height: auto;
     display: inline-block;
@@ -300,8 +215,7 @@ img.img-left-banner {
     width: 100%;
     display: grid;
 }
-
-.contentBtn-banner2 {
+.contentBtn-banner2{
     left: 50%;
     width: 500px;
     margin-left: auto;
@@ -309,26 +223,6 @@ img.img-left-banner {
     margin-top: 870px;
     position: absolute;
     transform: translate(-50%, 0);
-}
-
-.band {
-    background: url("https://cdn.somosunogo.com/Papeles.png");
-    background-position: top;
-    background-size: cover;
-    width: 100%;
-    height: 450px;
-    margin-top: -100px;
-    position: absolute;
-}
-
-/*  */
-
-.how {
-    background: url("https://cdn.somosunogo.com//Fondo-manchas.jpg");
-    background-position: top;
-    background-size: cover;
-    width: 100%;
-    padding: 5% 0px;
 }
 
 img.title_subcontent {
@@ -340,6 +234,28 @@ img.title_subcontent {
     font-family: 'Roboto Mono', monospace;
     color: white;
 }
+.titulo_taller{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.subtitulo_taller{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 23px;
+    font-weight: 500;
+}
+.parrafo_taller{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    font-weight: 300;
+}
+.aforo_taller{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
 span.titleOne {
     font-family: 'Roboto Mono', monospace;
     font-size: 35px;
@@ -349,100 +265,74 @@ span.titleOne {
     vertical-align: middle;
     padding: 0px 10px;
 }
-.cuadrito{
-    width: 100%;
-    height: 5px;
-    background-color: black;
-}
-.cuadrito a {
-    color: black;
-}
 p.textOne {
     font-family: 'Roboto Mono', monospace;
     font-size: 24px;
     line-height: 30px;
 }
-
-.description {
+.description{
     padding-top: 5%;
 }
 
-.contentHow {
+.contentHow{
     position: absolute;
     width: 100%;
     margin-top: 70px;
 }
-
-.titleHow {
+.titleHow{
     width: 55%;
     margin-right: auto;
     margin-left: auto;
 }
-
-.contentBox {
+.contentBox{
     position: absolute;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 140px;
 }
-
-.contentActions {
+.contentActions{
     margin-top: 70px;
     display: flex;
     width: 72%;
     margin-left: auto;
-    margin-right: auto;
-    ;
+    margin-right: auto;;
 }
-
-.contentActionsTwo {
+.contentActionsTwo{    
     width: 100%;
     display: flex;
     justify-content: center;
 }
-
-.subactionOne {
+.subactionOne{    
     display: flex;
 }
-
-.actionOne, .actionTwo, .actionThree, .actionFive, .actionSix {
+.actionOne, .actionTwo, .actionThree,
+.actionFive, .actionSix{
     width: 100%;
     padding: 7%;
     margin: 10px;
-    font-size: 30px;
+    font-size: 30px;    
     font-weight: bold;
     line-height: .5;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.contentText {
+.contentText{
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
     margin-bottom: 150px;
 }
-
-.actionOne {
-    background: #FBFE01;
-}
-
-.actionTwo {
-    background: #E5E5E5;
-}
-
-.actionThree {
-    background: #FF6F57;
-}
-
-.actionFour {
+.actionOne{background: #FBFE01;}
+.actionTwo{background: #E5E5E5;}
+.actionThree{background: #FF6F57;}
+.actionFour{
     width: 22.5%;
     height: 356px;
     background: #F89FDC;
-    margin: 10px;
+    margin: 10px;    
     font-size: 30px;
     text-align: center;
     font-weight: bold;
@@ -451,16 +341,9 @@ p.textOne {
     justify-content: center;
     align-items: center;
 }
-
-.actionFive {
-    background: #FBFE01;
-}
-
-.actionSix {
-    background: #E5E5E5;
-}
-
-.actionSeven {
+.actionFive{background: #FBFE01;}
+.actionSix{background: #E5E5E5;}
+.actionSeven{
     background: #1D1D1D;
     width: 508px;
     height: 168px;
@@ -474,15 +357,9 @@ p.textOne {
     align-items: center;
     color: white;
 }
-.introducing{
-    background: black url("https://cdn.somosunogo.com/starts-bg.png");
-    background-attachment: fixed;
-    padding: 7% 0px;
-}
 img.amor_accion {
     width: 45%;
 }
-
 img.img_set_info {
     width: 100%;
     margin-bottom: 35px;
@@ -494,36 +371,22 @@ img.img_set_info {
     color: white;
     font-family: 'Roboto Mono', monospace;
 }
-
 .content_side p {
     font-family: 'Roboto Mono', monospace;
 }
-
-/*  */
-
-.watherPink {
-    background: url("https://cdn.somosunogo.com/watherPink.jpg");
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-}
-
-.contentWeAreOne {
+.contentWeAreOne{
     width: 77%;
-    position: absolute;
+    position: absolute;    
     margin-top: 11%;
 }
-
-.titleOne {
+.titleOne{
     font-weight: bold;
     font-size: calc(1em + 1.5vw);
     color: black;
     margin-bottom: -30px;
+    
 }
-
-.whatOne {
+.whatOne{
     background: transparent;
     padding: 20px 0;
     font-size: calc(.7em + 1vw);
@@ -538,30 +401,13 @@ img.img_set_info {
     font-style: italic;
     font-size: 19px;
 }
-
-.contentMedia {
+.contentMedia{
     padding: 0;
 }
-
 .contentMedia .img-fluid {
     max-width: 100%;
     height: auto;
     width: 100%;
-}
-
-@media only screen and (max-width: 928px) {
-    .container-content-introducting {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 802px) {
-    .container-buttons {
-        display: block;
-    }
-    .btnVerify, .btnRegisterBanner {
-        margin-bottom: 10px;
-    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -582,7 +428,7 @@ img.img_set_info {
         flex: 100%;
         max-width: 100% !important;
     }
-    img.title_subcontent {
+    img.title_subcontent{
         margin: 0 auto;
         width: 80%;
         margin: 45px 0px;
