@@ -2,7 +2,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit, Input } from '@angular/core';
 import * as moment from 'moment-timezone'
 
-
 import { ChatService } from 'src/app/service/chat.service';
 import { chat } from 'src/app/interfaces/chat';
 
@@ -17,16 +16,12 @@ export class ChatComponent implements OnInit {
   finalImage:any;
   chats: chat[];
   chatSix: chat[];
+  toggled: boolean = false;
+  emoji: string ='';
   ordermessage:any;
   formMessages:FormGroup;
   userProfile:any;
-  username:any;
-  imgProfileTribu={
-    halcones: "assets/profiles/halcones.jpeg",
-    tiburones: "assets/profiles/tiburones.jpeg",
-    gorilas: "assets/profiles/gorilas.jpeg",
-    leones: "assets/profiles/leones.jpeg"
-  }
+  username:any; 
   
   constructor(
     private fb : FormBuilder,
@@ -40,8 +35,7 @@ export class ChatComponent implements OnInit {
     this.username = this.userProfile.nombre +' '+ this.userProfile.apellidos;
     this.getchat();
     this.chatservice.getMessages();
-    this.setvalues();
-    this.selectImgTribu();    
+    this.setvalues();    
   }
   
   getchat(){
@@ -63,8 +57,7 @@ export class ChatComponent implements OnInit {
       message:['', Validators.required],
       hourMessage:[new Date().getTime()]
     });
-    this.formMessages.valueChanges.subscribe(res=>{ 
-      // console.log('el form',res)     
+    this.formMessages.valueChanges.subscribe(res=>{       
     })
   }
   newMessage(e:Event){
@@ -75,8 +68,7 @@ export class ChatComponent implements OnInit {
       console.log('data del mensaje: ', data);
       this.chatservice.newMessage(data);
       this.formMessages.reset();
-      this.setvalues()
-            
+      this.setvalues()            
     }    
   }
   setvalues(){     
@@ -96,21 +88,8 @@ export class ChatComponent implements OnInit {
     }
     return style
   }
-
-
-  selectImgTribu() {
-    if (this.userProfile.tribu == "1" || this.userProfile.tribu == 1) {      
-      this.finalImage = this.imgProfileTribu.gorilas;      
-    } else if (this.userProfile.tribu == "2" || this.userProfile.tribu == 2) {      
-      this.finalImage = this.imgProfileTribu.halcones;     
-    } else if (this.userProfile.tribu == "3" || this.userProfile.tribu == 3) {      
-      this.finalImage = this.imgProfileTribu.leones;      
-    } else if (this.userProfile.tribu == "4" || this.userProfile.tribu == 4) {      
-      this.finalImage = this.imgProfileTribu.tiburones;      
-    } else {      
-      this.finalImage = this.imgProfileTribu.leones;      
-    }
-
+  handleSelection(event) {
+    console.log(event.char);
+    this.emoji += event.char;
   }
-
 }

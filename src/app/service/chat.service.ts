@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-// import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database'
-
 import { chat } from '../interfaces/chat'
 
 @Injectable({
@@ -15,8 +13,8 @@ export class ChatService {
     private fire: AngularFireDatabase,
   ) { }
 
-  getMessages(){
-    return this.fire.list('chatsomosuno').snapshotChanges()    
+  getMessages(){    
+    return this.fire.list('chatsomosuno', ref => ref.limitToLast(6) ).snapshotChanges()  
   }
   newMessage(message: chat) {
     this.messages = this.fire.list('/chatsomosuno');
@@ -28,19 +26,5 @@ export class ChatService {
         hourMessage: message.hourMessage
       });
     }
-
   }
-  // getMessages(){
-  //   return this.fire.collection<chat>('chats', ref => ref.orderBy('hourMessage','desc').limit(5)).valueChanges()    
-  //   .pipe(map( (res:chat[])=>{
-  //     this.messages = [];
-  //     for(let message of res){
-  //       this.messages.unshift(message)
-  //       console.log(this.messages);
-  //     }
-  //   }))
-  // }
-  // newMessage(message: chat){
-  //   return this.fire.collection('chats').add(message)
-  // }
 }

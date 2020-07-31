@@ -1,38 +1,37 @@
 <div class="container content-chat">
-    
-
     <div *ngFor="let message of chats" class="back-cloud">
         <div class="cloud" [ngStyle]="styleCloud( message.username)">
-            <div class="cloudMessage" >
-                                 
+            <div class="cloudMessage">
                 <div class="content-message">
                     <div class="text-message">
                         <p class="messageList">{{message.message}}</p>
-                    </div>                
+                    </div>
                 </div>
-                <div class="text-time" >               
+                <div class="text-time">
                     <p class="timeMessage">{{message.hourMessage | date:'HH:mm:ss'}}</p>
-                    
-                </div>            
-                
+                </div>
             </div>
             <p class="textName">{{message.username | slice:0:14}}</p>
         </div>
-        
-        <!-- <div class="triangle" [ngClass]="{'triangleRight': username == message.username, 'triangleLeft': username != message.username}"></div> -->
     </div>
 </div>
-
 <hr class="hrMessage">
-<form [formGroup]="formMessages" (ngSubmit)="newMessage($event)">
-    <div class="goContent">
-        <a class="control">
-            <input class="input inputLook" type="text" placeholder="Envianos tu saludo" formControlName="message">
-            <span class="icon is-small is-right">
-                <button type="submit" value="submit" class="btninputLook" [ngStyle]=" { background: finalColor } ">
-                    <img src="../../../../assets/logs/enviar.png" class="imgButton">
-                </button>
-            </span>
-        </a>
+<div>
+    <form [formGroup]="formMessages" (ngSubmit)="newMessage($event)">
+        <div class="goContent">
+            <a class="control">
+                <input class="input inputLook" type="text" placeholder="Envianos tu saludo" formControlName="message"
+                    [(ngModel)]="emoji">
+                <span class="icon is-small is-right">
+                    <button type="submit" value="submit" class="btninputLook" [ngStyle]=" { background: finalColor } ">
+                        <img src="../../../../assets/logs/enviar.png" class="imgButton">
+                    </button>
+                </span>
+            </a>
+        </div>
+    </form>
+    <div class="content-emojis">
+        <button class='attachment' (click)="toggled = !toggled" [(emojiPickerIf)]="toggled" type="button"
+            [emojiPickerDirection]="'left'" (emojiPickerSelect)="handleSelection($event)">😄</button>
     </div>
-</form>
+</div>

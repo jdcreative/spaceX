@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import  {  NgxEmojiPickerModule  }  from  'ngx-emoji-picker';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database'
@@ -89,7 +89,8 @@ import { MusicComponent } from './components/home/music/music.component';
     MatSelectModule,
     MatCheckboxModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
+    NgxEmojiPickerModule.forRoot(), 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     TranslateModule.forRoot({
