@@ -36,7 +36,7 @@ p.title-modal {
     height: auto !important;
 }
 .modal-dialog{
-    background: url(../../../assets/back/shadow_modal_01.jpg);
+    background: url("https://cdn.somosunogo.com/shadow_modal_01.jpg");
     background-size: cover;
     background-position: center;
     margin: 0px !important;

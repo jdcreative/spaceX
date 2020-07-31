@@ -1,0 +1,210 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="" href="#">
+        <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
+    </a>
+    <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo01">
+        <div class="menuNavbar">
+
+            <div class="allNets">
+                <a class="nav-link" [routerLink]="['/']">
+                    <span class="textMenu">{{ 'menu.inicio' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/invitados-especiales']">
+                    <span class="textMenu">{{ 'menu.invitados' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/conferencistas']">
+                    <span class="textMenu">{{ 'menu.conferencistas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/bandas']">
+                    <span class="textMenu">{{ 'menu.bandas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/tribus']">
+                    <span class="textMenu">{{ 'menu.tribus' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/faq']">
+                    <span class="textMenu">{{ 'menu.faq' | translate }}</span>
+                </a>
+            <!--    
+                <a class="nav-link" (click)="setLang('es');">
+                    <img src="https://devocional.somosunogo.com/images/062-colombia.png" width="20" height="20"
+                        alt="Español">
+                </a>
+                <a class="nav-link" (click)="setLang('en');">
+                    <img src="https://devocional.somosunogo.com/images/153-united-states-of-america.png" width="20"
+                        height="20" alt="English">
+                </a>
+                <a class="nav-link" (click)="setLang('pt');">
+                    <img src="https://devocional.somosunogo.com/images/250-brazil.png" width="20" height="20"
+                        alt="Portugues">
+                </a>
+                <a class="nav-link" (click)="setLang('en');">
+                    <img src="https://devocional.somosunogo.com/images/153-united-states-of-america.png" width="20"
+                        height="20" alt="English">
+                </a>
+                <a class="nav-link" (click)="setLang('pt');">
+                    <img src="https://devocional.somosunogo.com/images/250-brazil.png" width="20" height="20"
+                        alt="Portugues">
+                </a>
+            -->
+            </div>
+        </div>
+    </div>
+    <a class="btnRegister" (click)="openLogin();" style="display: none;">
+        <div class="btn here">
+            {{ 'home.iniciar-sesion' | translate }}
+        </div>
+    </a>
+</nav>
+<div class="banner">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            <h1 class="title_banner">CONFERENCISTAS</h1>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</div>
+<div class="fondo_containt">
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">césar y emma castellanos</h2>
+            <p class="paragraph">El Pastor César Castellanos Es un hombre apasionado por las almas, desde el momento que
+                se convirtió comenzó a predicar en las calles. Hoy en día a través de la “Visión G12” mentorea a mucho
+                líderes y pastores y los lleva a soñar, a ser formado y a alcanzar su máximo potencial. La Pastora
+                Claudia es una mujer de fe. Dios la sacó de estar detrás de su esposo y la colocó al lado de él. Tiene
+                una gran pasión por las mujeres, y ha levantado una tremenda red de mujeres en la ciudad de Bogotá.
+                También se ha desarrollado en el ámbito político.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista2.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">lau y sara guerra</h2>
+            <p class="paragraph">Papás de Isaac, Anabela y uno más en camino, son los pastores de SOMOS UNO. Apasionados
+                por
+                Jesús y por ver la única luz siendo expandida por todo el mundo.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista2_1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">Rebeca Howard</h2>
+            <p class="paragraph">Brasileña, casada con Josh Howard, mamá de Israel, pastora en MCI Durango. Ama estudiar
+                y enseñar la Palabra de Dios.
+                Dato curioso: Siempre dijo que había sido llamada a la nación de Brasil, hasta que Dios la mandó a
+                México. !Nunca digas nunca!
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista4.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">Gloria Salamanca</h2>
+            <p class="paragraph">Juntamente com seu esposo Saul, pastoreia a MCI na Cidade do México. Mãe de três filhos
+                que todos amam e eles servem a Deus como família. A amamos por sua mensagem sempre direta ao coração.
+                Fato curioso: Estudou engenharia de sistemas.
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista5.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">FELIPE SALAMANCA</h2>
+            <p class="paragraph">Casado con Vicky, pastor de jóvenes en MCI México, formado en teología. Ama un buen
+                café y un buen libro. Creador del podcast "Una Fe Relevante".
+                Dato curioso: ¡Le tocó orar mucho por Vicky! Tienen una historia de película.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista6.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">Julian y Lorena Gamba</h2>
+            <p class="paragraph">Papas de Ariana, Melody y Ezequiel. Hoy son directores de Generación 12 Music y
+                pastores en MCI Bogotá y G12 Church Miami. Tienen un corazón para la iglesia y a las misiones. Julián
+                tiene un podcast llamado “La Academia” acerca de la capacidad de liderazgo de cada uno.
+                Dato curioso: Por años Juli perseveró en conquistar a Lore, aunque ella lo negaba, ¡siempre le gustó!
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista7.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">ERIKA BERRIOS</h2>
+            <p class="paragraph">Casada con el Pastor Daniel, mamá de Dani, Vale y Ana Victoria, es pastora en MCI
+                Bogotá y tiene un mensaje genuino y directo que llega al corazón de todos nosotros. Amamos su pasión por
+                Dios, su fe genuina y su entrega a otros.
+                Dato curioso: De pequeña se escapaba de la casa a callejear y la abuela la correteaba por todo el
+                barrio! ¡Quien la ve! Hoy es toda una ama de casa, su especialidad es la Cazuela de Mariscos.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista8.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">rich y manuela harding</h2>
+            <p class="paragraph">Papas de Noah, Nathan, Chloe y Joy. Fundadores de HeroKids, HeroMoms y Arco En Las
+                Nubes (Curriculum de estudio para los niños en casa), son también pastores en MCI Bogotá y G12 Church
+                Miami.
+                Dato curioso: ¡Quieren tener 6 hijos!
+            </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista9_1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">David Eghelshi</h2>
+            <p class="paragraph">Casado con Dinorah y papá de 4 hijos que aman y sirven a Dios. Hoy pastor en Medes
+                Church, tiene un testimonio increíble de cómo Dios lo sacó de extrema pobreza a una vida de plenitud en
+                Cristo.
+                Dato curioso: amante de las pupusas (comida típica Salvadoreña). !Podría desayunar, almorzar y cenar
+                pupusas!
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/conferencista10.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">ELIEMERSON Y JOHANNA</h2>
+            <p class="paragraph">Papas de Shailoh, Rachel y Emma, tienen una familia ejemplar. Son pastores en MCI
+                Bogotá y G12 Church Miami y Dios los ha podido usar llevando un mensaje de dirección a los sentimientos
+                de los jóvenes y a las familias.
+                Dato curioso: El pastor Eli tuvo el pelo hasta la cintura y la pastora Johanna tuvo un novio metalero.
+            </p>
+        </div>
+    </div>
+
+</div>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="" href="#">
-        <img src="./../../../assets/logs/goo.png" class="logoNavbar">
+        <img src="https://cdn.somosunogo.com/goo.png" class="logoNavbar">
     </a>
 </nav>
 
@@ -30,11 +30,14 @@
             <div
                 [ngClass]="{ 'tab-switch-black': tab == 'home' || tab == 'conferencistas' || tab == 'tribus' || tab == 'merch', 'tab-switch-white' : tab == 'talleres'  }">
 
-                <div *ngIf="tab == 'home'">
-
-                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                <div *ngIf="tab == 'home'" style="display: flex;">
+                    <div style="border: 1px solid red; width: 60%;"><iframe
                             src="https://player.vimeo.com/video/441474151" frameborder="0" allow="autoplay; fullscreen"
-                            allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            allowfullscreen style="top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+
+                    <div class="chat" style="width: 40%;">
+                        <app-chat [finalColor]="finalColor"></app-chat>
                     </div>
 
                     <div class="info-video" *ngIf="conferencistas && conferencistas.length >= 1">
@@ -57,50 +60,29 @@
                         <app-chat [finalColor]="finalColor"></app-chat>
                     </div>
 
-                    <!-- <div class="container-buttons">
-
-                        <button class="btn bttn-gray btn-selected">
-                            Notas
-                        </button>
-                        <button class="btn bttn-gray">
-                            Biblia
-                        </button>
-                        <button class="btn bttn-gray">
-                            Horario
-                        </button>
-
-                    </div> -->
-
-                </div>
-
-                <div class="container-prox"
-                    *ngIf="tab != 'home' && tab != 'conferencistas' && tab != 'tribus' && tab != 'talleres'">
-
-                    <div class="container-soon">
-                        <img src="../../../assets/merch/soonmerch.jpg"
-                            style="display: flex;text-align: center;margin: 0 auto; width: 100%;" />
+                    <div class="container-prox" *ngIf="tab != 'home' && tab != 'conferencistas' && tab != 'tribus'">
+                        <img src="https://cdn.somosunogo.com//soonmerch.jpg"
+                            style="display: flex;text-align: center;margin: 0 auto;" />
                     </div>
 
-                </div>
+                    <div class="container-prox" *ngIf=" tab == 'conferencistas'">
+                        <app-conferencistas></app-conferencistas>
+                    </div>
 
-                <div class="container-prox" *ngIf=" tab == 'conferencistas'">
-                    <app-conferencistas></app-conferencistas>
-                </div>
+                    <div class="container-prox" *ngIf=" tab == 'tribus'">
+                        <app-tribus></app-tribus>
+                    </div>
 
-                <div class="container-prox" *ngIf=" tab == 'tribus'">
-                    <app-tribus></app-tribus>
-                </div>
+                    <div class="container-prox" *ngIf=" tab == 'talleres'">
+                        <app-talleres *ngIf="tab == 'talleres'"></app-talleres>
+                    </div>
 
-                <div class="container-prox" *ngIf=" tab == 'talleres'">
-                    <app-talleres *ngIf="tab == 'talleres'"></app-talleres>
-                </div>
+                    <!---<app-merch *ngIf="tab =='merch'"></app-merch> -->
 
-                <!---             <app-merch *ngIf="tab =='merch'"></app-merch> -->
+                </div>
 
             </div>
 
         </div>
 
     </div>
-
-</div>

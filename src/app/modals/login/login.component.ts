@@ -95,7 +95,7 @@ export class LoginComponent implements OnInit {
       const data = this.formLogin.value;
       this.tempEmail = data.email;
       this.data_user.getCodeSesion(data.email).subscribe(res => {
-        // console.log("RESSSS", res);
+        console.log("RESSSS", res);
         if (res.email) {
           this.dataForm = res;
           // console.log("DATA: ", this.dataForm);

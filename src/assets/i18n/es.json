@@ -1,8 +1,69 @@
 {
     "language": "Español",
+    "menu": {
+        "inicio": "INICIO",
+        "invitados": "INVITADOS",
+        "conferencistas": "CONFERENCISTAS",
+        "bandas": "BANDAS",
+        "tribus": "TRIBUS",
+        "faq": "FAQ"
+    },
     "home": {
         "confirmar-registro": "Confirma tu Registro",
         "iniciar-sesion": "Inciar Sesión",
+        "registrate": "Registrate Aquí",
+        "titulo-somosuno": "SOMOS UNO",
+        "imagen-home": "https://cdn.somosunogo.com/goo.png",
+        "versiculo": "”Un ángel del Señor habló a Felipe, diciendo: Levántate y ve hacia el sur…. Entonces él se levantó y fue...” Hechos 8:26-27",
+        "descripcion": "El llamado de Dios a esta generación es levántate y ve. Hay una misión que nos espera, hay un llamado a la puerta, hay vidas esperando el mensaje que tú y yo tenemos. Dios ha lanzado su palabra, “levántate y ve!” Ahora el resto depende de nosotros. GO es nuestra respuesta y creemos que no estamos solos en esta respuesta. Unámonos al clamor de miles y digamos, “¡Heme aquí Dios, envíame a mí!” !A partir de hoy nos unimos a la generación GO!",
+        "descripcion-nombre": "Pastores de SOMOS UNO",
+        "descripcion-somosuno": "Somos uno es el ministerio de Jóvenes de la Misión Carismática internacional, creemos que el mensaje más poderoso que tenemos es la unidad. Somos Uno busca unir la nueva generación para que a través de la unidad con el Espíritu Santo muchos puedan escuchar el mensaje más poderoso de todos: el mensaje de Jesús.",
+        "versiculo-somosuno": "”Mas no ruego solamente por éstos, sino también por los que han de creer en mí por la palabra de ellos, para que todos sean uno; como tú, oh Padre, en mí, y yo en ti, que también ellos sean uno en nosotros; para que el mundo crea que tú me enviaste.” - Juan 17:20-22"
+    },
+    "guests":{
+        "titulo": "INVITADOS ESPECIALES",
+        "descripcion1": "Francis Chan es pastor, autor y maestro de la Palabra en Estados Unidos, aunque nació en Hong-Kong. Después de ser criado por su abuela budista en Hong Kong, Francis llegó a Estados Unidos a la edad de cinco años. Su madre murió en su nacimiento, su madrastra murió en un accidente automovilístico cuando él tenía nueve años, y su padre murió de cáncer cuando tenía doce. Pero en 1884, Francis llegó a conocer al Señor durante su secundario y su historia cambió por completo.<br /> Chan es un orador muy solicitado en universidades cristianas y conferencias a nivel nacional e internacional. Actualmente también está activo con Children’s Hunger Fund, African Renewal Ministries y World Impact, y ha escrito libros como ”El Dios Olvidado”, ”Cartas a la Iglesia” y algunos otros best-sellers."
+    },
+    "sidebar": {
+        "tribu": "TRIBU",
+        "puntos": "PUNTOS",
+        "boton-salir": "SALIR"
+    },
+    "footer": {
+        "siguenos": "Síguenos en:"
+    },
+    "faq": {
+        "titulo": "PREGUNTAS FRECUENTES",
+        "titulo_faq1": "¿Quienes pueden asistir a la convención GO?",
+        "respuesta_faq1": "Todos aquellos jóvenes que deseen asistir sin ningún límite y desde cualquier lugar del mundo.",
+        "titulo_faq2": "¿Que idiomas están disponibles?",
+        "respuesta_faq2": "Español, Ingles, Portugues, y Frances escogiendo la opción en su registro del idioma de su preferencia.",
+        "titulo_faq3": "¿Costos de la convención GO?",
+        "respuesta_faq3": "Esta convención no tendrá ningún costo, solo debes regístrate.",
+        "titulo_faq4": "¿Puedo acceder sin registro previo a la convención GO?",
+        "respuesta_faq4": "No, debes realizar el registro en la pagina https://somosunogo.com",
+        "titulo_faq5": "¿Hasta cuando podré hacer mi registro?",
+        "respuesta_faq5": "No tendremos día de cierre para registros, pero recomendamos  realizarlo antes de iniciar la convención. (6 de agosto)",
+        "titulo_faq6": "¿Cuando se realizará la convención GO?",
+        "respuesta_faq6": "La convención se realizara los días 6,7 y 8 de Agosto de 2020",
+        "titulo_faq7": "¿Como se que mi registro se completo exitosamente?",
+        "respuesta_faq7": "Al momento de terminar el registro saldrá una confirmación y además te llegara un correo de confirmación.",
+        "titulo_faq8": "No he recibido mi correo de confirmación , ¿donde lo puedo conseguir?",
+        "respuesta_faq8": "Muchas veces llega a la carpeta de Spam o Correo No deseado, también puedes ingresar a la pagina para actualizar y confirmar el registro."
+    },
+    "modals": {
+        "iniciarsesion1": "INICIAR",
+        "iniciarsesion2": "SESION",
+        "descripcion_modal": "Escribe tu correo electronico",
+        "input_modal": "Ingresa tu correo electronico",
+        "boton_modal": "INGRESAR",
+        "ingresar_codigo": "Ingresa el código que te hemos enviado a tu correo electrónico.",
+        "input_codigo": "Ingresa el código...",
+        "codigo_invalido": "El código ingresado es inválido, revisa de nuevo.",
+        "correo_invalido": "El correo que ingresaste no existe.",
+        "correo_no_registrado": "Tu correo no esta registrado en la base de datos, realiza el registro y no te pierdas la convencion #SomosUnoGo.",
+        "boton_registro": "Registrate",
+        "titulo_alerta": "OH NO!",
         "registrate": "Registrate Aquí"
     }
 }

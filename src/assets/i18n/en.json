@@ -1,6 +1,46 @@
 {
     "language": "English",
+    "menu": {
+        "invitados": "SPECIAL GUESTS",
+        "conferencistas": "SPEAKERS",
+        "bandas": "MUSIC",
+        "tribus": "TRIBES",
+        "faq": "FAQ"
+    },
     "home": {
+        "confirmar-registro": "CONFIRM YOUR REGISTRATION",
+        "iniciar-sesion": "LOGIN",
+        "registrate": "REGISTER HERE",
+        "imagen-home": "https://cdn.somosunogo.com/goo.png",
+        "titulo-somosuno": "WE ARE ONE",
+        "versiculo": "”Now an angel of the Lord spoke to Philip, saying, Arise and GO toward the south...” Acts 8:26",
+        "descripcion": "God is calling this generation to take action! Many have heard this, but few have paid attention. But a different generation is rising up, one that does not hold back because of circumstances or depend on them either. A generation that is tired of seeing our world beaten by injustice, sadness, and hopelessness. A generation that is ready to be sent out and will not grow weary of saying, ¨send me!¨  God has sent out His word and ¨GO!¨ is our answer, and we know we are not alone. Let's join the millions that cry out ¨Here I am Lord, send me!¨  Starting today we join the GO Generation!",
+        "descripcion-nombre": "Pastors of WE ARE ONE",
+        "descripcion-somosuno": "We are a global community of Christian youth sharing the most important message to this generation: unity in Christ. The world is divided against itself, but with the help of the Holy Spirit we want thousands to hear the message of Love, hope and purpose found in Jesus.",
+        "versiculo-somosuno": "”I do not pray for these alone, but also for those who will believe in Me through their word;  that they all may be one, as You, Father, are in Me, and I in You; that they also may be one in Us, that the world may believe that You sent Me.” John 17:-20-22"
+    },
+    "sidebar":{
+        "tribu": "TRIBE",
+        "puntos": "POINTS",
+        "boton-salir": "LOG OUT",
+        "home": "Home"
+    },
+    "footer":{
+        "siguenos":"FOLLOW US:"
+    },
+    "modals": {
+        "iniciarsesion1": "LOG",
+        "iniciarsesion2": "IN",
+        "descripcion_modal": "Enter your e-mail",
+        "input_modal": "E-mail",
+        "boton_modal": "ENTER",
+        "ingresar_codigo": "Enter the code we sent to your e-mail",
+        "input_codigo": "Enter code",
+        "codigo_invalido": "The code you entered is invalid, please check again.",
+        "correo_invalido": "The e-mail you entered does not exist.",
+        "correo_no_registrado": "Your e-mail is not registered in our data base, please complete your sign-up and don´t miss out on the We Are One GO Conference.",
+        "boton_registro": "Sign-up",
+        "titulo_alerta": "OH NO!",
         "confirmar-registro": "Confirm your registration",
         "iniciar-sesion": "Login",
         "registrate": "Sign In Here"

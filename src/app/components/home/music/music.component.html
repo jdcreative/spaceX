@@ -1,0 +1,118 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="" href="#">
+        <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
+    </a>
+    <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo01">
+        <div class="menuNavbar">
+
+            <div class="allNets">
+                <!-- Paginas -->
+                <a class="nav-link" [routerLink]="['/']">
+                    <span class="textMenu">{{ 'menu.inicio' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/invitados-especiales']">
+                    <span class="textMenu">{{ 'menu.invitados' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/conferencistas']">
+                    <span class="textMenu">{{ 'menu.conferencistas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/bandas']">
+                    <span class="textMenu">{{ 'menu.bandas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/tribus']">
+                    <span class="textMenu">{{ 'menu.tribus' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/faq']">
+                    <span class="textMenu">{{ 'menu.faq' | translate }}</span>
+                </a>
+                <!-- 
+                <a class="nav-link" (click)="setLang('es');">
+                    <img src="https://devocional.somosunogo.com/images/062-colombia.png" width="20" height="20"
+                        alt="Español">
+                </a>
+                <a class="nav-link" (click)="setLang('en');">
+                    <img src="https://devocional.somosunogo.com/images/153-united-states-of-america.png" width="20"
+                        height="20" alt="English">
+                </a>
+                <a class="nav-link" (click)="setLang('pt');">
+                    <img src="https://devocional.somosunogo.com/images/250-brazil.png" width="20" height="20"
+                        alt="Portugues">
+                </a>
+                <a class="nav-link" (click)="setLang('en');">
+                    <img src="https://devocional.somosunogo.com/images/153-united-states-of-america.png" width="20"
+                        height="20" alt="English">
+                </a>
+                <a class="nav-link" (click)="setLang('pt');">
+                    <img src="https://devocional.somosunogo.com/images/250-brazil.png" width="20" height="20"
+                        alt="Portugues">
+                </a>
+                -->
+            </div>
+        </div>
+    </div>
+    <!-- Boton iniciar sesion -->
+    <a class="btnRegister" (click)="openLogin();" style="display: none;">
+        <div class="btn here">
+            {{ 'home.iniciar-sesion' | translate }}
+        </div>
+    </a>
+</nav>
+<div class="banner">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            <h1 class="title_banner">BANDAS INVITADAS</h1>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</div>
+<div class="fondo_containt">
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/bandasinvitados1.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">Redimi2</h2>
+            <p class="paragraph">Willy Gonzales Cruz más conocido como Redimi2 es un cantante de Hip Hop nacido en Santo
+                Domingo, República Dominicana. Desde muy niño tuvo inclinación por el arte, principalmente por el
+                dibujo, pintura y teatro. Cuando cumplió 12 años empezó a gustarle la música del género rap, la cual
+                llegó a convertirse en su preferida. Este género llegó a influenciarlo mediante sus mensajes de
+                violencia y negativismo, de tal manera que a la edad de 17 años era un adicto a las drogas, pero en 1999
+                tuvo un encuentro sobrenatural con Dios y ahora usa su talento para enseñar a muchos, a través de la
+                música, que el amor de Dios lo puede cambiar todo. ¡Es todo un Trapstornador! </p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/bandasinvitados2.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">Barak</h2>
+            <p class="paragraph">Roberts Green¡, Janiel Ponciano, Katiuska y Ángelo Frilop, todos de república
+                dominicana, conforman el Grupo Barak, un ministerio musical con el llamado y la intención de alcanzar
+                almas en todo el mundo y postrarlas a los pies de Cristo. Nació en 2009 y han producido 9 álbums con
+                canciones que nos conectan al Cielo. Ha tenido colaboración con Generación 12, Christine D’clario,
+                Redimi2, y grandes salmistas latinoamericanos.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center py-3">
+        <div class="col-3">
+            <img src="https://cdn.somosunogo.com/bandasinvitados4.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-5">
+            <h2 class="title_name">Generación 12</h2>
+            <p class="paragraph">Aman conectar a las personas al corazón de Dios a través de la verdadera adoración.
+                Dato curioso: Inicialmente se iban a llamar Revolución 12
+            </p>
+        </div>
+    </div>
+</div>
