@@ -1,36 +1,25 @@
 <div class="container content-chat">
-    <h1 style="font-size: 22px;">Chat SOMOSUNOGO!</h1>
-    <hr class="hrMessage">
+    
 
-    <div *ngFor="let message of chatservice.messages" class="back-cloud">
-
-        <div class="cloudMessage" [ngStyle]="styleCloud( message.username)">
-            <div class="content-head" [ngStyle]="styleHead( message.username)">
-                <div class="imgProfile">
-                    <img class="imgTribu" [src]="finalImage">                    
+    <div *ngFor="let message of chats" class="back-cloud">
+        <div class="cloud" [ngStyle]="styleCloud( message.username)">
+            <div class="cloudMessage" >
+                                 
+                <div class="content-message">
+                    <div class="text-message">
+                        <p class="messageList">{{message.message}}</p>
+                    </div>                
                 </div>
-                <p class="textName">{{message.username | slice:0:14}}</p>
-            </div>       
-            <div class="text-time" [ngStyle]="styleHeadFinal( message.username)">
-                <p class="timeMessage">{{message.hourMessage | date:'HH:mm:ss'}}</p>
-            </div>     
-            <div class="content-message">
-                <div class="text-message">
-                    <p class="messageList">{{message.message}}</p>
-                </div>                
+                <div class="text-time" >               
+                    <p class="timeMessage">{{message.hourMessage | date:'HH:mm:ss'}}</p>
+                    
+                </div>            
+                
             </div>
-            <div class="text-time" [ngStyle]="styleHead( message.username)">
-                <p class="timeMessage">{{message.hourMessage | date:'HH:mm:ss'}}</p>
-            </div>
-            <div class="content-head" [ngStyle]="styleHeadFinal( message.username)">
-                <div class="imgProfile">
-                    <img class="imgTribu" [src]="finalImage">                    
-                </div>
-                <p class="textName">{{message.username | slice:0:14}}</p>
-            </div>
-            
+            <p class="textName">{{message.username | slice:0:14}}</p>
         </div>
-        <div class="triangle" [ngClass]="{'triangleRight': username == message.username, 'triangleLeft': username != message.username}"></div>
+        
+        <!-- <div class="triangle" [ngClass]="{'triangleRight': username == message.username, 'triangleLeft': username != message.username}"></div> -->
     </div>
 </div>
 

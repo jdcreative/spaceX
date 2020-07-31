@@ -1,12 +1,14 @@
-import { ChatService } from './service/chat.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { environment } from 'src/environments/environment';
+
 import {
   MatDialogModule,
   MatCheckboxModule,
@@ -15,7 +17,6 @@ import {
   MatOptionModule
 } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -27,8 +28,9 @@ import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-transla
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //services
-import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
-import { LoginComponent } from './modals/login/login.component';
+import { ChatService } from './service/chat.service';
+
+//components
 import { PreconvencionComponent } from './components/preconvencion/preconvencion.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
@@ -38,6 +40,12 @@ import { TalleresComponent } from './components/profile/talleres/talleres.compon
 import { MerchComponent } from './components/profile/merch/merch.component';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 import { ChatComponent } from './components/profile/chat/chat.component';
+
+//modals
+import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
+import { LoginComponent } from './modals/login/login.component';
+
+
 
 @NgModule({
   declarations: [
