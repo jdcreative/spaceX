@@ -159,6 +159,18 @@
     padding: 50px;
 }
 
+.flex-content {
+    display: flex;
+}
+
+.container-home-video {
+    width: 70%;
+}
+
+.container-home-chat {
+    width: 30%;
+}
+
 @media only screen and (max-width: 739px) {
     .container-profile {
         display: block;
@@ -169,5 +181,14 @@
     .container-content-profile {
         padding: 0;
         padding-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 1275px) {
+    .flex-content {
+        display: block !important;
+    }
+    .container-home-chat, .container-home-video {
+        width: 100% !important;
     }
 }

@@ -25,6 +25,11 @@
         "descripcion1": "Francis Chan es pastor, autor y maestro de la Palabra en Estados Unidos, aunque nació en Hong-Kong. Después de ser criado por su abuela budista en Hong Kong, Francis llegó a Estados Unidos a la edad de cinco años. Su madre murió en su nacimiento, su madrastra murió en un accidente automovilístico cuando él tenía nueve años, y su padre murió de cáncer cuando tenía doce. Pero en 1884, Francis llegó a conocer al Señor durante su secundario y su historia cambió por completo.<br /> Chan es un orador muy solicitado en universidades cristianas y conferencias a nivel nacional e internacional. Actualmente también está activo con Children’s Hunger Fund, African Renewal Ministries y World Impact, y ha escrito libros como ”El Dios Olvidado”, ”Cartas a la Iglesia” y algunos otros best-sellers."
     },
     "sidebar": {
+        "home": "Inicio",
+        "talleres": "Talleres",
+        "merch": "Merch",
+        "galeria": "Galería",
+        "donaciones": "Donaciones",
         "tribu": "TRIBU",
         "puntos": "PUNTOS",
         "boton-salir": "SALIR"
