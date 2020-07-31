@@ -34,6 +34,7 @@ export class SideBarComponent implements OnInit {
     gorilas: "Gorilas",
     leones: "Leones"
   }];
+
   tribuPoints: string = "0";
 
   constructor(
@@ -57,16 +58,17 @@ export class SideBarComponent implements OnInit {
   }
 
   validateTribus() {
+
     if (this.userProfile.tribu == "1" || this.userProfile.tribu == 1) {
-      this.tribuPoints = this.tribus[0].data.gorilas;
+      this.tribuPoints = this.tribus[0].value;
     } else if (this.userProfile.tribu == "2" || this.userProfile.tribu == 2) {
-      this.tribuPoints = this.tribus[0].data.halcones;
+      this.tribuPoints = this.tribus[1].value;
     } else if (this.userProfile.tribu == "3" || this.userProfile.tribu == 3) {
-      this.tribuPoints = this.tribus[0].data.leones;
+      this.tribuPoints = this.tribus[2].value;
     } else if (this.userProfile.tribu == "4" || this.userProfile.tribu == 4) {
-      this.tribuPoints = this.tribus[0].data.tiburones;
+      this.tribuPoints = this.tribus[3].value;
     } else {
-      this.tribuPoints = this.tribus[0].data.leones;
+      this.tribuPoints = this.tribus[2].value;
     }
   }
 

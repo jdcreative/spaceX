@@ -91,6 +91,12 @@
                                 </div>
                             </div>
 
+                            <div>
+                                <a class="resend-title" (click)="resendCode();">
+                                    Reenviar el código
+                                </a>
+                            </div>
+
                         </form>
 
                         <div class="alert alert-danger" role="alert" *ngIf="showAlert">
@@ -99,6 +105,10 @@
 
                         <div class="alert alert-warning" role="alert" *ngIf="emailNotFound">
                             El correo que ingresaste no existe
+                        </div>
+
+                        <div class="alert alert-success" role="alert" *ngIf="resendStatus">
+                            Se ha reenviado el código a tu correo.
                         </div>
 
                     </div>

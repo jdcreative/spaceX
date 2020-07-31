@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   emailNotFound: boolean = false;
   loginValidation: boolean = false;
   errorOccurred: boolean = false;
+  resendStatus: boolean = false;
   dataForm: any;
   description: string;
   tempEmail: string;
@@ -85,9 +86,8 @@ export class LoginComponent implements OnInit {
     // });
   }
 
-  login(e: Event) {
+  login(e?: Event) {
 
-    e.preventDefault();
     this.loginValidation = true;
 
     if (this.formLogin.valid) {
@@ -187,7 +187,34 @@ export class LoginComponent implements OnInit {
 
   closeModal() {
     this.formLogin.reset();
+    this.formCode.reset();
     this.dialogRef.close();
+  }
+
+  resendCode() {
+    const data = JSON.parse(localStorage.getItem("tempUs"));
+    this.tempEmail = data.email;
+    this.data_user.getCodeSesion(data.email).subscribe(res => {
+
+      this.resendStatus = true;
+
+      if (res.email) {
+        this.dataForm = res;
+        this.validationCode = 2;
+        localStorage.setItem("tempUs", JSON.stringify({ email: data.email, code: res.code }));
+        setTimeout(() => {
+          this.resendStatus = false;
+        }, 5000);
+      } else if (res.estado == false) {
+        this.validationCode = 3;
+        this.loginValidation = false;
+      }
+
+    }, err => {
+      this.loginValidation = false;
+      this.errorOccurred = true;
+      console.log("ERROR IN LOGIN METHOD: ", err)
+    });
   }
 
 }
