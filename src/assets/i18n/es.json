@@ -62,6 +62,7 @@
         "correo_invalido": "El correo que ingresaste no existe.",
         "correo_no_registrado": "Tu correo no esta registrado en la base de datos, realiza el registro y no te pierdas la convencion #SomosUnoGo.",
         "boton_registro": "Registrate",
-        "titulo_alerta": "OH NO!"
+        "titulo_alerta": "OH NO!",
+        "registrate": "Registrate Aquí"
     }
 }

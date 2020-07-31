@@ -41,14 +41,7 @@
 
             <ul class="list-group list-group-flush">
                 <li class="list-group-item" (click)="goTo('home');" [ngClass]="{ 'bold-selected' : tab == 'home' }">
-                    HOME
-                </li>
-                <li class="list-group-item" (click)="goTo('tribus');" [ngClass]="{ 'bold-selected' : tab == 'tribus' }">
-                    TRIBUS
-                </li>
-                <li class="list-group-item" (click)="goTo('conferencistas');"
-                    [ngClass]="{ 'bold-selected' : tab == 'conferencistas' }">
-                    CONFERENCISTAS
+                    {{ 'sidebar.home' | translate }}
                 </li>
                 <li class="list-group-item" (click)="goTo('talleres');"
                     [ngClass]="{ 'bold-selected' : tab == 'talleres' }">
@@ -60,18 +53,6 @@
                 <li class="list-group-item" (click)="goTo('galeria');"
                     [ngClass]="{ 'bold-selected' : tab == 'galeria' }">
                     GALERIA
-                </li>
-                <li class="list-group-item">
-                    <a class="white" target="_blank"
-                        href="https://open.spotify.com/user/u2r5xfv3uohci4693tuqvyb6e?si=4jV_CisOTLKpsorjMdRG6A">
-                        PLAYLIST
-                    </a>
-                </li>
-                <li class="list-group-item">
-                    <a class="white" target="_blank"
-                        href="https://open.spotify.com/show/3LEn5V5hmqikFBaoAMzeJV?si=MMVwbqE8R-q0eIgEi2Hfwg">
-                        PODCAST
-                    </a>
                 </li>
                 <li class="list-group-item">
                     <a class="white" target="_blank" href="https://mcidonaciones.com/">

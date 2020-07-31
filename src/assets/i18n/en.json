@@ -22,7 +22,8 @@
     "sidebar":{
         "tribu": "TRIBE",
         "puntos": "POINTS",
-        "boton-salir": "LOG OUT"
+        "boton-salir": "LOG OUT",
+        "home": "Home"
     },
     "footer":{
         "siguenos":"FOLLOW US:"
@@ -39,6 +40,9 @@
         "correo_invalido": "The e-mail you entered does not exist.",
         "correo_no_registrado": "Your e-mail is not registered in our data base, please complete your sign-up and don´t miss out on the We Are One GO Conference.",
         "boton_registro": "Sign-up",
-        "titulo_alerta": "OH NO!"
+        "titulo_alerta": "OH NO!",
+        "confirmar-registro": "Confirm your registration",
+        "iniciar-sesion": "Login",
+        "registrate": "Sign In Here"
     }
 }
