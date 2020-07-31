@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RealtimeDatabaseService } from 'src/app/service/realtime-database.service';
 
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -12,6 +11,7 @@ import { RealtimeDatabaseService } from 'src/app/service/realtime-database.servi
 export class ProfileComponent implements OnInit {
 
   public tribus = [];
+  public conferencistas = [];
   tab: string = 'home';
   finalColor: any;
   userProfile: any;
@@ -32,6 +32,7 @@ export class ProfileComponent implements OnInit {
     this.userProfile = JSON.parse(localStorage.getItem("user"));
     this.validationColors();
     this.getTribus();
+    this.getConferencista();
   }
 
   getTribus() {
@@ -44,10 +45,20 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  getConferencista() {
+    this._database.getActualConferencista().snapshotChanges().subscribe((res) => {
+      this.conferencistas = [];
+      res.forEach((tribus: any) => {
+        let id = tribus.payload.toJSON();
+        this.conferencistas.push(id);
+      });
+    });
+
+  }
+
   sendTagReceive(event) {
     this.tab = event;
   }
-
 
   validationColors() {
     if (this.userProfile.tribu == "1" || this.userProfile.tribu == 1) {
@@ -58,12 +69,12 @@ export class ProfileComponent implements OnInit {
       this.finalColor = this.data[0].leones;
     } else if (this.userProfile.tribu == "4" || this.userProfile.tribu == 4) {
       this.finalColor = this.data[0].tiburones;
-
     } else {
       this.finalColor = this.data[0].leones;
     }
 
   }
+
   closeSession() {
     localStorage.clear();
     this.router.navigate(["/home"]);

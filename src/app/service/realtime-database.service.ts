@@ -8,13 +8,18 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 export class RealtimeDatabaseService {
 
   tribus: AngularFireList<any>;
+  conferencista: AngularFireList<any>;
 
   constructor(
     private firebase: AngularFireDatabase
   ) { }
 
-  getTribus(){
+  getTribus() {
     return this.tribus = this.firebase.list("tribus");
+  }
+
+  getActualConferencista() {
+    return this.conferencista = this.firebase.list("conferencistas");
   }
 
 }
