@@ -12,7 +12,8 @@ import {
   MatCheckboxModule,
   MatRadioModule,
   MatSelectModule,
-  MatOptionModule
+  MatOptionModule,
+  MatIconModule
 } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -38,6 +39,12 @@ import { ConferencistasComponent } from './components/profile/conferencistas/con
 import { TalleresComponent } from './components/profile/talleres/talleres.component';
 import { MerchComponent } from './components/profile/merch/merch.component';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
+import { FaqComponent } from './components/home/faq/faq.component';
+import { SpeakersComponent } from './components/home/speakers/speakers.component';
+import { WorkshopsComponent } from './components/home/workshops/workshops.component';
+import { TribesComponent } from './components/home/tribes/tribes.component';
+import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
+import { MusicComponent } from './components/home/music/music.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +61,13 @@ import { ErrorDialogComponent } from './components/error-dialog/error-dialog.com
     ConferencistasComponent,
     TalleresComponent,
     MerchComponent,
-    ErrorDialogComponent
+    ErrorDialogComponent,
+    FaqComponent,
+    SpeakersComponent,
+    WorkshopsComponent,
+    TribesComponent,
+    SpecialGuestsComponent,
+    MusicComponent
   ],
   imports:
     [
@@ -66,6 +79,7 @@ import { ErrorDialogComponent } from './components/error-dialog/error-dialog.com
       MatRadioModule,
       MatOptionModule,
       MatSelectModule,
+      MatIconModule,
       MatCheckboxModule,
       BrowserAnimationsModule,
       ReactiveFormsModule,

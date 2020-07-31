@@ -2,21 +2,21 @@
     <div class="modal-dialog-scrollable">
         <div *ngIf="validationCode == 0" class="modal-content">
             <div class="modal-header">
-                <p>INICIAR <span>SESION</span></p>
+                <p>{{ 'modals.iniciarsesion1' | translate }} <span>{{ 'modals.iniciarsesion2' | translate }} </span></p>
             </div>
             <form [formGroup]="formlogin" (ngSubmit)="login($event)">
                 <div class="modal-body">
                     <div class="formLogin">
                         <div class="form-row">
-                            <label for="correo">Escribe tu correo electronico</label>
+                            <label for="correo">{{ 'modals.descripcion_modal' | translate }}</label>
                             <input id="toLowerEmail" type="text" class="form-control" id="correo"
-                                placeholder="Ingresa tu correo electronico" formControlName="email"
+                                placeholder="{{ 'modals.input_modal' | translate }}" formControlName="email"
                                 (input)="toLower($event);">
                         </div>
                     </div>
                 </div>
                 <div class="contentBtn modal-footer">
-                    <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">INGRESAR
+                    <button class="btn btn-primary btnLogin" [disabled]="formlogin.invalid">{{ 'modals.boton_modal' | translate }}
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
                             *ngIf="loginValidation"></span>
                     </button>
@@ -35,11 +35,11 @@
                             <img src="../../../assets/media/icons/mail.png" style="margin: 0 auto;" />
                         </div>
                         <div class="center-items">
-                            <p class="description light">Ingresa el código que te hemos enviado a tu correo electrónico.
+                            <p class="description light">{{ 'modals.ingresar_codigo' | translate }}
                             </p>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Ingresa el código..."
+                            <input type="text" class="form-control" placeholder="{{ 'modals.input_codigo' | translate }}"
                                 aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="code">
                         </div>
 
@@ -50,17 +50,17 @@
                                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
                                         *ngIf="statusLoading"></span>
 
-                                    INGRESAR
+                                        {{ 'modals.boton_modal' | translate }}
                                 </button>
                             </div>
                         </div>
 
                         <div class="alert alert-danger" role="alert" *ngIf="showAlert">
-                            El código ingresado es inválido, revisa de nuevo.
+                            {{ 'modals.codigo_invalido' | translate }}
                         </div>
 
                         <div class="alert alert-warning" role="alert" *ngIf="emailNotFound">
-                            El correo que ingresaste no existe
+                            {{ 'modals.correo_invalido' | translate }}
                         </div>
 
                     </div>
@@ -74,16 +74,17 @@
                         <img src="../../../assets/media/icons/face.png" style="margin: 0 auto;" />
                     </div>
                     <div class="row" style="justify-content: center;">
-                        <p class="title-modal light">OH NO!</p>
+                        <p class="title-modal light">{{ 'modals.titulo_alerta' | translate }}</p>
                     </div>
                     <div class="row">
-                        <p class="description light">Tu correo no esta registrado en la base de datos, realiza el
-                            registro y no te pierdas la convencion #SomosUnoGo.</p>
+                        <p class="description light">
+                            {{ 'modals.correo_no_registrado' | translate }}
+                            </p>
                     </div>
 
                     <div class="row" style="margin-bottom:25px;">
                         <button type="button" class="btn buttonform" style="margin: 0 auto;"
-                            (click)="showregister()">Registrate</button>
+                            (click)="showregister()">{{ 'modals.boton_registro' | translate }}</button>
                     </div>
                 </div>
             </div>

@@ -60,44 +60,29 @@
     border-radius: 0 40px 40px 0;
     margin-right: -18px;
 }
-/*  */
+/*   */
 .banner{
-    background: url(../../../assets/back/banner_home.jpg) no-repeat;
+    background: url('https://cdn.somosunogo.com/watherPink.jpg') no-repeat;
     width: 100%;
-    padding: 100px 1px;
+    padding: 70px 1px;
+    background-position: top;
+    background-size: cover;
+}
+.fondo_containt{
+    background: url('https://cdn.somosunogo.com/fondo_conferencistas.jpg') no-repeat;
+    width: 100%;
+    padding: 70px 0px;
     background-position: top;
     background-size: cover;
 }
 
-img.img-left-banner {
-    margin: 0 auto;
-    display: block;
-    width: 50%;
-}
 .banner .row {
     padding-top: 20px;
 }
-.contentPromoBanner{
-    display: flex;
-}
-
-.logoBanner{
-    width: 408px;
-    height: 305px;
-    background-size: contain;
-    position: relative;
-    bottom: -241px;
-    margin-left: auto;
-    margin-right: -73px;
-}
-.itielBanner{
-    width: 680px;
-    height: 501px;
-    background-size: contain;
-    position: relative;
-    bottom: -160px;
-    margin-left: auto;
-    margin-right: 100px;
+h1.title_banner {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
 }
 .contetn-btnOptions{
     display: flex;
@@ -146,13 +131,6 @@ img.img-left-banner {
 .btn-bar{
     padding: 3% 0px;
 }
-
-/*  */
-.bannertwo{
-    width: 100%;
-    height: 900px;
-    background: url(../../../assets/back/Stars.jpg)
-}
 .contentBannerTwo{
     width: 1000px;
     margin-left: auto;
@@ -199,13 +177,6 @@ img.img-left-banner {
     font-family: monospace;
     color: white;
     font-size: 18px;   
-}
-/*  */
-.banner2{
-    background: url(../../../assets/back/Stars.jpg) no-repeat;
-    width: 100%;
-    height: 1100px;    
-    background-size: cover;
 }
 .textPreconvencion{
     background: #272727;
@@ -254,24 +225,6 @@ img.img-left-banner {
     transform: translate(-50%, 0);
 }
 
-.band{
-    background: url(../../../assets/back/Papeles.png);
-    background-position: top;
-    background-size: cover;
-    width: 100%;
-    height: 450px;
-    margin-top: -100px;  
-    position: absolute;  
-}
-
-/*  */
-.how{
-    background: url(../../../assets/back/Fondo-manchas.jpg);
-    background-position: top;
-    background-size: cover;
-    width: 100%;
-    padding: 5% 0px;
-}
 img.title_subcontent {
     margin: 0 auto;
     width: 50%;
@@ -290,18 +243,23 @@ span.titleOne {
     vertical-align: middle;
     padding: 0px 10px;
 }
-.cuadrito{
-    width: 100%;
-    height: 5px;
-    background-color: black;
-}
-.cuadrito a {
-    color: black;
-}
 p.textOne {
     font-family: 'Roboto Mono', monospace;
     font-size: 24px;
     line-height: 30px;
+}
+.title_name{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 40px;
+    font-weight: lighter;
+    color: white;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    font-size: 15px;
+    color: white;
 }
 .description{
     padding-top: 5%;
@@ -390,11 +348,6 @@ p.textOne {
     align-items: center;
     color: white;
 }
-.introducing{
-    background: black url("https://cdn.somosunogo.com/starts-bg.png");
-    background-attachment: fixed;
-    padding: 7% 0px;
-}
 img.amor_accion {
     width: 45%;
 }
@@ -411,15 +364,6 @@ img.img_set_info {
 }
 .content_side p {
     font-family: 'Roboto Mono', monospace;
-}
-/*  */
-.watherPink{
-    background: url("https://cdn.somosunogo.com/watherPink.jpg");
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
 }
 .contentWeAreOne{
     width: 77%;
