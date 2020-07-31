@@ -45,18 +45,18 @@
                 </li>
                 <li class="list-group-item" (click)="goTo('talleres');"
                     [ngClass]="{ 'bold-selected' : tab == 'talleres' }">
-                    TALLERES
+                    {{ 'sidebar.talleres' | translate }}
                 </li>
                 <li class="list-group-item" (click)="goTo('merch');" [ngClass]="{ 'bold-selected' : tab == 'merch' }">
-                    MERCH
+                    {{ 'sidebar.merch' | translate }}
                 </li>
                 <li class="list-group-item" (click)="goTo('galeria');"
                     [ngClass]="{ 'bold-selected' : tab == 'galeria' }">
-                    GALERIA
+                    {{ 'sidebar.galeria' | translate }}
                 </li>
                 <li class="list-group-item">
                     <a class="white" target="_blank" href="https://mcidonaciones.com/">
-                        DONACIONES
+                        {{ 'sidebar.donaciones' | translate }}
                     </a>
                 </li>
             </ul>
