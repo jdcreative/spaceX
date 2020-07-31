@@ -15,7 +15,8 @@ export class ChatComponent implements OnInit {
 
   @Input() finalColor:any;
   finalImage:any;
-  messages:chat[];
+  chats: chat[];
+  chatSix: chat[];
   ordermessage:any;
   formMessages:FormGroup;
   userProfile:any;
@@ -35,16 +36,26 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userProfile = JSON.parse(localStorage.getItem("user"));
-    console.log(this.userProfile)
+    this.userProfile = JSON.parse(localStorage.getItem("user"));    
     this.username = this.userProfile.nombre +' '+ this.userProfile.apellidos;
     this.getchat();
+    this.chatservice.getMessages();
     this.setvalues();
     this.selectImgTribu();    
   }
   
   getchat(){
-    this.chatservice.getMessages().subscribe()
+    this.chatservice.getMessages()
+    .subscribe(res=>{
+      this.chats = [];   
+      const arrayFire = res  ;
+      res.forEach(data=>{
+        let chat = data.payload.toJSON();  
+        this.chats.push(chat as chat)                                              
+        chat['$key'] = data.key;        
+        console.log('chats : ', this.chats);
+      }) 
+    })
   }
   buildForm(){
     this.formMessages = this.fb.group({
@@ -52,7 +63,8 @@ export class ChatComponent implements OnInit {
       message:['', Validators.required],
       hourMessage:[new Date().getTime()]
     });
-    this.formMessages.valueChanges.subscribe(res=>{      
+    this.formMessages.valueChanges.subscribe(res=>{ 
+      // console.log('el form',res)     
     })
   }
   newMessage(e:Event){
@@ -61,9 +73,10 @@ export class ChatComponent implements OnInit {
     if(this.formMessages.valid){
       let data = this.formMessages.value;      
       console.log('data del mensaje: ', data);
-      this.chatservice.newMessage(data)
-      .then(()=>{this.setvalues()})
-      .catch((err)=>{console.error('error al enviar: ', err)})        
+      this.chatservice.newMessage(data);
+      this.formMessages.reset();
+      this.setvalues()
+            
     }    
   }
   setvalues(){     
@@ -72,33 +85,14 @@ export class ChatComponent implements OnInit {
     this.formMessages.controls['hourMessage'].setValue(timeHere);    
     this.formMessages.controls['message'].setValue(' '); 
   }
-  styleHead(e:string){
-    let user;
-    if(this.username == e){
-      user= true;
-    }else{user=false}    
-    let style = {
-      'display': user ? 'initial' : 'none'            
-    }
-    return style
-  }
-  styleHeadFinal(e:string){
-    let user;
-    if(this.username == e){
-      user= true;
-    }else{user=false}    
-    let style = {
-      'display': user ? 'none' : 'initial'            
-    }
-    return style
-  }
+  
   styleCloud(e:string){
     let user;
     if(this.username == e){
       user= true;
     }else{user=false}    
     let style = {
-      'background': user ? '#C8C8C8' : '#A8A8A8'
+      'background': user ? '#4f4f4f99' : '#6f6f6f4d'
     }
     return style
   }

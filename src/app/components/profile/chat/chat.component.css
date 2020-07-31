@@ -1,68 +1,34 @@
-
+::-webkit-scrollbar {
+    display: none;
+}
 .content-chat{
     min-height: 80px;
-    height: auto;
-    overflow: hidden;
-    border-top: 1px solid #4f4f4f;
+    max-height: 300px;
+    overflow: auto;
+    padding: 0;    
 }
 .back-cloud{
-    background: white;
-    padding: 20px;
+    background: black; 
+    padding: 2px;   
 }
-.cloudMessage{
-    /* background: red; */
-    border-radius: 6px;
+.cloud{
+    border: 1px solid #7a7a7a;
+}
+.cloudMessage{       
     display: flex;
-    padding: 5px;
+    padding: 5px 5px 0 5px;
+    
 }
-.triangleRight{    
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 12px 21px 0px 21px;
-    border-color: #C8C8C8 transparent transparent transparent;
-    position: absolute;
-    margin-top: -2px;
-    right: 100px;
-    left: auto;
-}
-.triangleLeft{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 12px 21px 0px 21px;
-    border-color: #A8A8A8 transparent transparent transparent;
-    position: absolute;
-    margin-top: -2px;
-    right: 0;
-    left: 400px;
-}
-.badgeName{
-    padding: 5px 12px;
-    border-radius: 20px;
-    color: black;
-    font-weight: bold;
-}
+
 .content-head{    
     width: 79px;
     text-align: center;
 }
-.imgProfile{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px; 
-    margin-left: auto;
-    margin-right: auto;  
-}
-.imgTribu{
-    width: 100%;
-    border-radius: 20px;
-    object-fit: contain;
-    object-position: center;
-}
+
 .textName{
-    font-size: 9px;
+    font-size: 11px;
     margin-bottom: auto;
+    text-align: end;
 }
 .content-message{
     width: 100%;
@@ -112,39 +78,38 @@
 .goContent{
     display: flex;    
     align-items: center;
-    padding: 20px 0;
+    padding: 5px 0;
 }
 .control{
-    width: 80%;
+    width:100%;
     margin-left: auto;
     margin-right: auto;
 }
 .inputLook{
     width: 100%;
-    height: 60px;
-    border-radius: 30px;
+    height: 40px;
+    background: transparent;
     border: none;
     font-family: Roboto;
     font-size: 16px;
-    color: #4F4F4F;
+    color: #A8A8A8;    
     padding-left: 20px;
     padding-right: 67px;
     outline-style: none;
 }
 .btninputLook{
-    padding: 14px;
-    border:none;
-    border-radius: 30px;
-    box-shadow: 0 0 4px 3px rgba(0,0,0,0.3);
-    font-family: 'GothamMedium';
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 3px rgba(0,0,0,0.3);    
     font-size: 14px;
-    /* background: rgb(0, 225, 255); */
-    color:white;
+    color: white;
+    width: 67px;
     cursor: pointer;
+    height: 35px;
     outline: none;
     position: absolute;
-    margin-left: -57px;
-    margin-top: 5px;
+    margin-left: -70px;
+    margin-top: 3px;
     transition: .3s all ease;
 }
 .btninputLook:hover{
@@ -152,7 +117,7 @@
     transition: .3s all ease;
 }
 .imgButton{
-    width: 22px;    
+    width: 27px;    
 }
 @media screen and (max-width:740px){
     .triangleRight{right: 20%;}
