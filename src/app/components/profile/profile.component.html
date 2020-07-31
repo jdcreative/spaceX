@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="" href="#">
-        <img src="./../../../assets/logs/goo.png" class="logoNavbar">
+        <img src="https://cdn.somosunogo.com/goo.png" class="logoNavbar">
     </a>
 </nav>
 
@@ -8,7 +8,7 @@
 
     <app-side-bar (sendTag)="sendTagReceive($event);" [tribus]="tribus"></app-side-bar>
 
-    <div class="content-profile">
+    <div class="content-profile background-black">
 
         <div class="tab">
 
@@ -27,53 +27,41 @@
 
         <div class="container-content-profile">
 
-            <div class="tab-switch">
+            <div
+                [ngClass]="{ 'tab-switch-black': tab == 'home' || tab == 'conferencistas' || tab == 'tribus' || tab == 'merch', 'tab-switch-white' : tab == 'talleres'  }">
 
-                <div *ngIf="tab == 'home'" class="mediaHome" >                    
-                    <div class="vimeo"><iframe
-                            src="https://player.vimeo.com/video/441474151" frameborder="0" allow="autoplay; fullscreen"
-                            allowfullscreen style="top:0;left:0;width:100%;height:100%;"></iframe>
+                <div *ngIf="tab == 'home'" class="mediaHome">
+                    <div class="vimeo"><iframe src="https://player.vimeo.com/video/441474151" frameborder="0"
+                            allow="autoplay; fullscreen" allowfullscreen
+                            style="top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
 
-                    
-                    
+
+
                     <div class="chat">
                         <app-chat [finalColor]="finalColor"></app-chat>
                     </div>
-                    
-
                 </div>
-                <div class="info-video" style="border: 1px solid green;">
+                <div class="info-video" *ngIf="conferencistas && conferencistas.length >= 1">
 
-
-                    <!-----
-                    
-                        
-                        INSERTAR IMAGEN AQUÍ
-                    
-                
-                    
-                    -->
-
-                    <!-- <div class="info display-f">
+                    <div class="info display-f">
                         <div class="info-title">
-                            Alcanzando la Promesa
+                            {{ conferencistas[1] ? conferencistas[1] : 'N/A' }}
                         </div>
-                        Laudjair Guerra
+                        {{ conferencistas[0] ? conferencistas[0] : 'N/A' }}
                     </div>
 
-                    <div class="container-next">
-                        Next<br>
-                        Break
-                    </div> -->
+                    <!-- <div class="container-next">
+                            Next<br>
+                            Break
+                        </div> -->
+
+                </div>
 
 
                 <div class="container-prox" *ngIf="tab != 'home' && tab != 'conferencistas' && tab != 'tribus'">
-
-
-                    <img src="../../../assets/merch/soonmerch.jpg"
+                    <img src="https://cdn.somosunogo.com//soonmerch.jpg"
                         style="display: flex;text-align: center;margin: 0 auto;" />
-
                 </div>
 
                 <div class="container-prox" *ngIf=" tab == 'conferencistas'">
@@ -84,15 +72,16 @@
                     <app-tribus></app-tribus>
                 </div>
 
+                <div class="container-prox" *ngIf=" tab == 'talleres'">
+                    <app-talleres *ngIf="tab == 'talleres'"></app-talleres>
+                </div>
 
-                <!-- <app-conferencistas *ngIf="tab == 'conferencistas'"></app-conferencistas>
-                <app-talleres *ngIf="tab == 'talleres'"></app-talleres>
-                <app-merch *ngIf="tab =='merch'"></app-merch> -->
+                <!---<app-merch *ngIf="tab =='merch'"></app-merch> -->
+
+
 
             </div>
 
         </div>
 
     </div>
-
-</div>

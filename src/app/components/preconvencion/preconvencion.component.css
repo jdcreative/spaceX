@@ -78,7 +78,7 @@
 }
 /*  */
 .banner2{
-    background: url(../../../assets/back/Stars.jpg) no-repeat;
+    background: url("https://cdn.somosunogo.com/Stars.jpg") no-repeat;
     width: 100%;
     height: 1100px;    
     background-size: cover;
@@ -145,7 +145,7 @@
 }
 /*  */
 .banner3{
-    background: url(../../../assets/back/fondomagazin.png) no-repeat;
+    background: url("https://cdn.somosunogo.com/fondomagazin.png") no-repeat;
     width: 100%;
     height: 800px;    
     background-size: cover;
@@ -179,21 +179,21 @@
     display: flex;  
 }
 .walpaper1{
-    background: url(../../../assets/media/story1.png) no-repeat;
+    background: url("https://cdn.somosunogo.com/story1.png") no-repeat;
     width: 190px;
     height: 330px;    
     margin: 5px; 
     background-size: cover;    
 }
 .walpaper2{
-    background: url(../../../assets/media/story2.png) no-repeat;
+    background: url("https://cdn.somosunogo.com/story2.png") no-repeat;
     width: 190px;
     height: 330px;   
     margin: 5px; 
     background-size: cover;
 }
 .walpaper3{
-    background: url(../../../assets/media/story3.png) no-repeat;
+    background: url("https://cdn.somosunogo.com/story3.png") no-repeat;
     width: 190px;
     margin: 5px; 
     height: 330px;    
@@ -206,21 +206,21 @@
     display: flex;  
 }
 .post1{
-    background: url(../../../assets/media/PostGO1.png) no-repeat;
+    background: url("https://cdn.somosunogo.com/PostGO1.png") no-repeat;
     width: 190px;
     height: 190px;    
     margin: 5px; 
     background-size: cover;    
 }
 .post2{
-    background: url(../../../assets/media/PostGO21.png) no-repeat;
+    background: url("https://cdn.somosunogo.com/PostGO21.png") no-repeat;
     width: 190px;
     height: 190px;   
     margin: 5px; 
     background-size: cover;
 }
 .post3{
-    background: url(../../../assets/media/postGO31.png) no-repeat;
+    background: url("https://cdn.somosunogo.com/postGO31.png") no-repeat;
     width: 190px;
     margin: 5px; 
     height: 190px;    

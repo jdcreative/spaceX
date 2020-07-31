@@ -14,7 +14,8 @@ import {
   MatCheckboxModule,
   MatRadioModule,
   MatSelectModule,
-  MatOptionModule
+  MatOptionModule,
+  MatIconModule
 } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -46,6 +47,12 @@ import { ValidateUserComponent } from './modals/validate-user/validate-user.comp
 import { LoginComponent } from './modals/login/login.component';
 
 
+import { FaqComponent } from './components/home/faq/faq.component';
+import { SpeakersComponent } from './components/home/speakers/speakers.component';
+import { WorkshopsComponent } from './components/home/workshops/workshops.component';
+import { TribesComponent } from './components/home/tribes/tribes.component';
+import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
+import { MusicComponent } from './components/home/music/music.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +70,13 @@ import { LoginComponent } from './modals/login/login.component';
     TalleresComponent,
     MerchComponent,
     ErrorDialogComponent,
-    ChatComponent
+    ChatComponent,
+    FaqComponent,
+    SpeakersComponent,
+    WorkshopsComponent,
+    TribesComponent,
+    SpecialGuestsComponent,
+    MusicComponent
   ],
   imports: [
     FormsModule,

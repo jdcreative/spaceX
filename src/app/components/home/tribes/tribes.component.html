@@ -1,0 +1,136 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="" href="#">
+        <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
+    </a>
+    <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo01">
+        <div class="menuNavbar">
+
+            <div class="allNets">
+                <a class="nav-link" [routerLink]="['/']">
+                    <span class="textMenu">{{ 'menu.inicio' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/invitados-especiales']">
+                    <span class="textMenu">{{ 'menu.invitados' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/conferencistas']">
+                    <span class="textMenu">{{ 'menu.conferencistas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/bandas']">
+                    <span class="textMenu">{{ 'menu.bandas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/tribus']">
+                    <span class="textMenu">{{ 'menu.tribus' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/faq']">
+                    <span class="textMenu">{{ 'menu.faq' | translate }}</span>
+                </a>
+                <!--
+                <a class="nav-link" (click)="setLang('es');">
+                    <img src="https://devocional.somosunogo.com/images/062-colombia.png" width="20" height="20"
+                        alt="Español">
+                </a>
+                <a class="nav-link" (click)="setLang('en');">
+                    <img src="https://devocional.somosunogo.com/images/153-united-states-of-america.png" width="20"
+                        height="20" alt="English">
+                </a>
+                <a class="nav-link" (click)="setLang('pt');">
+                    <img src="https://devocional.somosunogo.com/images/250-brazil.png" width="20" height="20"
+                        alt="Portugues">
+                </a>
+                <a class="nav-link" (click)="setLang('en');">
+                    <img src="https://devocional.somosunogo.com/images/153-united-states-of-america.png" width="20"
+                        height="20" alt="English">
+                </a>
+                <a class="nav-link" (click)="setLang('pt');">
+                    <img src="https://devocional.somosunogo.com/images/250-brazil.png" width="20" height="20"
+                        alt="Portugues">
+                </a>
+                -->
+            </div>
+        </div>
+    </div>
+    <a class="btnRegister" (click)="openLogin();" style="display: none;">
+        <div class="btn here">
+            {{ 'home.iniciar-sesion' | translate }}
+        </div>
+    </a>
+</nav>
+<div class="banner">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            <h1 class="title_banner">TRIBUS</h1>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</div>
+<div class="fondo_containt">
+   <!--
+    <div class="row justify-content-md-center py-5">
+        <div class="col-4">
+            <p class="parrafo">ouygygoyg o8 g8g a8gsvo8gs ad aa gso sgsog 8ug sg sogus oug s gsugsug sdoug sdoug dsoug dsfoug sdfoug
+                dsoug sdoug sdo8ugouygygoyg o8 g8g a8gsvo8gs ad aa gso sgsog 8ug sg sogus oug s gsugsug sdoug sdoug
+                dsoug dsfoug sdfoug dsoug sdoug sdo8ug</p>
+        </div>
+    </div>
+    -->
+    <h2 class="title_tribu py-3">PACK LEONES</h2>
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <img src="https://cdn.somosunogo.com/leones_pack1.png" class="img-fluid" alt="">¡
+            <img src="https://cdn.somosunogo.com/leones_pack2.png" class="img-fluid" alt="">
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <img src="https://cdn.somosunogo.com/leones_pack3.png" class="img-fluid" alt="">¡
+            <img src="https://cdn.somosunogo.com/leones_pack4.png" class="img-fluid" alt="">
+        </div>
+    </div>
+    <h2 class="title_tribu py-4">PACK GORILAS</h2>
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <img src="https://cdn.somosunogo.com/gorilas_pack1.png" class="img-fluid" alt="">¡
+            <img src="https://cdn.somosunogo.com/gorilas_pack2.png" class="img-fluid" alt="">
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <img src="https://cdn.somosunogo.com/gorilas_pack3.png" class="img-fluid" alt="">¡
+            <img src="https://cdn.somosunogo.com/gorilas_pack4.png" class="img-fluid" alt="">
+        </div>
+    </div>
+    <h2 class="title_tribu py-4">PACK HALCONES</h2>
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <img src="https://cdn.somosunogo.com/halcones_pack1.png" class="img-fluid" alt="">¡
+            <img src="https://cdn.somosunogo.com/halcones_pack2.png" class="img-fluid" alt="">
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <img src="https://cdn.somosunogo.com/halcones_pack3.png" class="img-fluid" alt="">¡
+            <img src="https://cdn.somosunogo.com/halcones_pack4.png" class="img-fluid" alt="">
+        </div>
+    </div>
+    <h2 class="title_tribu py-4">PACK TIBURONES</h2>
+    <div class="row justify-content-md-center">
+        <div class="col-6">
+            <img src="https://cdn.somosunogo.com/tiburones_pack1.png" class="img-fluid" alt="">¡
+            <img src="https://cdn.somosunogo.com/tiburones_pack2.png" class="img-fluid" alt="">
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-5">
+            <img src="https://cdn.somosunogo.com/tiburones_pack3.png" class="img-fluid" alt="">¡
+            <img src="https://cdn.somosunogo.com/tiburones_pack4.png" class="img-fluid" alt="">
+        </div>
+    </div>
+</div>
