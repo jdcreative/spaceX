@@ -2,7 +2,9 @@
 
     <div class="container-title-login">
         <h2 *ngIf="showLoginTitle">Iniciar Sesión</h2>
+        
         <h2 *ngIf="showSendTitle">Reenviar Código</h2>
+        <p class="description_resend" *ngIf="showSendTitle">Si ha olvidado su codigo o no lo tiene porfavor digite el email con el cual se ha registrado en nuestra plataforma y le enviaremos uno...</p>
     </div>
 
     <div class="modal-dialog-scrollable">
@@ -85,7 +87,8 @@
             </div>
 
             <div class="idonthave-code" *ngIf="!buttonUserStatus">
-                <a class="a-code" (click)="userNoCode();">¿No tienes el código?</a>
+                <p  class="description" *ngIf="showLoginTitle">Si esta registrado y no recuerdas tu codigo, haz click en el siguiente enlace y recibiras un codigo unico a tu email registrado.</p>
+                <a class="a-code" (click)="userNoCode();">¿No recuerdas el código?</a>
             </div>
 
         </form>

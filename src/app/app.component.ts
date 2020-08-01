@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
     const getDefaultLang = this.http.get('assets/i18n/es.json');
 
     if (localStorage.getItem("lang") == undefined || localStorage.getItem("lang") == null) {
-     // this.navigatorLang = navigator.language.split("-")[0];
+      this.navigatorLang = navigator.language.split("-")[0];
       this.navigatorLang = "es";
       localStorage.setItem("lang", this.navigatorLang)
     } else {

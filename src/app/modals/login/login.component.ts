@@ -80,7 +80,7 @@ export class LoginComponent implements OnInit {
 
           setTimeout(() => {
             this.showCodeSatus = false;
-          }, 5000);
+          }, 7000);
 
         } else {
           localStorage.setItem("user", JSON.stringify(res[0]));
@@ -144,7 +144,7 @@ export class LoginComponent implements OnInit {
           this.noCodeStatus = false;
           setTimeout(() => {
             this.showCodeSatus = false;
-          }, 2000);
+          }, 7000);
 
         } else {
 
@@ -153,7 +153,7 @@ export class LoginComponent implements OnInit {
           this.buttonUserStatus = false;
           setTimeout(() => {
             this.sendCodeEmail = false;
-          }, 5000);
+          }, 25000);
 
         }
       });

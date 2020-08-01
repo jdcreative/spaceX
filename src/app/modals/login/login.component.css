@@ -1,5 +1,5 @@
 ::ng-deep.mat-dialog-container {
-    width: auto;
+    width: 500px;
     /* background: url("https://cdn.somosunogo.com/watherPink.jpg"); */
     background-size: cover;
     background-position: center;
@@ -8,6 +8,32 @@
 .modal-content {
     background: transparent;
     border: none;
+}
+a.a-code {
+    width: 85%;
+    text-align: center;
+    color: black;
+    background: gainsboro;
+    padding: 3%;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+p.description {
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+.h2, h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+p.description_resend {
+    width: 90%;
+    display: block;
+    font-size: 12px;
+    text-align: center;
 }
 
 .modal-header p {
@@ -132,25 +158,27 @@ p.description.light {
 }
 
 .buttonEnter {
-    width: auto;
+
     border: none;
-    background: #FBFE01;
-    border-radius: 80px;
+    background: #040404;
+    border-radius: 10px;
     font-weight: bold;
-    color: black;
+    color: white;
     padding: 10px 20px;
     margin: 0 auto;
     text-transform: uppercase;
+    width: 90%;
 }
 
 .container-title-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    width: 100%;
+    /*justify-content: center;
+    align-items: center;*/
 }
 
 .idonthave-code {
-    display: flex;
+    display: block;
     justify-content: flex-end;
     padding-top: 20px;
 }

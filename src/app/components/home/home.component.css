@@ -81,7 +81,25 @@
     background-position: top;
     background-size: cover;
 }
-
+a.btnRegister-home {
+    background: #fd705c;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 7px 0px;
+    border-radius: 27px;
+    height: 70px;
+    line-height: 50px;
+}
+.container.buttons-section {
+    padding: 45px 0px;
+}
+.btnRegister-home .btn.here {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
 img.img-left-banner {
     margin: 0 auto;
     display: block;
@@ -97,7 +115,7 @@ img.img-left-banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black url("https://cdn.somosunogo.com/starts-bg.png");
+    background: black url("https://cdn.somosunogo.com/starts-bg.jpg");
     background-attachment: fixed;
     padding: 7% 0px;
 }
