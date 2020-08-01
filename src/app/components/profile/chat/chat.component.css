@@ -15,11 +15,11 @@
     /*border: none;
     background: #191919 !important;*/
     border: none;
-    background: #000000 !important;
+    background: #000000ab !important;
     border-radius: 13px;
-    width: 90%;
+    width: 100%;
     margin: 1px auto;
-    padding: 9px 10px;
+    padding: 7px 10px;
 }
 
 .cloudMessage {
@@ -29,7 +29,7 @@
 
 .content-emojis {
     position: absolute;
-    margin-top: -33px;
+    margin-top: -40px;
     margin-left: 5px;
 }
 
@@ -37,7 +37,8 @@
     border-radius: 72px;
     width: 40px;
     border: none;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    height: 30px;
 }
 
 .textName {
@@ -103,25 +104,26 @@
 
 .inputLook {
     width: 100%;
-    height: 40px;
+    height: 50px;
     border: none;
     font-family: Poppins,sans-serif;
-    font-size: 16px;
-    color: #4f4f4f;
+    font-size: 12px;
+    color: #ffffff;
     padding-left: 50px;
     padding-right: 80px;
     outline-style: none;
+    background: #353535;
 }
 
 .btninputLook {
     border: none;
-    border-radius: 5px;
+    border-radius: 100%;
     box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.3);
     font-size: 14px;
     color: white;
-    width: 67px;
+    width: 43px;
     cursor: pointer;
-    height: 35px;
+    height: 40px;
     outline: none;
     position: absolute;
     margin-left: -70px;

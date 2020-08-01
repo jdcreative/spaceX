@@ -11,7 +11,7 @@
                     <p class="timeMessage">{{message.hourMessage | date:'HH:mm:ss'}}</p>
                 </div>
             </div>
-            <p class="textName">{{message.username | slice:0:14}}</p>
+            <p class="textName">{{message.username | slice:0:20}}</p>
         </div>
     </div>
 </div>
@@ -23,8 +23,8 @@
                 <input class="input inputLook" type="text" placeholder="Envianos tu saludo" formControlName="message"
                     [(ngModel)]="emoji">
                 <span class="icon is-small is-right">
-                    <button type="submit" value="submit" class="btninputLook" [ngStyle]=" { background: finalColor } ">
-                        <img src="../../../../assets/logs/enviar.png" class="imgButton">
+                    <button type="submit" value="submit" class="btninputLook" [ngStyle]=" { background: finalColor } " [disabled]='formMessages.invalid'>
+                        <img src="../../../../assets/logs/enviar.png" class="imgButton" >
                     </button>
                 </span>
             </a>

@@ -87,7 +87,7 @@ export class LoginComponent implements OnInit {
           this.dialogRef.close();
           this.router.navigate(["/profile"]);
         }
-
+        
       }, err => {
         console.log("ERROR IN API", err);
         this.showCodeSatus = true;
