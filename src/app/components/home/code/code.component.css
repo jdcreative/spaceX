@@ -1,0 +1,674 @@
+
+.navbar{
+    height: 78px;
+    background: #272727
+}
+.logoNavbar{
+    width: 104px;
+    margin-left: 2vw;
+}
+.menuNavbar{
+    /*display: flex;
+    position: absolute;
+    right: 70px;*/
+}
+.allNets{
+    /*display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-right: 200px;*/
+    display: flex;
+    align-items: baseline;
+    margin-right: 10px;
+    float: right;
+}
+.menuNavbar {
+    width: 100%;
+}
+@media screen and (max-width:991px){
+    .allNets{display: none;}
+}
+.netLink{    
+    margin: auto 20px;
+}
+.nets{    
+    display: flex;
+}
+.btnRegister{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    border-radius: 40px;
+    background: white;
+    width: 25%;
+    min-width: 150px;
+    max-width: 200px;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+}
+.free{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FBFE01;
+    height: 100%;    
+    width: 90px;
+    border-radius: 0 40px 40px 0;
+    margin-right: -18px;
+}
+
+/*   */
+.banner{
+    background: url('https://cdn.somosunogo.com/banner_home.jpg') no-repeat;
+    width: 100%;
+    padding: 70px 1px;
+    background-position: middle;
+    background-size: cover;
+}
+.fondo_containt{
+    background: url('https://cdn.somosunogo.com/fondo_talleres.png') no-repeat;
+    width: 100%;
+    padding: 70px 0px;
+    background-position: top;
+    background-size: cover;
+}
+
+.banner .row {
+    padding-top: 20px;
+}
+h1.title_banner {
+    text-align: center;
+    font-family: Poppins,sans-serif;
+    font-weight: bold;
+}
+.contetn-btnOptions{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;    
+    background: white;
+    padding: 35px 0;
+}
+.contentVerify, .contentRegister{    
+    margin-left: auto;
+    margin-right: auto;
+}
+.btnVerify{
+    border: none;
+    width: 334px;
+    height: 70px;
+    border-radius: 50px;
+    background: #272727;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0.5;
+    outline: none;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+}
+.btnRegisterBanner{
+    width: 334px;
+    height: 70px;
+    border: none;
+    background: #FBFE01;
+    border-radius: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 20px 50px;
+    outline: none;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.btn-bar{
+    padding: 3% 0px;
+}
+.contentBannerTwo{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titleInfo{
+    background: #FBFE01;
+    width: 460px;
+    position: absolute;
+    z-index: 5;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentTitleInfo{
+    font-size: 30px;
+}
+.contentTitleInfo p{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.messageBannerTwo{
+    background: #272727;
+    padding: 55px;
+    width: 930px;
+    margin-left: auto;
+    top: 60px;
+    position: relative;
+}
+.contentMessageTwo{
+    margin-top: 20px;
+    padding: 10px;
+}
+.titleMessage{
+    font-family: monospace;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    position: absolute;
+}
+.subtitleMessage{
+    font-family: monospace;
+    color: white;
+    font-size: 18px;   
+}
+.textPreconvencion{
+    background: #272727;
+    width: 830px;
+    height: 440px;
+    margin-top: 100px;
+    padding: 30px;
+    font-family: Poppins,sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+}
+.backvideo{
+    width: 600px;
+    height: 440px;
+    margin: -40px -30px auto auto;
+    background: #00CEA7;
+}
+.iframevideo{
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    min-height: 350px;
+    margin: 0 auto !important;
+    background: #00CEA7;
+    padding: 1%;
+    margin-top: -45px !important;
+}
+.somos_uno_title{
+    width: 10%;
+}
+.vdeo_set {
+    width: 100%;
+    display: grid;
+}
+.contentBtn-banner2{
+    left: 50%;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 870px;
+    position: absolute;
+    transform: translate(-50%, 0);
+}
+
+img.title_subcontent {
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 45px;
+}
+.textMenu{
+    font-family: Poppins,sans-serif;
+    color: white;
+}
+span.titleOne {
+    font-family: Poppins,sans-serif;
+    font-size: 35px;
+    line-height: 30px;
+    font-weight: bold;
+    display: inline;
+    vertical-align: middle;
+    padding: 0px 10px;
+}
+p.textOne {
+    font-family: Poppins,sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+}
+.title_name{
+    font-family: Poppins,sans-serif;
+    font-size: 40px;
+    font-weight: lighter;
+    color: white;
+    text-transform: uppercase;
+}
+.frase{
+    font-family: Poppins,sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-family: Poppins,sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: white;
+    text-align: justify;
+    margin-top: 20px;
+}
+.description{
+    padding-top: 5%;
+}
+
+.contentHow{
+    position: absolute;
+    width: 100%;
+    margin-top: 70px;
+}
+.titleHow{
+    width: 55%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.contentBox{
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+}
+.contentActions{
+    margin-top: 70px;
+    display: flex;
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;;
+}
+.contentActionsTwo{    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.subactionOne{    
+    display: flex;
+}
+.actionOne, .actionTwo, .actionThree,
+.actionFive, .actionSix{
+    width: 100%;
+    padding: 7%;
+    margin: 10px;
+    font-size: 30px;    
+    font-weight: bold;
+    line-height: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentText{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+.actionOne{background: #FBFE01;}
+.actionTwo{background: #E5E5E5;}
+.actionThree{background: #FF6F57;}
+.actionFour{
+    width: 22.5%;
+    height: 356px;
+    background: #F89FDC;
+    margin: 10px;    
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    line-height: .5;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.actionFive{background: #FBFE01;}
+.actionSix{background: #E5E5E5;}
+.actionSeven{
+    background: #1D1D1D;
+    width: 508px;
+    height: 168px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    line-height: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+img.amor_accion {
+    width: 45%;
+}
+img.img_set_info {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.content_side {
+    background: #272727;
+    padding: 5%;
+    color: white;
+    font-family: Poppins,sans-serif;
+}
+.content_side p {
+    font-family: Poppins,sans-serif;
+}
+.contentWeAreOne{
+    width: 77%;
+    position: absolute;    
+    margin-top: 11%;
+}
+.titleOne{
+    font-weight: bold;
+    font-size: calc(1em + 1.5vw);
+    color: black;
+    margin-bottom: -30px;
+    
+}
+.whatOne{
+    background: transparent;
+    padding: 20px 0;
+    font-size: calc(.7em + 1vw);
+    color: white;
+}
+
+.versOne {
+    background: #1C1C1C;
+    padding: 5%;
+    color: white;
+    font-family: Poppins,sans-serif;
+    font-style: italic;
+    font-size: 19px;
+}
+.contentMedia{
+    padding: 0;
+}
+.contentMedia .img-fluid {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .col-6 {
+        width: 100%;
+        max-width: 100%;
+        flex: auto;
+    }
+    img.img-right-banner {
+        width: 90%;
+    }
+    .col-2 {
+        max-width: 2%;
+        flex: 0;
+    }
+    .col-4, .col-6, .col-8 {
+        width: 100% !important;
+        flex: 100%;
+        max-width: 100% !important;
+    }
+    img.title_subcontent{
+        margin: 0 auto;
+        width: 80%;
+        margin: 45px 0px;
+    }
+    .iframevideo {
+        width: 88%;
+        height: auto;
+        display: inline-block;
+        min-height: 250px;
+        margin: 0 auto !important;
+        background: #00CEA7;
+        padding: 1%;
+        margin-top: 27px !important;
+    }
+}
+
+/* css login*/
+::ng-deep.mat-dialog-container {
+    width: 500px;
+    /* background: url("https://cdn.somosunogo.com/watherPink.jpg"); */
+    background-size: cover;
+    background-position: center;
+}
+
+.modal-content {
+    background: transparent;
+    border: none;
+}
+a.a-code {
+    width: 85%;
+    text-align: center;
+    color: black;
+    background: gainsboro;
+    padding: 3%;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+p.description {
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+.h2, h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+p.description_resend {
+    width: 90%;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+
+.modal-header p {
+    font-size: 32px;
+    color: white;
+    font-weight: 900;
+}
+
+.modal-header p span {
+    font-size: 32px;
+    color: black;
+}
+
+.okGO {
+    width: 600%;
+    margin: 100px auto auto auto;
+    text-align: center;
+    line-height: 1;
+}
+
+.GO {
+    color: black;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.GO span {
+    color: white;
+}
+
+.contentBtn {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.btnLogin {
+    color: #4f4f4f;
+    font-family: Poppins,sans-serif;
+    font-weight: 900;
+    background: yellow;
+    opacity: 1;
+}
+
+.btnLogin:hover {
+    background: rgb(206, 206, 3);
+}
+
+.codeValidation {
+    display: flex;
+}
+
+.codeValidation>.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center-items {
+    display: flex;
+    justify-content: center;
+}
+
+p.description.light {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.buttonform {
+    border-radius: 20px;
+    padding: 8px 25px;
+    color: #000000 !important;
+    font-size: 15px !important;
+    font-family: Poppins,sans-serif;
+    font-weight: 900;
+    background: yellow !important;
+    width: 50%;
+}
+
+.buttonform:hover {
+    background: rgb(206, 206, 3);
+}
+
+.codeValidation {
+    overflow: auto !important;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: unset;
+}
+
+#toLowerEmail {
+    text-transform: lowercase !important;
+}
+
+.error-message {
+    color: rgb(196, 20, 20);
+    font-weight: bold;
+}
+
+.label-bold {
+    font-weight: bold;
+}
+
+.resend-title:hover {
+    cursor: pointer;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.buttonEnter {
+
+    border: none;
+    background: #040404;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+.container-title-login {
+    display: block;
+    width: 100%;
+    /*justify-content: center;
+    align-items: center;*/
+}
+
+.idonthave-code {
+    display: block;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+.a-code:hover {
+    cursor: pointer !important;
+}
+
+.buttonCancel {
+    width: auto;
+    border: none;
+    background: #80808099;
+    border-radius: 80px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    p.title-modal.light {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    p.description.light {
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .buttonform {
+        font-size: 11px !important;
+        background: yellow !important;
+        width: 90%;
+    }
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: black !important;
+    font-weight: bold;
+}

@@ -11,6 +11,7 @@ import { TribesComponent } from './components/home/tribes/tribes.component';
 import { AuthGuard } from './guards/auth.guard';
 import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
 import { MusicComponent } from './components/home/music/music.component';
+import { CodeComponent } from './components/home/code/code.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'tribus', component: TribesComponent },
   { path: 'invitados-especiales', component: SpecialGuestsComponent },
   { path: 'bandas', component: MusicComponent },
+  { path: 'code', component: CodeComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: '**', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }

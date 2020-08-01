@@ -43,6 +43,7 @@ import { WorkshopsComponent } from './components/home/workshops/workshops.compon
 import { TribesComponent } from './components/home/tribes/tribes.component';
 import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
 import { MusicComponent } from './components/home/music/music.component';
+import { CodeComponent } from './components/home/code/code.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { MusicComponent } from './components/home/music/music.component';
     WorkshopsComponent,
     TribesComponent,
     SpecialGuestsComponent,
-    MusicComponent
+    MusicComponent,
+    CodeComponent
   ],
   imports: [
     FormsModule,
