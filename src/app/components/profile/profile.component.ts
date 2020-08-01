@@ -29,7 +29,8 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.userProfile = JSON.parse(localStorage.getItem("user"));
+    let data = JSON.parse(localStorage.getItem("user"));
+    this.userProfile = data["user"];
     this.validationColors();
     this.getTribus();
     this.getConferencista();
@@ -61,23 +62,18 @@ export class ProfileComponent implements OnInit {
   }
 
   validationColors() {
-    if (this.userProfile.tribu == "1" || this.userProfile.tribu == 1) {
+    if (this.userProfile.tribu == "1") {
       this.finalColor = this.data[0].gorilas;
-    } else if (this.userProfile.tribu == "2" || this.userProfile.tribu == 2) {
+    } else if (this.userProfile.tribu == "2") {
       this.finalColor = this.data[0].halcones;
-    } else if (this.userProfile.tribu == "3" || this.userProfile.tribu == 3) {
+    } else if (this.userProfile.tribu == "3") {
       this.finalColor = this.data[0].leones;
-    } else if (this.userProfile.tribu == "4" || this.userProfile.tribu == 4) {
+    } else if (this.userProfile.tribu == "4") {
       this.finalColor = this.data[0].tiburones;
     } else {
       this.finalColor = this.data[0].leones;
     }
 
-  }
-
-  closeSession() {
-    localStorage.clear();
-    this.router.navigate(["/home"]);
   }
 
 }
