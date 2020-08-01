@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    localStorage.removeItem("user");
+    
     window.scroll(0, 0);
-    this.validateSession();
+    //this.validateSession();
   }
 
   validateSession() {

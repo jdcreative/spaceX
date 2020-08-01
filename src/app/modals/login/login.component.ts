@@ -83,6 +83,7 @@ export class LoginComponent implements OnInit {
           }, 7000);
 
         } else {
+          localStorage.removeItem("user");
           localStorage.setItem("user", JSON.stringify(res[0]));
           this.dialogRef.close();
           this.router.navigate(["/profile"]);
