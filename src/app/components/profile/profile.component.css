@@ -7,7 +7,10 @@
     width: 104px;
     margin-left: 2vw;
 }
-
+a.item-lang {
+    padding: 0px 15px;
+    cursor: pointer;
+}
 .menuNavbar {
     display: flex;
     position: absolute;
@@ -53,9 +56,20 @@
 .background-white {
     background: #E9E9E9;
 }
-
+.info.display-f {
+    float: left;
+    width: 85%;
+}
+.img-set-profile{
+    width: 10%;
+    float: left;
+}
 .content-profile {
     width: 100%;
+}
+
+.divisor{
+    border-right: 1px solid #C4C4C4;
 }
 
 .tab {
@@ -74,7 +88,7 @@
 }
 
 .title-nav-profile {
-    font-family: Roboto;
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
@@ -83,7 +97,7 @@
 }
 
 .languages-profiles {
-    font-family: Roboto;
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -163,7 +177,8 @@
 }
 .vimeo{
     /* border: 1px solid red;  */
-    width: 60%;
+    width: 70%;
+    min-height: 500px;
 }
 .chat{
     /* border: 1px solid yellow;  */

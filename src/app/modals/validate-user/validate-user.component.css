@@ -104,7 +104,7 @@ input[type=checkbox]{
     padding: 8px 25px;
     color: #000000 !important;
     font-size: 15px !important;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-weight: 900;
     background: yellow !important;
     width: 50%;    
@@ -120,7 +120,7 @@ label {
     padding: 8px 25px;
     color: #a8a8a8;
     font-size: 14px;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     font-weight: 900;
     background: rgb(214, 214, 214);
 }

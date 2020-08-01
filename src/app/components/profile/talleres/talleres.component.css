@@ -8,14 +8,27 @@
 .content-talleres {
     /* border: 5px solid blue; */
 }
-
+a.disable-btn {
+    background: #a7a7a7;
+    color: #f3f3f3;
+    padding: 10px 22px;
+    border-radius: 5px;
+}
+.title_taller{
+    font-weight: 600;
+    font-size: 20px;
+}
+.btn_section {
+    display: flex;
+    margin-top: 10px;
+}
 .container-salas {
     padding-top: 10px;
 }
 
 .container-nav {
     /* border: 5px solid blueviolet; */
-    width: 50%;
+    width: 100%;
 }
 
 .font-family-poppins {
@@ -24,7 +37,7 @@
     font-style: normal;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 30px;
 }
 

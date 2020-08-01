@@ -24,7 +24,7 @@
 
 .container-menu {
     /* border: 5px solid blueviolet; */
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     text-align: center;
     text-transform: uppercase;
     color: white;
@@ -57,7 +57,7 @@
 }
 
 .names {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -66,14 +66,14 @@
 }
 
 .email {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     text-align: center;
     color: white;
     font-size: 12px;
 }
 
 .tribu-halcones {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;

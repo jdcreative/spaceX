@@ -2,16 +2,24 @@
     display: none;
 }
 .content-chat{   
-    height: 300px;
+    min-height: 500px;
+    height: 500px;
     overflow: auto;
     padding: 0;    
 }
 .back-cloud{
-    background: black; 
+    background:transparent; 
     padding: 2px;   
 }
 .cloud{
-    border: 1px solid #7a7a7a;
+    /*border: none;
+    background: #191919 !important;*/
+    border: none;
+    background: #000000 !important;
+    border-radius: 13px;
+    width: 90%;
+    margin: 1px auto;
+    padding: 9px 10px;
 }
 .cloudMessage{       
     display: flex;
@@ -43,8 +51,8 @@
 .messageList{
     width: 100%;
     margin-top: 5px;
-    font-family:  Roboto;
-    font-size: 16px;    
+    font-family:  'Poppins';
+    font-size: 13px;    
     color:whitesmoke;
     margin-right: auto;
     margin-bottom: 0;
@@ -59,7 +67,7 @@
 }
 .timeMessage{
     width: 100%;
-    font-family:  Roboto;
+    font-family:  'Poppins';
     font-size: 10px;    
     color:whitesmoke;    
     text-align: end;   
@@ -84,7 +92,7 @@
     width: 100%;
     height: 40px;    
     border: none;
-    font-family: Roboto;
+    font-family: 'Poppins';
     font-size: 16px;
     color: #4f4f4f;    
     padding-left: 50px;

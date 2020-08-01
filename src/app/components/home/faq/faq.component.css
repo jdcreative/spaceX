@@ -74,7 +74,7 @@
 }
 h1.title_banner {
     text-align: center;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     font-weight: bold;
 }
 .contetn-btnOptions{
@@ -177,7 +177,7 @@ h1.title_banner {
     height: 440px;
     margin-top: 100px;
     padding: 30px;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     font-weight: bold;
     font-size: 18px;
     color: white;
@@ -224,11 +224,11 @@ img.title_subcontent {
     margin-bottom: 45px;
 }
 .textMenu{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     color: white;
 }
 span.titleOne {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     font-size: 35px;
     line-height: 30px;
     font-weight: bold;
@@ -237,7 +237,7 @@ span.titleOne {
     padding: 0px 10px;
 }
 p.textOne {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     font-size: 24px;
     line-height: 30px;
 }
@@ -340,10 +340,10 @@ img.img_set_info {
     background: #272727;
     padding: 5%;
     color: white;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
 }
 .content_side p {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
 }
 .contentWeAreOne{
     width: 77%;
@@ -368,7 +368,7 @@ img.img_set_info {
     background: #1C1C1C;
     padding: 5%;
     color: white;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Poppins', monospace;
     font-style: italic;
     font-size: 19px;
 }

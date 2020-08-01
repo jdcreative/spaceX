@@ -8,6 +8,9 @@
         "tribus": "TRIBUS",
         "faq": "FAQ"
     },
+    "profile":{
+        "live": "https://player.vimeo.com/video/441474151"
+    },
     "home": {
         "confirmar-registro": "Confirma tu Registro",
         "iniciar-sesion": "Inciar Sesión",

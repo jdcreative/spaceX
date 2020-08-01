@@ -13,6 +13,7 @@ export class TalleresComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.changeTab('taller1');
   }
 
   changeTab(tab){

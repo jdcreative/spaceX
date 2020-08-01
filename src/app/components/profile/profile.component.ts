@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RealtimeDatabaseService } from 'src/app/service/realtime-database.service';
+import { UtilsService } from 'src/app/service/utils.service';
+import { TranslateService } from '@ngx-translate/core';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profile',
@@ -12,6 +16,7 @@ export class ProfileComponent implements OnInit {
 
   public tribus = [];
   public conferencistas = [];
+  public live_video;
   tab: string = 'home';
   finalColor: any;
   userProfile: any;
@@ -25,7 +30,10 @@ export class ProfileComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private _database: RealtimeDatabaseService
+    private _database: RealtimeDatabaseService,
+    private _utils: UtilsService,
+    private _translate: TranslateService,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit() {
@@ -33,6 +41,17 @@ export class ProfileComponent implements OnInit {
     this.validationColors();
     this.getTribus();
     this.getConferencista();
+    this.videoLive();
+  }
+
+  videoLive(){
+    this._translate.setDefaultLang(localStorage.getItem('lang'));
+    this._translate.get("profile.live").subscribe((res)=>{
+      console.log(res)
+      this.live_video = this.sanitizer.bypassSecurityTrustResourceUrl(res);
+      console.log(this.live_video)
+      
+    });
   }
 
   getTribus() {
@@ -54,6 +73,11 @@ export class ProfileComponent implements OnInit {
       });
     });
 
+  }
+
+  setLanguage(lang){
+    this._utils.setLang(lang);
+    this.videoLive()
   }
 
   sendTagReceive(event) {

@@ -14,7 +14,7 @@ export class ChatService {
   ) { }
 
   getMessages(){    
-    return this.fire.list('chatsomosuno', ref => ref.limitToLast(6) ).snapshotChanges()  
+    return this.fire.list('chatsomosuno', ref => ref.limitToLast(8) ).snapshotChanges()  
   }
   newMessage(message: chat) {
     this.messages = this.fire.list('/chatsomosuno');

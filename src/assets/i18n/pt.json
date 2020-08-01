@@ -11,10 +11,18 @@
         "descripcion-somosuno": "“Somos Um” é o ministério de jovens da Misión Carismática internacional (Missão Carismática Internacional). Cremos que a mensagem mais poderosa que temos é a unidade. “Somos Um” busca unir a nova geração para que, através da unidade com o Espírito Santo, muitos possam escutar a mensagem mais impactante de todas: a mensagem de Jesus.",
         "versiculo-somosuno": "“Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste” João 17:20-22"
     },
-    "sidebar":{
-        "tribu": "TRIBO",
-        "puntos": "PONTOS",
-        "boton-salir": "SAIR"
+    "profile":{
+        "live": "https://player.vimeo.com/video/443565011"
+    },
+    "sidebar":{        
+        "home": "Inicio",        
+        "tribu": "TRIBO",        
+        "puntos": "PONTOS",        
+        "boton-salir": "SAIR",        
+        "talleres": "oficinas",        
+        "merch": "mercadoria",        
+        "galeria": "galeria",        
+        "donaciones": "doações"    
     },
     "footer":{
         "siguenos":"SIGA-NOS:"
