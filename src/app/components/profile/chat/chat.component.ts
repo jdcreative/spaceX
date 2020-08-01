@@ -31,7 +31,8 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userProfile = JSON.parse(localStorage.getItem("user"));    
+    let data = JSON.parse(localStorage.getItem("user")); 
+    this.userProfile = data["user"];   
     this.username = this.userProfile.nombre +' '+ this.userProfile.apellidos;
     this.getchat();
     this.chatservice.getMessages();
