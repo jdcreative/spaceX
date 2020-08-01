@@ -83,13 +83,14 @@
 }
 a.btnRegister-home {
     background: #fd705c;
-    width: 100%;
+    width: 73%;
     display: block;
     text-align: center;
     padding: 7px 0px;
     border-radius: 27px;
-    height: 70px;
     line-height: 50px;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 .container.buttons-section {
     padding: 45px 0px;
