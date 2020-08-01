@@ -1,149 +1,95 @@
 <div class="modal" tabindex="-1" role="dialog" style="display: contents;">
 
+    <div class="container-title-login">
+        <h2 *ngIf="showLoginTitle">Iniciar Sesión</h2>
+        <h2 *ngIf="showSendTitle">Reenviar Código</h2>
+    </div>
+
     <div class="modal-dialog-scrollable">
 
-        <div *ngIf="validationCode == 0" class="modal-content">
+        <form class="example-form" [formGroup]="formLogin">
 
-            <div class="modal-header">
-                <p>INICIAR <span>SESION</span></p>
-            </div>
+            <mat-form-field class="example-full-width" appearance="outline">
 
-            <form [formGroup]="formLogin" (ngSubmit)="login($event);">
+                <mat-label>Correo</mat-label>
+                <input matInput placeholder="Ej. usuario@hotmail.com" formControlName="email"
+                    (input)="toLower($event);">
 
-                <div class="modal-body">
+                <mat-icon matSuffix>person</mat-icon>
 
-                    <div class="formLogin">
+                <mat-hint align="left">
 
-                        <div class="form-row">
-
-                            <label class="label-bold" for="correo">Correo Electrónico: </label>
-
-                            <input class="form-control" id="correo" type="email"
-                                placeholder="Ingresa tu correo electronico" formControlName="email"
-                                (input)="toLower($event);"
-                                [ngClass]="{ 'is-invalid' : !formLogin.valid, 'is-valid' : formLogin.valid }">
-
-                            <ng-container *ngFor="let error of error_messages.email">
-                                <div class="error-message"
-                                    [ngClass]="{ 'is-invalid' : !formLogin.valid, 'is-valid' : formLogin.valid }"
-                                    *ngIf="formLogin.get('email').hasError(error.type) && (formLogin.get('email').dirty || formLogin.get('email').touched)">
-                                    {{ error.message }}
-                                </div>
-                            </ng-container>
-
-                        </div>
-
+                    <div class="error-message" *ngIf="submitted && form.email.errors">
+                        <p *ngIf="form.email.errors.email">El email es inválido.</p>
+                        <p *ngIf="form.email.errors.required">El email es requerido.</p>
                     </div>
 
-                </div>
+                </mat-hint>
 
-                <div class="contentBtn modal-footer">
+            </mat-form-field>
 
-                    <button class="btn btn-primary btnLogin" [disabled]="!formLogin.valid">
-                        <span [ngClass]="{ 'spinner-border spinner-border-sm' : loginValidation }" role="status"
-                            aria-hidden="true"></span>
-                        INGRESAR
-                    </button>
+            <mat-form-field class="example-full-width" appearance="standard" appearance="outline" *ngIf="noCodeStatus">
 
-                </div>
+                <mat-label>Código</mat-label>
 
-            </form>
+                <input matInput #input placeholder="Ej. 123456" formControlName="code" maxlength="6"
+                    (keypress)="numberOnly($event)">
 
-            <div class="alert alert-warning" role="alert" *ngIf="errorOccurred">
-                Ocurrió un error, vuelve a intentarlo.
-            </div>
+                <mat-icon matSuffix>vpn_key</mat-icon>
 
-        </div>
+                <mat-hint align="left">
 
-        <div *ngIf="validationCode == 2" class="modal-content">
-
-            <div class="modal-body">
-
-                <div class="codeValidation">
-
-                    <div class="container padding-50">
-                        <div class="center-items">
-                            <img src="../../../assets/media/icons/mail.png" style="margin: 0 auto;" />
-                        </div>
-
-                        <div class="center-items">
-                            <p class="description light">
-                                Ingresa el código que hemos enviado a tu correo electrónico:
-                                {{ tempEmail ? tempEmail : 'N/A' }}
-                            </p>
-                        </div>
-
-                        <form [formGroup]="formCode">
-
-                            <div class="input-group mb-3">
-                                <input type="number" min="0" class="form-control" placeholder="Ingresa el código..."
-                                    aria-label="Username" aria-describedby="basic-addon1" formControlName="code">
-                            </div>
-
-                            <div>
-                                <div class="contentBtn modal-footer">
-                                    <button class="btn btn-primary btnLogin" (click)="saveValidation();" type="button"
-                                        [disabled]="!formCode.valid">
-                                        <span [ngClass]="{ 'spinner-border spinner-border-sm' : statusLoading }"
-                                            role="status" aria-hidden="true"></span>
-                                        INGRESAR
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div>
-                                <a class="resend-title" (click)="resendCode();">
-                                    Reenviar el código
-                                </a>
-                            </div>
-
-                        </form>
-
-                        <div class="alert alert-danger" role="alert" *ngIf="showAlert">
-                            El código ingresado es inválido, revisa de nuevo.
-                        </div>
-
-                        <div class="alert alert-warning" role="alert" *ngIf="emailNotFound">
-                            El correo que ingresaste no existe
-                        </div>
-
-                        <div class="alert alert-success" role="alert" *ngIf="resendStatus">
-                            Se ha reenviado el código a tu correo.
-                        </div>
-
+                    <div class="error-message" *ngIf="submitted && form.code.errors">
+                        <p *ngIf="form.code.errors.pattern">El código es inválido.</p>
+                        <p *ngIf="form.code.errors.required">El código es requerido.</p>
+                        <p *ngIf="form.code.errors.minlength">El código debe tener mínimo 6 caracteres.</p>
                     </div>
 
+                </mat-hint>
+
+                <mat-hint align="end">Max. {{input.value?.length || 0}}/6</mat-hint>
+
+            </mat-form-field>
+
+            <div class="container-notify">
+
+                <div class="alert alert-danger" role="alert" *ngIf="showCodeSatus">
+                    <strong>¡UPS!</strong>
+                    El correo ingresado o el código es inválido.
+                </div>
+
+                <div class="alert alert-primary" role="alert" *ngIf="sendCodeEmail">
+                    Hemos enviado el código único de ingreso a tu correo.
                 </div>
 
             </div>
 
-        </div>
+            <div class="contentBtn">
 
-        <div *ngIf="validationCode == 3" class="modal-content">
+                <button class="buttonEnter" (click)="login();" [disabled]="statusLoading" *ngIf="!buttonUserStatus">
+                    <span [ngClass]="{ 'spinner-border spinner-border-sm' : statusLoading }" role="status"
+                        aria-hidden="true"></span>
+                    Entrar
+                </button>
 
-            <div class="modal-header">
+                <button class="buttonCancel" (click)="cancelNoCode();" *ngIf="buttonCancelStatus">
+                    Cancelar
+                </button>
 
-                <div class="container padding-50">
+                <button class="buttonEnter" (click)="sendUserNoCode();" *ngIf="buttonUserStatus">
+                    <span [ngClass]="{ 'spinner-border spinner-border-sm' : statusLoadingSend }" role="status"
+                        aria-hidden="true"></span>
+                    Enviar
+                </button>
 
-                    <div class="row">
-                        <img src="../../../assets/media/icons/face.png" style="margin: 0 auto;" />
-                    </div>
-
-                    <div class="row" style="justify-content: center;">
-                        <p class="title-modal light">OH NO!</p>
-                    </div>
-
-                    <div class="row">
-                        <p class="description light">Tu correo no esta registrado, realiza el
-                            registro y no te pierdas la convención #SomosUnoGo.</p>
-                    </div>
-
-                    <div class="row" style="margin-bottom:25px;">
-                        <button type="button" class="btn buttonform" style="margin: 0 auto;"
-                            (click)="showregister()">Registrate</button>
-                    </div>
-                </div>
             </div>
-        </div>
+
+            <div class="idonthave-code" *ngIf="!buttonUserStatus">
+                <a class="a-code" (click)="userNoCode();">¿No tienes el código?</a>
+            </div>
+
+        </form>
+
     </div>
+
 </div>
