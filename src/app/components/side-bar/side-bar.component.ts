@@ -47,7 +47,8 @@ export class SideBarComponent implements OnInit {
   }
 
   getUser() {
-    this.userProfile = JSON.parse(localStorage.getItem("user"));
+    let data = JSON.parse(localStorage.getItem("user"));
+    this.userProfile = data["user"];
   }
 
   ngOnChanges() {
@@ -59,13 +60,17 @@ export class SideBarComponent implements OnInit {
 
   validateTribus() {
 
-    if (this.userProfile.tribu == "1" || this.userProfile.tribu == 1) {
+    console.log("user profile", this.userProfile.tribu);
+
+    console.log("tribus", this.tribus)
+
+    if (this.userProfile.tribu == "1") {
       this.tribuPoints = this.tribus[0].value;
-    } else if (this.userProfile.tribu == "2" || this.userProfile.tribu == 2) {
+    } else if (this.userProfile.tribu == "2") {
       this.tribuPoints = this.tribus[1].value;
-    } else if (this.userProfile.tribu == "3" || this.userProfile.tribu == 3) {
+    } else if (this.userProfile.tribu == "3") {
       this.tribuPoints = this.tribus[2].value;
-    } else if (this.userProfile.tribu == "4" || this.userProfile.tribu == 4) {
+    } else if (this.userProfile.tribu == "4") {
       this.tribuPoints = this.tribus[3].value;
     } else {
       this.tribuPoints = this.tribus[2].value;
@@ -74,19 +79,21 @@ export class SideBarComponent implements OnInit {
 
   validationColors() {
 
-    if (this.userProfile.tribu == "1" || this.userProfile.tribu == 1) {
+    console.log("OLAAA", this.data)
+
+    if (this.userProfile.tribu == "1") {
       this.finalColor = this.data[0].gorilas;
       this.finalImage = this.data[1].gorilas;
       this.finalTribu = this.data[2].gorilas;
-    } else if (this.userProfile.tribu == "2" || this.userProfile.tribu == 2) {
+    } else if (this.userProfile.tribu == "2") {
       this.finalColor = this.data[0].halcones;
       this.finalImage = this.data[1].halcones;
       this.finalTribu = this.data[2].halcones;
-    } else if (this.userProfile.tribu == "3" || this.userProfile.tribu == 3) {
+    } else if (this.userProfile.tribu == "3") {
       this.finalColor = this.data[0].leones;
       this.finalImage = this.data[1].leones;
       this.finalTribu = this.data[2].leones;
-    } else if (this.userProfile.tribu == "4" || this.userProfile.tribu == 4) {
+    } else if (this.userProfile.tribu == "4") {
       this.finalColor = this.data[0].tiburones;
       this.finalImage = this.data[1].tiburones;
       this.finalTribu = this.data[2].tiburones;
@@ -104,7 +111,7 @@ export class SideBarComponent implements OnInit {
   }
 
   closeSession() {
-    localStorage.clear();
+    localStorage.removeItem("user");
     this._router.navigate(["/home"]);
   }
 
