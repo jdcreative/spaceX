@@ -1,6 +1,6 @@
 ::ng-deep.mat-dialog-container {
     width: auto;
-    background: url("https://cdn.somosunogo.com/watherPink.jpg");
+    /* background: url("https://cdn.somosunogo.com/watherPink.jpg"); */
     background-size: cover;
     background-position: center;
 }
@@ -41,6 +41,7 @@
 .contentBtn {
     display: flex;
     justify-content: center;
+    padding-top: 10px;
 }
 
 .btnLogin {
@@ -120,6 +121,56 @@ p.description.light {
     cursor: pointer;
 }
 
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.buttonEnter {
+    width: auto;
+    border: none;
+    background: #FBFE01;
+    border-radius: 80px;
+    font-weight: bold;
+    color: black;
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.container-title-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idonthave-code {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+.a-code:hover {
+    cursor: pointer !important;
+}
+
+.buttonCancel {
+    width: auto;
+    border: none;
+    background: #80808099;
+    border-radius: 80px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
 @media screen and (max-width: 600px) {
     p.title-modal.light {
         font-size: 15px;
@@ -135,4 +186,10 @@ p.description.light {
         background: yellow !important;
         width: 90%;
     }
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: black !important;
+    font-weight: bold;
 }

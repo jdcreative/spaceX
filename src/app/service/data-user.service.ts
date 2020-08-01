@@ -3,12 +3,12 @@ import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { user } from '../interfaces/user'
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataUserService {
 
   apiUrl = 'https://tnpuu5xzq6.execute-api.us-east-2.amazonaws.com/dev/auth';
@@ -20,8 +20,7 @@ export class DataUserService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-
+      'Content-Type': 'application/json'
     })
   };
 
@@ -46,6 +45,7 @@ export class DataUserService {
     return this.http.post<any>(this.apiValidateCode, { email: mail, code: code }, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
   updateDataUser(datauser: any): Observable<any> {
     // console.log('la data que llega: ',datauser);
     return this.http.post<userInterface>(this.apiUpdate, datauser, this.httpOptions)

@@ -5,6 +5,7 @@ import { MatDialog, MatDialogConfig } from "@angular/material";
 import { DataUserService } from './../../service/data-user.service';
 import { SignUpComponent } from './../../modals/sign-up/sign-up.component';
 import { Router } from '@angular/router';
+import { UtilsService } from 'src/app/service/utils.service';
 
 @Component({
   selector: 'app-login',
@@ -15,26 +16,19 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
-  formCode: FormGroup;
-  currentState = 0;
-  validationCode: number = 0;
-  statusLoading: boolean = false;
-  showAlert: boolean = false;
-  emailNotFound: boolean = false;
-  loginValidation: boolean = false;
-  errorOccurred: boolean = false;
-  resendStatus: boolean = false;
-  dataForm: any;
   description: string;
-  tempEmail: string;
-  tempToken: string;
-  error_messages = {
-    'email': [
-      { type: 'required', message: 'El correo es requerido' },
-      { type: 'minlength', message: 'El correo debe tener mínimo 1 caracter.' },
-      { type: 'pattern', message: 'El correo ingresado no es válido.' }
-    ]
-  };
+  submitted: boolean = false;
+  statusLoading: boolean = false;
+  statusLoadingSend: boolean = false;
+  noCodeStatus: boolean = true;
+  //Alerts
+  showCodeSatus: boolean = false;
+  //SHOW
+  sendCodeEmail: boolean = false;
+  buttonUserStatus: boolean = false;
+  buttonCancelStatus: boolean = false;
+  showLoginTitle: boolean = true;
+  showSendTitle: boolean = false;
 
   constructor(
     private dialogRef: MatDialogRef<LoginComponent>,
@@ -42,126 +36,67 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     public data_user: DataUserService,
     public router: Router,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private utils: UtilsService
   ) {
     this.description = data.title;
     this.buildlogin();
   }
 
-  ngOnInit() {
-    this.validationCodeInitial();
-  }
+  get form() { return this.formLogin.controls; }
 
-  validationCodeInitial() {
-    let usTemp = JSON.parse(localStorage.getItem("tempUs"));
-    if (usTemp) {
-      // console.log("US TEMP HERE", usTemp);
-      this.tempEmail = usTemp.email;
-      this.validationCode = 2;
-    } else {
-      this.validationCode = 0;
-    }
-  }
+  ngOnInit() { }
 
   buildlogin() {
 
     this.formLogin = this.fb.group({
-      email: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.minLength(1),
-        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
-      ])),
+      email: ['', [Validators.required, Validators.minLength(1), Validators.email]],
+      code: ['', [Validators.required, Validators.minLength(6), Validators.pattern("[0-9]+")]]
     });
 
-    this.formCode = this.fb.group({
-      code: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.minLength(1),
-        Validators.maxLength(6)
-      ])),
-    });
-
-    // this.formlogin.valueChanges.subscribe(res => {
-    //   // console.log('login : ', res);
-    // });
   }
 
-  login(e?: Event) {
+  login() {
 
-    this.loginValidation = true;
+    this.submitted = true;
+    this.statusLoading = true;
 
     if (this.formLogin.valid) {
 
-      const data = this.formLogin.value;
-      this.tempEmail = data.email;
-      this.data_user.getCodeSesion(data.email).subscribe(res => {
-        console.log("RESSSS", res);
-        if (res.email) {
-          this.dataForm = res;
-          // console.log("DATA: ", this.dataForm);
-          this.validationCode = 2;
-          localStorage.setItem("tempUs", JSON.stringify({ email: data.email, code: res.code }));
-        } else if (res.estado == false) {
-          this.validationCode = 3;
-          this.loginValidation = false;
+      let data = this.formLogin.value;
+
+      this.formLogin.controls['email'].disable();
+      this.formLogin.controls['code'].disable();
+
+      this.data_user.getAuthToken(data.email, data.code).subscribe(res => {
+
+        this.statusLoading = false;
+
+        if (res.estado == false) {
+
+          this.formLogin.controls['email'].enable();
+          this.formLogin.controls['code'].enable();
+          this.showCodeSatus = true;
+
+          setTimeout(() => {
+            this.showCodeSatus = false;
+          }, 5000);
+
+        } else {
+          localStorage.setItem("user", JSON.stringify(res[0]));
+          this.dialogRef.close();
+          this.router.navigate(["/profile"]);
         }
 
       }, err => {
-        this.loginValidation = false;
-        this.errorOccurred = true;
-        console.log("ERROR IN LOGIN METHOD: ", err)
-      });
-
-    }
-
-  }
-
-  saveValidation() {
-
-    if (this.dataForm == undefined) {
-      this.dataForm = JSON.parse(localStorage.getItem("tempUs"));
-    }
-
-    if (parseInt(this.formCode.value.code) == this.dataForm.code) {
-
-      this.statusLoading = true;
-
-      this.data_user.getAuthToken(this.dataForm.email, this.dataForm.code).subscribe((res) => {
-
-        this.tempToken = res.token;
-        this.statusLoading = false;
-
-        if (res.token) {
-
-          this.showAlert = false;
-          this.data_user.getDataUser(this.dataForm.email).subscribe((res) => {
-
-            if (res.detail == "no existe") {
-              this.emailNotFound = true;
-              setTimeout(() => {
-                this.dialogRef.close();
-              }, 2000);
-            } else {
-              // this.validationCode = false;
-              localStorage.removeItem("tempUs");
-              localStorage.setItem("token", this.tempToken);
-              localStorage.setItem("user", JSON.stringify(res));
-              this.dialogRef.close();
-              this.router.navigate(["/profile"]);
-            }
-
-          });
-        } else {
-          console.log("OCURRIÓ UN ERROR");
-          this.statusLoading = false;
-        }
-
+        console.log("ERROR IN API", err);
+        this.showCodeSatus = true;
       });
 
     } else {
       this.statusLoading = false;
-      this.showAlert = true;
     }
+
   }
 
   showregister() {
@@ -181,40 +116,80 @@ export class LoginComponent implements OnInit {
     }, 1000);
   }
 
+  userNoCode() {
+    this.noCodeStatus = false;
+    this.buttonUserStatus = true;
+    this.buttonCancelStatus = true;
+    this.showSendTitle = true;
+    this.showLoginTitle = false;
+  }
+
+  sendUserNoCode() {
+
+    this.buttonCancelStatus = false;
+    this.statusLoadingSend = true;
+
+    let email = this.formLogin.value.email;
+
+    if (email) {
+
+      this.showLoginTitle = true;
+      this.showSendTitle = false;
+
+      this.data_user.getCodeSesion(email).subscribe((res) => {
+
+        if (res.estado == false) {
+
+          this.showCodeSatus = true;
+          this.noCodeStatus = false;
+          setTimeout(() => {
+            this.showCodeSatus = false;
+          }, 2000);
+
+        } else {
+
+          this.noCodeStatus = true;
+          this.sendCodeEmail = true;
+          this.buttonUserStatus = false;
+          setTimeout(() => {
+            this.sendCodeEmail = false;
+          }, 5000);
+
+        }
+      });
+
+      this.statusLoadingSend = false;
+
+    } else {
+      this.buttonUserStatus = true;
+    }
+
+  }
+
+  cancelNoCode() {
+    this.buttonUserStatus = false;
+    this.noCodeStatus = true;
+    this.buttonCancelStatus = false;
+    this.showSendTitle = false;
+    this.showLoginTitle = true;
+    this.formLogin.reset();
+  }
+
   toLower(event) {
     this.formLogin.get("email").setValue(event.target.value.toLowerCase());
   }
 
-  closeModal() {
-    this.formLogin.reset();
-    this.formCode.reset();
-    this.dialogRef.close();
+  numberOnly(event): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
   }
 
-  resendCode() {
-    const data = JSON.parse(localStorage.getItem("tempUs"));
-    this.tempEmail = data.email;
-    this.data_user.getCodeSesion(data.email).subscribe(res => {
-
-      this.resendStatus = true;
-
-      if (res.email) {
-        this.dataForm = res;
-        this.validationCode = 2;
-        localStorage.setItem("tempUs", JSON.stringify({ email: data.email, code: res.code }));
-        setTimeout(() => {
-          this.resendStatus = false;
-        }, 5000);
-      } else if (res.estado == false) {
-        this.validationCode = 3;
-        this.loginValidation = false;
-      }
-
-    }, err => {
-      this.loginValidation = false;
-      this.errorOccurred = true;
-      console.log("ERROR IN LOGIN METHOD: ", err)
-    });
+  closeModal() {
+    this.formLogin.reset();
+    this.dialogRef.close();
   }
 
 }
