@@ -24,7 +24,7 @@
 
 .container-menu {
     /* border: 5px solid blueviolet; */
-    font-family: 'Poppins', monospace;
+    font-family: Poppins,sans-serif;
     text-align: center;
     text-transform: uppercase;
     color: white;
@@ -57,7 +57,7 @@
 }
 
 .names {
-    font-family: 'Poppins', monospace;
+    font-family: Poppins,sans-serif;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -66,14 +66,14 @@
 }
 
 .email {
-    font-family: 'Poppins', monospace;
+    font-family: Poppins,sans-serif;
     text-align: center;
     color: white;
     font-size: 12px;
 }
 
 .tribu-halcones {
-    font-family: 'Poppins', monospace;
+    font-family: Poppins,sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;

@@ -88,7 +88,7 @@ a.item-lang {
 }
 
 .title-nav-profile {
-    font-family: 'Poppins';
+    font-family: Poppins,sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
@@ -97,7 +97,7 @@ a.item-lang {
 }
 
 .languages-profiles {
-    font-family: 'Poppins';
+    font-family: Poppins,sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
