@@ -152,40 +152,58 @@
 .btn-selected {
     background: #444444 !important;
 }
+
 /* PROX- */
+
 .container-prox {
     padding: 50px;
 }
+
 /* media */
-.mediaHome{
-    display: flex; 
+
+.mediaHome {
+    display: flex;
     /* border: 1px solid blue; */
 }
-.vimeo{
+
+.vimeo {
     /* border: 1px solid red;  */
     width: 60%;
+    height: 500px;
 }
-.chat{
-    /* border: 1px solid yellow;  */
+
+.chat {
     width: 40%;
 }
-@media screen and (max-width:1000px){
-    .mediaHome{display: block;}
-    .vimeo{
+
+@media screen and (max-width:1000px) {
+    .mediaHome {
+        display: block;
+    }
+    .vimeo {
         width: 100%;
         height: 400px;
     }
-    .chat{width: 100%;}
+    .chat {
+        width: 100%;
+    }
 }
+
 @media only screen and (max-width: 850px) {
-    .vimeo{height: 350px;}
+    .vimeo {
+        height: 350px;
+    }
 }
+
 @media only screen and (max-width: 739px) {
-    .container-profile {display: block;}    
+    .container-profile {
+        display: block;
+    }
 }
+
 @media only screen and (max-width: 470px) {
     .container-content-profile {
         padding: 0;
         padding-top: 50px;
-    }    
+    }
 }

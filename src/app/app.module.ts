@@ -1,22 +1,14 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import  {  NgxEmojiPickerModule  }  from  'ngx-emoji-picker';
+import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { environment } from 'src/environments/environment';
-
-import {
-  MatDialogModule,
-  MatCheckboxModule,
-  MatRadioModule,
-  MatSelectModule,
-  MatOptionModule,
-  MatIconModule
-} from "@angular/material";
+import { MatDialogModule, MatCheckboxModule, MatRadioModule, MatSelectModule, MatOptionModule, MatInputModule, MatIconModule, MatButtonModule } from "@angular/material";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -45,8 +37,6 @@ import { ChatComponent } from './components/profile/chat/chat.component';
 //modals
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
 import { LoginComponent } from './modals/login/login.component';
-
-
 import { FaqComponent } from './components/home/faq/faq.component';
 import { SpeakersComponent } from './components/home/speakers/speakers.component';
 import { WorkshopsComponent } from './components/home/workshops/workshops.component';
@@ -86,11 +76,14 @@ import { MusicComponent } from './components/home/music/music.component';
     MatDialogModule,
     MatRadioModule,
     MatOptionModule,
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
     MatSelectModule,
     MatCheckboxModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule, 
-    NgxEmojiPickerModule.forRoot(), 
+    ReactiveFormsModule,
+    NgxEmojiPickerModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     TranslateModule.forRoot({

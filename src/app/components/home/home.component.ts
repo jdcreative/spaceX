@@ -4,6 +4,7 @@ import { ValidateUserComponent } from './../../modals/validate-user/validate-use
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from "@angular/material";
 import { UtilsService } from "../../service/utils.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,15 +13,28 @@ import { UtilsService } from "../../service/utils.service";
 })
 
 export class HomeComponent implements OnInit {
+
   languaje: any;
   isOpenClose: boolean = false;
-  constructor(private dialog: MatDialog, private UtilsService: UtilsService) { }
+  constructor(
+    private dialog: MatDialog,
+    private UtilsService: UtilsService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     window.scroll(0, 0);
+    this.validateSession();
   }
 
-  setLang(lang){
+  validateSession() {
+    let user = localStorage.getItem("user");
+    if (user) {
+      this.router.navigate(["/profile"]);
+    }
+  }
+
+  setLang(lang) {
     this.languaje = this.UtilsService.setLang(lang);
   }
 

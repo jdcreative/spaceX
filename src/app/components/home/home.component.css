@@ -109,6 +109,14 @@ img.img-left-banner {
     align-items: center;
 }
 
+.container-title-convencion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-love-action {}
+
 .banner .row {
     padding-top: 20px;
 }
@@ -153,7 +161,7 @@ img.img-left-banner {
 
 .btnVerify {
     border: none;
-    width: 334px;
+    width: auto;
     height: 70px;
     border-radius: 50px;
     background: #272727;
@@ -164,12 +172,13 @@ img.img-left-banner {
     outline: none;
     text-align: center;
     margin: 0 auto;
+    padding: 20px;
     display: block;
     text-transform: uppercase;
 }
 
 .btnRegisterBanner {
-    width: 334px;
+    width: auto;
     height: 70px;
     border: none;
     background: #FBFE01;
@@ -293,9 +302,11 @@ img.img-left-banner {
     padding: 1%;
     margin-top: -45px !important;
 }
-.somos_uno_title{
+
+.somos_uno_title {
     width: 10%;
 }
+
 .vdeo_set {
     width: 100%;
     display: grid;
@@ -336,10 +347,12 @@ img.title_subcontent {
     width: 50%;
     margin-bottom: 45px;
 }
-.textMenu{
+
+.textMenu {
     font-family: 'Roboto Mono', monospace;
     color: white;
 }
+
 span.titleOne {
     font-family: 'Roboto Mono', monospace;
     font-size: 35px;
@@ -349,14 +362,17 @@ span.titleOne {
     vertical-align: middle;
     padding: 0px 10px;
 }
-.cuadrito{
+
+.cuadrito {
     width: 100%;
     height: 5px;
     background-color: black;
 }
+
 .cuadrito a {
     color: black;
 }
+
 p.textOne {
     font-family: 'Roboto Mono', monospace;
     font-size: 24px;
@@ -474,11 +490,13 @@ p.textOne {
     align-items: center;
     color: white;
 }
-.introducing{
+
+.introducing {
     background: black url("https://cdn.somosunogo.com/starts-bg.png");
     background-attachment: fixed;
     padding: 7% 0px;
 }
+
 img.amor_accion {
     width: 45%;
 }
@@ -547,6 +565,19 @@ img.img_set_info {
     max-width: 100%;
     height: auto;
     width: 100%;
+}
+
+@media only screen and (max-width: 575px) {
+    .padding-description {
+        padding: 5%;
+    }
+}
+
+@media only screen and (max-width: 566px) {
+    .img.amor_accion {
+        border: 5px solid blue;
+        width: 56%;
+    }
 }
 
 @media only screen and (max-width: 928px) {
