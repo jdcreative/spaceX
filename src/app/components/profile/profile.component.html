@@ -49,7 +49,7 @@
                         </div>
                         {{ conferencistas[0] ? conferencistas[0] : 'N/A' }}
                     </div>
-                </div>
+                </div>                
 
                 <div class="container-prox"
                     *ngIf="tab != 'home' && tab != 'conferencistas' && tab != 'tribus' && tab != 'talleres'">
@@ -75,9 +75,9 @@
 
                 <!-- 
                 <app-merch *ngIf="tab =='merch'"></app-merch> -->
-
+                <app-editor></app-editor>
             </div>
-
+            
         </div>
 
     </div>

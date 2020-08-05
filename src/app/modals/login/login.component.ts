@@ -138,7 +138,7 @@ export class LoginComponent implements OnInit {
       this.showSendTitle = false;
 
       this.data_user.getCodeSesion(email).subscribe((res) => {
-
+        // console.log(res)
         if (res.estado == false) {
 
           this.showCodeSatus = true;
@@ -148,7 +148,7 @@ export class LoginComponent implements OnInit {
           }, 7000);
 
         } else {
-
+          
           this.noCodeStatus = true;
           this.sendCodeEmail = true;
           this.buttonUserStatus = false;

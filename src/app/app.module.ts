@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SignUpComponent } from './modals/sign-up/sign-up.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 //Languages libraries
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -44,6 +45,7 @@ import { TribesComponent } from './components/home/tribes/tribes.component';
 import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
 import { MusicComponent } from './components/home/music/music.component';
 import { CodeComponent } from './components/home/code/code.component';
+import { EditorComponent } from './components/profile/editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,8 @@ import { CodeComponent } from './components/home/code/code.component';
     TribesComponent,
     SpecialGuestsComponent,
     MusicComponent,
-    CodeComponent
+    CodeComponent,
+    EditorComponent
   ],
   imports: [
     FormsModule,
@@ -85,6 +88,7 @@ import { CodeComponent } from './components/home/code/code.component';
     MatCheckboxModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    AngularEditorModule,
     NgxEmojiPickerModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

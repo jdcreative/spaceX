@@ -25,6 +25,7 @@
     "@angular/router": "~8.2.0",
     "@auth0/angular-jwt": "^5.0.1",
     "@auth0/auth0-spa-js": "^1.11.0",
+    "@kolkov/angular-editor": "^1.0.0",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "bootstrap": "^4.5.0",
