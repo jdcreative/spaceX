@@ -55,14 +55,9 @@ export class SideBarComponent implements OnInit {
     if (this.tribus.length >= 1) {
       this.validateTribus();
     }
-
   }
 
   validateTribus() {
-
-    console.log("user profile", this.userProfile.tribu);
-
-    console.log("tribus", this.tribus)
 
     if (this.userProfile.tribu == "1") {
       this.tribuPoints = this.tribus[0].value;
@@ -78,8 +73,6 @@ export class SideBarComponent implements OnInit {
   }
 
   validationColors() {
-
-    console.log("OLAAA", this.data)
 
     if (this.userProfile.tribu == "1") {
       this.finalColor = this.data[0].gorilas;

@@ -1,37 +1,88 @@
 <div class="container content-chat">
-    <div *ngFor="let message of chats" class="back-cloud">
-        <div class="cloud" [ngStyle]="styleCloud( message.username)">
-            <div class="cloudMessage">
-                <div class="content-message">
-                    <div class="text-message">
-                        <p class="messageList">{{message.message}}</p>
+
+    <div class="main-panel">
+
+        <div class="no-messages" *ngIf="chats && chats.length === 0">
+            No hay mensajes...
+        </div>
+
+        <div class="no-messages" *ngIf="loader">
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+            [infiniteScrollContainer]="selector" [fromRoot]="true" *ngIf="chats && chats.length >= 1">
+
+            <div class="item-chat" *ngFor="let message of chats" (click)="removeItem(message);">
+
+                <div class="cloud-chat">
+
+                    <div class="container-img-cloud">
+
+                        <img *ngIf="message.tribu == null || message.tribu == undefined || message.tribu === ''"
+                            src="../../../../assets/default.png">
+                        <img style="height: 32px; width: 32px;" class="rounded-circle" *ngIf="message.tribu == '1'"
+                            src="https://cdn.somosunogo.com/gorilas.jpeg">
+                        <img style="height: 32px; width: 32px;" class="rounded-circle" *ngIf="message.tribu == '2'"
+                            src="https://cdn.somosunogo.com/halcones.jpeg">
+                        <img style="height: 32px; width: 32px;" class="rounded-circle" *ngIf="message.tribu == '3'"
+                            src="https://cdn.somosunogo.com/leones.jpeg">
+                        <img style="height: 32px; width: 32px;" class="rounded-circle" *ngIf="message.tribu == '4'"
+                            src="https://cdn.somosunogo.com/tiburones.jpeg">
+
                     </div>
+
+                    <div class="container-msg-cloud">
+                        <div class="chat-user">{{ message.username }}</div>
+                        <div class="chat-message">{{ message.message ? message.message : '' }}</div>
+                    </div>
+
                 </div>
-                <div class="text-time">
-                    <p class="timeMessage">{{message.hourMessage | date:'HH:mm:ss'}}</p>
+
+            </div>
+
+            <div *ngIf="await">
+                <div class="alert alert-warning" role="alert">
+                    Estás enviando mensajes muy rápido, espera un momento.
                 </div>
             </div>
-            <p class="textName">{{message.username | slice:0:20}}</p>
+
         </div>
+
+        <div id="destination" #destinationRef></div>
+
     </div>
+
 </div>
-<hr class="hrMessage">
-<div>
-    <form [formGroup]="formMessages" (ngSubmit)="newMessage($event)">
-        <div class="goContent">
-            <a class="control">
-                <input class="input inputLook" type="text" placeholder="Envianos tu saludo" formControlName="message"
-                    [(ngModel)]="emoji">
-                <span class="icon is-small is-right">
-                    <button type="submit" value="submit" class="btninputLook" [ngStyle]=" { background: finalColor } " [disabled]='formMessages.invalid'>
-                        <img src="../../../../assets/logs/enviar.png" class="imgButton" >
-                    </button>
-                </span>
-            </a>
-        </div>
-    </form>
-    <div class="content-emojis">
-        <button class='attachment' (click)="toggled = !toggled" [(emojiPickerIf)]="toggled" type="button"
-            [emojiPickerDirection]="'left'" (emojiPickerSelect)="handleSelection($event)">😄</button>
+
+<div class="container-send">
+
+    <div class="container-emoji-picker">
+        <button class="attachment" (click)="toggled = !toggled" [(emojiPickerIf)]="toggled" type="button"
+            [emojiPickerDirection]="'left'" (emojiPickerSelect)="handleSelection($event);">
+            <img style="height: 20px;" src="../../../../assets/smile.svg">
+        </button>
     </div>
+
+    <form class="form-flex" [formGroup]="sendMessage" (ngSubmit)="newMessage($event);">
+
+        <div class="container-input-send">
+            <textarea #message class="form-control form-control-fix" id="exampleFormControlTextarea1" maxlength="200"
+                formControlName="message" [(ngModel)]="emojiSelected"
+                style="min-height: 60px !important; max-height: 137px !important;"></textarea>
+        </div>
+
+        <div class="container-button-send">
+            <button class="btn btn-dark btn-fix" type="submit" [disabled]="!sendMessage.valid || blockButton">
+                <img style="height: 20px;" src="../../../../assets/send.svg">
+            </button>
+        </div>
+
+    </form>
+
 </div>
