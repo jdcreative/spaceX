@@ -1,30 +1,39 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from '@angular/fire/database'
-import { chat } from '../interfaces/chat'
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { chat } from '../interfaces/chat';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ChatService {
 
-  
   messages: AngularFireList<any>;
+
   constructor(
-    private fire: AngularFireDatabase,
+    private firebase: AngularFireDatabase
   ) { }
 
-  getMessages(){    
-    return this.fire.list('chatsomosuno', ref => ref.limitToLast(8) ).snapshotChanges()  
+  getMessages() {
+    return this.firebase.list('chatsomosuno', ref => ref.limitToLast(50));
   }
+
   newMessage(message: chat) {
-    this.messages = this.fire.list('/chatsomosuno');
-    if (message) {
-      console.log('lo que llega al servicio: ', message)
-      this.messages.push({
-        username: message.username,
-        message: message.message,
-        hourMessage: message.hourMessage
-      });
-    }
+
+    this.messages = this.firebase.list('chatsomosuno', ref => ref.limitToLast(50));
+
+    return this.messages.push({
+      username: message.username,
+      message: message.message,
+      hourMessage: message.hourMessage,
+      tribu: message.tribu
+    });
+
   }
+
+  deleteMessage(event) {
+    this.messages = this.firebase.list('chatsomosuno', ref => ref.limitToLast(50));
+    return this.messages.remove(event.$key);
+  }
+
 }

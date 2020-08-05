@@ -1,7 +1,7 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit, Input } from '@angular/core';
-import * as moment from 'moment-timezone'
-
+import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
+import * as moment from 'moment-timezone';
 import { ChatService } from 'src/app/service/chat.service';
 import { chat } from 'src/app/interfaces/chat';
 
@@ -10,87 +10,142 @@ import { chat } from 'src/app/interfaces/chat';
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
+
 export class ChatComponent implements OnInit {
 
-  @Input() finalColor:any;
-  finalImage:any;
-  chats: chat[];
-  chatSix: chat[];
+  @Input() finalColor: any;
+  sendMessage: FormGroup;
+  finalImage: any;
+  userProfile: any;
+  username: any;
+  selector: string = '.main-panel';
+  emojiSelected: string = "";
+  color: string;
   toggled: boolean = false;
-  emoji: string ='';
-  ordermessage:any;
-  formMessages:FormGroup;
-  userProfile:any;
-  username:any; 
-  
+  blockButton: boolean = false;
+  await: boolean = false;
+  loader: boolean = true;
+  localCount: number = 0;
+  chats: any[];
+
   constructor(
-    private fb : FormBuilder,
+    private fb: FormBuilder,
     public chatservice: ChatService,
-  ) { 
+    private scrollToService: ScrollToService
+  ) {
     this.buildForm();
   }
 
   ngOnInit() {
-    let data = JSON.parse(localStorage.getItem("user")); 
-    this.userProfile = data["user"];   
-    this.username = this.userProfile.nombre +' '+ this.userProfile.apellidos;
-    this.getchat();
-    this.chatservice.getMessages();
-    this.setvalues();    
+    let data = JSON.parse(localStorage.getItem("user"));
+    this.userProfile = data["user"];
+    this.getChat();
+    this.username = this.userProfile.nombre + ' ' + this.userProfile.apellidos;
   }
-  
-  getchat(){
-    this.chatservice.getMessages()
-    .subscribe(res=>{
-      this.chats = [];   
-      const arrayFire = res  ;
-      res.forEach(data=>{
-        let chat = data.payload.toJSON();  
-        this.chats.push(chat as chat)                                              
-        chat['$key'] = data.key;        
-        console.log('chats : ', this.chats);
-      }) 
-    })
-  }
-  buildForm(){
-    this.formMessages = this.fb.group({
-      username:[''],
-      message:['', Validators.required],
-      hourMessage:[new Date().getTime()]
+
+  buildForm() {
+    this.sendMessage = this.fb.group({
+      username: [''],
+      tribu: [''],
+      message: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(200)]],
+      hourMessage: [new Date().getTime()]
     });
-    this.formMessages.valueChanges.subscribe(res=>{       
-    })
   }
-  newMessage(e:Event){
+
+  getChat() {
+
+    this.chatservice.getMessages().snapshotChanges().subscribe(res => {
+
+      this.chats = [];
+
+      res.forEach(data => {
+        let chat = data.payload.toJSON();
+        this.chats.push(chat as chat)
+        chat['$key'] = data.key;
+      });
+      this.loader = false;
+      this.triggerScrollTo();
+    });
+
+  }
+
+  triggerScrollTo() {
+
+    setTimeout(() => {
+      const config: ScrollToConfigOptions = {
+        target: 'destination'
+      };
+      this.scrollToService.scrollTo(config);
+    }, 1000);
+
+  }
+
+  newMessage(e: Event) {
+
     e.preventDefault();
-    console.log(this.formMessages.value)
-    if(this.formMessages.valid){
-      let data = this.formMessages.value;      
-      console.log('data del mensaje: ', data);
-      this.chatservice.newMessage(data);
-      this.formMessages.reset();
-      this.setvalues()            
-    }    
+    this.localCount++;
+
+    if (this.localCount == 3) {
+
+      this.await = true;
+      this.blockButton = true;
+
+      setTimeout(() => {
+        this.await = false;
+        this.blockButton = false;
+        this.localCount = 0;
+      }, 4000);
+
+    } else {
+
+      this.blockButton = true;
+      if (this.sendMessage.valid) {
+        this.setvalues();
+      }
+
+    }
   }
-  setvalues(){     
-    let timeHere = moment.tz('America/Bogota').format();
-    this.formMessages.controls['username'].setValue(this.username);
-    this.formMessages.controls['hourMessage'].setValue(timeHere);    
-    this.formMessages.controls['message'].setValue(' '); 
+
+  setvalues() {
+
+    let actualTime = moment.tz('America/Bogota').format();
+    this.sendMessage.controls['username'].setValue(this.username);
+    this.sendMessage.controls["tribu"].setValue(this.userProfile["tribu"]);
+    this.sendMessage.controls['hourMessage'].setValue(actualTime);
+    this.sendMessage.controls['message'].setValue(this.sendMessage.value.message);
+
+    let data = this.sendMessage.value;
+    this.chatservice.newMessage(data);
+    this.sendMessage.reset();
+    this.triggerScrollTo();
+
+    setTimeout(() => {
+      this.blockButton = false;
+    }, 1000);
+
   }
-  
-  styleCloud(e:string){
+
+  removeItem(event) {
+
+    if (this.userProfile.email == 'fabian.zapata@gracialab.com.co' || this.userProfile.email == 'hectorj.24@hotmail.com' || this.userProfile.email == 'jdcreativemaker@gmail.com') {
+      this.chatservice.deleteMessage(event);
+    }
+
+  }
+
+  styleCloud(e: string) {
     let user;
-    if(this.username == e){
-      user= true;
-    }else{user=false}    
+    if (this.username == e) {
+      user = true;
+    } else { user = false }
     let style = {
       'background': user ? '#4f4f4f99' : '#6f6f6f4d'
     }
     return style
   }
+
   handleSelection(event) {
-    console.log(event.char);
-    this.emoji += event.char;
+    this.emojiSelected += event.char;
   }
+
 }

@@ -54,20 +54,11 @@
     </div>
 
     <div class="container buttons-section">
-        <div class="row">
-            <div class="col-4"><button class="btnVerify" (click)="openModalvalidate();">{{ 'home.confirmar-registro' | translate }}</button></div>
-            <div class="col-4"><a class="btnRegister-home" (click)="openLogin();">
-                <div class="btn here">
-                    {{ 'home.iniciar-sesion' | translate }}
-                </div>
-            </a></div>
-            <div class="col-4">
-                <button class="btnRegisterBanner" (click)="openCloseModal();">{{ 'home.registrate' | translate }}</button>
-            </div>
-            
-        </div>
-        
-        
+
+        <button class="btnVerify" (click)="openModalvalidate();">{{ 'home.confirmar-registro' | translate }}</button>
+        <button class="btnLogInHome" (click)="openLogin();">{{ 'home.iniciar-sesion' | translate }}</button>
+        <button class="btnRegisterBanner" (click)="openCloseModal();">{{ 'home.registrate' | translate }}</button>
+
     </div>
 
     <div class="container-introducing">

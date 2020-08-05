@@ -81,26 +81,33 @@
     background-position: top;
     background-size: cover;
 }
-a.btnRegister-home {
+
+.btnLogInHome {
     background: #fd705c;
-    width: 73%;
-    display: block;
+    border: none;
+    width: auto;
+    height: 70px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 0.5;
+    outline: none;
     text-align: center;
-    padding: 7px 0px;
-    border-radius: 27px;
-    line-height: 50px;
     margin: 0 auto;
-    margin-bottom: 10px;
+    padding: 20px;
+    display: block;
+    text-transform: uppercase;
 }
+
 .container.buttons-section {
     padding: 45px 0px;
 }
-.btnRegister-home .btn.here {
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20px;
+
+.buttons-section {
+    display: flex;
 }
+
 img.img-left-banner {
     margin: 0 auto;
     display: block;
@@ -295,7 +302,7 @@ img.img-left-banner {
     height: 440px;
     margin-top: 100px;
     padding: 30px;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: white;
@@ -366,13 +373,14 @@ img.title_subcontent {
     width: 50%;
     margin-bottom: 45px;
 }
-.textMenu{
-    font-family: Poppins,sans-serif;
+
+.textMenu {
+    font-family: Poppins, sans-serif;
     color: white;
 }
 
 span.titleOne {
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 35px;
     line-height: 30px;
     font-weight: bold;
@@ -392,7 +400,7 @@ span.titleOne {
 }
 
 p.textOne {
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 24px;
     line-height: 30px;
 }
@@ -528,11 +536,11 @@ img.img_set_info {
     background: #272727;
     padding: 5%;
     color: white;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 .content_side p {
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
 }
 
 /*  */
@@ -570,7 +578,7 @@ img.img_set_info {
     background: #1C1C1C;
     padding: 5%;
     color: white;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-style: italic;
     font-size: 19px;
 }
@@ -601,15 +609,6 @@ img.img_set_info {
 @media only screen and (max-width: 928px) {
     .container-content-introducting {
         width: 100%;
-    }
-}
-
-@media only screen and (max-width: 802px) {
-    .container-buttons {
-        display: block;
-    }
-    .btnVerify, .btnRegisterBanner {
-        margin-bottom: 10px;
     }
 }
 
@@ -645,5 +644,20 @@ img.img_set_info {
         background: #00CEA7;
         padding: 1%;
         margin-top: 27px !important;
+    }
+}
+
+@media only screen and (max-width: 1013px) {
+    .container-profile {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1027px) {
+    .buttons-section {
+        display: block !important;
+    }
+    .btnVerify, .btnRegisterBanner, .btnLogInHome {
+        margin-bottom: 10px;
     }
 }
