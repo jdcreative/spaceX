@@ -60,7 +60,7 @@
         <div class="col-2">
         </div>
         <div class="col-8">
-            <h1 class="title_banner">Obtener codigo</h1>
+            <h1 class="title_banner">Validar Código</h1>
         </div>
         <div class="col-2">
         </div>
@@ -68,7 +68,9 @@
 </div>
 <div class="fondo_containt">
     <div class="row justify-content-md-center py-4">
+        <div class="col-3"></div>
         <div class="col-6">
+            <p class="codigo" *ngIf="codigo">{{codigo}}</p>
             <form class="example-form" [formGroup]="formCode">
 
                 <mat-form-field class="example-full-width" appearance="fill">
@@ -80,47 +82,22 @@
 
                         <mat-hint align="center">
 
-                            <div class="error-message" *ngIf="submitted && form.email.errors">
-                                <p *ngIf="form.email.errors.email">El email es inválido.</p>
-                                <p *ngIf="form.email.errors.required">El email es requerido.</p>
-                            </div>
-
                         </mat-hint>
                 </mat-form-field>
 
-                <div class="container-notify">
-
-                    <div class="alert alert-danger" role="alert" *ngIf="showCodeSatus">
-                        <strong>¡UPS!</strong>
-                        El correo ingresado o el código es inválido.
-                    </div>
-
-                    <div class="alert alert-primary" role="alert" *ngIf="sendCodeEmail">
-                        Hemos enviado el código único de ingreso a tu correo.
-                    </div>
-
-                </div>
 
                 <div class="contentBtn">
 
-                    <button class="buttonEnter" (click)="login();" [disabled]="statusLoading" *ngIf="!buttonUserStatus">
-                        <span [ngClass]="{ 'spinner-border spinner-border-sm' : statusLoading }" role="status"
-                            aria-hidden="true"></span>
-                        Entrar
+                    <button class="buttonEnter" (click)="sendUserNoCode();">
+                   
+                        VALIDAR CÓDIGO
                     </button>
 
-                    <button class="buttonCancel" (click)="cancelNoCode();" *ngIf="buttonCancelStatus">
-                        Cancelar
-                    </button>
 
-                    <button class="buttonEnter" (click)="sendUserNoCode();" *ngIf="buttonUserStatus">
-                        <span [ngClass]="{ 'spinner-border spinner-border-sm' : statusLoadingSend }" role="status"
-                            aria-hidden="true"></span>
-                        Enviar
-                    </button>
 
                 </div>
 
             </form>
         </div>
+        <div class="col-3"></div>
     </div>

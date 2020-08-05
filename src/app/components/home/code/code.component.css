@@ -580,7 +580,9 @@ p.description.light {
     font-weight: bold;
     font-size: unset;
 }
-
+.footer {
+    display: none;
+}
 #toLowerEmail {
     text-transform: lowercase !important;
 }
@@ -597,10 +599,17 @@ p.description.light {
 .resend-title:hover {
     cursor: pointer;
 }
-
+p.codigo {
+    font-size: 40px;
+    border: 1px solid;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 29px;
+    border-radius: 7px;
+}
 .example-form {
     min-width: 150px;
-    max-width: 500px;
     width: 100%;
 }
 

@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'tribus', component: TribesComponent },
   { path: 'invitados-especiales', component: SpecialGuestsComponent },
   { path: 'bandas', component: MusicComponent },
-  { path: 'code', component: CodeComponent },
+  { path: 'codigo', component: CodeComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: '**', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }

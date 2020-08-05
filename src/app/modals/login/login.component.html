@@ -88,7 +88,8 @@
 
             <div class="idonthave-code" *ngIf="!buttonUserStatus">
                 <p  class="description" *ngIf="showLoginTitle">Si esta registrado y no recuerdas tu codigo, haz click en el siguiente enlace y recibiras un codigo unico a tu email registrado.</p>
-                <a class="a-code" (click)="userNoCode();">¿No recuerdas el código?</a>
+                <a class="a-code" (click)="userNoCode();" style="margin-bottom: 5px;">Enviar codigo al Email</a>
+                <a class="a-code" [routerLink]="['/codigo']" (click)="closeModal()">Buscar mi Codigo</a>
             </div>
 
         </form>
