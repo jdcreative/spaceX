@@ -1,15 +1,72 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <a>
         <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
     </a>
-
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/']">
+                <span class="textMenu">{{ 'menu.inicio' | translate }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/invitados-especiales']">
+                <span class="textMenu">{{ 'menu.invitados' | translate }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/conferencistas']">
+                <span class="textMenu">{{ 'menu.conferencistas' | translate }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/bandas']">
+                <span class="textMenu">{{ 'menu.bandas' | translate }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/tribus']">
+                <span class="textMenu">{{ 'menu.tribus' | translate }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/faq']">
+                <span class="textMenu">{{ 'menu.faq' | translate }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" (click)="openLogin();">
+                <span class="textMenu">{{ 'home.iniciar-sesion' | translate }}</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Idioma
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a (click)="setLang('es')" class="dropdown-item">ESPAÑOL</a>
+                <a (click)="setLang('pt')" class="dropdown-item">PORTUGUÉS</a>
+                <a (click)="setLang('en')" class="dropdown-item">ENGLISH</a>
+                <a (click)="setLang('fr')" class="dropdown-item">FRANÇAIS</a>
+                <a (click)="setLang('ru')" class="dropdown-item">РУССКИЙ</a>
+                </div>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!--
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a>
+        <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
+    </a>
     <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo01">
-
         <div class="menuNavbar">
-
             <div class="allNets">
-
                 <a class="nav-link" [routerLink]="['/']">
                     <span class="textMenu">{{ 'menu.inicio' | translate }}</span>
                 </a>
@@ -44,16 +101,15 @@
                     <a (click)="setLang('fr')" class="dropdown-item">FRANÇAIS</a>
                     <a (click)="setLang('ru')" class="dropdown-item">РУССКИЙ</a>
                     </div>
-                  </div>
+                </div>
             </div>
-
         </div>
     </div>
-    <!--style="display: none;"---->
+
     <a class="btnRegister" (click)="openLogin();">
         <div class="btn here">
             {{ 'home.iniciar-sesion' | translate }}
         </div>
     </a>
-
 </nav>
+-->
