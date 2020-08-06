@@ -8,20 +8,24 @@
 .content-talleres {
     /* border: 5px solid blue; */
 }
+
 a.disable-btn {
     background: #a7a7a7;
     color: #f3f3f3;
     padding: 10px 22px;
     border-radius: 5px;
 }
-.title_taller{
+
+.title_taller {
     font-weight: 600;
     font-size: 20px;
 }
+
 .btn_section {
     display: flex;
     margin-top: 10px;
 }
+
 .container-salas {
     padding-top: 10px;
 }
@@ -80,6 +84,10 @@ a.disable-btn {
 .sala-content {
     width: 100%;
     padding: 10px;
+}
+
+.btn-white {
+    color: white !important;
 }
 
 @media only screen and (max-width: 994px) {
