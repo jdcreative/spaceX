@@ -25,4 +25,14 @@ export class RealtimeDatabaseService {
   getLinkTalleres(){
     return this.taller = this.firebase.list("Talleres");
   }
+  newTallers(taller:any){
+    console.log('lo que llega al servicio: ', taller);
+    const talleresNuevos = this.firebase.list("Talleres");
+    return talleresNuevos.push({
+      nombre:taller.nombre,
+      idioma:taller.idioma,
+      tipo:taller.tipo,
+      link:taller.link
+    })
+  }
 }

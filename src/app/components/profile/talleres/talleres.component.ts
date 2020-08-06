@@ -20,7 +20,8 @@ export class TalleresComponent implements OnInit {
 
   ngOnInit() {
     this.changeTab('taller1');
-    this.getTalleres();        
+    this.getTalleres(); 
+    // this.newtaller();       
   }
 
   ngOnChanges() {
@@ -36,7 +37,8 @@ export class TalleresComponent implements OnInit {
         let taller = data.payload.toJSON();
         this.listTalleres.push(taller);
         taller['$key'] = data.key;
-      })      
+      }) 
+      console.log('talleres: ', this.listTalleres);
     })    
   }
 
@@ -70,22 +72,59 @@ export class TalleresComponent implements OnInit {
     }else if(tab == 'taller4'){
       if(e == 'pt' ){
         this.link = this.listTalleres[7].link;         
-      }else{
+      }else if(e == 'en'){
+        //ingles
+        this.link = this.listTalleres[8].link;  
+      }
+      else if(e == ''){
+        //ruso
+        this.link = this.listTalleres[9].link;  
+      }else if(e == ''){
+        //frances
+        this.link = this.listTalleres[10].link;  
+      }
+      else{
         this.link = this.listTalleres[6].link;        
       }
     }else if(tab == 'taller5'){
       if(e == 'pt' ){
-        this.link = this.listTalleres[9].link;         
-      }else{
-        this.link = this.listTalleres[8].link;        
+        this.link = this.listTalleres[12].link;         
+      }else if(e == 'en'){
+        //ingles
+        this.link = this.listTalleres[13].link; 
+      }
+      else if(e == ''){
+        //frances
+        this.link = this.listTalleres[14].link; 
+      }
+      else if(e == ''){
+        //ruso
+        this.link = this.listTalleres[15].link; 
+      }
+      else{
+        this.link = this.listTalleres[11].link;        
       }
     }else if(tab == 'taller6'){
       if(e == 'pt' ){
-        this.link = this.listTalleres[11].link;         
+        this.link = this.listTalleres[17].link;         
       }else{
-        this.link = this.listTalleres[10].link;        
+        this.link = this.listTalleres[16].link;        
       }
+    }    
+  }
+  // let taller = {
+  //   nombre: estudio biblico
+  //   tipo:'youtube',
+  //   idioma:'español',
+  //   link:'https://player.vimeo.com/video/445051118'
+  // }
+  newtaller(){
+    let taller = {
+      nombre:'finanzas',//
+      tipo:'youtube',
+      idioma:'portugues',
+      link:'https://player.vimeo.com/video/445051118'
     }
-    
+    this.realtimeservice.newTallers(taller);
   }
 }
