@@ -58,9 +58,8 @@ export class EditorComponent implements OnInit {
       enteredText:['']
     });
     this.formEditor.valueChanges.subscribe(res=>{
-      console.log('texto ingresado: ', res)
       localStorage.setItem('notas', res.enteredText);
-    }, err=>{console.error('error al ingresar texto')})
+    }, err=>{console.error('Error in Subscribe')})
   }
 
 }
