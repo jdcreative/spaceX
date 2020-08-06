@@ -14,6 +14,16 @@
     right: 70px;*/
 }
 
+li.nav-item.list-lang {
+    margin-left: 25px;
+}
+
+li.nav-item.log-in {
+    background: #ff6245;
+    padding: 0px 5px;
+    margin-left: 8px;
+    border-radius: 9px;
+}
 .textMenu {
     font-family: Poppins, sans-serif;
     color: white;
@@ -80,4 +90,38 @@
 
 .navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a:hover {
     background-color: #343a4073 !important;
+}
+
+.navbar-dark .navbar-text a:hover {
+    background-color:transparent !important;
+}
+
+@media screen and (max-width:480px) {
+    li.nav-item.log-in {
+        background: #ff6245;
+        padding: 0px 11px;
+        margin-left: 0px !important;
+        border-radius: 9px;
+        width: 220px;
+        text-align: center;
+        margin-top: 12px;
+
+    }
+    li.nav-item.log-in:hover {
+        background:#ff757b !important;
+    }
+
+    
+    li.nav-item.list-lang {
+        margin-left: 0px;
+        width: 200px;
+        margin-top: 12px;
+    }
+    .btn-secondary {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+        width: 221px;
+        border-radius: 7px;
+    }
 }

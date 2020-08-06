@@ -47,7 +47,13 @@
                         <span class="textMenu">{{ 'menu.faq' | translate }}</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item log-in">
+                    <a class="nav-link" (click)="openLogin();">
+                        <span class="textMenu">{{ 'modals.iniciarsesion1' | translate }}
+                            {{ 'modals.iniciarsesion2' | translate }} </span>
+                    </a>
+                </li>
+                <li class="nav-item list-lang">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,19 +61,14 @@
                         </button>
                         <div class="dropdown-menu is-color-fixed" aria-labelledby="dropdownMenuButton">
                             <a (click)="setLang('es')" class="dropdown-item">ESPAÑOL</a>
-                            <a (click)="setLang('pt')" class="dropdown-item">PORTUGUÉS</a>
+                            <a (click)="setLang('pt')" class="dropdown-item">PORTUGUÊS</a>
                             <a (click)="setLang('en')" class="dropdown-item">ENGLISH</a>
                             <a (click)="setLang('fr')" class="dropdown-item">FRANÇAIS</a>
                             <a (click)="setLang('ru')" class="dropdown-item">РУССКИЙ</a>
                         </div>
                     </div>
                 </li>
-                <li class="nav-item log-in">
-                    <a class="nav-link" (click)="openLogin();">
-                        <span class="textMenu">{{ 'modals.iniciarsesion1' | translate }}
-                            {{ 'modals.iniciarsesion2' | translate }} </span>
-                    </a>
-                </li>
+                
             </ul>
 
         </span>
