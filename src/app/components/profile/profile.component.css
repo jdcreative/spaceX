@@ -1,5 +1,4 @@
 .navbar {
-    height: 78px;
     background: #272727
 }
 
@@ -84,7 +83,7 @@ a.item-lang {
 .tab {
     color: white !important;
     background: #000000;
-    height: 78px;
+    height: auto;
 }
 
 .color-degra {
@@ -252,6 +251,7 @@ a.item-lang {
         display: block;
     }
 }
+
 @media only screen and (max-width: 533px) {
     .container-profile-tribus {
         display: flex;
@@ -261,8 +261,9 @@ a.item-lang {
     }
     .tribu-value {
         margin-left: 10px;
-    }    
+    }
 }
+
 @media only screen and (max-width: 470px) {
     .container-content-profile {
         padding: 0;
