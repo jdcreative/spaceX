@@ -21,7 +21,7 @@
                     <a (click)="setLanguage('pt')" class="divisor item-lang">PORTUGUÉS</a>
                     <a (click)="setLanguage('en')" class="divisor item-lang">ENGLISH</a>
                     <a (click)="setLanguage('fr')" class="divisor item-lang">FRANÇAIS</a>
-                    <a (click)="setLanguage('rs')" class="item-lang">РУССКИЙ</a>
+                    <a (click)="setLanguage('ru')" class="item-lang">РУССКИЙ</a>
                 </div>
 
             </nav>
@@ -38,8 +38,18 @@
                 <div *ngIf="tab == 'home'" class="mediaHome">
 
                     <div class="vimeo">
-                        <iframe [src]="live_video" frameborder="0" allow="autoplay; fullscreen" allowfullscreen
-                            style="top:0;left:0;width:100%;height:100%;"></iframe>
+
+                        <div class="container-display-flex" *ngIf="loadingVideo">
+                            <div class="lds-ring">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <iframe *ngIf="!loadingVideo" [src]="live_video" frameborder="0" allow="autoplay; fullscreen"
+                            allowfullscreen style="top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
 
                     <div class="container-tabs">

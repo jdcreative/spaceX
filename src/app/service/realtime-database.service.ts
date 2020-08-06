@@ -10,6 +10,7 @@ export class RealtimeDatabaseService {
   tribus: AngularFireList<any>;
   buttons: AngularFireList<any>;
   taller: AngularFireList<any>;
+  livelang: AngularFireList<any>;
 
   constructor(
     private firebase: AngularFireDatabase
@@ -25,6 +26,10 @@ export class RealtimeDatabaseService {
 
   getLinkTalleres() {
     return this.taller = this.firebase.list("Talleres");
+  }
+
+  getLiveLang() {
+    return this.livelang = this.firebase.list("live_home");
   }
 
 }
