@@ -27,7 +27,8 @@ export class EditorComponent implements OnInit {
         'undo',
         'redo',    
         'subscript',
-        'superscript',    
+        'superscript',
+        'heading',    
         'fontName'
       ],
       [

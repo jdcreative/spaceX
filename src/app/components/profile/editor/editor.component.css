@@ -2,3 +2,33 @@
     max-height: 480px !important;
     min-height: 480px !important;
 }
+::ng-deep angular-editor .angular-editor-toolbar {
+    font: 100 .8rem/15px Roboto,Arial,sans-serif;
+    background-color: transparent !important;
+    padding: .2rem;
+    border: none !important;
+}
+
+::ng-deep angular-editor .fa{
+    color: white !important;
+}
+
+
+::ng-deep angular-editor .angular-editor-button{
+    background-color: #fff0 !important;
+    vertical-align: middle;
+    border: 1px solid #ddd0 !important;
+    padding: .4rem;
+    min-width: 2rem;
+    float: left;
+}
+
+::ng-deep angular-editor .angular-editor-textarea{
+    min-height: 5rem;
+    padding: .5rem .8rem 1rem;
+    border: none !important;
+    background-color: transparent;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
