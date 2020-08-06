@@ -2,7 +2,7 @@
     <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
 </nav>
 
-<div class="container-profile">
+<div class="container-profile" oncopy="return false" oncut="return false" onpaste="return false">
 
     <app-side-bar (sendTag)="sendTagReceive($event);" [tribus]="tribus"></app-side-bar>
 

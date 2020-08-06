@@ -1,26 +1,30 @@
-
-.navbar{
-    height: 78px;
+.navbar {
+    height: auto;
     background: #272727
 }
-.logoNavbar{
+
+.logoNavbar {
     width: 104px;
     margin-left: 2vw;
 }
-.menuNavbar{
+
+.menuNavbar {
     /*display: flex;
     position: absolute;
     right: 70px;*/
 }
-.textMenu{
+
+.textMenu {
     font-family: Poppins, sans-serif;
     color: white;
     font-size: 14px;
 }
+
 .dropdown-item {
     cursor: pointer;
 }
-.allNets{
+
+.allNets {
     /*display: flex;
     justify-content: center;
     align-items: baseline;
@@ -30,23 +34,30 @@
     margin-right: 10px;
     float: right;
 }
+
 .menuNavbar {
     width: 100%;
 }
-@media screen and (max-width:991px){
-    .allNets{display: none;}
+
+@media screen and (max-width:991px) {
+    .allNets {
+        display: none;
+    }
 }
-.netLink{    
+
+.netLink {
     margin: auto 20px;
 }
-.nets{    
+
+.nets {
     display: flex;
 }
-.btnRegister{
+
+.btnRegister {
     display: flex;
     align-items: center;
     justify-content: center;
-    border:none;
+    border: none;
     border-radius: 40px;
     background: white;
     width: 25%;
@@ -57,4 +68,16 @@
     text-align: center;
     color: black;
     cursor: pointer;
+}
+
+.log-in:hover {
+    cursor: pointer !important;
+}
+
+.is-color-fixed {
+    background-color: #343a40 !important;
+}
+
+.navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a:hover {
+    background-color: #343a4073 !important;
 }

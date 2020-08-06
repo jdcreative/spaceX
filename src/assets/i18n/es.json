@@ -61,7 +61,7 @@
     },
     "modals": {
         "iniciarsesion1": "INICIAR",
-        "iniciarsesion2": "SESION",
+        "iniciarsesion2": "SESIÓN",
         "descripcion_modal": "Escribe tu correo electronico",
         "input_modal": "Ingresa tu correo electronico",
         "boton_modal": "INGRESAR",
