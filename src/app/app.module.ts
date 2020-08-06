@@ -52,6 +52,7 @@ import { TribesComponent } from './components/home/tribes/tribes.component';
 import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
 import { MusicComponent } from './components/home/music/music.component';
 import { CodeComponent } from './components/home/code/code.component';
+import { NavbarComponent } from './components/home/navbar/navbar.component';
 
 
 
@@ -85,7 +86,8 @@ import { CodeComponent } from './components/home/code/code.component';
     CodeComponent,
     EditorComponent,
     ArraySortPipe,
-    SafePipe
+    SafePipe,
+    NavbarComponent
 
   ],
   imports: [

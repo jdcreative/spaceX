@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <a>
+        <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
+    </a>
+
+    <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo01">
+
+        <div class="menuNavbar">
+
+            <div class="allNets">
+
+                <a class="nav-link" [routerLink]="['/']">
+                    <span class="textMenu">{{ 'menu.inicio' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/invitados-especiales']">
+                    <span class="textMenu">{{ 'menu.invitados' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/conferencistas']">
+                    <span class="textMenu">{{ 'menu.conferencistas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/bandas']">
+                    <span class="textMenu">{{ 'menu.bandas' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/tribus']">
+                    <span class="textMenu">{{ 'menu.tribus' | translate }}</span>
+                </a>
+                <span class="textMenu">-</span>
+                <a class="nav-link" [routerLink]="['/faq']">
+                    <span class="textMenu">{{ 'menu.faq' | translate }}</span>
+                </a>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Idioma
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a (click)="setLang('es')" class="dropdown-item">ESPAÑOL</a>
+                    <a (click)="setLang('pt')" class="dropdown-item">PORTUGUÉS</a>
+                    <a (click)="setLang('en')" class="dropdown-item">ENGLISH</a>
+                    <a (click)="setLang('fr')" class="dropdown-item">FRANÇAIS</a>
+                    <a (click)="setLang('ru')" class="dropdown-item">РУССКИЙ</a>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    <!--style="display: none;"---->
+    <a class="btnRegister" (click)="openLogin();">
+        <div class="btn here">
+            {{ 'home.iniciar-sesion' | translate }}
+        </div>
+    </a>
+
+</nav>

@@ -55,6 +55,7 @@
     font-size: small;
     font-weight: bold;
     color: #ffffffb3;
+    word-break: break-all;
 }
 
 .chat-message {
@@ -62,6 +63,7 @@
     font-size: smaller;
     margin-bottom: 10px;
     color: #ffffff;
+    word-break: break-all;
 }
 
 .main-panel {

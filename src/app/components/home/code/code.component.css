@@ -616,9 +616,13 @@ p.codigo {
 .example-full-width {
     width: 100%;
 }
-
+.cointainer-access {
+    background: white;
+    padding: 5%;
+    margin-bottom: 25px;
+    border-radius: 11px;
+}
 .buttonEnter {
-
     border: none;
     background: #040404;
     border-radius: 10px;
@@ -627,7 +631,9 @@ p.codigo {
     padding: 10px 20px;
     margin: 0 auto;
     text-transform: uppercase;
-    width: 90%;
+    width: 78%;
+    margin: 0 auto;
+    display: block;
 }
 
 .container-title-login {

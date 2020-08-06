@@ -1,64 +1,12 @@
+<app-navbar></app-navbar>
 <div class="general-container">
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
-
-        <a>
-            <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
-        </a>
-
-        <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo01">
-
-            <div class="menuNavbar">
-
-                <div class="allNets">
-
-                    <a class="nav-link" [routerLink]="['/']">
-                        <span class="textMenu">{{ 'menu.inicio' | translate }}</span>
-                    </a>
-                    <span class="textMenu">-</span>
-                    <a class="nav-link" [routerLink]="['/invitados-especiales']">
-                        <span class="textMenu">{{ 'menu.invitados' | translate }}</span>
-                    </a>
-                    <span class="textMenu">-</span>
-                    <a class="nav-link" [routerLink]="['/conferencistas']">
-                        <span class="textMenu">{{ 'menu.conferencistas' | translate }}</span>
-                    </a>
-                    <span class="textMenu">-</span>
-                    <a class="nav-link" [routerLink]="['/bandas']">
-                        <span class="textMenu">{{ 'menu.bandas' | translate }}</span>
-                    </a>
-                    <span class="textMenu">-</span>
-                    <a class="nav-link" [routerLink]="['/tribus']">
-                        <span class="textMenu">{{ 'menu.tribus' | translate }}</span>
-                    </a>
-                    <span class="textMenu">-</span>
-                    <a class="nav-link" [routerLink]="['/faq']">
-                        <span class="textMenu">{{ 'menu.faq' | translate }}</span>
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-        <!--style="display: none;"---->
-        <a class="btnRegister" (click)="openLogin();">
-            <div class="btn here">
-                {{ 'home.iniciar-sesion' | translate }}
-            </div>
-        </a>
-
-    </nav>
-
     <div class="banner">
         <img src="https://cdn.somosunogo.com/logo_fecha.png" class="img-left-banner" />
     </div>
-
     <div class="container buttons-section">
-
         <button class="btnVerify" (click)="openModalvalidate();">{{ 'home.confirmar-registro' | translate }}</button>
         <button class="btnLogInHome" (click)="openLogin();">{{ 'home.iniciar-sesion' | translate }}</button>
         <button class="btnRegisterBanner" (click)="openCloseModal();">{{ 'home.registrate' | translate }}</button>
-
     </div>
 
     <div class="container-introducing">

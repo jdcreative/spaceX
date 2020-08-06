@@ -49,6 +49,15 @@ a.item-lang {
 .container-profile {
     display: flex;
 }
+a.item-lang{
+    color: white;
+}
+.nav-pills .nav-link {
+    color: white;
+}
+.navbar-brand {
+    color: white;
+}
 
 .container-tabs {
     width: 30%;
@@ -92,7 +101,7 @@ a.item-lang {
 
 .container-content-profile {
     height: auto;
-    padding: 50px;
+    padding: 15px;
 }
 
 .title-nav-profile {
@@ -190,7 +199,7 @@ a.item-lang {
 
 .vimeo {
     /* border: 1px solid red;  */
-    width: 70%;
+    width: 80%;
     min-height: 500px;
 }
 
