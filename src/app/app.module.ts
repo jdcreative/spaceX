@@ -34,6 +34,10 @@ import { MerchComponent } from './components/profile/merch/merch.component';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 import { ChatComponent } from './components/profile/chat/chat.component';
 
+// Infinite Scroll
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 //modals
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
 import { LoginComponent } from './modals/login/login.component';
@@ -44,6 +48,7 @@ import { TribesComponent } from './components/home/tribes/tribes.component';
 import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
 import { MusicComponent } from './components/home/music/music.component';
 import { CodeComponent } from './components/home/code/code.component';
+import { ArraySortPipe } from './service/ordered.pipe';
 
 @NgModule({
   declarations: [
@@ -68,7 +73,8 @@ import { CodeComponent } from './components/home/code/code.component';
     TribesComponent,
     SpecialGuestsComponent,
     MusicComponent,
-    CodeComponent
+    CodeComponent,
+    ArraySortPipe
   ],
   imports: [
     FormsModule,
@@ -85,6 +91,8 @@ import { CodeComponent } from './components/home/code/code.component';
     MatCheckboxModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    InfiniteScrollModule,
+    ScrollToModule.forRoot(),
     NgxEmojiPickerModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

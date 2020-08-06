@@ -11,11 +11,11 @@
         <div class="tab">
 
             <nav class="navbar black justify-content-between">
-               
+
                 <a class="navbar-brand title-nav-profile">{{ tab ? tab : 'Home' }}</a>
                 <div class="form-inline languages-profile">
-                    <a (click)="setLanguage('es')" class="divisor item-lang">ESPAÑOL</a> 
-                    <a (click)="setLanguage('pt')" class="item-lang">PORTUGUÉS</a> 
+                    <a (click)="setLanguage('es')" class="divisor item-lang">ESPAÑOL</a>
+                    <a (click)="setLanguage('pt')" class="item-lang">PORTUGUÉS</a>
                 </div>
             </nav>
 
@@ -29,26 +29,50 @@
                 [ngClass]="{ 'tab-switch-black': tab == 'home' || tab == 'conferencistas' || tab == 'tribus' || tab == 'merch' || tab == 'galeria', 'tab-switch-white' : tab == 'talleres'  }">
 
                 <div *ngIf="tab == 'home'" class="mediaHome">
+
                     <div class="vimeo">
-                        <iframe [src]="live_video" frameborder="0"
-                            allow="autoplay; fullscreen" allowfullscreen
+                        <iframe [src]="live_video" frameborder="0" allow="autoplay; fullscreen" allowfullscreen
                             style="top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
 
-                    <div class="chat">
-                        <app-chat [finalColor]="finalColor"></app-chat>
+                    <div class="container-tabs">
+
+                        <nav class="nav nav-pills nav-fill fix-hover">
+                            <a class="nav-item nav-link" (click)="changeTabTool('notas');"
+                                [ngClass]="{ 'active' : tabTools == 'notas' }">Notas</a>
+                            <a class="nav-item nav-link" (click)="changeTabTool('chat');"
+                                [ngClass]="{ 'active' : tabTools == 'chat' }">Chat</a>
+                        </nav>
+
+                        <div class="chat" *ngIf="tabTools == 'chat'">
+                            <app-chat [finalColor]="finalColor"></app-chat>
+                        </div>
+
+                        <div *ngIf="tabTools == 'notas'">
+                            Notass...
+                        </div>
+
                     </div>
 
                 </div>
+
                 <div class="info-video" *ngIf="tab == 'home'">
-                    
-                    <img src="https://cdn.somosunogo.com/goo.png" class="img-set-profile" />
-                    <div class="info display-f">
-                        <div class="info-title">
-                            {{ conferencistas[1] ? conferencistas[1] : 'N/A' }}
+
+                    <div class="container-content-images">
+
+                        <div class="container-profile-tribus" *ngFor="let tribu of tribus | orderBy">
+
+                            <img style="width: 200px;" class="rounded-circle"
+                                src="https://cdn.somosunogo.com/{{ tribu.name }}.jpeg">
+
+                            <div class="tribu-value">
+                                {{ tribu.value ? tribu.value : '0' }}
+                            </div>
+
                         </div>
-                        {{ conferencistas[0] ? conferencistas[0] : 'N/A' }}
+
                     </div>
+
                 </div>
 
                 <div class="container-prox"
