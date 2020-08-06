@@ -6,6 +6,7 @@ import { DataUserService } from './../../service/data-user.service';
 import { SignUpComponent } from './../../modals/sign-up/sign-up.component';
 import { Router } from '@angular/router';
 import { UtilsService } from 'src/app/service/utils.service';
+import { UsernameValidator } from './nowhitespacevalidator';
 
 @Component({
   selector: 'app-login',
@@ -50,7 +51,7 @@ export class LoginComponent implements OnInit {
   buildlogin() {
 
     this.formLogin = this.fb.group({
-      email: ['', [Validators.required, Validators.minLength(1), Validators.email]],
+      email: ['', [Validators.required, Validators.minLength(1), Validators.email, UsernameValidator.cannotContainSpace]],
       code: ['', [Validators.required, Validators.minLength(6), Validators.pattern("[0-9]+")]]
     });
 
@@ -88,7 +89,7 @@ export class LoginComponent implements OnInit {
           this.dialogRef.close();
           this.router.navigate(["/profile"]);
         }
-        
+
       }, err => {
         console.log("ERROR IN API", err);
         this.showCodeSatus = true;
@@ -138,7 +139,7 @@ export class LoginComponent implements OnInit {
       this.showSendTitle = false;
 
       this.data_user.getCodeSesion(email).subscribe((res) => {
-
+        // console.log(res)
         if (res.estado == false) {
 
           this.showCodeSatus = true;
@@ -148,7 +149,7 @@ export class LoginComponent implements OnInit {
           }, 7000);
 
         } else {
-
+          
           this.noCodeStatus = true;
           this.sendCodeEmail = true;
           this.buttonUserStatus = false;

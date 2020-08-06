@@ -1,10 +1,13 @@
 <div class="modal" tabindex="-1" role="dialog" style="display: contents;">
 
     <div class="container-title-login">
+
         <h2 *ngIf="showLoginTitle">Iniciar Sesión</h2>
-        
         <h2 *ngIf="showSendTitle">Reenviar Código</h2>
-        <p class="description_resend" *ngIf="showSendTitle">Si ha olvidado su codigo o no lo tiene porfavor digite el email con el cual se ha registrado en nuestra plataforma y le enviaremos uno...</p>
+
+        <p class="description_resend" *ngIf="showSendTitle">Si has olvidado tu código o no lo tienes porfavor digita el
+            email con el cual te registraste en nuestra plataforma y te enviaremos uno.</p>
+
     </div>
 
     <div class="modal-dialog-scrollable">
@@ -22,10 +25,16 @@
                 <mat-hint align="left">
 
                     <div class="error-message" *ngIf="submitted && form.email.errors">
-                        <p *ngIf="form.email.errors.email">El email es inválido.</p>
-                        <p *ngIf="form.email.errors.required">El email es requerido.</p>
+                        <p *ngIf="form.email.errors.email">*El email es inválido.</p>
+                        <p *ngIf="form.email.errors.required">*El email es requerido.</p>
                     </div>
 
+                </mat-hint>
+
+                <mat-hint align="right">
+                    <div class="error-message margin-left" *ngIf="form.email.errors">
+                        <p *ngIf="form.email.errors.cannotContainSpace">*El email no puede contener espacios.</p>
+                    </div>
                 </mat-hint>
 
             </mat-form-field>
@@ -35,21 +44,21 @@
                 <mat-label>Código</mat-label>
 
                 <input matInput #input placeholder="Ej. 123456" formControlName="code" maxlength="6"
-                    (keypress)="numberOnly($event)">
+                    (keypress)="numberOnly($event);">
 
                 <mat-icon matSuffix>vpn_key</mat-icon>
 
                 <mat-hint align="left">
 
                     <div class="error-message" *ngIf="submitted && form.code.errors">
-                        <p *ngIf="form.code.errors.pattern">El código es inválido.</p>
-                        <p *ngIf="form.code.errors.required">El código es requerido.</p>
-                        <p *ngIf="form.code.errors.minlength">El código debe tener mínimo 6 caracteres.</p>
+                        <p *ngIf="form.code.errors.pattern">*El código es inválido.</p>
+                        <p *ngIf="form.code.errors.required">*El código es requerido.</p>
+                        <p *ngIf="form.code.errors.minlength">*El código debe tener mínimo 6 caracteres.</p>
                     </div>
 
                 </mat-hint>
 
-                <mat-hint align="end">Max. {{input.value?.length || 0}}/6</mat-hint>
+                <mat-hint align="end">Máx. {{input.value?.length || 0}}/6</mat-hint>
 
             </mat-form-field>
 

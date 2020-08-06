@@ -226,6 +226,9 @@ a.item-lang {
 }
 
 @media screen and (max-width:1258px) {
+    .container-tabs {
+        width: 100%;
+    }
     .mediaHome {
         display: block;
     }
@@ -249,14 +252,6 @@ a.item-lang {
         display: block;
     }
 }
-
-@media only screen and (max-width: 470px) {
-    .container-content-profile {
-        padding: 0;
-        padding-top: 50px;
-    }
-}
-
 @media only screen and (max-width: 533px) {
     .container-profile-tribus {
         display: flex;
@@ -266,8 +261,11 @@ a.item-lang {
     }
     .tribu-value {
         margin-left: 10px;
-    }
-    .container-tabs {
-        width: 100%;
+    }    
+}
+@media only screen and (max-width: 470px) {
+    .container-content-profile {
+        padding: 0;
+        padding-top: 50px;
     }
 }

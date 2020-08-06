@@ -16,6 +16,7 @@ export class ProfileComponent implements OnInit {
   public tribus = [];
   public conferencistas = [];
   public live_video;
+  idioma:any;
 
   tab: string = 'home';
   tabTools: string = 'notas';
@@ -62,6 +63,7 @@ export class ProfileComponent implements OnInit {
   }
 
   setLanguage(lang) {
+    this.idioma=lang;
     this._utils.setLang(lang);
     this.videoLive()
   }

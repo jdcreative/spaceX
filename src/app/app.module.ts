@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SignUpComponent } from './modals/sign-up/sign-up.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 //Languages libraries
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -22,6 +23,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //services
 import { ChatService } from './service/chat.service';
+import { ArraySortPipe } from './service/ordered.pipe';
+import { SafePipe } from './service/safe.pipe';
 
 //components
 import { PreconvencionComponent } from './components/preconvencion/preconvencion.component';
@@ -33,6 +36,7 @@ import { TalleresComponent } from './components/profile/talleres/talleres.compon
 import { MerchComponent } from './components/profile/merch/merch.component';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 import { ChatComponent } from './components/profile/chat/chat.component';
+import { EditorComponent } from './components/profile/editor/editor.component';
 
 // Infinite Scroll
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
@@ -48,7 +52,12 @@ import { TribesComponent } from './components/home/tribes/tribes.component';
 import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
 import { MusicComponent } from './components/home/music/music.component';
 import { CodeComponent } from './components/home/code/code.component';
-import { ArraySortPipe } from './service/ordered.pipe';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -74,7 +83,10 @@ import { ArraySortPipe } from './service/ordered.pipe';
     SpecialGuestsComponent,
     MusicComponent,
     CodeComponent,
-    ArraySortPipe
+    EditorComponent,
+    ArraySortPipe,
+    SafePipe
+
   ],
   imports: [
     FormsModule,
@@ -91,6 +103,7 @@ import { ArraySortPipe } from './service/ordered.pipe';
     MatCheckboxModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    AngularEditorModule,
     InfiniteScrollModule,
     ScrollToModule.forRoot(),
     NgxEmojiPickerModule.forRoot(),
