@@ -31,7 +31,7 @@
           Estudio Biblico
         </a>
 
-        <a class="nav-item nav-link font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller6' }"
+        <a class="nav-item nav-link divisor2 font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller6' }"
           (click)="changeTab('taller6');">
           Finanzas
         </a>
@@ -55,7 +55,7 @@
             <figure class="image is-128x128">
 
               <div class="" *ngIf="tab == 'taller1'">
-                <img class="is-rounded" src="https://cdn.somosunogo.com/taller1_1.png">
+                <img class="is-rounded imagentaller" src="https://cdn.somosunogo.com/taller1_1.png">
               </div>
 
               <div class="" *ngIf="tab == 'taller2'">
@@ -91,7 +91,7 @@
             <div class="title_taller" *ngIf="tab == 'taller5'">APRENDIENDO A CONOCER A DIOS</div>
             <div class="title_taller" *ngIf="tab == 'taller6'">¿CÓMO MANEJAR MI DINERO?</div>
             <!-- Descripcion -->
-            <div *ngIf="tab == 'taller1'">
+            <div class="subtitle" *ngIf="tab == 'taller1'">
               Taller 1
             </div>
             <div *ngIf="tab == 'taller2'">Taller 2</div>
@@ -103,7 +103,7 @@
             <!-- Descripcion -->
             <div class="content-buttons" *ngIf="buttonsStatus">
 
-              <button class="btn btn-secondary" *ngIf="tab == 'taller1'"
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller1'"
                 [ngClass]="{ 'btn-danger' : buttonsStatus[3].status == 'full' }">
 
                 <a class="btn-white" *ngIf="buttonsStatus[3].status == 'enabled'" href="{{ buttonsStatus[3].link }}"
@@ -117,7 +117,7 @@
 
               </button>
 
-              <button class="btn btn-secondary" *ngIf="tab == 'taller2'"
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller2'"
                 [ngClass]="{ 'btn-danger' : buttonsStatus[4].status == 'full' }">
 
                 <a class="btn-white" *ngIf="buttonsStatus[4].status == 'enabled'" href="{{ buttonsStatus[4].link }}"
@@ -131,7 +131,7 @@
 
               </button>
 
-              <button class="btn btn-secondary" *ngIf="tab == 'taller3'"
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller3'"
                 [ngClass]="{ 'btn-danger' : buttonsStatus[5].status == 'full' }">
 
                 <a class="btn-white" *ngIf="buttonsStatus[5].status == 'enabled'" href="{{ buttonsStatus[5].link }}"
@@ -145,7 +145,7 @@
 
               </button>
 
-              <button class="btn btn-secondary" *ngIf="tab == 'taller4'"
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller4'"
                 [ngClass]="{ 'btn-danger' : buttonsStatus[0].status == 'full' }">
 
                 <a class="btn-white" *ngIf="buttonsStatus[0].status == 'enabled'" href="{{ buttonsStatus[0].link }}"
@@ -159,7 +159,7 @@
 
               </button>
 
-              <button class="btn btn-secondary" *ngIf="tab == 'taller5'"
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller5'"
                 [ngClass]="{ 'btn-danger' : buttonsStatus[1].status == 'full' }">
 
                 <a class="btn-white" *ngIf="buttonsStatus[1].status == 'enabled'" href="{{ buttonsStatus[1].link }}"
@@ -173,7 +173,7 @@
 
               </button>
 
-              <button class="btn btn-secondary" *ngIf="tab == 'taller6'"
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller6'"
                 [ngClass]="{ 'btn-danger' : buttonsStatus[2].status == 'full' }">
 
                 <a class="btn-white" *ngIf="buttonsStatus[2].status == 'enabled'" href="{{ buttonsStatus[2].link }}"
@@ -197,7 +197,8 @@
 
     </div>
 
-    <div class="title-talleres">Video Live</div>
+    <div class="title-talleres">Video Live </div>
+    <!-- <p>{{ubicado}}</p> -->
 
     <div class="container-video-t">
 
@@ -206,7 +207,7 @@
         <div style="padding:56.25% 0 0 0;position:relative;"><iframe [src]="link | safe" frameborder="0"
             allow="autoplay" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
         </div>
-
+        
       </div>
 
     </div>

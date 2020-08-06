@@ -262,6 +262,9 @@ a.item-lang{
     .vimeo {
         height: 350px;
     }
+    .container-prox{
+        padding: 13px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
