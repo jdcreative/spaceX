@@ -8,8 +8,9 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 export class RealtimeDatabaseService {
 
   tribus: AngularFireList<any>;
-  conferencista: AngularFireList<any>;
+  buttons: AngularFireList<any>;
   taller: AngularFireList<any>;
+  livelang: AngularFireList<any>;
 
   constructor(
     private firebase: AngularFireDatabase
@@ -19,20 +20,16 @@ export class RealtimeDatabaseService {
     return this.tribus = this.firebase.list("tribus");
   }
 
-  getActualConferencista() {
-    return this.conferencista = this.firebase.list("conferencistas");
+  getButtons() {
+    return this.buttons = this.firebase.list("buttons");
   }
-  getLinkTalleres(){
+
+  getLinkTalleres() {
     return this.taller = this.firebase.list("Talleres");
   }
-  newTallers(taller:any){
-    console.log('lo que llega al servicio: ', taller);
-    const talleresNuevos = this.firebase.list("Talleres");
-    return talleresNuevos.push({
-      nombre:taller.nombre,
-      idioma:taller.idioma,
-      tipo:taller.tipo,
-      link:taller.link
-    })
+
+  getLiveLang() {
+    return this.livelang = this.firebase.list("live_home");
   }
+
 }

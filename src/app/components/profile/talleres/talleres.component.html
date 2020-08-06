@@ -1,65 +1,89 @@
 <div class="container-talleres">
+
   <div class="container-tab">
+
     <div class="container-nav">
+
       <nav class="nav nav-justified">
+
         <a class="nav-item nav-link divisor font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller1' }"
           (click)="changeTab('taller1');">
           Liderazgo
         </a>
+
         <a class="nav-item nav-link divisor font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller2' }"
           (click)="changeTab('taller2');">
           Parejas Jovenes
         </a>
+
         <a class="nav-item nav-link divisor font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller3' }"
           (click)="changeTab('taller3');">
           Relaciones
         </a>
+
         <a class="nav-item nav-link divisor font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller4' }"
           (click)="changeTab('taller4');">
           Bases Firmes
         </a>
+
         <a class="nav-item nav-link divisor font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller5' }"
           (click)="changeTab('taller5');">
           Estudio Biblico
         </a>
-        <a class="nav-item nav-link font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller6' }"
+
+        <a class="nav-item nav-link divisor2 font-family-poppins" [ngClass]="{ 'activated' : tab == 'taller6' }"
           (click)="changeTab('taller6');">
           Finanzas
         </a>
+
       </nav>
+
     </div>
+
   </div>
 
   <div class="content-talleres">
+
     <div class="container-salas">
+
       <div class="box-talleres">
+
         <div class="display-content">
+
           <div class="container-image">
+
             <figure class="image is-128x128">
-            <div class="" *ngIf="tab == 'taller1'">
-                <img class="is-rounded" src="https://cdn.somosunogo.com/taller1_1.png">
-            </div>
+
+              <div class="" *ngIf="tab == 'taller1'">
+                <img class="is-rounded imagentaller" src="https://cdn.somosunogo.com/taller1_1.png">
+              </div>
+
               <div class="" *ngIf="tab == 'taller2'">
                 <img class="is-rounded" src="https://cdn.somosunogo.com/taller2.png">
               </div>
+
               <div class="" *ngIf="tab == 'taller3'">
                 <img class="is-rounded" src="https://cdn.somosunogo.com/taller3.png">
-            </div>
-            <div class="" *ngIf="tab == 'taller4'">
-                <img class="is-rounded" src="https://cdn.somosunogo.com/taller4.png">
-            </div>
-            <div class="" *ngIf="tab == 'taller5'">
-                <img class="is-rounded" src="https://cdn.somosunogo.com/taller5.png">
-            </div>
-            <div class="" *ngIf="tab == 'taller6'">
-                <img class="is-rounded" src="https://cdn.somosunogo.com/taller6.png">
-            </div>
+              </div>
 
-              
+              <div class="" *ngIf="tab == 'taller4'">
+                <img class="is-rounded" src="https://cdn.somosunogo.com/taller4.png">
+              </div>
+
+              <div class="" *ngIf="tab == 'taller5'">
+                <img class="is-rounded" src="https://cdn.somosunogo.com/taller5.png">
+              </div>
+
+              <div class="" *ngIf="tab == 'taller6'">
+                <img class="is-rounded" src="https://cdn.somosunogo.com/taller6.png">
+              </div>
+
             </figure>
+
           </div>
+
           <div class="sala-content">
-            <!-- Titulo Taller -->  
+            <!-- Titulo Taller -->
             <div class="title_taller" *ngIf="tab == 'taller1'">LIDERÁNDOTE PARA LIDERAR A OTROS</div>
             <div class="title_taller" *ngIf="tab == 'taller2'">1.5 HIJOS Y 1 PERRO</div>
             <div class="title_taller" *ngIf="tab == 'taller3'">¿CÓMO SER FELIZ SOLTERO?</div>
@@ -67,7 +91,7 @@
             <div class="title_taller" *ngIf="tab == 'taller5'">APRENDIENDO A CONOCER A DIOS</div>
             <div class="title_taller" *ngIf="tab == 'taller6'">¿CÓMO MANEJAR MI DINERO?</div>
             <!-- Descripcion -->
-            <div *ngIf="tab == 'taller1'">
+            <div class="subtitle" *ngIf="tab == 'taller1'">
               Taller 1
             </div>
             <div *ngIf="tab == 'taller2'">Taller 2</div>
@@ -75,24 +99,119 @@
             <div *ngIf="tab == 'taller4'">Taller 4</div>
             <div *ngIf="tab == 'taller5'">Taller 5</div>
             <div *ngIf="tab == 'taller6'">Taller 6</div>
-            <!-- Descripcion -->
-            <div class="btn_section" *ngIf="tab == 'taller1'"><a href="#" class="disable-btn">Conectarse a Zoom</a></div>
-            <div class="btn_section" *ngIf="tab == 'taller2'"><a class="disable-btn">Conectarse a Zoom</a></div>
-            <div class="btn_section" *ngIf="tab == 'taller3'"><a class="disable-btn">Conectarse a Zoom</a></div>
-            <div class="btn_section" *ngIf="tab == 'taller4'"><a class="disable-btn">Conectarse a Zoom</a></div>
-            <div class="btn_section" *ngIf="tab == 'taller5'"><a class="disable-btn">Conectarse a Zoom</a></div>
-            <div class="btn_section" *ngIf="tab == 'taller6'"><a class="disable-btn">Conectarse a Zoom</a></div>
 
+            <!-- Descripcion -->
+            <div class="content-buttons" *ngIf="buttonsStatus">
+
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller1'"
+                [ngClass]="{ 'btn-danger' : buttonsStatus[3].status == 'full' }">
+
+                <a class="btn-white" *ngIf="buttonsStatus[3].status == 'enabled'" href="{{ buttonsStatus[3].link }}"
+                  target="_blank">Conectarse a Zoom</a>
+
+                <a *ngIf="buttonsStatus[3].status == 'full'" class="btn-danger">Sala Llena</a>
+
+                <a *ngIf="buttonsStatus[3].status == 'disabled'">
+                  Deshabilitado
+                </a>
+
+              </button>
+
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller2'"
+                [ngClass]="{ 'btn-danger' : buttonsStatus[4].status == 'full' }">
+
+                <a class="btn-white" *ngIf="buttonsStatus[4].status == 'enabled'" href="{{ buttonsStatus[4].link }}"
+                  target="_blank">Conectarse a Zoom</a>
+
+                <a *ngIf="buttonsStatus[4].status == 'full'">Sala Llena</a>
+
+                <a *ngIf="buttonsStatus[4].status == 'disabled'">
+                  Deshabilitado
+                </a>
+
+              </button>
+
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller3'"
+                [ngClass]="{ 'btn-danger' : buttonsStatus[5].status == 'full' }">
+
+                <a class="btn-white" *ngIf="buttonsStatus[5].status == 'enabled'" href="{{ buttonsStatus[5].link }}"
+                  target="_blank">Conectarse a Zoom</a>
+
+                <a *ngIf="buttonsStatus[5].status == 'full'" class="btn-danger">Sala Llena</a>
+
+                <a *ngIf="buttonsStatus[5].status == 'disabled'">
+                  Deshabilitado
+                </a>
+
+              </button>
+
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller4'"
+                [ngClass]="{ 'btn-danger' : buttonsStatus[0].status == 'full' }">
+
+                <a class="btn-white" *ngIf="buttonsStatus[0].status == 'enabled'" href="{{ buttonsStatus[0].link }}"
+                  target="_blank">Conectarse a Zoom</a>
+
+                <a *ngIf="buttonsStatus[0].status == 'full'" class="btn-danger">Sala Llena</a>
+
+                <a *ngIf="buttonsStatus[0].status == 'disabled'">
+                  Deshabilitado
+                </a>
+
+              </button>
+
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller5'"
+                [ngClass]="{ 'btn-danger' : buttonsStatus[1].status == 'full' }">
+
+                <a class="btn-white" *ngIf="buttonsStatus[1].status == 'enabled'" href="{{ buttonsStatus[1].link }}"
+                  target="_blank">Conectarse a Zoom</a>
+
+                <a *ngIf="buttonsStatus[1].status == 'full'" class="btn-danger">Sala Llena</a>
+
+                <a *ngIf="buttonsStatus[1].status == 'disabled'">
+                  Deshabilitado
+                </a>
+
+              </button>
+
+              <button class="btn btn-secondary btnZoom" *ngIf="tab == 'taller6'"
+                [ngClass]="{ 'btn-danger' : buttonsStatus[2].status == 'full' }">
+
+                <a class="btn-white" *ngIf="buttonsStatus[2].status == 'enabled'" href="{{ buttonsStatus[2].link }}"
+                  target="_blank">Conectarse a Zoom</a>
+
+                <a *ngIf="buttonsStatus[2].status == 'full'" class="btn-danger">Sala Llena</a>
+
+                <a *ngIf="buttonsStatus[2].status == 'disabled'">
+                  Deshabilitado
+                </a>
+
+              </button>
+
+            </div>
 
           </div>
+
         </div>
+
       </div>
+
     </div>
-    <div class="title-talleres">Video Live</div>
+
+    <div class="title-talleres">Video Live </div>
+    <!-- <p>{{ubicado}}</p> -->
+
     <div class="container-video-t">
+
       <div class="box-talleres">
-        <div style="padding:56.25% 0 0 0;position:relative;"><iframe [src]="link | safe" frameborder="0" allow="autoplay" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe [src]="link | safe" frameborder="0"
+            allow="autoplay" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        </div>
+        
       </div>
-    </div>  
+
+    </div>
+
   </div>
+
 </div>

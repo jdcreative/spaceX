@@ -15,9 +15,10 @@ export class ProfileComponent implements OnInit {
 
   public tribus = [];
   public conferencistas = [];
+  public liveArray = [];
   public live_video;
-  idioma:any;
 
+  idioma: any;
   tab: string = 'home';
   tabTools: string = 'notas';
   finalColor: any;
@@ -29,6 +30,7 @@ export class ProfileComponent implements OnInit {
     gorilas: "linear-gradient(180deg, rgba(13, 201, 165, 0) 45.6%, #19B960 106.71%), #C1F092",
     leones: "linear-gradient(180deg, rgba(237, 44, 44, 0) 13.22%, #F95252 94.29%), #FFF09B"
   }];
+  loadingVideo: boolean = false;
 
   constructor(
     private _database: RealtimeDatabaseService,
@@ -38,18 +40,46 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
     let data = JSON.parse(localStorage.getItem("user"));
     this.userProfile = data["user"];
     this.validationColors();
     this.getTribus();
-    this.videoLive();
+    this.getLiveLanguage();
+    
+  }
+
+  getLiveLanguage() {
+    this.loadingVideo = true;
+    this._database.getLiveLang().snapshotChanges().subscribe((res) => {
+      this.liveArray = [];
+      res.forEach((tribus: any) => {
+        let id = tribus.payload.toJSON();
+        this.liveArray.push(id);
+      });
+      this.videoLive();
+    });
   }
 
   videoLive() {
-    this._translate.setDefaultLang(localStorage.getItem('lang'));
-    this._translate.get("profile.live").subscribe((res) => {
-      this.live_video = this.sanitizer.bypassSecurityTrustResourceUrl(res);
-    });
+
+    this.loadingVideo = false;
+    let saveVideo;
+    let lang = localStorage.getItem("lang");
+
+    if (lang == "en") {
+      saveVideo = this.liveArray[0].link;
+    } else if (lang == "fr") {
+      saveVideo = this.liveArray[1].link;
+    } else if (lang == "pt") {
+      saveVideo = this.liveArray[2].link;
+    } else if (lang == "ru") {
+      saveVideo = this.liveArray[3].link;
+    } else if (lang == "es") {
+      saveVideo = this.liveArray[4].link;
+    }
+    this.live_video = this.sanitizer.bypassSecurityTrustResourceUrl(saveVideo);
+
   }
 
   getTribus() {
@@ -63,7 +93,7 @@ export class ProfileComponent implements OnInit {
   }
 
   setLanguage(lang) {
-    this.idioma=lang;
+    this.idioma = lang;
     this._utils.setLang(lang);
     this.videoLive()
   }

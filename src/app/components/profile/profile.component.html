@@ -12,11 +12,18 @@
 
             <nav class="navbar black justify-content-between">
 
-                <a class="navbar-brand title-nav-profile">{{ tab ? tab : 'Home' }}</a>
+                <div>
+                    <a class="navbar-brand title-nav-profile">{{ tab ? tab : 'Home' }}</a>
+                </div>
+
                 <div class="form-inline languages-profile">
                     <a (click)="setLanguage('es')" class="divisor item-lang">ESPAÑOL</a>
-                    <a (click)="setLanguage('pt')" class="item-lang">PORTUGUÉS</a>
+                    <a (click)="setLanguage('pt')" class="divisor item-lang">PORTUGUÉS</a>
+                    <a (click)="setLanguage('en')" class="divisor item-lang">ENGLISH</a>
+                    <a (click)="setLanguage('fr')" class="divisor item-lang">FRANÇAIS</a>
+                    <a (click)="setLanguage('ru')" class="item-lang">РУССКИЙ</a>
                 </div>
+
             </nav>
 
         </div>
@@ -31,8 +38,18 @@
                 <div *ngIf="tab == 'home'" class="mediaHome">
 
                     <div class="vimeo">
-                        <iframe [src]="live_video" frameborder="0" allow="autoplay; fullscreen" allowfullscreen
-                            style="top:0;left:0;width:100%;height:100%;"></iframe>
+
+                        <div class="container-display-flex" *ngIf="loadingVideo">
+                            <div class="lds-ring">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <iframe *ngIf="!loadingVideo" [src]="live_video" frameborder="0" allow="autoplay; fullscreen"
+                            allowfullscreen style="top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
 
                     <div class="container-tabs">
@@ -72,7 +89,7 @@
                         </div>
 
                     </div>
-                </div>                
+                </div>
 
                 <div class="container-prox"
                     *ngIf="tab != 'home' && tab != 'conferencistas' && tab != 'tribus' && tab != 'talleres'">
@@ -98,9 +115,9 @@
 
                 <!-- 
                 <app-merch *ngIf="tab =='merch'"></app-merch> -->
-                
+
             </div>
-            
+
         </div>
 
     </div>
