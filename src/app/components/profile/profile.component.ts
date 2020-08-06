@@ -40,11 +40,13 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
     let data = JSON.parse(localStorage.getItem("user"));
     this.userProfile = data["user"];
     this.validationColors();
     this.getTribus();
     this.getLiveLanguage();
+    
   }
 
   getLiveLanguage() {
@@ -76,7 +78,6 @@ export class ProfileComponent implements OnInit {
     } else if (lang == "es") {
       saveVideo = this.liveArray[4].link;
     }
-
     this.live_video = this.sanitizer.bypassSecurityTrustResourceUrl(saveVideo);
 
   }
