@@ -7,10 +7,12 @@
     width: 104px;
     margin-left: 2vw;
 }
+
 a.item-lang {
     padding: 0px 15px;
     cursor: pointer;
 }
+
 .menuNavbar {
     display: flex;
     position: absolute;
@@ -49,6 +51,10 @@ a.item-lang {
     display: flex;
 }
 
+.container-tabs {
+    width: 40%;
+}
+
 .background-black {
     background: #1D1D1D;
 }
@@ -56,19 +62,22 @@ a.item-lang {
 .background-white {
     background: #E9E9E9;
 }
+
 .info.display-f {
     float: left;
     width: 85%;
 }
-.img-set-profile{
+
+.img-set-profile {
     width: 10%;
     float: left;
 }
+
 .content-profile {
     width: 100%;
 }
 
-.divisor{
+.divisor {
     border-right: 1px solid #C4C4C4;
 }
 
@@ -88,7 +97,7 @@ a.item-lang {
 }
 
 .title-nav-profile {
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
@@ -97,7 +106,7 @@ a.item-lang {
 }
 
 .languages-profiles {
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -187,10 +196,39 @@ a.item-lang {
 }
 
 .chat {
-    width: 40%;
+    width: 100%;
 }
 
-@media screen and (max-width:1000px) {
+.fix-hover:hover {
+    cursor: pointer !important;
+}
+
+.active {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* CONTENT IMAGES HOME */
+
+.container-content-images {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tribu-value {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+@media screen and (max-width:1258px) {
+    .container-tabs {
+        width: 100%;
+    }
     .mediaHome {
         display: block;
     }
@@ -209,12 +247,22 @@ a.item-lang {
     }
 }
 
-@media only screen and (max-width: 739px) {
+@media only screen and (max-width: 800px) {
     .container-profile {
         display: block;
     }
 }
-
+@media only screen and (max-width: 533px) {
+    .container-profile-tribus {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .tribu-value {
+        margin-left: 10px;
+    }    
+}
 @media only screen and (max-width: 470px) {
     .container-content-profile {
         padding: 0;

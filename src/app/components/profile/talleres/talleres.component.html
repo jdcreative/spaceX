@@ -76,9 +76,7 @@
             <div *ngIf="tab == 'taller5'">Taller 5</div>
             <div *ngIf="tab == 'taller6'">Taller 6</div>
             <!-- Descripcion -->
-            <div class="btn_section" *ngIf="tab == 'taller1'">
-              <a href="#" class="disable-btn">Conectarse a Zoom</a>
-            </div>
+            <div class="btn_section" *ngIf="tab == 'taller1'"><a href="#" class="disable-btn">Conectarse a Zoom</a></div>
             <div class="btn_section" *ngIf="tab == 'taller2'"><a class="disable-btn">Conectarse a Zoom</a></div>
             <div class="btn_section" *ngIf="tab == 'taller3'"><a class="disable-btn">Conectarse a Zoom</a></div>
             <div class="btn_section" *ngIf="tab == 'taller4'"><a class="disable-btn">Conectarse a Zoom</a></div>
@@ -93,8 +91,8 @@
     <div class="title-talleres">Video Live</div>
     <div class="container-video-t">
       <div class="box-talleres">
-        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/443585830" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe [src]="link | safe" frameborder="0" allow="autoplay" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
       </div>
-    </div>
+    </div>  
   </div>
 </div>

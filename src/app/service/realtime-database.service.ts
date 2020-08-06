@@ -9,6 +9,7 @@ export class RealtimeDatabaseService {
 
   tribus: AngularFireList<any>;
   conferencista: AngularFireList<any>;
+  taller: AngularFireList<any>;
 
   constructor(
     private firebase: AngularFireDatabase
@@ -21,5 +22,7 @@ export class RealtimeDatabaseService {
   getActualConferencista() {
     return this.conferencista = this.firebase.list("conferencistas");
   }
-
+  getLinkTalleres(){
+    return this.taller = this.firebase.list("Talleres");
+  }
 }

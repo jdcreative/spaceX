@@ -1,3 +1,4 @@
 ::ng-deep angular-editor .angular-editor .angular-editor-wrapper .angular-editor-textarea{
-    max-height: 10rem;
+    max-height: 480px !important;
+    min-height: 480px !important;
 }

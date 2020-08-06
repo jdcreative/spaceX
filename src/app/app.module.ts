@@ -23,6 +23,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 //services
 import { ChatService } from './service/chat.service';
+import { ArraySortPipe } from './service/ordered.pipe';
+import { SafePipe } from './service/safe.pipe';
 
 //components
 import { PreconvencionComponent } from './components/preconvencion/preconvencion.component';
@@ -34,6 +36,11 @@ import { TalleresComponent } from './components/profile/talleres/talleres.compon
 import { MerchComponent } from './components/profile/merch/merch.component';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 import { ChatComponent } from './components/profile/chat/chat.component';
+import { EditorComponent } from './components/profile/editor/editor.component';
+
+// Infinite Scroll
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 //modals
 import { ValidateUserComponent } from './modals/validate-user/validate-user.component';
@@ -45,7 +52,12 @@ import { TribesComponent } from './components/home/tribes/tribes.component';
 import { SpecialGuestsComponent } from './components/home/special-guests/special-guests.component';
 import { MusicComponent } from './components/home/music/music.component';
 import { CodeComponent } from './components/home/code/code.component';
-import { EditorComponent } from './components/profile/editor/editor.component';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -71,7 +83,10 @@ import { EditorComponent } from './components/profile/editor/editor.component';
     SpecialGuestsComponent,
     MusicComponent,
     CodeComponent,
-    EditorComponent
+    EditorComponent,
+    ArraySortPipe,
+    SafePipe
+
   ],
   imports: [
     FormsModule,
@@ -89,6 +104,8 @@ import { EditorComponent } from './components/profile/editor/editor.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AngularEditorModule,
+    InfiniteScrollModule,
+    ScrollToModule.forRoot(),
     NgxEmojiPickerModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,

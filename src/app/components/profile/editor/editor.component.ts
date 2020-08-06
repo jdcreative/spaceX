@@ -23,16 +23,27 @@ export class EditorComponent implements OnInit {
     defaultFontName: 'Arial',
     defaultFontSize: '3',
     toolbarHiddenButtons: [
-      ['fontSize'],
-      ['insertImage'],
-      ['insertVideo'],
-      ['fontName'],
-      ['subscript'],
-      ['strikeThrough'],
-      ['superscript'],
-      ['customClasses'],
-      ['heading']
-    ]    
+      [
+        'undo',
+        'redo',    
+        'subscript',
+        'superscript',    
+        'fontName'
+      ],
+      [
+        'fontSize',
+        'textColor',
+        'backgroundColor',
+        'customClasses',
+        'link',
+        'unlink',
+        'insertImage',
+        'insertVideo',
+        'insertHorizontalRule',
+        'removeFormat',
+        'toggleEditorMode'
+      ]
+    ],   
   };
   formEditor:FormGroup;  
   nota= localStorage.getItem('notas')
