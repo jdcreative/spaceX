@@ -64,10 +64,19 @@ export class ChatComponent implements OnInit {
         chat['$key'] = data.key;
       });
       this.loader = false;
-      this.triggerScrollTo();
     });
 
+    this.triggerScrollTo();
+
+
   }
+
+  // remove() {
+  //   for (let i = 0; i < this.chats.length; i++) {
+  //     this.chatservice.deleteMessage(this.chats[i]);
+
+  //   }
+  // }
 
   triggerScrollTo() {
 
@@ -76,7 +85,7 @@ export class ChatComponent implements OnInit {
         target: 'destination'
       };
       this.scrollToService.scrollTo(config);
-    }, 1000);
+    }, 3000);
 
   }
 
@@ -85,7 +94,7 @@ export class ChatComponent implements OnInit {
     e.preventDefault();
     this.localCount++;
 
-    if (this.localCount == 3) {
+    if (this.localCount == 2) {
 
       this.await = true;
       this.blockButton = true;
@@ -94,7 +103,7 @@ export class ChatComponent implements OnInit {
         this.await = false;
         this.blockButton = false;
         this.localCount = 0;
-      }, 4000);
+      }, 15000);
 
     } else {
 
