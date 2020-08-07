@@ -30,7 +30,7 @@
         <div class="container-content-profile">
 
             <div
-                [ngClass]="{ 'tab-switch-black': tab == 'home' || tab == 'conferencistas' || tab == 'tribus' || tab == 'merch' || tab == 'galeria', 'tab-switch-white' : tab == 'talleres'  }">
+                [ngClass]="{ 'tab-switch-black': tab == 'home' || tab == 'bloques' || tab == 'tribus' || tab == 'merch' || tab == 'galeria', 'tab-switch-white' : tab == 'talleres'  }">
 
                 <div *ngIf="tab == 'home'" class="mediaHome">
 
@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="container-prox"
-                    *ngIf="tab != 'home' && tab != 'conferencistas' && tab != 'tribus' && tab != 'talleres'">
+                    *ngIf="tab != 'home' && tab != 'bloques' && tab != 'tribus' && tab != 'talleres' && tab != 'merch'" >
 
                     <div class="container-soon">
                         <img src="https://cdn.somosunogo.com/soonmerch.jpg"
@@ -98,12 +98,16 @@
 
                 </div>
 
-                <div class="container-prox" *ngIf=" tab == 'conferencistas'">
-                    <app-conferencistas></app-conferencistas>
+                <div class="container-prox" *ngIf=" tab == 'bloques'">
+                    <app-conferencistas [idioma]='idioma'></app-conferencistas>
                 </div>
 
                 <div class="container-prox" *ngIf=" tab == 'tribus'">
                     <app-tribus></app-tribus>
+                </div>
+
+                <div class="container-prox" *ngIf=" tab == 'merch'">
+                    <app-merch></app-merch>
                 </div>
 
                 <div class="container-prox" *ngIf=" tab == 'talleres'">

@@ -1,6 +1,42 @@
 {
     "language": "English",
+    "bloque_01": {
+        "es": "https://player.vimeo.com/video/445039823",
+        "en": "https://player.vimeo.com/video/445040693",
+        "fr": "https://player.vimeo.com/video/445042896",
+        "pt": "https://player.vimeo.com/video/445041433",
+        "ru": "https://player.vimeo.com/video/445043225"
+    },
+    "bloque_02": {
+        "es": "https://player.vimeo.com/video/445044840",
+        "en": "https://player.vimeo.com/video/445045038",
+        "fr": "https://player.vimeo.com/video/445047465",
+        "pt": "https://player.vimeo.com/video/445045703",
+        "ru": "https://player.vimeo.com/video/445436467"
+    },
+    "bloque_03": {
+        "es": "https://player.vimeo.com/video/445053439",
+        "en": "https://player.vimeo.com/video/445056061",
+        "fr": "https://player.vimeo.com/video/445056853",
+        "pt": "https://player.vimeo.com/video/445056546",
+        "ru": "https://player.vimeo.com/video/445057076"
+    },
+    "bloque_04": {
+        "es": "https://player.vimeo.com/video/445058473",
+        "en": "https://player.vimeo.com/video/445058644",
+        "fr": "https://player.vimeo.com/video/445059788",
+        "pt": "https://player.vimeo.com/video/445058843",
+        "ru": "https://player.vimeo.com/video/445060117"
+    },
+    "bloque_05": {
+        "es": "https://player.vimeo.com/video/445415221",
+        "en": "https://player.vimeo.com/video/445065512",
+        "fr": "https://player.vimeo.com/video/445066874",
+        "pt": "https://player.vimeo.com/video/445066401",
+        "ru": "https://player.vimeo.com/video/445067035"
+    },
     "menu": {
+        "inicio": "Home",
         "invitados": "SPECIAL GUESTS",
         "conferencistas": "SPEAKERS",
         "bandas": "MUSIC",
@@ -8,22 +44,61 @@
         "faq": "FAQ"
     },
     "home": {
+        "imagen-home": "https://cdn.somosunogo.com/goo.png",
         "confirmar-registro": "CONFIRM YOUR REGISTRATION",
         "iniciar-sesion": "LOGIN",
         "registrate": "REGISTER HERE",
-        "imagen-home": "https://cdn.somosunogo.com/goo.png",
         "titulo-somosuno": "WE ARE ONE",
-        "versiculo": "”Now an angel of the Lord spoke to Philip, saying, Arise and GO toward the south...” Acts 8:26",
+        "versiculo": "\"Now an angel of the Lord spoke to Philip, saying, Arise and GO toward the south...\" Acts 8:26",
         "descripcion": "God is calling this generation to take action! Many have heard this, but few have paid attention. But a different generation is rising up, one that does not hold back because of circumstances or depend on them either. A generation that is tired of seeing our world beaten by injustice, sadness, and hopelessness. A generation that is ready to be sent out and will not grow weary of saying, ¨send me!¨  God has sent out His word and ¨GO!¨ is our answer, and we know we are not alone. Let's join the millions that cry out ¨Here I am Lord, send me!¨  Starting today we join the GO Generation!",
         "descripcion-nombre": "Pastors of WE ARE ONE",
         "descripcion-somosuno": "We are a global community of Christian youth sharing the most important message to this generation: unity in Christ. The world is divided against itself, but with the help of the Holy Spirit we want thousands to hear the message of Love, hope and purpose found in Jesus.",
-        "versiculo-somosuno": "”I do not pray for these alone, but also for those who will believe in Me through their word;  that they all may be one, as You, Father, are in Me, and I in You; that they also may be one in Us, that the world may believe that You sent Me.” John 17:-20-22"
+        "versiculo-somosuno": "”I do not pray for these alone, but also for those who will believe in Me through their word;  that they all may be one, as You, Father, are in Me, and I in You; that they also may be one in Us, that the world may believe that You sent Me.” John 17:-20-22",
+        "que_habra": "WHAT WILL BE AT THE CONVENTION?"
+    },
+    "guests": {
+        "titulo": "SPECIAL GUESTS",
+        "descripcion1": "Francis Chan is a pastor, author and teacher of the Word in the US, though he was actually born in Hong-Kong. After being raised by his Buddhist grandmother in Hong Kong, Francis moved to America at the age of five. His mother died at his birth, his stepmother died in a car accident when he was nine, and his father died of cancer when he was twelve years old. Francis came to know the Lord in high school in 1884. Pastor Chan is a highly sought-after speaker at many Christian colleges and youth conferences nationally and internationally. He is also currently active with Children’s Hunger Fund, African Renewal Ministries and World Impact, and has written books that include “The Forgotten God”, “Letters to the Church'' and others best-sellers.",
+        "frase1": "\"TENER FE A VECES SIGNIFICA HACER LO QUE LOS DEMÁS CONSIDERAN LOCO.\"",
+        "descripcion2": "Have you watched The Chosen? Well, Dallas Jenkins was its producer, director, and co-writer. This film producer, writer and television director has impacted the entire world with one of the best series that epically narrates the story of our Savior. His first independent production was released when he was 25 and distributed by Warner Brothers, and nothing has stopped him since! He grew up in a home where they loved to tell stories, and he was professionally educated to tell the world through movies about the greatest story of all: The love of a God who gave it all to rescue our hearts.",
+        "frase2": "\"Hemos sido llamados para llevar el mensaje de Jesús a esta generación a través de los medios de comunicación. No existen los límites\".",
+        "descripcion3":"Heidi Baker's story seems like a continuation of the book of Acts. It is full of divine encounters, visions and miracles since she heard about Jesus at the age of 16 and fell madly in love with Him. She has seen the dead resurrect, the deaf hear and the blind see. She’s helped children who prostituted themselves for bread to become doctors, engineers, and preachers. Entire towns who had never heard the gospel have given themselves to God in one of the poorest and most threatened countries in the world: Mozambique. Along with her husband, they founded Iris Global, which has 34 missionary bases in 30 countries. They have planted more than 10,000 churches, are building a university, and working to rescue a million little orphans and see revival in Africa. They had a before and after in Christ, and they want all of humanity to have it, too.",
+        "frase3": "\"El método de Dios para cambiar tu nación eres tú. Tú eres la sal. Tú eres la luz. Tú eres la persona que Él quiere usar.\"",
+        "descripcion4": "Dominic Russo is a speaker, humanitarian, and innovator in international missions. At the young age of 20, Dominic founded Missions.Me and began organizing strategic outreach campaigns in cities across Latin America.  Since 2011 and during his four main evangelistic campaigns in Latin America, over 3.6 million people have been reached personally through the various outreach initiatives. Dominic inspires hearts to dream bigger and leaders to unite for exponential impact. In 2010, Dominic’s wife Lindsay founded Angel House – an organization that has provided 202 Angel Houses, homes to over 5,000 children in India and a freedom campus that shelters and rehabilitates nearly 100 victims of human trafficking annually in Nepal. Together, they reside in Southern California with their three children, Mason, Jude, and Liviana.",
+        "frase4": "“Deus te chamou para deixar uma pegada nesta geração através da mensagem de Jesus”",
+        "descripcion5": "Professor in Oxford University, mathematician, Christian philosopher of British science, protagonist of memorable debates about God’s existence with important intellectuals like Richas Dawkins and Christopher Hitchens. He is the Director of the Trinity Forum Institute and author of a well known series of publications such as, “God’s Undertaker: Has Science Buried God?”, “The Beginning According to Genesis and Science”, “We Can Trust in the Gospels”, among others, where he exposes the relationship between God and science.",
+        "frase5": "\"The more I understand science, the more I believe in God because of the wonder of the width, satisfaction and integrity of His creation.\""
+    },
+    "speakers": {
+        "titulo": "SPEAKERS",
+        "titulo1": "Cesar and Emma Claudia Castellanos",
+        "descripcion1": "Global pastors of MCI and founders of the G12 movement.",
+        "titulo2": "Lau and Sara Guerra",
+        "descripcion2": "They have two beautiful children, Isaac and Anabela and one on the way! They lead We Are One and are very passionate about following Jesus.",
+        "titulo3": "REBECA HOWARD",
+        "descripcion3": "Brazilian, married to Josh Howard, mom to Israel, and pastor in MCI Durango. She loves to study and teach the Word of God. Fun fact: She always said she had been called to Brazil, until God called her to Mexico. Never say never!",
+        "titulo4": "GLORIA SALAMANCA",
+        "descripcion4": "Along with her husband Saul, they pastor an MCI church in Mexico City. Mom to three children who love and serve God together as a family. We love her because her message is always straight to the heart. Fun fact: She studied to be a systems engineer.",
+        "titulo5": "FELIPE SALAMANCA",
+        "descripcion5": "Married to Vicky, youth pastor in MCI Mexico, and studied theology. He loves a good cup of coffee and a good book. He is the creator of the podcast “Una Fe Relevante” (A Relevant Faith). Fun fact: He had to pray a lot for Vicky! They have a movie-like story.",
+        "titulo6": "Julian and Lorena Gamba",
+        "descripcion6": "Papas de Ariana, Melody y Ezequiel. Hoy son directores de Generación 12 Music y pastores en MCI Bogotá y G12 Church Miami. Tienen un corazón para la iglesia y a las misiones. Julián tiene un podcast llamado “La Academia” acerca de la capacidad de liderazgo de cada uno. Dato curioso: Por años Juli perseveró en conquistar a Lore, aunque ella lo negaba, ¡siempre le gustó!",
+        "titulo7": "ERIKA BERRIOS",
+        "descripcion7": "Parents to Ariana, Melody and Ezekiel. They are the directors of Generación 12 Music and pastors in MCI Bogota and G12 Church Miami. They have a heart for the church and for missions. Julian has a podcast called “La Academia” (The Academy), where he talks about the leadership potential every single one of us has. Fun fact: Julian pursued Lorena for years, and although she denied it for a long time, she always liked him!",
+        "titulo8": "Richard and Manuela Harding ",
+        "descripcion8": "Parents to Noah, Nathan, Chloe, and Joy, founders of HeroKids, HeroMoms, and Bow in the Clouds (homeschool curriculum). They are also pastors in MCI Bogota and G12 Church Miami. Fun fact: They want to have six kids!",
+        "titulo9": "DAVID EGHELSHI",
+        "descripcion9": "Married to Dinorah, and dad to four children who love and serve God. He pastors Medes Church, and has an incredible testimony of how God brought him out of extreme poverty into a life in the fullness of Christ. Fun fact: He is a big fan of pupusas (a typical dish from El Salvador). He could have them for breakfast, lunch and dinner!",
+        "titulo10": "Eliemerson and Johanna Proença",
+        "descripcion10": "Parents to Shailoh, Rachel, and Emma, they truly are an exemplary family. They are pastors in MCI Bogota and G12 Church Miami. God has used them to guide youth in their feelings and to give direction to families. Fun Fact: Pastor Eli grew his hair out down to his waist, and Pastor Johanna had a boyfriend who was a fan of rock metal."
     },
     "sidebar": {
         "home": "Home",
         "talleres": "Workshops",
         "merch": "Merch",
         "galeria": "Galery",
+        "bloques": "Sessions",
+        "conferencistas": "Bloques",
         "donaciones": "Donations",
         "tribu": "TRIBE",
         "puntos": "POINTS",

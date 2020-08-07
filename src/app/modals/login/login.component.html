@@ -72,31 +72,25 @@
                 <div class="alert alert-primary" role="alert" *ngIf="sendCodeEmail">
                     Hemos enviado el código único de ingreso a tu correo.
                 </div>
-
             </div>
 
             <div class="contentBtn">
-
                 <button class="buttonEnter" (click)="login();" [disabled]="statusLoading" *ngIf="!buttonUserStatus">
                     <span [ngClass]="{ 'spinner-border spinner-border-sm' : statusLoading }" role="status"
                         aria-hidden="true"></span>
                     Entrar
                 </button>
-
                 <button class="buttonCancel" (click)="cancelNoCode();" *ngIf="buttonCancelStatus">
                     Cancelar
                 </button>
-
                 <button class="buttonEnter" (click)="sendUserNoCode();" *ngIf="buttonUserStatus">
                     <span [ngClass]="{ 'spinner-border spinner-border-sm' : statusLoadingSend }" role="status"
                         aria-hidden="true"></span>
                     Enviar
                 </button>
-
             </div>
-
             <div class="idonthave-code" *ngIf="!buttonUserStatus">
-                <p  class="description" *ngIf="showLoginTitle">Si esta registrado y no recuerdas tu codigo, haz click en el siguiente enlace y recibiras un codigo unico a tu email registrado.</p>
+                <p  class="description" *ngIf="showLoginTitle">Si esta registrado y no recuerdas tu codigo, haz click <b><a [routerLink]="['/codigo']" (click)="closeModal()">aqui</a></b>.</p>
                 <a class="a-code" (click)="userNoCode();" style="margin-bottom: 5px;">Enviar codigo al Email</a>
                 <a class="a-code" [routerLink]="['/codigo']" (click)="closeModal()">Buscar mi Codigo</a>
             </div>

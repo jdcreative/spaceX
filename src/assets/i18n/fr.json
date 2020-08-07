@@ -1,6 +1,53 @@
 {
     "language": "Portugues",
+    "bloque_01": {
+        "es": "https://player.vimeo.com/video/445039823",
+        "en": "https://player.vimeo.com/video/445040693",
+        "fr": "https://player.vimeo.com/video/445042896",
+        "pt": "https://player.vimeo.com/video/445041433",
+        "ru": "https://player.vimeo.com/video/445043225"
+    },
+    "bloque_02": {
+        "es": "https://player.vimeo.com/video/445044840",
+        "en": "https://player.vimeo.com/video/445045038",
+        "fr": "https://player.vimeo.com/video/445047465",
+        "pt": "https://player.vimeo.com/video/445045703",
+        "ru": "https://player.vimeo.com/video/445436467"
+    },
+    "bloque_03": {
+        "es": "https://player.vimeo.com/video/445053439",
+        "en": "https://player.vimeo.com/video/445056061",
+        "fr": "https://player.vimeo.com/video/445056853",
+        "pt": "https://player.vimeo.com/video/445056546",
+        "ru": "https://player.vimeo.com/video/445057076"
+    },
+    "bloque_04": {
+        "es": "https://player.vimeo.com/video/445058473",
+        "en": "https://player.vimeo.com/video/445058644",
+        "fr": "https://player.vimeo.com/video/445059788",
+        "pt": "https://player.vimeo.com/video/445058843",
+        "ru": "https://player.vimeo.com/video/445060117"
+    },
+    "bloque_05": {
+        "es": "https://player.vimeo.com/video/445415221",
+        "en": "https://player.vimeo.com/video/445065512",
+        "fr": "https://player.vimeo.com/video/445066874",
+        "pt": "https://player.vimeo.com/video/445066401",
+        "ru": "https://player.vimeo.com/video/445067035"
+    },
+    "menu": {
+        "inicio": "ACCUEIL",
+        "invitados": "INVITÉS",
+        "conferencistas": "CONFÉRENCIERS",
+        "bandas": "GROUPES",
+        "tribus": "TRIBUS",
+        "faq": "FAQ"
+    },
+    "profile":{
+        "live": "https://player.vimeo.com/video/443564812"
+    },
     "home": {
+        "imagen-home": "https://cdn.somosunogo.com/goo.png",
         "confirmar-registro": "CONFIRME SUA INSCRIÇÃO",
         "iniciar-sesion": "INGRESAR",
         "registrate": "INSCREVA-SE AQUI",
@@ -8,12 +55,89 @@
         "descripcion": "O chamado de Deus a essa geração é “Levante-se e vá”! Há uma missão que  nos espera. Há um chamado à porta. Há vidas esperando a mensagem que eu e você temos. Deus lançou sua palavra “levante-se e vá!”. Agora o resto depende de nós. GO é nossa resposta e cremos que não estamos sós nessa resposta. Vamos nos unir ao clamor de milhares e digamos: “Eis-me aqui, Deus. Envia-me a mim!” A partir de hoje nos unimos à geração GO!",
         "descripcion-nombre": "Pastores do “SOMOS UNO",
         "descripcion-somosuno": "“Somos Um” é o ministério de jovens da Misión Carismática internacional (Missão Carismática Internacional). Cremos que a mensagem mais poderosa que temos é a unidade. “Somos Um” busca unir a nova geração para que, através da unidade com o Espírito Santo, muitos possam escutar a mensagem mais impactante de todas: a mensagem de Jesus.",
-        "versiculo-somosuno": "“Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste” João 17:20-22"
+        "versiculo-somosuno": "“Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste” João 17:20-22",
+        "que_habra": "¿QUÉ HABRÁ EN LA CONVENCIÓN?"
     },
-    "sidebar":{
-        "tribu": "TRIBO",
-        "puntos": "PONTOS",
-        "boton-salir": "SAIR"
+    "guests": {
+        "titulo": "CONVIDADOS ESPECIAIS",
+        "descripcion1": "Francis Chan est pasteur, auteur et maître de la Parole aux Etats-Unis, bien qu’il soit né à Hong-Kong. Après avoir été élevé par sa grand-mère bouddhiste à Hong-Kong, Francis est arrivé aux Etats-Unis à l’âge de cinq ans. Sa mère est morte à sa naissance, sa belle-mère est morte dans un accident de voiture quand il avait neuf ans, et son père est mort d’un cancer quand il avait douze ans. Mais en 1984, Francis a rencontré le Seigneur pendant ses études secondaires et son histoire a complètement changé. Le pasteur Chan est un orateur très sollicité dans beaucoup d’universités chrétiennes et dans des conférences pour les jeunes au niveau national et international. Actuellement il est aussi actif avec Children’s Hunger Fund, African Renewal Ministries et World Impact, et il a écrit des livres comme « Dieu oublié », « Lettres à l’Eglise » et d’autres best-sellers.",
+        "frase1": "\"TENER FE A VECES SIGNIFICA HACER LO QUE LOS DEMÁS CONSIDERAN LOCO.\"",
+        "descripcion2": "As-tu vu la série The Chosen (les élus) ? Eh bien Dallas Jenkins est son producteur, directeur et co-auteur. Cet auteur, producteur de cinéma et directeur de télévision à impacts le monde entier avec l’une des meilleures séries qui racontent de manière épique l’histoire de notre Sauveur. Sa première production indépendante a été lancée à ses 25 ans et distribuée par Warner Brothers, et rien ne l’a arrêté ! Il a grandi dans un foyer où on aimait raconter des histoires, et il s’est formé professionnellement pour raconter au monde la plus grande histoire de toutes : l’amour de Dieu qui a tout donné pour récupérer notre cœur. ",
+        "frase2": "\"Hemos sido llamados para llevar el mensaje de Jesús a esta generación a través de los medios de comunicación. No existen los límites\".",
+        "descripcion3":"L’histoire de Heidi Baker semble être la continuité du livre des Actes. Elle est remplie de rencontres divines, de visions et de miracles depuis l’âge de 16 ans, où on lui a parlé de Jésus et où elle en est tombée éperdument amoureuse. Elle a vu des morts ressusciter, des sourds entendre et des aveugles voir. Des enfants qui se prostituaient pour un pain, devenir des médecins, des ingénieurs et des prédicateurs. Des peuples entiers qui n’avaient jamais entendu l’évangile se donner à Dieu dans l’un des pays les plus pauvres et vulnérables du monde : le Mozambique. Avec son mari, elle a fondé Iris Global, qui aujourd’hui a 34 bases missionnaires dans 30 pays. Ils ont implanté plus de 10 000 églises, ils construisent une université et travaillent à sauver un million de petits orphelins et à voir le réveil. Ils ont vécu un avant et un après Christ, et ils veulent que l’humanité entière vivent la même expérience.",
+        "frase3": "\"El método de Dios para cambiar tu nación eres tú. Tú eres la sal. Tú eres la luz. Tú eres la persona que Él quiere usar.\"",
+        "descripcion4": "Dominic Russo est un prédicateur, évangéliste et innovateur en termes de missions internationales. À l’âge précoce de vingt ans, Dominic a fondé Missions.Me et a commencé à organiser des campagnes stratégiques de prédication dans des villes d’Amérique Latine. Depuis 2011 et pendant ses quatre principales campagnes d’évangélisation en Amérique Latine, il a pu atteindre plus de 3,6 millions de personnes face à face au travers des diverses initiatives. Dominic inspire les cœurs pour rêver en grand et les leaders pour s’unir et avoir un impact exponentiel. En 2010, l’épouse de Dominic, Lindsay, a fondé Angel House, une organisation qui a créé plus de 202 « Casas Angel », des foyers pour plus de 5000 enfants en Inde et un campus de liberté trafic humain annuellement au Népal. Ensemble, ils vivent au sud de la Californie avec leurs trois enfants Mason, Jude et Liviana.",
+        "frase4": "“Deus te chamou para deixar uma pegada nesta geração através da mensagem de Jesus”",
+        "descripcion5": "Le docteur John Lennox est mathématicien et philosophe des sciences et professeur de Mathématiques à l’université d’Oxford. C’est un apologète impressionnant, il cherche toujours la relation entre la science, la philosophie et la religion. Il est professeur dans beaucoup d’institutions académiques, entre autres le Said Business School, Wycliffe Hall et le Oxford Centre for Christian Apologetics. Il a écrit une série de livres qui explorent les relations entre la science et le christianisme et a participé à de nombreux débats télévisés avec certains des plus grands penseurs athées du monde.",
+        "frase5": "“Quanto mais compreendo a Ciência, mais creio em Deus pela maravilha da amplitude, sofisticação e integridade de Sua criação”"
+    },
+    "speakers": {
+        "titulo": "SPEAKERS",
+        "titulo1": "César et Emma Claudia Castellanos",
+        "descripcion1": "Pasteurs Globaux de MCI et fondateurs du Gouvernement des 12 Le savais-tu ? Le pasteur César réveille la pasteure TOUS les matins avec un petit café tout chaud.",
+        "titulo2": "Lau et Sara Guerra",
+        "descripcion2": "Parents d’Isaac, Anabela et un autre en chemin. Pasteurs de MCI SOMOS UNO. Passionnés par Jésus.Le savais-tu ? Ils sont très compétitifs. Sara gagne toujours ",
+        "titulo3": "Rebecca Howard",
+        "descripcion3": "Brésilienne, mariée à Joshua Howard, maman d’Israël, pasteur à MCI Durango. Elle aime étudier et enseigner la Parole de Dieu.Le savais-tu ? Elle a toujours dit qu’elle était appelée à la nation du Brésil, jusqu’à ce que Dieu l’envoie au Mexique. Ne dis jamais « jamais » !",
+        "titulo4": "Gloria Salamanca",
+        "descripcion4": "Avec son époux Saul, ils sont pasteurs de MCI Ciudad de Mexico. Maman de 3 enfants qui aiment et servent Dieu ensemble en famille. Nous aimons ses messages qui vont toujours droit au cœur.Le savais-tu ? Elle a étudié l’Ingénierie informatique.",
+        "titulo5": "Felipe Salamanca",
+        "descripcion5": "Marié à Vicky, pasteur de jeunes à MCI Mexique, diplômé en théologie. Il aime le bon café et un bon livre. Créateur du podcast « Une foi significative »Le savais-tu ? Il a dû beaucoup prier pour Vicky ! Ils ont une histoire digne d’un film.",
+        "titulo6": "Julián y Lorena Gamba",
+        "descripcion6": "arents d’Ariana, Melody et Ezéchiel. Aujourd’hui, ils sont les directeurs de Generación 12 Music et pasteurs à MCI Bogota et G12 Church Miami. Ils ont un cœur pour l’église et les missions. Julian a un podcast appelé « La Academia » qui traite de la capacité de leadership que chacun a en soi.Le savais-tu ? Pendant des années Juli a persévéré pour conquérir Lore, même si elle le niait, il lui a toujours plu !",
+        "titulo7": "Érika Berrios",
+        "descripcion7": "Mariée au pasteur Daniel, maman de Dani, Vale et Ana Victoria. Elle est pasteure à MCI Bogota. Elle a un message authentique et direct qui touche le cœur de chacun de nous. Nous aimons son amour pour Dieu, sa foi véritable et son dévouement aux autres.Le savais-tu ? Quand elle était petite elle fuguait de chez elle pour traîner dans la rue et sa grand-mère la poursuivait partout dans le quartier ! Qui aurait pu l’imaginer ! Aujourd’hui c’est une véritable mère au foyer et sa spécialité est la Casserole de fruits de mer.",
+        "titulo8": "Richard et Manuela Harding",
+        "descripcion8": "Parents de Noah, Nathan, Chloé et Joy. Fondateurs de HeroKids, HeroMoms et Arco En Las Nubes (Curriculum d’étude pour enfants scolarisés à la maison). Il s sont aussi pasteurs à MCI Bogota et G12 Church Miami.Le savais-tu ? Ils souhaitent avoir 6 enfants !",
+        "titulo9": "David Eghelshi",
+        "descripcion9": "Marié à Dinorah et papa de 4 enfants qui aiment et servent Dieu. Aujourd’hui, il est pasteur de Medes Church. Il a un puissant témoignage de comment Dieu l’a sorti de la pauvreté extrême et l’a conduit à une vie de plénitude en Christ.Le savais-tu ? Il est passionné des pupusas (plat typique du Salvador) Il pourrait les prendre au petit déjeuner, à midi et même au dîner!",
+        "titulo10": "Eliemerson y Johanna Proença",
+        "descripcion10": "Parents de Shailoh, Rachel et Emma, ils ont une famille exemplaire. Ils sont pasteurs à MCI Bogota et G12 Church Miami et Dieu les a utilisés pour apporter un message de direction dans les sentiments des jeunes et aux familles.Le savais-tu ? Le pasteur Eli a eu les cheveux jusqu’à la taille et la pasteur Johanna a eu un petit ami gothique."
+    },
+    "registro": {
+        "nombres": "Prénom",
+        "apellidos": "Nom",
+        "registrate": "Inscreva-se Aqui",
+        "edad": "âge",
+        "email": "Email",
+        "celular": "Portable (+ indicatif)",
+        "telefono": "Téléphone fixe",
+        "pais": "Sélectionner un pays",
+        "ciudad": "Ville",
+        "lider": "Nom de ton leader",
+        "idioma": "Sélectionne une langue",
+        "taller": "Sélectionne un atelier",
+        "terminos": "J’accepte les termes et conditions",
+        "marketing": "Recevoir des emails promotionnels de Somos Uno GO",
+        "registrarme": "M’inscrire"
+    },
+    "sidebar": {
+        "home": "ACCUEIL",
+        "talleres": "ATELIERS",
+        "merch": "MERCH",
+        "galeria": "GALERIE",
+        "bloques": "Bloques",
+        "donaciones": "DONS",
+        "tribu": "TRIBE",
+        "puntos": "POINTS",
+        "conferencistas": "Bloques",
+        "boton-salir": "QUITTER"
+    },
+    "music": {
+        "titulo": "BANDAS INVITADAS",
+        "titulo1": "REDIMI2",
+        "descripcion1": "Un prédicateur au travers de la musique. Il n’a pas peur de dire les choses telles qu’elles sont. Nous aimons de lui que c’est un fou pour Jésus. Le savais-tu ? Son vrai prénom est Willy Gonzalez Cruz.",
+        "titulo2": "BARAK",
+        "descripcion2": "Roberts Green, Janiel Ponciano, Katiuska et Angelo Frilop font partie de ce que nous connaissons comme Barak. Nés en 2009, ils ont produit 9 albums qui nous connectent avec le ciel. Ils ont collaboré avec Génération 12, Christine D’clario, Redimi2 et d’autres grands psalmistes latino américains.",
+        "titulo3": "Generación 12",
+        "descripcion3": "Ils aiment connecter les personnes au cœur de Dieu au travers de l’adoration véritable.Le savais-tu ? Initialement ils allaient s’appeler Révolution 12."
+    },
+    "tribus": {
+        "titulo": "TRIBUS",
+        "titulo1": "PACK LIONS",
+        "titulo2": "PACK GORILLES",
+        "titulo3": "PACK FAUCONS",
+        "titulo4": "PACK REQUINS"
     },
     "footer":{
         "siguenos":"SIGA-NOS:"

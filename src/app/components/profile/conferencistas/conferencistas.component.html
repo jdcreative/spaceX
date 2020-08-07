@@ -1,13 +1,40 @@
 <div class="container-conferencistas">
-    <img src="https://cdn.somosunogo.com/invitado1.png">
-    <img src="https://cdn.somosunogo.com/invitado2.png">
-    <img src="https://cdn.somosunogo.com/invitado3.png" style="display: none;">
-    <img src="https://cdn.somosunogo.com/invitado4.png">
-    <img src="https://cdn.somosunogo.com/invitado5.png">
-    <img src="https://cdn.somosunogo.com/invitado6.png">
-    <img src="https://cdn.somosunogo.com/invitado7.png">
-    <img src="https://cdn.somosunogo.com/invitado8.png">
-    <img src="https://cdn.somosunogo.com/invitado9.png">
-    <img src="https://cdn.somosunogo.com/invitado10.png">
-    <img src="https://cdn.somosunogo.com/invitado11.png">
+    <div class="container-tabs">
+
+        <nav class="nav nav-pills nav-fill fix-hover">
+            <a class="nav-item nav-link" (click)="changeTabTool('bloque_01');"
+                [ngClass]="{ 'active' : tabTools == 'bloque_01' }">Jueves - Bloque 01</a>
+            <a class="nav-item nav-link" (click)="changeTabTool('bloque_02');"
+                [ngClass]="{ 'active' : tabTools == 'chat' }">Viernes - Bloque 02</a>
+            <a class="nav-item nav-link" (click)="changeTabTool('bloque_03');"
+            [ngClass]="{ 'active' : tabTools == 'chat' }">Viernes - Bloque 03</a>
+            <a class="nav-item nav-link" (click)="changeTabTool('bloque_04');"
+            [ngClass]="{ 'active' : tabTools == 'chat' }">Sabado - Bloque 04</a>
+            <a class="nav-item nav-link" (click)="changeTabTool('bloque_05');"
+            [ngClass]="{ 'active' : tabTools == 'chat' }">Sabado - Bloque 05</a>
+        </nav>
+
+        <div *ngIf="tabTools == 'bloque_01'" class="container-box">
+            <iframe *ngIf="!loadingVideo" [src]="live_video" frameborder="0" allow="autoplay; fullscreen"
+            allowfullscreen style="top:0;left:0;width:100%;height:100%;" class="vimeo_video"></iframe>
+        </div>
+
+        <div *ngIf="tabTools == 'bloque_02'" class="container-box">
+            <iframe *ngIf="!loadingVideo" [src]="live_video" frameborder="0" allow="autoplay; fullscreen"
+            allowfullscreen style="top:0;left:0;width:100%;height:100%;" class="vimeo_video"></iframe>
+        </div>
+        <div *ngIf="tabTools == 'bloque_03'" class="container-box">
+            <iframe *ngIf="!loadingVideo" [src]="live_video" frameborder="0" allow="autoplay; fullscreen"
+            allowfullscreen style="top:0;left:0;width:100%;height:100%;" class="vimeo_video"></iframe>
+        </div>
+        <div *ngIf="tabTools == 'bloque_04'" class="container-box">
+            <iframe *ngIf="!loadingVideo" [src]="live_video" frameborder="0" allow="autoplay; fullscreen"
+            allowfullscreen style="top:0;left:0;width:100%;height:100%;" class="vimeo_video"></iframe>
+        </div>
+        <div *ngIf="tabTools == 'bloque_05'" class="container-box">
+            <iframe *ngIf="!loadingVideo" [src]="live_video" frameborder="0" allow="autoplay; fullscreen"
+            allowfullscreen style="top:0;left:0;width:100%;height:100%;" class="vimeo_video"></iframe>
+        </div>
+
+    </div>
 </div>

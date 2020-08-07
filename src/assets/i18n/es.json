@@ -1,5 +1,40 @@
 {
     "language": "Español",
+    "bloque_01": {
+        "es": "https://player.vimeo.com/video/445039823",
+        "en": "https://player.vimeo.com/video/445040693",
+        "fr": "https://player.vimeo.com/video/445042896",
+        "pt": "https://player.vimeo.com/video/445041433",
+        "ru": "https://player.vimeo.com/video/445043225"
+    },
+    "bloque_02": {
+        "es": "https://player.vimeo.com/video/445044840",
+        "en": "https://player.vimeo.com/video/445045038",
+        "fr": "https://player.vimeo.com/video/445047465",
+        "pt": "https://player.vimeo.com/video/445045703",
+        "ru": "https://player.vimeo.com/video/445436467"
+    },
+    "bloque_03": {
+        "es": "https://player.vimeo.com/video/445053439",
+        "en": "https://player.vimeo.com/video/445056061",
+        "fr": "https://player.vimeo.com/video/445056853",
+        "pt": "https://player.vimeo.com/video/445056546",
+        "ru": "https://player.vimeo.com/video/445057076"
+    },
+    "bloque_04": {
+        "es": "https://player.vimeo.com/video/445058473",
+        "en": "https://player.vimeo.com/video/445058644",
+        "fr": "https://player.vimeo.com/video/445059788",
+        "pt": "https://player.vimeo.com/video/445058843",
+        "ru": "https://player.vimeo.com/video/445060117"
+    },
+    "bloque_05": {
+        "es": "https://player.vimeo.com/video/445415221",
+        "en": "https://player.vimeo.com/video/445065512",
+        "fr": "https://player.vimeo.com/video/445066874",
+        "pt": "https://player.vimeo.com/video/445066401",
+        "ru": "https://player.vimeo.com/video/445067035"
+    },
     "menu": {
         "inicio": "INICIO",
         "invitados": "INVITADOS",
@@ -12,30 +47,98 @@
         "live": "https://player.vimeo.com/video/443564812"
     },
     "home": {
+        "imagen-home": "https://cdn.somosunogo.com/goo.png",
         "confirmar-registro": "Confirma tu Registro",
-        "iniciar-sesion": "Iniciar Sesión",
+        "iniciar-sesion": "Inciar Sesión",
         "registrate": "Registrate Aquí",
         "titulo-somosuno": "SOMOS UNO",
-        "imagen-home": "https://cdn.somosunogo.com/goo.png",
-        "versiculo": "”Un ángel del Señor habló a Felipe, diciendo: Levántate y ve hacia el sur…. Entonces él se levantó y fue...” Hechos 8:26-27",
-        "descripcion": "El llamado de Dios a esta generación es levántate y ve. Hay una misión que nos espera, hay un llamado a la puerta, hay vidas esperando el mensaje que tú y yo tenemos. Dios ha lanzado su palabra, “levántate y ve!” Ahora el resto depende de nosotros. GO es nuestra respuesta y creemos que no estamos solos en esta respuesta. Unámonos al clamor de miles y digamos, “¡Heme aquí Dios, envíame a mí!” !A partir de hoy nos unimos a la generación GO!",
+        "versiculo": "\"Un ángel del Señor habló a Felipe, diciendo: Levántate y ve hacia el sur…. Entonces él se levantó y fue...\" Hechos 8:26-27",
+        "descripcion": "El llamado de Dios a esta generación es levántate y ve. Hay una misión que nos espera, hay un llamado a la puerta, hay vidas esperando el mensaje que tú y yo tenemos. Dios ha lanzado su palabra, \"levántate y ve!\" Ahora el resto depende de nosotros. GO es nuestra respuesta y creemos que no estamos solos en esta respuesta. Unámonos al clamor de miles y digamos, \"¡Heme aquí Dios, envíame a mí!\" !A partir de hoy nos unimos a la generación GO!",
         "descripcion-nombre": "Pastores de SOMOS UNO",
         "descripcion-somosuno": "Somos uno es el ministerio de Jóvenes de la Misión Carismática internacional, creemos que el mensaje más poderoso que tenemos es la unidad. Somos Uno busca unir la nueva generación para que a través de la unidad con el Espíritu Santo muchos puedan escuchar el mensaje más poderoso de todos: el mensaje de Jesús.",
-        "versiculo-somosuno": "”Mas no ruego solamente por éstos, sino también por los que han de creer en mí por la palabra de ellos, para que todos sean uno; como tú, oh Padre, en mí, y yo en ti, que también ellos sean uno en nosotros; para que el mundo crea que tú me enviaste.” - Juan 17:20-22"
+        "versiculo-somosuno": "”Mas no ruego solamente por éstos, sino también por los que han de creer en mí por la palabra de ellos, para que todos sean uno; como tú, oh Padre, en mí, y yo en ti, que también ellos sean uno en nosotros; para que el mundo crea que tú me enviaste.” - Juan 17:20-22",
+        "que_habra": "¿QUÉ HABRÁ EN LA CONVENCIÓN?"
     },
-    "guests":{
+    "registro": {
+        "nombres": "Nombres",
+        "apellidos": "Apellidos",
+        "registrate": "Registrate Aquí",
+        "edad": "Edad",
+        "email": "Correo Electrónico",
+        "celular": "celular",
+        "telefono": "Telefono",
+        "pais": "Seleccione un pais",
+        "ciudad": "Ciudad",
+        "lider": "Nombre de tu lider",
+        "idioma": "Seleccione un idioma",
+        "taller": "Seleccione un taller",
+        "terminos": "Acepto Terminos y condiciones",
+        "marketing": "Recibir emails de marketing de Somos Uno GO",
+        "registrarme": "Registrarme"
+    },
+    "guests": {
         "titulo": "INVITADOS ESPECIALES",
-        "descripcion1": "Francis Chan es pastor, autor y maestro de la Palabra en Estados Unidos, aunque nació en Hong-Kong. Después de ser criado por su abuela budista en Hong Kong, Francis llegó a Estados Unidos a la edad de cinco años. Su madre murió en su nacimiento, su madrastra murió en un accidente automovilístico cuando él tenía nueve años, y su padre murió de cáncer cuando tenía doce. Pero en 1884, Francis llegó a conocer al Señor durante su secundario y su historia cambió por completo.<br /> Chan es un orador muy solicitado en universidades cristianas y conferencias a nivel nacional e internacional. Actualmente también está activo con Children’s Hunger Fund, African Renewal Ministries y World Impact, y ha escrito libros como ”El Dios Olvidado”, ”Cartas a la Iglesia” y algunos otros best-sellers."
+        "descripcion1": "Francis Chan es pastor, autor y maestro de la Palabra en Estados Unidos, aunque nació en Hong-Kong. Después de ser criado por su abuela budista en Hong Kong, Francis llegó a Estados Unidos a la edad de cinco años. Su madre murió en su nacimiento, su madrastra murió en un accidente automovilístico cuando él tenía nueve años, y su padre murió de cáncer cuando tenía doce. Pero en 1884, Francis llegó a conocer al Señor durante su secundario y su historia cambió por completo. Chan es un orador muy solicitado en universidades cristianas y conferencias a nivel nacional e internacional. Actualmente también está activo con Children’s Hunger Fund, African Renewal Ministries y World Impact, y ha escrito libros como ”El Dios Olvidado”, ”Cartas a la Iglesia” y algunos otros best-sellers.",
+        "frase1": "\"TENER FE A VECES SIGNIFICA HACER LO QUE LOS DEMÁS CONSIDERAN LOCO.\"",
+        "descripcion2": "¿Has visto la serie \"The Chosen\" (Los Escogidos)? Bueno, Dallas Jenkins fue su productor, director y co-escritor. Este escritor, productor de cine y director de televisión, ha impactado al mundo entero con una de las mejores series que narra épicamente la historia de nuestro Salvador. Su primera producción independiente  fue lanzada a sus 25 años y distribuida por Warner Brothers,  y ¡nada lo ha detenido! Creció en un hogar en donde amaban narrar historias, y se formó profesionalmente para contarle al mundo sobre la historia más grande de todas: El amor de Dios que lo entregó todo con tal de recuperar nuestro corazón.",
+        "frase2": "\"Hemos sido llamados para llevar el mensaje de Jesús a esta generación a través de los medios de comunicación. No existen los límites\".",
+        "descripcion3":"La historia de  Heidi Baker parece una continuación del libro de Hechos. Está llena de encuentros divinos, visiones y milagros, desde los 16 años, cuando le hablaron de Jesús y se enamoró perdidamente. Ha visto muertos resucitar, sordos oír y ciegos ver. A niños que se prostituían por un pan, convertirse en médicos, ingenieros y predicadores. A pueblos enteros que nunca habían escuchado el evangelio, entregándose a Dios en uno de los países más pobres y amenazados del mundo: Mozambique. Junto con su esposo fundaron Iris Global, que hoy tiene 34 bases misioneras en 30 países. Han plantado más de 10 mil iglesias, están construyendo una universidad y trabajando para rescatar a un millón de pequeños huérfanos y ver avivamiento. Tuvieron un antes y después de Cristo, y quieren que la humanidad entera lo tenga.",
+        "frase3": "\"El método de Dios para cambiar tu nación eres tú. Tú eres la sal. Tú eres la luz. Tú eres la persona que Él quiere usar.\"",
+        "descripcion4": "Dominic Russo es un predicador, evangelista e innovador en términos de misiones internacionales. A la temprana edad de 20 años, Dominic fundó Missions.Me y comenzó a organizar campañas estratégicas de predicación en ciudades de América Latina. Desde 2011 y durante sus cuatro principales campañas Evangelistas en América Latina, pudo llegar a más de 3,6 millones de personas cara a cara a través de las diversas iniciativas. Fundador de Angel House, una organización que ha rescatado de la pobreza y el abandono a más de 5 mil niños en la India. Junto a su esposa ha desarrollado centros de restauración para jóvenes que han sido víctimas de la trata de personas en  Nepal, con el propósito de darles un llamado y esperanza de vida por medio del mensaje de Jesús. Actualmente lidera un ministerio en el Sur de California levantando a miles de líderes para seguir avanzando con este gran proyecto en las más de 200 misiones Angel House que han establecido en Asia y Latinoamérica.",
+        "frase4": "\"Dios te ha llamado para dejar una huella en esta generación a través del mensaje de Jesús.\"",
+        "descripcion5": "Profesor de la Universidad de Oxford, matemático y filósofo cristiano de la ciencia británico, protagonista de memorables debates sobre la existencia de Dios con destacados intelectuales, como Richard Dawkins y Christopher Hitchens. Director principal del Instituto Trinity Forum y autor de una reconocida serie de publicaciones como \"¿Ha enterrado la ciencia a Dios?\", \"El principio según Génesis y la Ciencia\", \"Podemos confiar en los Evangelios\", entre otros, donde expone la gran relación que existe entre Dios y la ciencia.",
+        "frase5": "\"Cuanto más comprendo la ciencia, más creo en Dios por la maravilla de la amplitud, sofisticación e integridad de su creación\"."
+    },
+    "speakers": {
+        "titulo": "CONFERENCISTAS",
+        "titulo1": "CÉSAR Y EMMA CASTELLANOS",
+        "descripcion1": "El Pastor César Castellanos Es un hombre apasionado por las almas, desde el momento que se convirtió comenzó a predicar en las calles. Hoy en día a través de la “Visión G12” mentorea a mucho líderes y pastores y los lleva a soñar, a ser formado y a alcanzar su máximo potencial. La Pastora Claudia es una mujer de fe. Dios la sacó de estar detrás de su esposo y la colocó al lado de él. Tiene una gran pasión por las mujeres, y ha levantado una tremenda red de mujeres en la ciudad de Bogotá. También se ha desarrollado en el ámbito político.",
+        "titulo2": "LAU Y SARA GUERRA",
+        "descripcion2": "Papás de Isaac, Anabela y uno más en camino, son los pastores de SOMOS UNO. Apasionados por Jesús y por ver la única luz siendo expandida por todo el mundo.",
+        "titulo3": "REBECA HOWARD",
+        "descripcion3": "Brasileña, casada con Josh Howard, mamá de Israel, pastora en MCI Durango. Ama estudiar y enseñar la Palabra de Dios. Dato curioso: Siempre dijo que había sido llamada a la nación de Brasil, hasta que Dios la mandó a México. !Nunca digas nunca!",
+        "titulo4": "GLORIA SALAMANCA",
+        "descripcion4": "Juntamente com seu esposo Saul, pastoreia a MCI na Cidade do México. Mãe de três filhos que todos amam e eles servem a Deus como família. A amamos por sua mensagem sempre direta ao coração. Fato curioso: Estudou engenharia de sistemas.",
+        "titulo5": "FELIPE SALAMANCA",
+        "descripcion5": "Casado con Vicky, pastor de jóvenes en MCI México, formado en teología. Ama un buen café y un buen libro. Creador del podcast \"Una Fe Relevante\". Dato curioso: ¡Le tocó orar mucho por Vicky! Tienen una historia de película.",
+        "titulo6": "JULIAN Y LORENA GAMBA",
+        "descripcion6": "Papas de Ariana, Melody y Ezequiel. Hoy son directores de Generación 12 Music y pastores en MCI Bogotá y G12 Church Miami. Tienen un corazón para la iglesia y a las misiones. Julián tiene un podcast llamado “La Academia” acerca de la capacidad de liderazgo de cada uno. Dato curioso: Por años Juli perseveró en conquistar a Lore, aunque ella lo negaba, ¡siempre le gustó!",
+        "titulo7": "ERIKA BERRIOS",
+        "descripcion7": "Casada con el Pastor Daniel, mamá de Dani, Vale y Ana Victoria, es pastora en MCI Bogotá y tiene un mensaje genuino y directo que llega al corazón de todos nosotros. Amamos su pasión por Dios, su fe genuina y su entrega a otros. Dato curioso: De pequeña se escapaba de la casa a callejear y la abuela la correteaba por todo el barrio! ¡Quien la ve! Hoy es toda una ama de casa, su especialidad es la Cazuela de Mariscos.",
+        "titulo8": "RICH Y MANUELA HARDING",
+        "descripcion8": "Papas de Noah, Nathan, Chloe y Joy. Fundadores de HeroKids, HeroMoms y Arco En Las Nubes (Curriculum de estudio para los niños en casa), son también pastores en MCI Bogotá y G12 Church Miami. Dato curioso: ¡Quieren tener 6 hijos!",
+        "titulo9": "DAVID EGHELSHI",
+        "descripcion9": "Casado con Dinorah y papá de 4 hijos que aman y sirven a Dios. Hoy pastor en Medes Church, tiene un testimonio increíble de cómo Dios lo sacó de extrema pobreza a una vida de plenitud en Cristo. Dato curioso: amante de las pupusas (comida típica Salvadoreña). !Podría desayunar, almorzar y cenar pupusas!",
+        "titulo10": "ELIEMERSON Y JOHANNA",
+        "descripcion10": "Papas de Shailoh, Rachel y Emma, tienen una familia ejemplar. Son pastores en MCI Bogotá y G12 Church Miami y Dios los ha podido usar llevando un mensaje de dirección a los sentimientos de los jóvenes y a las familias. Dato curioso: El pastor Eli tuvo el pelo hasta la cintura y la pastora Johanna tuvo un novio metalero."
     },
     "sidebar": {
         "home": "Inicio",
         "talleres": "Talleres",
         "merch": "Merch",
         "galeria": "Galería",
+        "bloques": "Bloques",
+        "conferencistas": "Bloques",
         "donaciones": "Donaciones",
         "tribu": "TRIBU",
         "puntos": "PUNTOS",
         "boton-salir": "SALIR"
+    },
+    "music": {
+        "titulo": "BANDAS INVITADAS",
+        "titulo1": "REDIMI2",
+        "descripcion1": "Willy Gonzales Cruz más conocido como Redimi2 es un cantante de Hip Hop nacido en Santo Domingo, República Dominicana. Desde muy niño tuvo inclinación por el arte, principalmente por el dibujo, pintura y teatro. Cuando cumplió 12 años empezó a gustarle la música del género rap, la cual llegó a convertirse en su preferida. Este género llegó a influenciarlo mediante sus mensajes de violencia y negativismo, de tal manera que a la edad de 17 años era un adicto a las drogas, pero en 1999 tuvo un encuentro sobrenatural con Dios y ahora usa su talento para enseñar a muchos, a través de la música, que el amor de Dios lo puede cambiar todo. ¡Es todo un Trapstornador!",
+        "titulo2": "BARAK",
+        "descripcion2": "Roberts Green¡, Janiel Ponciano, Katiuska y Ángelo Frilop, todos de república dominicana, conforman el Grupo Barak, un ministerio musical con el llamado y la intención de alcanzar almas en todo el mundo y postrarlas a los pies de Cristo. Nació en 2009 y han producido 9 álbums con canciones que nos conectan al Cielo. Ha tenido colaboración con Generación 12, Christine D’clario, Redimi2, y grandes salmistas latinoamericanos.",
+        "titulo3": "Generación 12",
+        "descripcion3": "Aman conectar a las personas al corazón de Dios a través de la verdadera adoración. Dato curioso: Inicialmente se iban a llamar Revolución 12"
+    },
+    "tribus": {
+        "titulo": "TRIBUS",
+        "titulo1": "PACK LEONES",
+        "titulo2": "PACK GORILAS",
+        "titulo3": "PACK HALCONES",
+        "titulo4": "PACK TIBURONES"
     },
     "footer": {
         "siguenos": "Síguenos en:"
@@ -61,7 +164,7 @@
     },
     "modals": {
         "iniciarsesion1": "INICIAR",
-        "iniciarsesion2": "SESIÓN",
+        "iniciarsesion2": "SESION",
         "descripcion_modal": "Escribe tu correo electronico",
         "input_modal": "Ingresa tu correo electronico",
         "boton_modal": "INGRESAR",

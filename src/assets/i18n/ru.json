@@ -1,0 +1,72 @@
+{
+    "language": "Portugues",
+    "bloque_01": {
+        "es": "https://player.vimeo.com/video/445039823",
+        "en": "https://player.vimeo.com/video/445040693",
+        "fr": "https://player.vimeo.com/video/445042896",
+        "pt": "https://player.vimeo.com/video/445041433",
+        "ru": "https://player.vimeo.com/video/445043225"
+    },
+    "bloque_02": {
+        "es": "https://player.vimeo.com/video/445044840",
+        "en": "https://player.vimeo.com/video/445045038",
+        "fr": "https://player.vimeo.com/video/445047465",
+        "pt": "https://player.vimeo.com/video/445045703",
+        "ru": "https://player.vimeo.com/video/445436467"
+    },
+    "bloque_03": {
+        "es": "https://player.vimeo.com/video/445053439",
+        "en": "https://player.vimeo.com/video/445056061",
+        "fr": "https://player.vimeo.com/video/445056853",
+        "pt": "https://player.vimeo.com/video/445056546",
+        "ru": "https://player.vimeo.com/video/445057076"
+    },
+    "bloque_04": {
+        "es": "https://player.vimeo.com/video/445058473",
+        "en": "https://player.vimeo.com/video/445058644",
+        "fr": "https://player.vimeo.com/video/445059788",
+        "pt": "https://player.vimeo.com/video/445058843",
+        "ru": "https://player.vimeo.com/video/445060117"
+    },
+    "bloque_05": {
+        "es": "https://player.vimeo.com/video/445415221",
+        "en": "https://player.vimeo.com/video/445065512",
+        "fr": "https://player.vimeo.com/video/445066874",
+        "pt": "https://player.vimeo.com/video/445066401",
+        "ru": "https://player.vimeo.com/video/445067035"
+    },
+    "home": {
+        "imagen-home": "https://cdn.somosunogo.com/goo.png",
+        "confirmar-registro": "CONFIRME SUA INSCRIÇÃO",
+        "iniciar-sesion": "INGRESAR",
+        "registrate": "INSCREVA-SE AQUI",
+        "versiculo": "« Un ange du Seigneur, s'adressant à Philippe, lui dit: Lève-toi, et va du côté du midi… » Actes 8 :26",
+        "descripcion": "O chamado de Deus a essa geração é “Levante-se e vá”! Há uma missão que  nos espera. Há um chamado à porta. Há vidas esperando a mensagem que eu e você temos. Deus lançou sua palavra “levante-se e vá!”. Agora o resto depende de nós. GO é nossa resposta e cremos que não estamos sós nessa resposta. Vamos nos unir ao clamor de milhares e digamos: “Eis-me aqui, Deus. Envia-me a mim!” A partir de hoje nos unimos à geração GO!",
+        "descripcion-nombre": "Pastores do “SOMOS UNO",
+        "descripcion-somosuno": "“Somos Um” é o ministério de jovens da Misión Carismática internacional (Missão Carismática Internacional). Cremos que a mensagem mais poderosa que temos é a unidade. “Somos Um” busca unir a nova geração para que, através da unidade com o Espírito Santo, muitos possam escutar a mensagem mais impactante de todas: a mensagem de Jesus.",
+        "versiculo-somosuno": "“Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste” João 17:20-22"
+    },
+    "guests": {
+        "titulo": " PRÉDICATEURS INTERNATIONAUX",
+        "descripcion1": "Francis Chan est pasteur, auteur et maître de la Parole aux Etats-Unis, bien qu’il soit né à Hong-Kong. Après avoir été élevé par sa grand-mère bouddhiste à Hong-Kong, Francis est arrivé aux Etats-Unis à l’âge de cinq ans. Sa mère est morte à sa naissance, sa belle-mère est morte dans un accident de voiture quand il avait neuf ans, et son père est mort d’un cancer quand il avait douze ans. Mais en 1984, Francis a rencontré le Seigneur pendant ses études secondaires et son histoire a complètement changé. Le pasteur Chan est un orateur très sollicité dans beaucoup d’universités chrétiennes et dans des conférences pour les jeunes au niveau national et international. Actuellement il est aussi actif avec Children’s Hunger Fund, African Renewal Ministries et World Impact, et il a écrit des livres comme « Dieu oublié », « Lettres à l’Eglise » et d’autres best-sellers.",
+        "frase1": "\"TENER FE A VECES SIGNIFICA HACER LO QUE LOS DEMÁS CONSIDERAN LOCO.\"",
+        "descripcion2": "As-tu vu la série The Chosen (les élus) ? Eh bien Dallas Jenkins est son producteur, directeur et co-auteur. Cet auteur, producteur de cinéma et directeur de télévision à impacts le monde entier avec l’une des meilleures séries qui racontent de manière épique l’histoire de notre Sauveur. Sa première production indépendante a été lancée à ses 25 ans et distribuée par Warner Brothers, et rien ne l’a arrêté ! Il a grandi dans un foyer où on aimait raconter des histoires, et il s’est formé professionnellement pour raconter au monde la plus grande histoire de toutes : l’amour de Dieu qui a tout donné pour récupérer notre cœur.",
+        "frase2": "\"Hemos sido llamados para llevar el mensaje de Jesús a esta generación a través de los medios de comunicación. No existen los límites\".",
+        "descripcion3":"L’histoire de Heidi Baker semble être la continuité du livre des Actes. Elle est remplie de rencontres divines, de visions et de miracles depuis l’âge de 16 ans, où on lui a parlé de Jésus et où elle en est tombée éperdument amoureuse. Elle a vu des morts ressusciter, des sourds entendre et des aveugles voir. Des enfants qui se prostituaient pour un pain, devenir des médecins, des ingénieurs et des prédicateurs. Des peuples entiers qui n’avaient jamais entendu l’évangile se donner à Dieu dans l’un des pays les plus pauvres et vulnérables du monde : le Mozambique. Avec son mari, elle a fondé Iris Global, qui aujourd’hui a 34 bases missionnaires dans 30 pays. Ils ont implanté plus de 10 000 églises, ils construisent une université et travaillent à sauver un million de petits orphelins et à voir le réveil. Ils ont vécu un avant et un après Christ, et ils veulent que l’humanité entière vivent la même expérience.",
+        "frase3": "\"El método de Dios para cambiar tu nación eres tú. Tú eres la sal. Tú eres la luz. Tú eres la persona que Él quiere usar.\"",
+        "descripcion4": "Dominic Russo est un prédicateur, évangéliste et innovateur en termes de missions internationales. À l’âge précoce de vingt ans, Dominic a fondé Missions.Me et a commencé à organiser des campagnes stratégiques de prédication dans des villes d’Amérique Latine. Depuis 2011 et pendant ses quatre principales campagnes d’évangélisation en Amérique Latine, il a pu atteindre plus de 3,6 millions de personnes face à face au travers des diverses initiatives. Dominic inspire les cœurs pour rêver en grand et les leaders pour s’unir et avoir un impact exponentiel. En 2010, l’épouse de Dominic, Lindsay, a fondé Angel House, une organisation qui a créé plus de 202 « Casas Angel », des foyers pour plus de 5000 enfants en Inde et un campus de liberté trafic humain annuellement au Népal. Ensemble, ils vivent au sud de la Californie avec leurs trois enfants Mason, Jude et Liviana.",
+        "frase4": "“Deus te chamou para deixar uma pegada nesta geração através da mensagem de Jesus”",
+        "descripcion5": "Le docteur John Lennox est mathématicien et philosophe des sciences et professeur de Mathématiques à l’université d’Oxford. C’est un apologète impressionnant, il cherche toujours la relation entre la science, la philosophie et la religion. Il est professeur dans beaucoup d’institutions académiques, entre autres le Said Business School, Wycliffe Hall et le Oxford Centre for Christian Apologetics. Il a écrit une série de livres qui explorent les relations entre la science et le christianisme et a participé à de nombreux débats télévisés avec certains des plus grands penseurs athées du monde.",
+        "frase5": "\"The more I understand science, the more I believe in God because of the wonder of the width, satisfaction and integrity of His creation.\""
+    },
+    "sidebar":{
+        "tribu": "TRIBO",
+        "puntos": "PONTOS",
+        "bloques": "Bloques",
+        "conferencistas": "Bloques",
+        "boton-salir": "SAIR"
+    },
+    "footer":{
+        "siguenos":"SIGA-NOS:"
+    }
+}

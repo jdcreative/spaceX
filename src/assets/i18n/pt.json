@@ -1,8 +1,54 @@
 {
     "language": "Portugues",
+    "bloque_01": {
+        "es": "https://player.vimeo.com/video/445039823",
+        "en": "https://player.vimeo.com/video/445040693",
+        "fr": "https://player.vimeo.com/video/445042896",
+        "pt": "https://player.vimeo.com/video/445041433",
+        "ru": "https://player.vimeo.com/video/445043225"
+    },
+    "bloque_02": {
+        "es": "https://player.vimeo.com/video/445044840",
+        "en": "https://player.vimeo.com/video/445045038",
+        "fr": "https://player.vimeo.com/video/445047465",
+        "pt": "https://player.vimeo.com/video/445045703",
+        "ru": "https://player.vimeo.com/video/445436467"
+    },
+    "bloque_03": {
+        "es": "https://player.vimeo.com/video/445053439",
+        "en": "https://player.vimeo.com/video/445056061",
+        "fr": "https://player.vimeo.com/video/445056853",
+        "pt": "https://player.vimeo.com/video/445056546",
+        "ru": "https://player.vimeo.com/video/445057076"
+    },
+    "bloque_04": {
+        "es": "https://player.vimeo.com/video/445058473",
+        "en": "https://player.vimeo.com/video/445058644",
+        "fr": "https://player.vimeo.com/video/445059788",
+        "pt": "https://player.vimeo.com/video/445058843",
+        "ru": "https://player.vimeo.com/video/445060117"
+    },
+    "bloque_05": {
+        "es": "https://player.vimeo.com/video/445415221",
+        "en": "https://player.vimeo.com/video/445065512",
+        "fr": "https://player.vimeo.com/video/445066874",
+        "pt": "https://player.vimeo.com/video/445066401",
+        "ru": "https://player.vimeo.com/video/445067035"
+    },
+    "menu": {
+        "inicio": "INÍCIO",
+        "invitados": "CONVIDADOS",
+        "conferencistas": "CONFERENCISTAS",
+        "bandas": "BANDAS",
+        "tribus": "TRIBOS",
+        "faq": "PERGUNTAS FREQUENTES"
+    },
+    "profile":{
+        "live": "https://player.vimeo.com/video/443564812"
+    },
     "home": {
-        "confirmar-registro": "CONFIRME SUA INSCRIÇÃO",
         "imagen-home": "https://cdn.somosunogo.com/goo.png",
+        "confirmar-registro": "CONFIRME SUA INSCRIÇÃO",
         "iniciar-sesion": "INGRESAR",
         "registrate": "INSCREVA-SE AQUI",
         "titulo-somosuno": "SOMOS UM",
@@ -10,22 +56,91 @@
         "descripcion": "O chamado de Deus a essa geração é “Levante-se e vá”! Há uma missão que  nos espera. Há um chamado à porta. Há vidas esperando a mensagem que eu e você temos. Deus lançou sua palavra “levante-se e vá!”. Agora o resto depende de nós. GO é nossa resposta e cremos que não estamos sós nessa resposta. Vamos nos unir ao clamor de milhares e digamos: “Eis-me aqui, Deus. Envia-me a mim!” A partir de hoje nos unimos à geração GO!",
         "descripcion-nombre": "Pastores do “SOMOS UNO",
         "descripcion-somosuno": "“Somos Um” é o ministério de jovens da Misión Carismática internacional (Missão Carismática Internacional). Cremos que a mensagem mais poderosa que temos é a unidade. “Somos Um” busca unir a nova geração para que, através da unidade com o Espírito Santo, muitos possam escutar a mensagem mais impactante de todas: a mensagem de Jesus.",
-        "versiculo-somosuno": "“Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste” João 17:20-22"
+        "versiculo-somosuno": "“Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste” João 17:20-22",
+        "que_habra": "¿QUÉ HABRÁ EN LA CONVENCIÓN?"
     },
-    "profile":{
-        "live": "https://player.vimeo.com/video/443565011"
+    "guests": {
+        "titulo": "CONVIDADOS ESPECIAIS",
+        "descripcion1": "Francis Chan é pastor, escritor de vários livros e professor da Palavra nos Estados Unidos, mesmo tendo nascido em Hong-Kong. Depois de ter sido criado por sua avó budista em Hong-Kong, Francis chegou aos Estados Unidos com cinco anos de idade. Sua mãe morreu após seu nascimento, sua madrasta morreu em um acidente de carro quando ele tinha nove anos e seu pai morreu de câncer quando tinha doze. Porém, em 1884, Francis conheceu ao Senhor durante o Ensino Médio e sua história mudou completamente. Chan é um palestrante muito requisitado em muitas universidades cristãs e em conferências de jovens a nível nacional e internacional. Atualmente também está envolvido ativamente em instituições como a Children´s Hunger Fund, African Renewal Ministries e World Impact. Além disso, escreveu livros como “O Deus esquecido”, “Cartas à Igreja” e outros best-sellers.",
+        "frase1": "\"TENER FE A VECES SIGNIFICA HACER LO QUE LOS DEMÁS CONSIDERAN LOCO.\"",
+        "descripcion2": "Você já assistiu a série “The Chosen” (Os escolhidos)? Bom, Dallas Jenkins foi seu produtor, diretor e coescritor. Este produtor de cinema, escritor e  diretor de televisão impactou o mundo inteiro com uma das melhores séries que narram epicamente a história do nosso Salvador. A sua primeira produção independente foi lançada quando tinha 25 anos e distribuída pela Warner Bros, e nada tem parado ele desde então! Cresceu em um lar onde amavam contar histórias e formou-se profissionalmente para contar ao mundo sobre a maior história de todas: O amor de Deus que entregou tudo para recuperar nosso coração.",
+        "frase2": "\"Hemos sido llamados para llevar el mensaje de Jesús a esta generación a través de los medios de comunicación. No existen los límites\".",
+        "descripcion3":"A história de Heidi Baker parece uma continuação do livro de Atos. Está cheia de encontros divinos, visões e milagres, desde os 16 anos, quando lhe falaram sobre Jesus e ela se apaixonou perdidamente. Viu mortos ressuscitarem, surdos ouvirem e cegos verem. Ajudou crianças que se prostituiam por um pedaço de pão a transformarem-se em médicos, engenheiros e pregadores. Povos inteiros que nunca haviam escutado o Evangelho entregando-se a Deus em um dos países mais pobres e ameaçados do mundo: Moçambique. Juntamente com seu esposo, fundou Iris Global, que hoje tem 34 bases missionárias em 30 países. Eles plantaram mais de 10 mil igrejas. Estão construindo uma universidade e trabalhando para resgatar um milhão de órfãos e para  ver um avivamento. Tiveram um antes e depois de Cristo e querem que a humanidade inteira viva o mesmo.",
+        "frase3": "\"El método de Dios para cambiar tu nación eres tú. Tú eres la sal. Tú eres la luz. Tú eres la persona que Él quiere usar.\"",
+        "descripcion4": "Dominic Russo é um pregador, evangelista e inovador em termos de missões internacionais. Quando tinha apenas 20 anos de idade, Dominic fundou Missions.Me e começou a organizar campanhas estratégicas de pregação em cidades da América Latina. Desde 2011 e durante suas quatro principais campanhas evangelísticas na América Latina, pôde alcançar mais de 3,6 milhões de pessoas face a face, através das diversas iniciativas. Fundador da Angel House, uma organização que tem resgatado mais de 5 mil crianças da pobreza e do abandono na Índia. Juntamente com sua esposa, construiu centros de abrigo e  reabilitação para vítimas de tráfico humano no Nepal, com o propósito de dar-lhes um chamado e esperança de vida através da mensagem de Jesus. Atualmente, lidera um ministério no Sul da Califórnia, levantando milhares de líderes para seguir em frente com esse grande projeto nas mais de 200 missões Angel House, que estabeleceram na Ásia e América Latina.",
+        "frase4": "“Deus te chamou para deixar uma pegada nesta geração através da mensagem de Jesus”",
+        "descripcion5": "Professor da Universidade de Oxford, matemático e filósofo cristão da Ciência. Britânico, protagonista de memoráveis debates sobre a existência de Deus com intelectuais de destaque, como Richard Dawkins e Christopher Hitchens. Diretor principal do Instituto Trinity Forum e autor de uma série de reconhecidas publicações  como “Por que a Ciência não consegue enterrar Deus”, “O início segundo Gênesis e a Ciência”, “Podemos confiar nos Evangelhos”, entre outros, onde expõe a grande relação que existe entre Deus e a Ciência.",
+        "frase5": "“Quanto mais compreendo a Ciência, mais creio em Deus pela maravilha da amplitude, sofisticação e integridade de Sua criação”"
     },
-    "sidebar":{        
-        "home": "Inicio",        
-        "tribu": "TRIBO",        
-        "puntos": "PONTOS",        
-        "boton-salir": "SAIR",        
-        "talleres": "oficinas",        
-        "merch": "mercadoria",        
-        "galeria": "galeria",        
-        "donaciones": "doações"    
+    "speakers": {
+        "titulo": "SPEAKERS",
+        "titulo1": "Cesar e Emma Claudia Castellanos",
+        "descripcion1": "Pastores globais da MCI e fundadores do movimento G12.",
+        "titulo2": "Lau e Sara Guerra",
+        "descripcion2": "Pais do Isaac, da Anabela e de mais um bebê que está chegando, são pastores do \"Somos Uno\". Completamente apaixonados por Jesus e por ver a Luz ser espalhada por todo o mundo.",
+        "titulo3": "REBECA HOWARD",
+        "descripcion3": "Brasileira, casada com Josh Howard, mãe do Israel, pastora na MCI Durango. Ama estudar e ensinar a Palavra de Deus. Fato curioso: Sempre disse que tinha sido chamada para a nação do Brasil, até que Deus a mandou para o México. Nunca diga nunca!",
+        "titulo4": "GLORIA SALAMANCA",
+        "descripcion4": "Juntamente com seu esposo Saul, pastoreia a MCI na Cidade do México. Mãe de três filhos que todos amam e eles  servem a Deus como família. A amamos por sua mensagem sempre direta ao coração. Fato curioso: Estudou engenharia de sistemas.",
+        "titulo5": "FELIPE SALAMANCA",
+        "descripcion5": "Casado com Vicky, pastor de jovens na MCI México, formado em Teologia. Ama um bom café e um bom livro. Criador do podcast \"Una Fe Relevante\" (Uma fé relevante). Fato curioso: Teve que orar muito pela Vicky! Eles têm uma história de filme.",
+        "titulo6": "Julián e Lorena Gamba",
+        "descripcion6": "Pais de Ariana, Melody e Ezequiel. Hoje são diretores do Generación 12 Music e pastores na MCI Bogotá eG12 Church Miami. Têm um coração para a Igreja e para as missões. Julián tem um podcast chamado “La Academia” (A Academia) que fala sobre a capacidade de liderança de cada um. Fato curioso: Por anos Juli perseverou para conquistar a Lore. Ainda que ela negasse, sempre gostou dele!",
+        "titulo7": "ERIKA BERRIOS",
+        "descripcion7": "Casada com o pastor Daniel, mãe de Dani, Vale e Ana Victoria, é pastora na MCI Bogotá e tem uma mensagem genuína e direta que chega ao coração de todos nós. Amamos sua paixão por Deus, sua fé pura e sua entrega aos outros. Fato curioso: Desde pequena fugia de casa para andar pela rua e a avó corria atrás dela por todo o bairro! Quem encontra ela hoje nem acredita! É super dona de casa, sua especialidade é Cazuela de Mariscos (Caçarola de frutos do mar).",
+        "titulo8": "Richard e Manuela Harding ",
+        "descripcion8": "Pais de Noah, Nathan, Chloe e Joy. Fundadores do HeroKids, HeroMoms e Arco En Las Nubes (Arco nas nuvens, currículo de estudo em casa para crianças), são também pastores na MCI Bogotá e G12 Church Miami. Fato curioso: Querem ter 6 filhos!",
+        "titulo9": "DAVID EGHELSHI",
+        "descripcion9": "Casado com Dinorah e pai de 4 filhos que amam e servem a Deus. Hoje, pastor em Medes Church. Tem um testemunho incrível de como Deus o tirou da pobreza extrema e o levou a uma vida de plenitude em Cristo. Fato curioso: amante de pupusas (comida típica de El Salvador). Poderia comê-las no café da manhã, almoço e jantar!",
+        "titulo10": "Eliemerson e Johanna Proença",
+        "descripcion10": "Pais de Shailoh, Rachel e Emma, têm uma família exemplar. São pastores na MCI Bogotá e G12 Church Miami e Deus tem podido usá-los levando uma mensagem de direção aos sentimentos dos jovens e às famílias. Fato curioso:  O pastor Eli já teve o cabelo tão longo que até chegou na cintura e a pastora Johanna teve um namorado roqueiro."
+    },
+    "registro": {
+        "nombres": "Nome",
+        "apellidos": "Sobrenomes",
+        "registrate": "Inscreva-se Aqui",
+        "edad": "Idade",
+        "email": "Email",
+        "celular": "Celular",
+        "telefono": "Telefone",
+        "pais": "Selecione um País",
+        "ciudad": "Cidade",
+        "lider": "Nome de seu Líder",
+        "idioma": "Selecione um Idioma",
+        "taller": "Selecione um Workshop",
+        "terminos": "Aceito Termos e Condições",
+        "marketing": "Receber emails de Marketing de SOMOS UNO - GO!",
+        "registrarme": "Inscrever-me"
+    },
+    "sidebar":{
+        "home": "INÍCIO",
+        "tribu": "TRIBO",
+        "puntos": "PONTOS",
+        "boton-salir": "SAIR",
+        "talleres": "WORKSHOPS",
+        "bloques": "Bloques",
+        "merch": "PRODUTOS",
+        "conferencistas": "Bloques",
+        "galeria": "GALERIA DE FOTOS",
+        "donaciones": "doações"
     },
     "footer":{
         "siguenos":"SIGA-NOS:"
+    },
+    "music": {
+        "titulo": "RODAS DE CONVERSA",
+        "titulo1": "REDIMI2",
+        "descripcion1": "Willy Gonzales Cruz, mais conhecido como Redimi2 é um cantor de Hip Hop nascido em Santo Domingo, República Dominicana. Desde muito jovem teve inclinação pela arte, principalmente pelo desenho, pintura e teatro. Quando fez 12 anos começou a gostar de rap, e rapidamente tornou-se seu estilo de música favorito. Esse estilo musical o influenciou através de suas mensagens de violência e negativismo de tal forma que aos 17 anos de idade estava viciado em drogas. Porém, em 1999 teve um encontro sobrenatural com Deus e agora usa seu talento para ensinar a muitos, através da música, que o amor de Deus pode mudar tudo.",
+        "titulo2": "BARAK",
+        "descripcion2": "Roberts Green, Janiel Ponciano, Katiuska e Ángelo Frilop, todos de República Dominicana, formam o Grupo Barak, um ministério musical com o chamado e intenção de alcançar almas em todo o mundo e levá-las a prostrarem-se aos pés de Cristo. Nascido em 2009, o grupo já produziu 9 álbuns com canções que nos conectam ao Céu. Fizeram colaborações com Generación 12, Christine D’clario, Redimi2 e grandes salmistas latinoamericanos.",
+        "titulo3": "Generación 12",
+        "descripcion3": "Amam conectar as pessoas ao coração de Deus através da verdadeira adoração. Fato curioso: Inicialmente iam chamar-se Revolución 12."
+    },
+    "tribus": {
+        "titulo": "TRIBOS",
+        "titulo1": "PACK LEÕES",
+        "titulo2": "PACK GORILAS",
+        "titulo3": "PACK FALCÕES",
+        "titulo4": "PACK TUBARÕES"
     }
 }

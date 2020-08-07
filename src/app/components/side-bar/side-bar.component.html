@@ -47,12 +47,11 @@
                     [ngClass]="{ 'bold-selected' : tab == 'talleres' }">
                     {{ 'sidebar.talleres' | translate }}
                 </li>
+                <li class="list-group-item" (click)="goTo('bloques');" [ngClass]="{ 'bold-selected' : tab == 'bloques' }">
+                    {{ 'sidebar.conferencistas' | translate }}
+                </li>
                 <li class="list-group-item" (click)="goTo('merch');" [ngClass]="{ 'bold-selected' : tab == 'merch' }">
                     {{ 'sidebar.merch' | translate }}
-                </li>
-                <li class="list-group-item" (click)="goTo('galeria');"
-                    [ngClass]="{ 'bold-selected' : tab == 'galeria' }">
-                    {{ 'sidebar.galeria' | translate }}
                 </li>
                 <li class="list-group-item">
                     <a class="white" target="_blank" href="https://mcidonaciones.com/">

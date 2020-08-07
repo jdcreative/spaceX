@@ -11,6 +11,13 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+    background: black !important;
+}
+
+.dropdown-toggle {
+    text-transform: uppercase;
+}
 button {
     font-family: 'Poppins', sans-serif;
 }
