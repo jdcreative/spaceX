@@ -123,9 +123,11 @@ export class ChatComponent implements OnInit {
     this.sendMessage.controls['hourMessage'].setValue(actualTime);
     this.sendMessage.controls['message'].setValue(this.sendMessage.value.message);
 
+
     let data = this.sendMessage.value;
     this.chatservice.newMessage(data);
     this.sendMessage.reset();
+    this.emojiSelected = "";
     this.triggerScrollTo();
 
     setTimeout(() => {
