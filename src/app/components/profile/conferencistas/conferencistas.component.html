@@ -3,15 +3,15 @@
 
         <nav class="nav nav-pills nav-fill fix-hover">
             <a class="nav-item nav-link" (click)="changeTabTool('bloque_01');"
-                [ngClass]="{ 'active' : tabTools == 'bloque_01' }">Jueves - Bloque 01</a>
+                [ngClass]="{ 'active' : tabTools == 'bloque_01' }">{{ 'submenuBloques.bloque_1' | translate }}</a>
             <a class="nav-item nav-link" (click)="changeTabTool('bloque_02');"
-                [ngClass]="{ 'active' : tabTools == 'chat' }">Viernes - Bloque 02</a>
+                [ngClass]="{ 'active' : tabTools == 'chat' }">{{ 'submenuBloques.bloque_2' | translate }}</a>
             <a class="nav-item nav-link" (click)="changeTabTool('bloque_03');"
-            [ngClass]="{ 'active' : tabTools == 'chat' }">Viernes - Bloque 03</a>
+            [ngClass]="{ 'active' : tabTools == 'chat' }">{{ 'submenuBloques.bloque_3' | translate }}</a>
             <a class="nav-item nav-link" (click)="changeTabTool('bloque_04');"
-            [ngClass]="{ 'active' : tabTools == 'chat' }">Sabado - Bloque 04</a>
+            [ngClass]="{ 'active' : tabTools == 'chat' }">{{ 'submenuBloques.bloque_4' | translate }}</a>
             <a class="nav-item nav-link" (click)="changeTabTool('bloque_05');"
-            [ngClass]="{ 'active' : tabTools == 'chat' }">Sabado - Bloque 05</a>
+            [ngClass]="{ 'active' : tabTools == 'chat' }">{{ 'submenuBloques.bloque_5' | translate }}</a>
         </nav>
 
         <div *ngIf="tabTools == 'bloque_01'" class="container-box">

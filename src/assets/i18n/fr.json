@@ -43,6 +43,13 @@
         "tribus": "TRIBUS",
         "faq": "FAQ"
     },
+    "submenuBloques": {
+        "bloque_1": "Jeudi - Session 01",
+        "bloque_2": "Vendredi - Session 02",
+        "bloque_3": "Vendredi - Session 03",
+        "bloque_4": "Samedi - Session 04",
+        "bloque_5": "Samedi - Session 05"
+    },
     "profile":{
         "live": "https://player.vimeo.com/video/443564812"
     },

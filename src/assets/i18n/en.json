@@ -43,6 +43,13 @@
         "tribus": "TRIBES",
         "faq": "FAQ"
     },
+    "submenuBloques": {
+        "bloque_1": "Thursday - Session 1",
+        "bloque_2": "Friday - Session 2",
+        "bloque_3": "Friday - Session 3",
+        "bloque_4": "Saturday - Session 4",
+        "bloque_5": "Saturday - Session 5"
+    },
     "home": {
         "imagen-home": "https://cdn.somosunogo.com/goo.png",
         "confirmar-registro": "CONFIRM YOUR REGISTRATION",

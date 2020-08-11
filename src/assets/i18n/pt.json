@@ -43,6 +43,13 @@
         "tribus": "TRIBOS",
         "faq": "PERGUNTAS FREQUENTES"
     },
+    "submenuBloques": {
+        "bloque_1": "Quinta - Bloco 1",
+        "bloque_2": "Sexta - Bloco 2",
+        "bloque_3": "Sexta - Bloco 3",
+        "bloque_4": "Sábado - Bloco 4",
+        "bloque_5": "Sábado - Bloco 5"
+    },
     "profile":{
         "live": "https://player.vimeo.com/video/443564812"
     },

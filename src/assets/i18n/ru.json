@@ -35,38 +35,126 @@
         "pt": "https://player.vimeo.com/video/445066401",
         "ru": "https://player.vimeo.com/video/445067035"
     },
+    "menu": {
+        "inicio": "НАЧАЛО",
+        "invitados": "ГОСТИ",
+        "conferencistas": "ПРОПОВЕДНИКИ",
+        "bandas": "МУЗЫКАЛЬНЫЕ ГРУППЫ",
+        "tribus": "ПЛЕМЕНА",
+        "faq": "FAQ"
+    },
+    "submenuBloques": {
+        "bloque_1": "Thursday - Session 1",
+        "bloque_2": "Friday - Session 2",
+        "bloque_3": "Friday - Session 3",
+        "bloque_4": "Saturday - Session 4",
+        "bloque_5": "Saturday - Session 5"
+    },
     "home": {
-        "imagen-home": "https://cdn.somosunogo.com/goo.png",
-        "confirmar-registro": "CONFIRME SUA INSCRIÇÃO",
-        "iniciar-sesion": "INGRESAR",
-        "registrate": "INSCREVA-SE AQUI",
-        "versiculo": "« Un ange du Seigneur, s'adressant à Philippe, lui dit: Lève-toi, et va du côté du midi… » Actes 8 :26",
-        "descripcion": "O chamado de Deus a essa geração é “Levante-se e vá”! Há uma missão que  nos espera. Há um chamado à porta. Há vidas esperando a mensagem que eu e você temos. Deus lançou sua palavra “levante-se e vá!”. Agora o resto depende de nós. GO é nossa resposta e cremos que não estamos sós nessa resposta. Vamos nos unir ao clamor de milhares e digamos: “Eis-me aqui, Deus. Envia-me a mim!” A partir de hoje nos unimos à geração GO!",
-        "descripcion-nombre": "Pastores do “SOMOS UNO",
-        "descripcion-somosuno": "“Somos Um” é o ministério de jovens da Misión Carismática internacional (Missão Carismática Internacional). Cremos que a mensagem mais poderosa que temos é a unidade. “Somos Um” busca unir a nova geração para que, através da unidade com o Espírito Santo, muitos possam escutar a mensagem mais impactante de todas: a mensagem de Jesus.",
-        "versiculo-somosuno": "“Minha oração não é apenas por eles. Rogo também por aqueles que crerão em mim, por meio da mensagem deles, para que todos sejam um, Pai, como tu estás em mim e eu em ti. Que eles também estejam em nós, para que o mundo creia que tu me enviaste” João 17:20-22"
+        "confirmar-registro": "Подтверди свою регистрацию",
+        "iniciar-sesion": "Начать",
+        "registrate": "Регистрация",
+        "versiculo": "«А Филиппу Ангел Господень сказал: встань и ИДИ на полдень...»  Деяния 8:26",
+        "descripcion": "Бог призывает это поколение встать и идти. У нас есть миссия, Бог стучит в нашу дверь, люди ждут, чтобы услышать послание, которое есть у нас с тобой. Бог уже высвободил слово: «Встань и иди!» Остальное зависит от нас. GO - это наш ответ. Присоединимся к голосам тысяч молодых людей и скажем: «Вот я, Бог, пошли меня!» С сегодняшнего дня мы присоединяемся к поколению GO!",
+        "descripcion-nombre": "Pastores do “МЫ - ОДНО ЦЕЛОЕ",
+        "descripcion-somosuno": "Somos uno - это молодежное движение Международной Харизматической Миссии, и мы верим, что наше самое сильное послание - это единство. Somos uno старается объединить новое поколение, чтобы через единство со Святым Духом многие смогли услышать самое главное послание - послание Иисуса.",
+        "versiculo-somosuno": "«Не о них же только молю, но и о верующих в Меня по слову их, да будут все едино, как Ты, Отче, во Мне, и Я в Тебе, так и они да будут в Нас едино, — да уверует мир, что Ты послал Меня.» ‭‭Иоанна ‭17:20-22‬",
+        "que_habra": "¿QUÉ HABRÁ EN LA CONVENCIÓN?"
     },
     "guests": {
-        "titulo": " PRÉDICATEURS INTERNATIONAUX",
-        "descripcion1": "Francis Chan est pasteur, auteur et maître de la Parole aux Etats-Unis, bien qu’il soit né à Hong-Kong. Après avoir été élevé par sa grand-mère bouddhiste à Hong-Kong, Francis est arrivé aux Etats-Unis à l’âge de cinq ans. Sa mère est morte à sa naissance, sa belle-mère est morte dans un accident de voiture quand il avait neuf ans, et son père est mort d’un cancer quand il avait douze ans. Mais en 1984, Francis a rencontré le Seigneur pendant ses études secondaires et son histoire a complètement changé. Le pasteur Chan est un orateur très sollicité dans beaucoup d’universités chrétiennes et dans des conférences pour les jeunes au niveau national et international. Actuellement il est aussi actif avec Children’s Hunger Fund, African Renewal Ministries et World Impact, et il a écrit des livres comme « Dieu oublié », « Lettres à l’Eglise » et d’autres best-sellers.",
-        "frase1": "\"TENER FE A VECES SIGNIFICA HACER LO QUE LOS DEMÁS CONSIDERAN LOCO.\"",
-        "descripcion2": "As-tu vu la série The Chosen (les élus) ? Eh bien Dallas Jenkins est son producteur, directeur et co-auteur. Cet auteur, producteur de cinéma et directeur de télévision à impacts le monde entier avec l’une des meilleures séries qui racontent de manière épique l’histoire de notre Sauveur. Sa première production indépendante a été lancée à ses 25 ans et distribuée par Warner Brothers, et rien ne l’a arrêté ! Il a grandi dans un foyer où on aimait raconter des histoires, et il s’est formé professionnellement pour raconter au monde la plus grande histoire de toutes : l’amour de Dieu qui a tout donné pour récupérer notre cœur.",
-        "frase2": "\"Hemos sido llamados para llevar el mensaje de Jesús a esta generación a través de los medios de comunicación. No existen los límites\".",
-        "descripcion3":"L’histoire de Heidi Baker semble être la continuité du livre des Actes. Elle est remplie de rencontres divines, de visions et de miracles depuis l’âge de 16 ans, où on lui a parlé de Jésus et où elle en est tombée éperdument amoureuse. Elle a vu des morts ressusciter, des sourds entendre et des aveugles voir. Des enfants qui se prostituaient pour un pain, devenir des médecins, des ingénieurs et des prédicateurs. Des peuples entiers qui n’avaient jamais entendu l’évangile se donner à Dieu dans l’un des pays les plus pauvres et vulnérables du monde : le Mozambique. Avec son mari, elle a fondé Iris Global, qui aujourd’hui a 34 bases missionnaires dans 30 pays. Ils ont implanté plus de 10 000 églises, ils construisent une université et travaillent à sauver un million de petits orphelins et à voir le réveil. Ils ont vécu un avant et un après Christ, et ils veulent que l’humanité entière vivent la même expérience.",
-        "frase3": "\"El método de Dios para cambiar tu nación eres tú. Tú eres la sal. Tú eres la luz. Tú eres la persona que Él quiere usar.\"",
-        "descripcion4": "Dominic Russo est un prédicateur, évangéliste et innovateur en termes de missions internationales. À l’âge précoce de vingt ans, Dominic a fondé Missions.Me et a commencé à organiser des campagnes stratégiques de prédication dans des villes d’Amérique Latine. Depuis 2011 et pendant ses quatre principales campagnes d’évangélisation en Amérique Latine, il a pu atteindre plus de 3,6 millions de personnes face à face au travers des diverses initiatives. Dominic inspire les cœurs pour rêver en grand et les leaders pour s’unir et avoir un impact exponentiel. En 2010, l’épouse de Dominic, Lindsay, a fondé Angel House, une organisation qui a créé plus de 202 « Casas Angel », des foyers pour plus de 5000 enfants en Inde et un campus de liberté trafic humain annuellement au Népal. Ensemble, ils vivent au sud de la Californie avec leurs trois enfants Mason, Jude et Liviana.",
-        "frase4": "“Deus te chamou para deixar uma pegada nesta geração através da mensagem de Jesus”",
-        "descripcion5": "Le docteur John Lennox est mathématicien et philosophe des sciences et professeur de Mathématiques à l’université d’Oxford. C’est un apologète impressionnant, il cherche toujours la relation entre la science, la philosophie et la religion. Il est professeur dans beaucoup d’institutions académiques, entre autres le Said Business School, Wycliffe Hall et le Oxford Centre for Christian Apologetics. Il a écrit une série de livres qui explorent les relations entre la science et le christianisme et a participé à de nombreux débats télévisés avec certains des plus grands penseurs athées du monde.",
-        "frase5": "\"The more I understand science, the more I believe in God because of the wonder of the width, satisfaction and integrity of His creation.\""
+        "titulo": "CONVIDADOS ESPECIAIS",
+        "descripcion1": "Фрэнсис Чан - пастор, автор книг и учитель слова, проживающий в США, но родившийся в Гонконге. Воспитанный своей бабушкой-буддисткой в Гонконге, в возрасте пяти лет Фрэнсис переехал в Соединённые Штаты. Его мать умерла при родах, мачеха погибла в автомобильной катастрофе, когда ему было 9 лет, а отец скончался от рака, когда Фрэнсису исполнилось 12. Но в 1884, учась в школе,  Фрэнсис встретился с Господом, и его история полностью изменилась. Чан - востребованный оратор в христианских университетах и на национальных и международных конференциях. В настоящее время работает с Children’s Hunger Fund, African Renewal Ministries и World Impact, автор книг «Забытый Бог», «Письма к Церкви» и других бестселлеров.",
+        "frase1": "«Иметь веру - значит совершать то, что другие считают безумием».",
+        "descripcion2": "Ты видел сериал «Избранные» (The Chosen)? Так вот, Даллас Дженкинс был его продюсером, режиссером и соавтором. Этот писатель, кинопродюсер и телевизионный режиссёр потряс весь мир одним из лучших эпических сериалов об истории нашего Спасителя. Когда ему было 25 лет, вышла его первая независимая продюсерская работа, она была распространена Warner Brothers, и с тех пор ничто не могло его остановить!Он вырос в семье, где любили рассказывать истории, и получил профессию, чтобы рассказать миру самую главную историю о любви Бога, Который отдал все, чтобы спасти наши сердца.",
+        "frase2": "«Мы призваны, чтобы нести этому поколению послание об Иисусе через средства массовой информации. Ограничений не существует».",
+        "descripcion3":"История жизни Хайди Бейкер похожа на продолжение книги Деяний: она полна Божественных встреч, видений и чудес. В 16 лет ей рассказали об Иисусе, и она влюбилась в Него без памяти. Она видела, как мертвые воскресали, глухие слышали и слепые прозревали. Она видела, как дети, занимавшиеся проституцией ради куска хлеба, становились врачами, инженерами и проповедниками. Она видела целые деревни, никогда прежде не слышавшие Евангелия и обращавшиеся к Богу в одной из самых бедных и угнетенных стран мира - в Мозамбике. Вместе со своим супругом они основали миссионерскую организацию Iris Global, которая на сегодняшний день имеет 34 базы в 30 странах. Они насадили более 10.000 церквей, строят университет, работают над спасением миллиона сирот и приближают пробуждение. Их жизнь разделена на до и после Христа, и их желание - чтобы все человечество познало Его.",
+        "frase3": "«Божий метод - это изменить твой народ через тебя. Ты - соль. Ты - свет. Ты - человек, которого хочет использовать Бог».",
+        "descripcion4": "Доминик Руссо - проповедник, евангелист и новатор в международных миссиях. Уже в возрасте двадцати лет Доминик основал Missions.Me и занялся организацией стратегических кампаний по проповеди Евангелия в городах Латинской Америки. Он лично достиг 3,6 миллионов людей через различные инициативы. Основатель Ángel House, организации, которая спасла из нищеты более 5.000 брошенных детей в Индии. Вместе со своей супругой открыл центры по восстановлению молодежи, ставшей жертвами работорговли в Непале, с целью дать им надежду и призвание в жизни через послание об Иисусе. В настоящее время ведёт служение на юге Калифорнии, поднимая тысячи лидеров, чтобы продолжить свой проект в более 200 миссий Ángel House в Азии и Латинской Америке.",
+        "frase4": "«Бог призвал тебя оставить след в этом поколении через проповедь об Иисусе». ",
+        "descripcion5": "Профессор Оксфордского университета, математик, философ науки, христианский апологет, британец, участник знаменательных дебатов о существовании Бога с такими выдающимися интеллектуалами, как Ричард Докинз и Кристофер Хитченс. Главный директор Института Trinity Forum и автор известной серии публикаций «Наука похоронила Бога?», «Начало согласно книге Бытия и науке», «Можно ли доверять Евангелиям» и др., где поднимает вопрос отношений науки и Бога.",
+        "frase5": "«Чем больше я изучаю науку, тем больше верю в Бога, видя величину, высшую степень сложности и целостность Его творения»        "
     },
-    "sidebar":{
-        "tribu": "TRIBO",
-        "puntos": "PONTOS",
-        "bloques": "Bloques",
-        "conferencistas": "Bloques",
-        "boton-salir": "SAIR"
+    "speakers": {
+        "titulo": "SPEAKERS",
+        "titulo1": "Сезар и Эмма Клаудиа Кастелланос",
+        "descripcion1": "Главные пасторы MCI и основатели G12.",
+        "titulo2": "Лау и Сара Гэрра",
+        "descripcion2": "Родители Исаака, Анабелы и ещё одного малыша, который родится уже совсем скоро. Пасторы молодежного движения SOMOS UNO. Горят для Иисуса и хотят видеть Его свет по всему миру.",
+        "titulo3": "Ребека Ховард",
+        "descripcion3": "Бразильянка, замужем за Джошем Ховардом, мама Израэля, пастор MCI в Дуранго, Мексика. Любит изучать и учить Божьему Слову.Любопытный факт: всегда утверждала, что ее призвание - для Бразилии, пока Бог не послал ее в Мексику. Никогда не говори никогда!",
+        "titulo4": "Глория Саламанка",
+        "descripcion4": "Вместе со своим мужем Саулом являются пасторами MCI в Мехико. Мама троих детей, которые любят Бога и служат Ему вместе со всей семьей. Мы любим ее, потому что ее послание всегда напрямую направлено в сердце.Любопытный факт: изучала системную инженерию.",
+        "titulo5": "Фелипе Саламанка",
+        "descripcion5": "Муж Вики, молодежный пастор MCI в Мексике, имеет теологическое образование. Любит хороший кофе и хорошие книги. Создатель подкаста «Una Fe Relevante». Любопытный факт: ему пришлось много молиться за Вики! Их история похожа на кино. ",
+        "titulo6": "Хулиан и Лорена Гамба",
+        "descripcion6": "Родители Арианы, Мелоди и Эсекиэля. Директоры Generación 12 Music и пасторы MCI в Боготе и G12 Church  в Майами. Любят церковь и миссионерскую деятельность. Хулиан - создатель подкаста «La Academia» о лидерских способностях в каждом человеке. Любопытный факт: Хулиан в течение нескольких лет пытался покорить Лорену, и хотя она постоянно его отвергала, он ей всегда нравился!",
+        "titulo7": "Эрика Берриос",
+        "descripcion7": "Жена пастора Даниэля, мама Дани, Вале и Аны Виктории. Пастор MCI в Боготе, ее послание всегда прямолинейно и искренно и достигает наших сердец. Она горит для Бога, имеет искреннюю веру и готова на самоотдачу.Любопытный факт: в детстве часто сбегала из дома, чтобы бродить по улицам, и бабушке приходилось бегать за ней по всему району, чтобы отвести домой! Кто бы мог подумать! Сегодня она посвящённая домохозяйка, прекрасно готовит блюда из морепродуктов. ",
+        "titulo8": "Ричард и Мануэла Хардинг",
+        "descripcion8": "Родители Ноа, Нэйтана, Клоуи и Джой. Создатели HeroKids, HeroMoms и Радуги в облаках (детского материала для домашнего обучения). Пасторы MCI  в Боготе и G12 Church в Майами. Любопытный факт: хотят иметь 6 детей!",
+        "titulo9": "Давид Эгелши",
+        "descripcion9": "Муж Диноры и отец 4 детей, которые любят Бога и служат Ему. Пастор Medes Church, имеет невероятное свидетельство о том, как Бог вывел его из крайней нищеты в жизнь в полноте во Христе. Любопытный факт: любитель пупусы (традиционного блюда Сальвадора). Может завтракать, обедать и ужинать только пупусой",
+        "titulo10": "Элиэмерсон и Джоханна Проэнса",
+        "descripcion10": "Родители Шайло, Рэйчел и Эммы, имеют образцовую семью. Пасторы MCI в Боготе и G12 Church в Майами. Бог использует их, чтобы нести послание для семей и о чувствах для молодежи. Любопытный факт: у пастора Эли когда-то были волосы до поясницы, а у пастора Джоханны был парень металли"
+    },
+    "registro": {
+        "nombres": "Имя",
+        "apellidos": "Фамилия",
+        "registrate": "Inscreva-se Aqui",
+        "edad": "Возраст",
+        "email": "Email",
+        "celular": "Моб. тел.",
+        "telefono": "Тел.",
+        "pais": "Выбери страну",
+        "ciudad": "Город",
+        "lider": "Имя лидера",
+        "idioma": "Выбери язык",
+        "taller": "Выбери мастер-класс",
+        "terminos": "Принимаю условия",
+        "marketing": "Получать маркетинговую рассылку Somos Uno GO",
+        "registrarme": "Зарегистрироваться"
+    },
+    "sidebar": {
+        "home": "НАЧАТЬ",
+        "talleres": "МАСТЕР-КЛАССЫ",
+        "merch": "MERCH",
+        "galeria": "ГАЛЕРЕЯ",
+        "donaciones": "ПОЖЕРТВОВАНИЯ",
+        "tribu": "TRIBE",
+        "puntos": "POINTS",
+        "boton-salir": "ВЫЙТИ"
     },
     "footer":{
         "siguenos":"SIGA-NOS:"
+    },
+    "music": {
+        "titulo": "МУЗЫКАЛЬНЫЕ ГРУППЫ",
+        "titulo1": "REDIMI2",
+        "descripcion1": "Вилли Гонсалес Крус, более известный, как Redimi2,  -  хип-хоп исполнитель родом из Санто Доминго, Доминиканская республика. С самого детства тяготел к искусству, главным образом к изобразительному искусству и театру. В 12 лет увлекся рэп музыкой, которая впоследствии стала его профессией. Этот музыкальный жанр нёс посыл негатива и насилия и оказал на него такое сильное влияние, что уже в 17 лет он стал наркозависимым, однако в 1999 году он пережил сверхъестественную встречу с Богом и теперь использует свой талант, чтобы посредством музыки доказать, что Божья любовь может все изменить.",
+        "titulo2": "BARAK",
+        "descripcion2": "Робертс Грин, Джаниэль Понсиано, Катюшка и Анхело Фрилоп, все родом из Доминиканской республики, члены группы Barak, музыкального служения, несущего призвание касаться жизней людей во всем мире, приводя их к ногам Христа. Группа основана в 2009 году и выпустила 9 музыкальных альбомов, которые соединяют нас с Небесами. Участвовала в совместных проектах  с Generación 12, Кристин Д’Кларио, Redimi2 и другими известными латиноамериканскими христианскими певцами.",
+        "titulo3": "Generación 12",
+        "descripcion3": "В истинном поклонении соединяют сердца людей с сердцем Бога. Любопытный факт: изначально хотели назваться Revolución 12."
+    },
+    "tribus": {
+        "titulo": "ПЛЕМЕНА",
+        "titulo1": "PACK ЛЬВЫ",
+        "titulo2": "PACK ГОРИЛЛЫ",
+        "titulo3": "PACK ЯСТРЕБЫ",
+        "titulo4": "PACK АКУЛЫ"
+    },
+    "talleres": {
+        "titulo1": "Лидерство",
+        "taller1": "ОСВОБОЖДЁН, ЧТОБЫ БЫТЬ ЛИДЕРОМ",
+        "titulo2": "Молодые пары",
+        "taller2": "«ПОЛТОРА РЕБЁНКА И СОБАКА» - ОТНОШЕНИЕ К БРАКУ В ОБЩЕСТВЕ",
+        "titulo3": "Отношения",
+        "taller3": "КАК БЫТЬ НЕЖЕНАТЫМ/НЕЗАМУЖНЕЙ И СЧАСТЛИВЫМ/СЧАСТЛИВОЙ - ЖИЗНЬ ДО БРАКА",
+        "titulo4": "Апологетический",
+        "taller4": "КАК ЗАЩИТИТЬ МОЮ ВЕРУ В МИРЕ НЕТЕРПИМОСТИ",
+        "titulo5": "Изучение Библии",
+        "taller5": "КАК ПОЗНАВАТЬ БОГА ЧЕРЕЗ ЕГО СЛОВО",
+        "titulo6": "ФИНАНСЫ",
+        "taller6": "¿CÓMO MANEJAR MI DINERO?"
     }
 }

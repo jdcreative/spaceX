@@ -35,6 +35,13 @@
         "pt": "https://player.vimeo.com/video/445066401",
         "ru": "https://player.vimeo.com/video/445067035"
     },
+    "submenuBloques": {
+        "bloque_1": "Jueves - Bloque 01",
+        "bloque_2": "Viernes - Bloque 02",
+        "bloque_3": "Viernes - Bloque 03",
+        "bloque_4": "Sabado - Bloque 04",
+        "bloque_5": "Sabado - Bloque 05"
+    },
     "menu": {
         "inicio": "INICIO",
         "invitados": "INVITADOS",
