@@ -3,7 +3,7 @@
     <div class="container-padding">
 
         <div class="container-image-profile padding-items display-flex">
-            <img class="rounded-circle img-tribus" [src]="finalImage">
+            <img class="rounded-circle img-tribus" src="https://cdn.somosunogo.com/argentina/logo_convencion.png">
         </div>
 
         <div class="container-info padding-items">
@@ -18,7 +18,7 @@
 
         </div>
 
-        <div class="container-tribu padding-items display-flex">
+        <div class="container-tribu padding-items display-flex" style="display: none;">
 
             <div class="container-border">
 
@@ -38,28 +38,26 @@
         </div>
 
         <div class="container-menu padding-items">
-
             <ul class="list-group list-group-flush">
                 <li class="list-group-item" (click)="goTo('home');" [ngClass]="{ 'bold-selected' : tab == 'home' }">
                     {{ 'sidebar.home' | translate }}
                 </li>
                 <li class="list-group-item" (click)="goTo('talleres');"
-                    [ngClass]="{ 'bold-selected' : tab == 'talleres' }">
+                    [ngClass]="{ 'bold-selected' : tab == 'talleres' }" style="display: none;">
                     {{ 'sidebar.talleres' | translate }}
                 </li>
-                <li class="list-group-item" (click)="goTo('bloques');" [ngClass]="{ 'bold-selected' : tab == 'bloques' }">
+                <li class="list-group-item" (click)="goTo('bloques');" [ngClass]="{ 'bold-selected' : tab == 'bloques' }" >
                     {{ 'sidebar.conferencistas' | translate }}
                 </li>
-                <li class="list-group-item" (click)="goTo('merch');" [ngClass]="{ 'bold-selected' : tab == 'merch' }">
+                <li class="list-group-item" (click)="goTo('merch');" [ngClass]="{ 'bold-selected' : tab == 'merch' }" style="display:none;">
                     {{ 'sidebar.merch' | translate }}
                 </li>
                 <li class="list-group-item">
-                    <a class="white" target="_blank" href="https://mcidonaciones.com/">
+                    <a class="white" target="_blank" href="https://www.visiondefuturo.org/done-hoy/">
                         {{ 'sidebar.donaciones' | translate }}
                     </a>
                 </li>
             </ul>
-
         </div>
 
     </div>

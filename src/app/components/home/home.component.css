@@ -74,8 +74,17 @@
 
 /*  */
 
+.calendar {
+    background: linear-gradient(rgba(255, 27, 27, 0) 15.68%, #1BE4FF 110.36%), #3965FF;
+    padding: 6% 0px;
+}
+.container-title-convencion {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
 .banner {
-    background: url("https://cdn.somosunogo.com/banner_home.jpg") no-repeat;
+    background: url("https://cdn.somosunogo.com/argentina/banner_convencion.jpg") no-repeat;
     width: 100%;
     padding: 100px 1px;
     background-position: top;
@@ -83,11 +92,11 @@
 }
 
 .btnLogInHome {
-    background: #fd705c;
+    background: linear-gradient(rgba(255, 27, 27, 0) 15.68%, #1BE4FF 110.36%), #3965FF;
     border: none;
-    width: auto;
+    width: 30%;
     height: 70px;
-    border-radius: 50px;
+    border-radius: 15px;
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -106,6 +115,7 @@
 
 .buttons-section {
     display: flex;
+    margin-bottom: 50px;
 }
 
 img.img-left-banner {
@@ -123,9 +133,9 @@ img.img-left-banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black url("https://cdn.somosunogo.com/starts-bg.jpg");
+    background: black url("https://cdn.somosunogo.com/argentina/bg_sec_info.jpg");
     background-attachment: fixed;
-    padding: 7% 0px;
+    padding: 4% 0px;
 }
 
 .container-content-introducting {
@@ -204,19 +214,20 @@ img.img-left-banner {
 }
 
 .btnRegisterBanner {
-    width: auto;
-    height: 70px;
+    background: linear-gradient(rgba(255, 27, 27, 0) 15.68%, #1BE4FF 110.36%), #3965FF;
     border: none;
-    background: #FBFE01;
-    border-radius: 80px;
-    font-size: 20px;
+    width: 30%;
+    height: 70px;
+    border-radius: 15px;
+    color: white;
     font-weight: bold;
-    color: black;
-    padding: 20px 50px;
+    font-size: 20px;
+    line-height: 0.5;
     outline: none;
     text-align: center;
-    display: block;
     margin: 0 auto;
+    padding: 20px;
+    display: block;
     text-transform: uppercase;
 }
 
@@ -533,10 +544,12 @@ img.img_set_info {
 }
 
 .content_side {
-    background: #272727;
-    padding: 5%;
-    color: white;
+    background: #ffffff;
+    padding: 6%;
+    color: #2d2d2d;
     font-family: Poppins, sans-serif;
+    font-weight: 300;
+    text-align: center;
 }
 
 .content_side p {
@@ -644,6 +657,13 @@ img.img_set_info {
         background: #00CEA7;
         padding: 1%;
         margin-top: 27px !important;
+    }
+    .btnLogInHome, .btnRegisterBanner, .btnVerify {
+        margin-bottom: 11px;
+        width: 81%;
+        font-size: 16px;
+        padding: 5px !important;
+        height: 48px;
     }
 }
 

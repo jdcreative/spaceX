@@ -1,16 +1,12 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-
     <a class="navbar-brand" [routerLink]="['/home']">
-        <img src="{{ 'home.imagen-home' | translate }}" class="logoNavbar">
+        <img src="https://cdn.somosunogo.com/argentina/logo_g12.png" class="logoNavbar">
     </a>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarText">
-
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link">
@@ -18,42 +14,27 @@
                 </a>
             </li>
         </ul>
-
         <span class="navbar-text">
 
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/invitados-especiales']">
-                        <span class="textMenu">{{ 'menu.invitados' | translate }}</span>
+                    <a class="nav-link" [routerLink]="['/home']">
+                        <span class="textMenu">{{ 'menu.inicio' | translate }}</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/conferencistas']">
-                        <span class="textMenu">{{ 'menu.conferencistas' | translate }}</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/bandas']">
-                        <span class="textMenu">{{ 'menu.bandas' | translate }}</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/tribus']">
-                        <span class="textMenu">{{ 'menu.tribus' | translate }}</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/faq']">
-                        <span class="textMenu">{{ 'menu.faq' | translate }}</span>
-                    </a>
-                </li>
+                
                 <li class="nav-item log-in">
                     <a class="nav-link" (click)="openLogin();">
                         <span class="textMenu">{{ 'modals.iniciarsesion1' | translate }}
                             {{ 'modals.iniciarsesion2' | translate }} </span>
                     </a>
                 </li>
-                <li class="nav-item list-lang">
+                <li class="nav-item log-in">
+                    <a class="nav-link" (click)="openCloseModal();">
+                        <span class="textMenu">{{ 'home.registrate' | translate }}</span>
+                    </a>
+                </li>
+                <li class="nav-item list-lang" style="display: none;">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

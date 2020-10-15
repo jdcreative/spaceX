@@ -1,10 +1,10 @@
 .navbar {
     height: auto;
-    background: #272727
+    background: #000 !important;
 }
 
 .logoNavbar {
-    width: 104px;
+    width: 55px;
     margin-left: 2vw;
 }
 
@@ -20,7 +20,7 @@ li.nav-item.list-lang {
 }
 
 li.nav-item.log-in {
-    background: #ff6245;
+    background:linear-gradient(rgba(255, 27, 27, 0) 0%, #1BE4FF 110.36%), #3965FF;
     padding: 0px 5px;
     margin-left: 8px;
     border-radius: 9px;

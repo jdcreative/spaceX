@@ -15,7 +15,6 @@
               <div *ngIf="nameUpdate.invalid && (nameUpdate.touched || nameUpdate.dirty)" class="invalid-feedback">
                 <p *ngIf="nameUpdate.hasError('required')">Debes ingresar tu Nombre</p>
               </div>
-
             </div>
             <div class="form-group col-md-6">
               <input type="text" class="form-control" id="inputApellido" formControlName="apellidos"
@@ -24,7 +23,6 @@
                 <p *ngIf="lastUpdate.hasError('required')">Debes ingresar tu Apellido</p>
               </div>
             </div>
-
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -36,7 +34,6 @@
               </div>
             </div>
             <div class="form-group col-md-6">
-
               <input type="email" class="form-control" id="inputEmail" formControlName="email" placeholder="Email">
               <div *ngIf="mailUpdate.invalid && (mailUpdate.touched || mailUpdate.dirty)" class="invalid-feedback">
                 <p *ngIf="mailUpdate.hasError('required')">Debes ingresar tu Correo Electronico</p>
@@ -55,7 +52,6 @@
                 placeholder="Telefono">
             </div>
           </div>
-
           <div class="form-row">
             <div class="form-group col-md-6">
               <select id="inputState" class="form-control custom-select" formControlName="pais">
@@ -75,293 +71,17 @@
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group col-md-6">
-              <select id="inputChurch" class="form-control custom-select" formControlName="iglesia">
-                <option selected value="">Selecciona tu iglesia</option>
-                <option value='pertenece_mci'>Soy parte de la MCI</option>
-                <option value='G12_church'>G12 Church - Miami</option>
-                <option value='otra_iglesia'>Otra Iglesia</option>
-                <option value='ninguna'>No pertenezco a ninguna iglesia</option>
-              </select>
-              <div *ngIf="churchUpdate.invalid && (churchUpdate.touched || churchUpdate.dirty)"
-                class="invalid-feedback">
-                <p *ngIf="churchUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
-              </div>
-            </div>
-            <div *ngIf="validOtraIglesia" class="form-group col-md-6">
-              <input type="text" class="form-control" id="inputOtraIglesia" placeholder="Nombre de tu Iglesia"
-                formControlName="otraIglesia">
-            </div>
-
-            <div *ngIf="validSede" class="form-group col-md-6">
-
-              <select id="inputSede" class="form-control custom-select" formControlName="sedeMci">
-                <option value=''>Cual es tu Sede</option>
-                <optgroup label="Sede Principal">
-                  <option value='bogota_principal'>MCI Bogota - Sede Principal</option>
-                </optgroup>
-                <optgroup label="Sede - Internacional Argentina">
-                  <option value='mci-buenos-aires'>MCI Buenos Aires</option>
-                  <option value='mci-ushuaia'>MCI Ushuaia</option>
-                </optgroup>
-                <optgroup label="Sede - Internacional España">
-                  <option value='mci-barcelona'>MCI Barcelona</option>
-                  <option value='mci-madrid'>MCI Madrid</option>
-                </optgroup>
-                <optgroup label="Sede - Internacional Estados Unidos">
-                  <option value='mci-san-diego'>MCI San Diego</option>
-                  <option value='mci-los-angeles'>MCI Los Angeles</option>
-                </optgroup>
-                <optgroup label="Bolivia">
-                  <option value='mci-santa-cruz'>MCI Santa Cruz</option>
-                </optgroup>
-                <optgroup label="Chile">
-                  <option value='mci-santiago-chile'>MCI Santiago de Chile</option>
-                  <option value='mci-vina-de-mar'>MCI Viña del Mar</option>
-                  <option value='mci-talca'>MCI Talca</option>
-                </optgroup>
-                <optgroup label="Ecuador">
-                  <option value='mci-quito'>MCI Quito</option>
-                </optgroup>
-                <optgroup label="Holanda">
-                  <option value='mci-utrecht'>MCI Utrecht</option>
-                </optgroup>
-                <optgroup label="Francia">
-                  <option value='mci-lyon'>MCI Lyon</option>
-                </optgroup>
-                <optgroup label="Mexico">
-                  <option value='mci-ciudad-mexico'>MCI Ciudad de Mexico</option>
-                  <option value='mci-durango'>MCI Durango</option>
-                  <option value='mci-yucatan'>MCI Yucatan</option>
-                  <option value='mci-tijuana'>MCI Tijuana</option>
-                </optgroup>
-                <optgroup label="Paraguay">
-                  <option value='mci-asuncion'>MCI Asuncion</option>
-                </optgroup>
-                <optgroup label="Peru">
-                  <option value='mci-Lima'>MCI Lima</option>
-                </optgroup>
-                <optgroup label="Uruguay">
-                  <option value='mci-montevideo'>MCI Montevideo</option>
-                </optgroup>
-                <optgroup label="Venezuela">
-                  <option value='mci-turmero'>MCI Turmero</option>
-                  <option value='mci-maracaibo'>MCI Maracaibo</option>
-                  <option value='mci-yaritagua'>MCI Yaritagua</option>
-                </optgroup>
-
-                <optgroup label="Nacionales - Antioquia">
-                  <option value='mci-medellin'>MCI Medellin</option>
-                  <option value='mci-occidente'>MCI Occidente</option>
-                  <option value='mci-envigado'>MCI Envigado</option>
-                  <option value='mci-itagui'>MCI Itagui</option>
-                  <option value='mci-rionegro'>MCI Rionegro</option>
-                  <option value='mci-bello'>MCI Bello</option>
-                </optgroup>
-                <optgroup label="Nacionales - Arauca">
-                  <option value='mci-arauca'>MCI Arauca</option>
-                </optgroup>
-                <optgroup label="Nacionales - Atlantico">
-                  <option value='mci-barranquilla'>MCI Barranquilla</option>
-                </optgroup>
-                <optgroup label="Nacionales - Bolivar">
-                  <option value='mci-cartagena'>MCI Cartagena</option>
-                </optgroup>
-                <optgroup label="Nacionales - Boyaca">
-                  <option value='mci-tunja'>MCI Tunja</option>
-                  <option value='mci-duitama'>MCI Duitama</option>
-                  <option value='mci-chiquinquira'>MCI Chiquinquira</option>
-                  <option value='mci-moniquira'>MCI Moniquira</option>
-                  <option value='mci-puerto-Boyaca'>MCI Puerto Boyacá</option>
-                  <option value='mci-sogamoso'>MCI Sogamoso</option>
-                </optgroup>
-                <optgroup label="Nacionales - Caldas">
-                  <option value='mci-manizales'>MCI Manizales</option>
-                  <option value='mci-la-dorada'>MCI La Dorada</option>
-                </optgroup>
-                <optgroup label="Nacionales - Casanare">
-                  <option value='mci-yopal'>MCI Yopal</option>
-                  <option value='mci-villanueva'>MCI Villanueva</option>
-                </optgroup>
-                <optgroup label="Nacionales - Cauca">
-                  <option value='mci-popayan'>MCI Popayan</option>
-                </optgroup>
-                <optgroup label="Nacionales - Cesar">
-                  <option value='mci-valledupar'>MCI Valledupar</option>
-                </optgroup>
-                <optgroup label="Nacionales - Cordoba">
-                  <option value='mci-monteria'>MCI Monteria</option>
-                </optgroup>
-                <optgroup label="Nacionales - Huila">
-                  <option value='mci-neiva'>MCI Neiva</option>
-                  <option value='mci-garzon'>MCI Garzon</option>
-                  <option value='mci-pitalito'>MCI Pitalito</option>
-                  <option value='mci-la-plata'>MCI La Plata</option>
-                </optgroup>
-                <optgroup label="Nacionales - Magdalena">
-                  <option value='mci-santa-marta'>MCI Santa Marta</option>
-                </optgroup>
-                <optgroup label="Nacionales - Guajira">
-                  <option value='mci-maicao'>MCI Maicao</option>
-                </optgroup>
-
-                <optgroup label="Nacionales - Meta">
-                  <option value='mci-villavicencio'>MCI Villavicencio</option>
-                  <option value='mci-acacias'>MCI Acacias</option>
-                  <option value='mci-puerto-lopez'>MCI Puerto Lopez</option>
-                  <option value='mci-granada-meta'>MCI Granada Meta</option>
-                  <option value='mci-fuente-oro'>MCI Fuente De Oro</option>
-                </optgroup>
-                <optgroup label="Nacionales - Nariño">
-                  <option value='mci-pasto'>MCI Pasto</option>
-                  <option value='mci-ipiales'>MCI Ipiales</option>
-                </optgroup>
-                <optgroup label="Nacionales - Cundinamarca">
-                  <option value='mci-usme'>MCI Usme</option>
-                  <option value='mci-ciudad-bolivar'>MCI Ciudad Bolivar</option>
-                  <option value='mci-soacha'>MCI Soacha</option>
-                  <option value='mci-bosa'>MCI Bosa</option>
-                  <option value='mci-chia'>MCI Chia</option>
-                  <option value='mci-girardot'>MCI Girardot</option>
-                  <option value='mci-fusagasuga'>MCI Fusagasuga</option>
-                  <option value='mci-mesitas'>MCI Mesitas del colegio</option>
-                  <option value='mci-la-mesa'>MCI La Mesa</option>
-                  <option value='mci-puerto-salgar'>MCI Puerto Salgar</option>
-                  <option value='mci-la-vega'>MCI La vega</option>
-                  <option value='mci-sibate'>MCI La Sibate</option>
-                  <option value='mci-ubate'>MCI Ubate</option>
-                  <option value='mci-tenjo'>MCI Tenjo</option>
-                  <option value='mci-choconta'>MCI Choconta</option>
-                  <option value='mci-tabio'>MCI Tabio</option>
-                  <option value='mci-la-calera'>MCI La Calera</option>
-                  <option value='mci-simijaca'>MCI Simijaca</option>
-                  <option value='mci-mosquera'>MCI Mosquera</option>
-                  <option value='mci-el-rosal'>MCI El Rosal</option>
-                  <option value='mci-facatativa'>MCI Facatativa</option>
-                  <option value='mci-madrid'>MCI Madrid</option>
-                  <option value='mci-zipaquira'>MCI Zipaquira</option>
-                </optgroup>
-                <optgroup label="Nacionales - Quindio">
-                  <option value='mci-manizales'>MCI Armenia</option>
-                </optgroup>
-                <optgroup label="Nacionales - Risaralda">
-                  <option value='mci-manizales'>MCI Pereira</option>
-                </optgroup>
-                <optgroup label="Nacionales - Santander">
-                  <option value='mci-bucaramanga'>MCI Bucaramanga</option>
-                  <option value='mci-barbosa'>MCI Barbosa</option>
-                  <option value='mci-barrancabermeja'>MCI Barrancabermeja</option>
-                  <option value='mci-puerto-wilches'>MCI Puerto Wilches</option>
-                  <option value='mci-sabana-torres'>MCI Sabana De Torres</option>
-                  <option value='mci-el-playon'>MCI El Playon</option>
-                  <option value='mci-malaga'>MCI Malaga</option>
-                  <option value='mci-san-gil'>MCI San Gil</option>
-                  <option value='mci-curiti'>MCI Curiti</option>
-                  <option value='mci-socorro'>MCI Socorro</option>
-                  <option value='mci-cucuta'>MCI Cucuta</option>
-                  <option value='mci-pamplona'>MCI pamplona</option>
-                  <option value='mci-ocana'>MCI Ocaña</option>
-                  <option value='mci-villa-rosario'>MCI Villa Del Rosario</option>
-                </optgroup>
-                <optgroup label="Nacionales - Tolima">
-                  <option value='mci-ibague'>MCI Ibague</option>
-                </optgroup>
-                <optgroup label="Nacionales - Valle del cauca">
-                  <option value='mci-cali'>MCI Cali</option>
-                </optgroup>
-              </select>
-            </div>
-
-
-          </div>
-          <div class="form-row">
-            <div *ngIf="validRed" class="form-group col-md-6">
-              <select id="inputMinistry" class="form-control custom-select" formControlName="red">
-                <option selected value="">Red / Ministerio</option>
-                <option value='Hombres'>Hombres</option>
-                <option value='Mujeres'>Mujeres</option>
-              </select>
-            </div>
-            <div *ngIf="validRedMen || validredWomen" class="form-group col-md-6">
-              <div *ngIf="validRedMen">
-
-                <select id="inputPastor" class="form-control custom-select" formControlName="redHombres">
-                  <option value="">Selecciona tu Pastor</option>
-                  <option *ngFor="let ps of pastores" [value]="ps.value">{{ps.name}}</option>
-                </select>
-              </div>
-              <div *ngIf="validredWomen">
-                <select id="inputPastora" class="form-control custom-select" formControlName="redMujeres">
-                  <option value="">Selecciona tu Pastora...</option>
-                  <option *ngFor="let ps of pastoras" [value]="ps.value">{{ps.name}}</option>
-                </select>
-              </div>
-            </div>
-            <div *ngIf="validEliemerson || validLau || validJohana || validSara" class="form-group col-md-6">
-              <div *ngIf="validEliemerson">
-                <select id="inputEli" class="form-control custom-select" formControlName="redEliemerson">
-                  <option value="">Selecciona tu Lider de 12</option>
-                  <option *ngFor="let eli of eliemerson" [value]="eli.name">{{eli.name}}</option>
-                </select>
-              </div>
-              <div *ngIf="validLau">
-
-                <select id="inputLau" class="form-control custom-select" formControlName="redLauGuerra">
-                  <option value="">Selecciona tu Lider de 12</option>
-                  <option *ngFor="let la of lau" [value]="la.name">{{la.name}}</option>
-                </select>
-              </div>
-              <div *ngIf="validJohana">
-                <select id="inputJohanna" class="form-control custom-select" formControlName="redJohanna">
-                  <option value="">Selecciona tu Lider de 12</option>
-                  <option *ngFor="let joh of johana" [value]="joh.name">{{joh.name}}</option>
-                </select>
-              </div>
-              <div *ngIf="validSara">
-
-                <select id="inputSara" class="form-control custom-select" formControlName="redSaraCastellanos">
-                  <option value="">Selecciona tu Lider de 12</option>
-                  <option *ngFor="let sa of sara" [value]="sa.name">{{sa.name}}</option>
-                </select>
-              </div>
-
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" id="iglesia" placeholder="Nombre de tu Iglesia"
+                formControlName="iglesia">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" id="inputLider" placeholder="Nombre de tu Lider"
+              <input type="text" class="form-control" id="inputLider" placeholder="Nombre de tu Pastor / Lider"
                 formControlName="liderPrincipal">
             </div>
           </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <select id="inputTaller" class="form-control custom-select" formControlName="talleres">
-                <option value="">Seleccione un Taller...</option>
-                <option value='Perspectiva Cristiana'>Perspectiva Cristiana</option>
-                <option value='Estudio Bíblico'>Estudio Bíblico</option>
-                <option value='Finanzas'>Finanzas</option>
-                <option value='Liderazgo'>Liderazgo</option>
-                <option value='Creativo'>Creativo</option>
-                <option value='Carrera'>Carrera</option>
-              </select>
-              <div *ngIf="workShopUpdate.invalid && (workShopUpdate.touched || workShopUpdate.dirty)"
-                class="invalid-feedback">
-                <p *ngIf="workShopUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
-              </div>
-            </div>
-            <div class="form-group col-md-6">
-              <select id="inputIdioma" class="form-control custom-select" formControlName="idioma">
-                <option value=''>Seleccione un Idioma</option>
-                <option *ngFor="let lang of language" [value]="lang.name">{{lang.name}}</option>
-              </select>
-              <div *ngIf="languageUpdate.invalid && (languageUpdate.touched || languageUpdate.dirty)"
-                class="invalid-feedback">
-                <p *ngIf="languageUpdate.hasError('required')">Debes Seleccionar tu Iglesia</p>
-              </div>
-            </div>
-
-          </div>
-
           <div class="row">
             <div class="form-group col-md-12 col-auto" style="margin-top: auto">
               <div class="form-check" style="display: flex;">
@@ -374,16 +94,6 @@
               <div *ngIf="terminos.invalid && (terminos.touched || terminos.dirty)" class="invalid-feedback">
                 <p *ngIf="terminos.hasError('required')">Debes aceptar los terminos y condiciones</p>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-md-12 col-auto" style="margin-top: auto">
-              <div class="form-check mb-2" style="display: flex;">
-                <input class="form-check-input" type="checkbox" id="email_aceptado" class="margin-top: 0">
-                <label class="form-check-label" for="email_aceptado" style="margin-left: 10px;">
-                  Recibir emails de marketing de Somos Uno GO
-                </label>
-              </div>   
             </div>
           </div>
         </div>
@@ -400,13 +110,13 @@
       <div class="modal-header">
         <div class="container padding-50">
             <div class="row">
-                <img src="../../../assets/media/icons/start.png" style="margin: 0 auto;" />
+                <img src="https://cdn.somosunogo.com/argentina/logo_convencion.png" style="margin: 0 auto;" />
             </div>
             <div class="row">
                 <p class="title-modal light">BIENVENIDO</p>
             </div>
             <div class="row">
-                <p class="description light">Hemos enviado un mensaje de confirmación a tu correo, confirma para poder ingresar a la plataforma.</p>
+                <p class="description light">Hemos enviado un mensaje de confirmación a tu correo con tus datos de acceso, valida tu información para poder ingresar a la plataforma.</p>
             </div>
             
         </div>
@@ -414,9 +124,17 @@
     </div>
     <div *ngIf="currentState == 3" class="modal-content">
       <div class="modal-header">
-        <div class="okGO">
-          <p class="GO">LO SENTIMOS TU USUARIO <span>YA EXISTE!</span></p>
+        <div class="container padding-50">
+        <div class="row">
+          <img src="https://cdn.somosunogo.com/argentina/logo_convencion.png" style="margin: 0 auto;" />
         </div>
+        <div class="row">
+          <p class="title-modal light">Usuario Existente</p>
+      </div>
+      <div class="row">
+          <p class="description light">Ya existe una cuenta creada con este correo electronico, porfavor valida la existencia de un codigo en tu correo electronico o en la opcion de Buscar mi codigo.</p>
+      </div>
+      </div>
       </div>
     </div>
     <div *ngIf="currentState == 4" class="modal-content">

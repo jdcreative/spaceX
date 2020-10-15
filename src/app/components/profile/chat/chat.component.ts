@@ -119,7 +119,7 @@ export class ChatComponent implements OnInit {
 
     let actualTime = moment.tz('America/Bogota').format();
     this.sendMessage.controls['username'].setValue(this.username);
-    this.sendMessage.controls["tribu"].setValue(this.userProfile["tribu"]);
+    //this.sendMessage.controls["tribu"].setValue(this.userProfile["tribu"]);
     this.sendMessage.controls['hourMessage'].setValue(actualTime);
     this.sendMessage.controls['message'].setValue(this.sendMessage.value.message);
 

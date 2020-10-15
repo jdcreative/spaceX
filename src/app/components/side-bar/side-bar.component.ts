@@ -19,10 +19,10 @@ export class SideBarComponent implements OnInit {
   finalImage: any = "http://cdn.somosunogo.com/default-user.jpg";
   finalTribu: string;
   data: any = [{
-    halcones: "linear-gradient(180deg, rgba(255, 27, 27, 0) 33.68%, #7839FF 110.36%), #ED5059",
-    tiburones: "linear-gradient(180deg, rgba(27, 228, 255, 0) 23.74%, #3965FF 97.77%), #71D7CA",
-    gorilas: "linear-gradient(180deg, rgba(13, 201, 165, 0) 45.6%, #19B960 106.71%), #C1F092",
-    leones: "linear-gradient(180deg, rgba(237, 44, 44, 0) 13.22%, #F95252 94.29%), #FFF09B"
+    halcones: "linear-gradient(rgba(255, 27, 27, 0) 15.68%, #1BE4FF 110.36%), #3965FF",
+    tiburones: "linear-gradient(rgba(255, 27, 27, 0) 15.68%, #1BE4FF 110.36%), #3965FF",
+    gorilas: "linear-gradient(rgba(255, 27, 27, 0) 15.68%, #1BE4FF 110.36%), #3965FF",
+    leones: "linear-gradient(rgba(255, 27, 27, 0) 15.68%, #1BE4FF 110.36%), #3965FF"
   }, {
     halcones: "https://cdn.somosunogo.com/halcones.jpeg",
     tiburones: "https://cdn.somosunogo.com/tiburones.jpeg",

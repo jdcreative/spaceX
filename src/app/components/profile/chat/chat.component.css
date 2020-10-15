@@ -23,7 +23,9 @@
     height: 30px;
     background-color: transparent;
 }
-
+.item-chat img {
+    width: 40px;
+}
 .imgButton {
     width: 27px;
 }
